@@ -10,7 +10,10 @@
 
 
 ## GCC
-
+- 发布了新的rv64ilp32 release版本，修复了gdb在rv64ilp32调试时的问题。
+- 完成了P扩展在GCC14上的Rebase工作，已合入RUYISDK GCC14分支。
+- 添加了Sm/scsrind扩展的支持。
+- 正在添加Ssccft/Smcdeleg扩展的支持中。
 
 ## LLVM
 
