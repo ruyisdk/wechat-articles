@@ -5,6 +5,27 @@
 
 ## 包管理器
 
+RuyiSDK 0.13 对应的包管理器版本也为 0.13.0，已于今日发布。您可移步
+[GitHub Releases][ruyi-0.13.0-gh] 或 [ISCAS 镜像源][ruyi-0.13.0-iscas]下载体验。
+
+[ruyi-0.13.0-gh]: https://github.com/ruyisdk/ruyi/releases/tag/0.13.0
+[ruyi-0.13.0-iscas]: https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.13.0/
+
+本次 RuyiSDK 包管理器的更新主要包含了以下内容：
+
+* 修复了 [issue #158](https://github.com/ruyisdk/ruyi/issues/158): `coremark` 包的两个版本，解压后的目录布局不统一。现在都会在当前工作目录下“摊开”了。
+* 修复了 [issue #159](https://github.com/ruyisdk/ruyi/issues/159): 对“预发布版本”判断方式的不统一。
+* 随着 Python 3.12 的正式发布，官方 `ruyi` 二进制也在 Python 3.12 环境构建了。
+* 为引入插件架构做好准备：引入了 Starlark 语言支持，并支持在 CI 自动化构建。[Starlark]
+  是一种极度简化的 Python 方言，被 Bazel、BUCK 等构建系统广泛采用；这是为了让所有了解
+  Python 语言的开发者都可使用熟悉的语法撰写 RuyiSDK 包管理器插件。
+
+[Starlark]: https://github.com/bazelbuild/starlark
+
+为了支持刷写方式复杂、需要夹杂人工干预、镜像文件需要手工下载等复杂情况下的设备初始化，我们正在将设备安装器重构为基于插件架构的形式，预计将于下个版本付诸测试。届时旧版
+`ruyi` 的设备安装器功能将不可用，请先升级再进行体验。
+
+欢迎试用或来上游围观；您的需求是我们迭代开发的目标和动力。
 
 ## IDE
 
