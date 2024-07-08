@@ -25,3 +25,13 @@
 
 
 ## 操作系统支持矩阵
+
+- Ubuntu 24.04 LTS
+  - StarFive VisionFive 2
+  - HiFive Unmatched
+- openEuler RISC-V 24.03 LTS
+    - Sipeed Lichee Pi 4A
+    - Milk-V Pioneer (v1.3)
+- 一些小的 typo 修复
+
+内容请详见：[ruyisdk/support-matrix](https://github.com/ruyisdk/support-matrix)
