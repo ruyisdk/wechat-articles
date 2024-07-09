@@ -41,6 +41,9 @@ RuyiSDK 0.14 对应的包管理器版本也为 0.14.0，已于今日发布。您
 
 ## GCC
 
+- 提交了gprofng的patch，目前已通过review修改，正在等待合并。
+- 更新了profiles的支持。
+
 ## LLVM
 
 - 新建 [Tuning-SPEC-CPU](https://github.com/ruyisdk/llvm-project/tree/Tuning-SPEC-CPU) 分支，用于 Spec CPU 较高性能的优化
