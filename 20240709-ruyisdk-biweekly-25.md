@@ -58,3 +58,13 @@ RuyiSDK 0.14 对应的包管理器版本也为 0.14.0，已于今日发布。您
 截止今日7月8日，订阅人数一共37人（增加1人）。RuyiSDK网站访问人数502人（增加103人），访问页面1424次（增加339次）。RuyiSDK 微信交流群 70人（进群请微信加小助手ruyisdk_helper）。
 
 ## 操作系统支持矩阵
+
+- Ubuntu 24.04 LTS
+  - StarFive VisionFive 2
+  - HiFive Unmatched
+- openEuler RISC-V 24.03 LTS
+    - Sipeed Lichee Pi 4A
+    - Milk-V Pioneer (v1.3)
+- 一些小的 typo 修复
+
+内容请详见：[ruyisdk/support-matrix](https://github.com/ruyisdk/support-matrix)
