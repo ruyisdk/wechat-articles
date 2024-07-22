@@ -10,6 +10,11 @@
 
 ## LLVM
 
+尝试使用该 LLVM 编译器，对 OpenCV 进行交叉编译，发现了如下缺失的 intrinsic，已经修复：
+
+- 支持 Clang 内建函数 vssra/vssrl
+- 支持 LLVM 内建函数 vssra/vssrl
+
 ## V8
 
 ## OpenJDK
