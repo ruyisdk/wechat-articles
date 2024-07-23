@@ -41,7 +41,7 @@ RuyiSDK 0.15 对应的包管理器版本也为 0.15.0，已于今日发布。您
 * `emulator/box64-upstream` 已更新到 0.3.0。
 * 用 Box64 运行 WPS Office 的操作文档已更新。
 * Ruyi 设备安装器现已新增支持以下设备型号与系统：
-  * Canaan Kendryte K230D：由 RuyiSDK 授权打包的 CanMV Linux SDK 镜像，附带演示程序。提供 LP64 与 RV64ILP32 两种 ABI。
+  * Canaan Kendryte K230D：由 RuyiSDK 受权打包的 CanMV Linux SDK 镜像，附带演示程序。提供 LP64 与 RV64ILP32 两种 ABI。
 
 欢迎试用或来上游围观；您的需求是我们迭代开发的目标和动力。
 
