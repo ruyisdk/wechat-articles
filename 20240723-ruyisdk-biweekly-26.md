@@ -10,6 +10,12 @@ RuyiSDK更多进展细节详见下方详情，欢迎大家试用并提供反馈�
 
 因8月亚洲多地（日本、中国）RISC-V活动或峰会的开展，RuyiSDK的部分小伙伴也有积极参与，因此近期的版本发布时间将有所调整，下一个开发版本 RuyiSDK V0.16 版本将在 8 月 13 日发布（RuyiSDK V0.17 版本将在 9 月 3 日发布）。
 
+
+这里附上RISC-V近期一些会议链接，欢迎关注：
+
+* [RISC-V Day Tokyo Summer 2024 (August 1)](https://riscv.org/event/risc-v-day-tokyo-summer-2024/)
+* [RISC-V China Summit (August 19 - August 25)](https://riscv.org/event/risc-v-china-summit/ "RISC-V China Summit")
+
 ## 包管理器
 
 RuyiSDK 0.15 对应的包管理器版本也为 0.15.0，已于今日发布。您可移步
