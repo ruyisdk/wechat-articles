@@ -7,6 +7,8 @@
 ## IDE
 
 ## GCC
+Gprofng的RISC-V后端支持已被上游合并，将作为binutils 2.43的新特性
+更新了P扩展的binutils支持，正在开发P扩展的draft草案支持中
 
 ## LLVM
 
