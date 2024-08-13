@@ -10,6 +10,20 @@ RuyiSDK更多进展细节详见下方详情，欢迎大家试用并提供反馈�
 
 ## 包管理器
 
+RuyiSDK 0.16 对应的包管理器版本也为 0.16.0，已于今日发布。您可移步
+[GitHub Releases][ruyi-0.16.0-gh] 或 [ISCAS 镜像源][ruyi-0.16.0-iscas]下载体验。
+
+[ruyi-0.16.0-gh]: https://github.com/ruyisdk/ruyi/releases/tag/0.16.0
+[ruyi-0.16.0-iscas]: https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.16.0/
+
+本次 RuyiSDK 包管理器的更新主要包含了以下内容：
+
+* 完成了设备安装器（`ruyi device provision`）的插件化改造。今后对不常见刷写步骤的支持将更加方便了：不一定需要更新
+  `ruyi` 本体了。
+
+欢迎试用或来上游围观；您的需求是我们迭代开发的目标和动力。您也可以亲自参与
+RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查看、修改我们的[部分打包脚本](https://github.com/ruyisdk/ruyici)与[软件源仓库](https://github.com/ruyisdk/packages-index)。今后，按照本年度的开发计划，我们也将支持有权的第三方贡献者通过程序化的方式上传软件包、系统镜像等分发文件，以便利打包工作。
+
 ## IDE
 
 本期暂无进展。
