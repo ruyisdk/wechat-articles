@@ -2,18 +2,29 @@
 
 ## 卷首语
 
+RuyiSDK V0.16 版本已于今日发布。包管理器**完成了设备安装器（`ruyi device provision`）的插件化改造**，后续升级程序将更加方便。此外，**RuyiSDK 完善了Canaan Kendryte K230D 开发板的支持**，对 K230D SDK 源码进行了更新和完善，同时建立了SDK自动构建CI，并联合玄铁团队和嘉楠科技进行了标题为“[嘉楠勘智 K230D: 首款基于新 32 位 RuyiSDK 的 AIoT 量产芯片](https://ruyisdk.org/blog/2024/07/30/k230d/)”的宣发，展示了基于 K230D RuyiSDK 源码的性能对比结果和其它合作成果。
+
+操作系统支持矩阵持续更新中，同时开始启动操作系统中语言运行时环境、语言虚拟机等运行支持软件在不同Linux发行版中的支持情况（应用软件支持矩阵），如系统包管理器是否提供安装，以及软件版本信息。目前已经完成了 Debian 的部分测试用例。
+
+RuyiSDK更多进展细节详见下方详情，欢迎大家试用并提供反馈和建议 ，下一个开发版本 RuyiSDK V0.17 版本将在 9 月 3 日发布。此外RuyiSDK报名了2024年8月27日-29日在深圳会展中心举办的[深圳国际电子展](https://www.elexcon.com/)，欢迎关注。
 
 ## 包管理器
 
-
 ## IDE
 
+本期暂无进展。
 
 ## GCC
+
 RUYISDK-GNU-Toolchain发布了基于GCC14.2与Binutils2.43的linux工具链，修复了回归测试中发现的一些问题。
 
 ## LLVM
 
+本期暂无进展。
+
+## V8
+
+审核新一代基线编译器maglev的riscv支持框架。
 
 ## 官网
 
@@ -31,4 +42,5 @@ RUYISDK-GNU-Toolchain发布了基于GCC14.2与Binutils2.43的linux工具链，�
 - 主表格：同步 Deepin 测试结果
 
 自动化测试/应用软件支持矩阵准备：[lintestor](https://github.com/255doesnotexist/lintestor)
-  - 目前已完成了 Debian 的部分测试用例，结果见[此处](https://github.com/255doesnotexist/lintestor/blob/main/summary.md)
+
+- 目前已完成了 Debian 的部分测试用例，结果见[此处](https://github.com/255doesnotexist/lintestor/blob/main/summary.md)
