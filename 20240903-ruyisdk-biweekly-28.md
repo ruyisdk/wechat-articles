@@ -19,4 +19,10 @@
 
 ## 官网
 
+截止今日9月3日，RuyiSDK 网站访问人数986人，新增152人，访问页面7622次，新增2755次。RuyiSDK 微信交流群132人，新增49人（进群请加微信小助手 ruyisdk_helper）。
+
+官网新增 algolia search，现在可以搜索网站上的任何内容啦！
+
+[RuyiSDK 亮相 elexcon 2024深圳国际电子展](https://mp.weixin.qq.com/s/Rr04my4SxRPfTT7-wvKriw)
+
 ## 操作系统支持矩阵
