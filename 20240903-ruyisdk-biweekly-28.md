@@ -1,6 +1,11 @@
 # RuyiSDK双周进展汇报  第028期·2024年09月03日
 
 ## 卷首语
+RuyiSDK V0.17 版本已于今日发布。RuyiSDK 包管理器修复了一些已知的缺陷，RuyiSDK 软件源更新了 Box64 和 WPS Office；RuyiSDK 官网也新增 algolia search，现在可以搜索网站上的任何内容了。
+
+此外，RuyiSDK 在第四届 RISC-V 中国峰会（RISC-V Summit China 2024）上，进行了包括 RuyiSDK 介绍、Ruyi 包管理器的自动化测试、RISC-V 操作系统支持矩阵 等报告；RuyiSDK 还亮相 elexcon 2024深圳国际电子展，展示了近期的工作成果。
+
+RuyiSDK更多进展细节详见下方详情，欢迎大家试用并提供反馈和建议 ，下一个开发版本 RuyiSDK V0.18 版本将在 9 月 14 日发布。
 
 ## 包管理器
 
