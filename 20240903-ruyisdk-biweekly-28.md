@@ -6,7 +6,10 @@
 
 ## IDE
 
+本期暂无进展。
+
 ## GCC
+
 - 支持了Zimop扩展
 - 修复了部分回归测试中发现的错误
 
@@ -16,6 +19,10 @@
 - 修复在指定 XTHeadVector 拓展时，编译器未定义 `__riscv_vector` 的问题，现在编译器行为与 GCC 一致。
 
 ## V8
+
+1. 提交patch，使V8 for Android RISCV64在 NDK r27 版本获得标准构建支持（无需在手工配置NDK toolchain）。
+2. 继续实现TurboShaft SIMD IR 到RVV的指令选择。
+3. 移植central stack switches特性。
 
 ## 官网
 
