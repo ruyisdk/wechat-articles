@@ -10,6 +10,9 @@
 
 ## LLVM
 
+- 支持了对 tuple type 的 vget/vset/vcreate 操作。
+- 修复在指定 XTHeadVector 拓展时，编译器未定义 `__riscv_vector` 的问题，现在编译器行为与 GCC 一致。
+
 ## V8
 
 ## 官网
