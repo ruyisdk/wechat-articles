@@ -26,3 +26,10 @@
 [RuyiSDK 亮相 elexcon 2024深圳国际电子展](https://mp.weixin.qq.com/s/Rr04my4SxRPfTT7-wvKriw)
 
 ## 操作系统支持矩阵
+
+- 修正了部分 typo 和 i18n / 英文翻译。
+- lintestor 应用软件可用性测试项目继续更新中
+  - 重写了测试调度相关的代码
+  - 添加了全局前置环境配置
+  - 改进了测试结果报告
+  - 新增了更多软件包的测试用例
