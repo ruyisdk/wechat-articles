@@ -25,7 +25,9 @@ RuyiSDK 0.18 对应的包管理器版本也为 0.18.0，已于昨日发布。您
 * 更新了 RV64ILP32 裸机工具链 `toolchain/gnu-plct-rv64ilp32-elf` 到当前最新版本。
 * 更新了 Milk-V Duo 的支持：
     * 新增打包了 Milk-V Duo 官方实例代码库 `source/milkv-duo-examples`。您可在一个新的目录下，用 `ruyi extract` 命令解压它。
-    * 新增打包了 Milk-V 官方提供的 Milk-V Duo 宿主工具链如下。且上游仅提供了 `x86_64` 架构的二进制。
+    * 新增打包了 Milk-V 官方提供的 Milk-V Duo 宿主工具链如下。请注意：它们是
+      RuyiSDK 受权对上游 https://github.com/milkv-duo/host-tools 仓库进行的重新打包；且上游仅提供了
+      `x86_64` 架构的二进制。
         * `toolchain/gnu-milkv-milkv-duo-bin`：适用于 Linux glibc 环境。
         * `toolchain/gnu-milkv-milkv-duo-elf-bin`：适用于裸机环境。
         * `toolchain/gnu-milkv-milkv-duo-musl-bin`：适用于 Linux musl 环境。
