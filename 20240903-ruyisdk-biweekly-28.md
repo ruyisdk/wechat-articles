@@ -41,7 +41,7 @@ RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查�
 
 ## GCC
 
-- 支持了Zimop扩展
+- 支持了 Zimop 扩展
 - 修复了部分回归测试中发现的错误
 
 ## LLVM
@@ -51,9 +51,9 @@ RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查�
 
 ## V8
 
-1. 提交patch，使V8 for Android RISCV64在 NDK r27 版本获得标准构建支持（无需在手工配置NDK toolchain）。
-2. 继续实现TurboShaft SIMD IR 到RVV的指令选择。
-3. 移植central stack switches特性。
+1. 提交 patch，使 V8 for Android RISCV64 在 NDK r27 版本获得标准构建支持（无需再手工配置 NDK toolchain）。
+2. 继续实现 TurboShaft SIMD IR 到 RVV 的指令选择。
+3. 移植 central stack switches 特性。
 
 ## 官网
 
