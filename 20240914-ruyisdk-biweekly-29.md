@@ -55,3 +55,9 @@ RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查�
 ## 官网
 
 ## 操作系统支持矩阵
+
+- 新增：[Microchip PIC64GX Curiosity Kit](https://github.com/ruyisdk/support-matrix/blob/main/PIC64GX/README_zh.md)
+ - Ubuntu 24.04.1 LTS
+- 更新：BPI-F3
+ - [Armbian Noble](https://github.com/ruyisdk/support-matrix/blob/main/BPI-F3/Armbian/README_zh_noble.md)
+ - 这是支持矩阵仓库第一个使用自动化工具完成的测试报告
