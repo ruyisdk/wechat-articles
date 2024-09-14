@@ -4,6 +4,37 @@
 
 ## 包管理器
 
+RuyiSDK 0.18 对应的包管理器版本也为 0.18.0，已于昨日发布。您可移步
+[GitHub Releases][ruyi-0.18.0-gh] 或 [ISCAS 镜像源][ruyi-0.18.0-iscas]下载体验。
+
+[ruyi-0.18.0-gh]: https://github.com/ruyisdk/ruyi/releases/tag/0.18.0
+[ruyi-0.18.0-iscas]: https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.18.0/
+
+本次 RuyiSDK 包管理器的更新主要包含了以下内容：
+
+* 进一步完善了 [issue #181] 的修复：先前虽然修复了代码块的折行缺字问题，但不经意间也让长度超过一行的
+  Markdown 列表项、块状引用等内容被截断了。
+* 完成了 [issue #193]: 为方便发行版的打包工作，移除了对 `python-frontmatter` 这一第三方库的依赖。
+
+[issue #181]: https://github.com/ruyisdk/ruyi/issues/181
+[issue #193]: https://github.com/ruyisdk/ruyi/issues/193
+
+本次 RuyiSDK 软件源的更新主要包含了以下内容：
+
+* 更新了 WPS Office 到上游最新版本。
+* 更新了 RV64ILP32 裸机工具链 `toolchain/gnu-plct-rv64ilp32-elf` 到当前最新版本。
+* 更新了 Milk-V Duo 的支持：
+    * 新增打包了 Milk-V Duo 官方实例代码库 `source/milkv-duo-examples`。您可在一个新的目录下，用 `ruyi extract` 命令解压它。
+    * 新增打包了 Milk-V 官方提供的 Milk-V Duo 宿主工具链如下。且上游仅提供了 `x86_64` 架构的二进制。
+        * `toolchain/gnu-milkv-milkv-duo-bin`：适用于 Linux glibc 环境。
+        * `toolchain/gnu-milkv-milkv-duo-elf-bin`：适用于裸机环境。
+        * `toolchain/gnu-milkv-milkv-duo-musl-bin`：适用于 Linux musl 环境。
+    * 更新了 Milk-V Duo 官方系统镜像包到上游最新版本。RuyiSDK 受权对这些镜像进行了重新打包，以便后续所有通过
+      RuyiSDK 渠道分发的系统镜像都能以 `ruyisdk` 用户名与密码登录，方便您的评估。
+
+欢迎试用或来上游围观；您的需求是我们迭代开发的目标和动力。您也可以亲自参与
+RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查看、修改我们的[部分打包脚本](https://github.com/ruyisdk/ruyici)与[软件源仓库](https://github.com/ruyisdk/packages-index)。今后，按照本年度的开发计划，我们也将支持有权的第三方贡献者通过程序化的方式上传软件包、系统镜像等分发文件，以便利打包工作。
+
 ## IDE
 开始启动 RuyiSDK VSCode IDE 插件开发和 RuyiSDK Eclispe IDE 开发。计划在开发的同时输出短视频吸引新人加入。
 
