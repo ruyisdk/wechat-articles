@@ -5,12 +5,14 @@
 ## 包管理器
 
 ## IDE
+开始启动 RuyiSDK VSCode IDE 插件开发和 RuyiSDK Eclispe IDE 开发。计划在开发的同时输出短视频吸引新人加入。
 
 ## GCC
 
 更新了Zcmt的实现，修复了gcc14.2回归测试中发现的一些问题，正在进行Smrnmi扩展的支持中。
 
 ## LLVM
+本期暂无进展。
 
 ## V8
 1. 在 RISC-V 平台适配 leaptier 特性，提高 JIT 编译器 tier-up 和 tier-down 的安全性和性能。
