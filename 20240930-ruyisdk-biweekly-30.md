@@ -1,7 +1,7 @@
 # RuyiSDK双周进展汇报  第030期·2024年09月30日
 
 ## 卷首语
-RuyiSDK V0.19 版本已于今日发布。RevyOS 小队的工程师联合其他开源社区开发者，**成功为 Eclipse 上游代码仓库引入了对 riscv64 架构的初步支持**。期间创建了[二十余个 Issue/PR](https://github.com/eclipse-platform/eclipse.platform.releng.aggregator/issues/2310)，涵盖了包括 SWT、Equinox 在内的关键组件。目前，Eclipse 已支持在 riscv64 平台上基于 OpenJDK 开发 Java 项目。[Eclipse 每日构建镜像](https://riscv.org/blog-chinese/2024/09/eclipse-riscv64-support-upstreamed/)已经可以下载试用。Visual Studio Code IDE插件也正式开启开发，并输出视频教程以吸引更多开发者参与，第一课将于十月一日零点推送，欢迎[关注](https://space.bilibili.com/13429452)。
+RuyiSDK V0.19 版本已于今日发布。RuyiSDK工程师联合其他开源社区开发者，**成功为 Eclipse 上游代码仓库引入了对 riscv64 架构的初步支持**。期间创建了[二十余个 Issue/PR](https://github.com/eclipse-platform/eclipse.platform.releng.aggregator/issues/2310)，涵盖了包括 SWT、Equinox 在内的关键组件。目前，Eclipse 已支持在 riscv64 平台上基于 OpenJDK 开发 Java 项目。[Eclipse 每日构建镜像](https://riscv.org/blog-chinese/2024/09/eclipse-riscv64-support-upstreamed/)已经可以下载试用。Visual Studio Code IDE插件也正式开启开发，并输出视频教程以吸引更多开发者参与，第一课将于十月一日零点推送，欢迎[关注](https://space.bilibili.com/13429452)。
 
 包管理器工具为 **`ruyi venv` 新增了多工具链支持**，目前可以为一个虚拟环境配置多个 target tuple 互不相同的工具链包，满足sdk构建时多工具链的需求。同时，RuyiSDK 开始了基础的遥测功能采集用户数据，目前**完成了基础数据的采集**（当前存储在用户本地），后续上传功能会在用户隐私协议、后端服务器就绪后正式启用。收集的 ruyi 安装信息、ruyi install 执行信息将帮助我们了解 RuyiSDK 的装机情况、编译器等工具的安装情况等。
 
