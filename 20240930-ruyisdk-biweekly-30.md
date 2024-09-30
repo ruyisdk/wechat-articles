@@ -19,7 +19,12 @@ RuyiSDK 0.19 对应的包管理器版本也为 0.19.0，已于昨日发布。您
 * 新增了 `ruyi self clean` 命令，用来清理 Ruyi 产生的各种数据，释放存储空间。
 * 对于发行版直接再次分发 RuyiSDK 官方编译 `ruyi` 二进制的情况，为发行版打包工作者提供了手段来阻止用户不慎
   `ruyi self uninstall`。
-* 基础的遥测功能，目前不支持数据上传。
+* 基础的遥测功能，目前不支持数据上传。详见“遥测”一节。
+
+欢迎试用或来上游围观；您的需求是我们迭代开发的目标和动力。您也可以亲自参与
+RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查看、修改我们的[部分打包脚本](https://github.com/ruyisdk/ruyici)与[软件源仓库](https://github.com/ruyisdk/packages-index)。今后，按照本年度的开发计划，我们也将支持有权的第三方贡献者通过程序化的方式上传软件包、系统镜像等分发文件，以便利打包工作。
+
+### 遥测
 
 为帮助 RuyiSDK 团队更好了解用户使用习惯以改进体验，我们为 RuyiSDK 包管理器增加了基础的遥测功能。有以下 3 种遥测模式：
 
@@ -52,8 +57,28 @@ mode = "off"
 在 RuyiSDK 完全支持遥测数据上传之前的一个版本，我们将会告知您此事，您可自行决定是否删除先前的遥测数据，以及是否禁用遥测。您可用
 `ruyi self clean --telemetry` 删除所有的遥测信息，包括设备信息。
 
-欢迎试用或来上游围观；您的需求是我们迭代开发的目标和动力。您也可以亲自参与
-RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查看、修改我们的[部分打包脚本](https://github.com/ruyisdk/ruyici)与[软件源仓库](https://github.com/ruyisdk/packages-index)。今后，按照本年度的开发计划，我们也将支持有权的第三方贡献者通过程序化的方式上传软件包、系统镜像等分发文件，以便利打包工作。
+## Linux 发行版打包
+
+一直以来，RuyiSDK 包管理器都是在 GitHub Release 或 ISCAS 镜像源渠道分发二进制。用户需要自行下载、调整文件权限、重命名、安排进
+`$PATH` 才能使用，些许不便，且打包后的二进制每次使用都要校验解压文件完整性，性能欠佳。为此，RuyiSDK
+团队计划为主流 Linux 发行版打包 `ruyi`。目前，已经为如下的发行版完成了 `ruyi`
+v0.18.0 的实验性打包：
+
+* Debian 13 ("trixie")
+* Fedora 39, 40, 41
+* openEuler 24.03
+* Ubuntu 22.04 ("jammy"), 24.04 ("noble")
+
+其中除 Fedora 39、Fedora 41 未有 `riscv64` 架构包之外，均提供三种官方支持架构即
+`amd64`、`arm64` 与 `riscv64` 的二进制包。
+
+目前，您可根据实际情况找到适合您的安装方式与尝鲜软件源：
+
+* Arch Linux：已[上架 AUR](https://aur.archlinux.org/packages/ruyi)
+* 以上提到的发行版：参考[此仓库](https://github.com/weilinfox/ruyi-builds)
+* 官方支持架构的其他发行版：参考[此仓库](https://github.com/weilinfox/ruyi-bin-builds)
+
+后续我们将会在 RuyiSDK 新版本发布时同步完成二进制软件包的打包，并为各大主流发行版搭建正式的第三方软件源，敬请期待。
 
 ## IDE
 
@@ -82,14 +107,3 @@ Visual Studio Code IDE插件正式开启开发，并输出视频教程。第一�
 - [更新了 D1 Ubuntu 24.10 beta 测试报告](https://github.com/ruyisdk/support-matrix/commit/43538a76cca483795d74e88868c1c525e8e8fae0)
 - [新增 D1/Arch Linux 测试报告](https://github.com/ruyisdk/support-matrix/commit/3d537dd9498dc79c00e771862657d2ec203fbe79)
 - [更新 VisionFive 2/ArchLinux 测试报告](https://github.com/ruyisdk/support-matrix/commit/bac9eb66d4ecda9b55812af18d16d4c1998015f4)
-
-
-## 主流Linux发行版打包ruyi
-
-RuyiSDK 的 ruyi 工具一直以来都是在官网或github release提供二进制的下载，这一操作不是很方便。为此 RuyiSDK 团队启动了完成ruyi在主流Linux发行中打包的计划，目前除了Gentoo外，已经基于Debian、Ubuntu、Fedora、openEuler等多个Linux发行版的流行版本完成了 ruyi v0.18 的打包，具体的第三方源和使用说明参考如下：
-
-* https://github.com/weilinfox/ruyi-builds
-* https://github.com/weilinfox/ruyi-bin-builds
-
-由于目前 ruyi 一直处于持续的更新中，ruyi 在 Linux 发行版中的打包也需要随着 ruyi 的升级再构建，这个目前还无法保障构建的实时性和不间断性。我们后续目标是在 RuyiSDK 稳定版本中提供基于各主流Linux发行版的安装包（以Linux发行版的第三方源方式提供），随着产品的成熟，我们将持续完善。
-此次首次已非正式源方式释放 ruyi 操作系统安装包，仅供大家体验。后续我们依然会不定时发布更新的版本，欢迎大家关注。
