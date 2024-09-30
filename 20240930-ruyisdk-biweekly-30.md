@@ -64,8 +64,12 @@ Visual Studio Code IDE插件正式开启开发，并输出视频教程。第一�
 添加了Smrnmi扩展的支持,将riscv-gnu-toolchain仓库中的GCC版本同步更新至14.2,更新了allowlist中的测试列表
 
 ## LLVM
+本期暂无进展。
 
 ## V8
+1. 合入Maglev JIT，正式在RISCV64架构上支持Tier-2的优化编译器。
+2. 实施了若干分支优化，包括将jalr优化到jal，zicond优化，jump to table优化，call address优化。
+3. 开始支持wasm deopt特性。
 
 ## 官网
 
@@ -78,3 +82,14 @@ Visual Studio Code IDE插件正式开启开发，并输出视频教程。第一�
 - [更新了 D1 Ubuntu 24.10 beta 测试报告](https://github.com/ruyisdk/support-matrix/commit/43538a76cca483795d74e88868c1c525e8e8fae0)
 - [新增 D1/Arch Linux 测试报告](https://github.com/ruyisdk/support-matrix/commit/3d537dd9498dc79c00e771862657d2ec203fbe79)
 - [更新 VisionFive 2/ArchLinux 测试报告](https://github.com/ruyisdk/support-matrix/commit/bac9eb66d4ecda9b55812af18d16d4c1998015f4)
+
+
+## 主流Linux发行版打包ruyi
+
+RuyiSDK 的 ruyi 工具一直以来都是在官网或github release提供二进制的下载，这一操作不是很方便。为此 RuyiSDK 团队启动了完成ruyi在主流Linux发行中打包的计划，目前除了Gentoo外，已经基于Debian、Ubuntu、Fedora、openEuler等多个Linux发行版的流行版本完成了 ruyi v0.18 的打包，具体的第三方源和使用说明参考如下：
+
+* https://github.com/weilinfox/ruyi-builds
+* https://github.com/weilinfox/ruyi-bin-builds
+
+由于目前 ruyi 一直处于持续的更新中，ruyi 在 Linux 发行版中的打包也需要随着 ruyi 的升级再构建，这个目前还无法保障构建的实时性和不间断性。我们后续目标是在 RuyiSDK 稳定版本中提供基于各主流Linux发行版的安装包（以Linux发行版的第三方源方式提供），随着产品的成熟，我们将持续完善。
+此次首次已非正式源方式释放 ruyi 操作系统安装包，仅供大家体验。后续我们依然会不定时发布更新的版本，欢迎大家关注。
