@@ -6,6 +6,9 @@
 
 ## IDE
 
+Visual Studio Code IDE插件正式开启开发，并输出视频教程。第一课将于十月一日零点准时推送！为国庆献礼~
+视频可以在[此](https://space.bilibili.com/13429452)观看。欢迎点赞关注一键三连！
+
 ## GCC
 
 ## LLVM
