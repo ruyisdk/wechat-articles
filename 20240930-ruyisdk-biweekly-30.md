@@ -7,6 +7,7 @@
 ## IDE
 
 ## GCC
+添加了Smrnmi扩展的支持,将riscv-gnu-toolchain仓库中的GCC版本同步更新至14.2,更新了allowlist中的测试列表
 
 ## LLVM
 
