@@ -10,6 +10,7 @@ Visual Studio Code IDE插件正式开启开发，并输出视频教程。第一�
 视频可以在[此](https://space.bilibili.com/13429452)观看。欢迎点赞关注一键三连！
 
 ## GCC
+添加了Smrnmi扩展的支持,将riscv-gnu-toolchain仓库中的GCC版本同步更新至14.2,更新了allowlist中的测试列表
 
 ## LLVM
 
