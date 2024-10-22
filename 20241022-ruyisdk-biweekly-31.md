@@ -4,6 +4,32 @@
 
 ## 包管理器
 
+RuyiSDK 0.20 对应的包管理器版本也为 0.20.0，已于昨日发布。您可移步
+[GitHub Releases][ruyi-0.20.0-gh] 或 [ISCAS 镜像源][ruyi-0.20.0-iscas]下载体验。
+
+[ruyi-0.20.0-gh]: https://github.com/ruyisdk/ruyi/releases/tag/0.20.0
+[ruyi-0.20.0-iscas]: https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.20.0/
+
+本次 RuyiSDK 包管理器的更新主要包含了以下内容：
+
+* `ruyi self uninstall --purge` 不会遗留遥测数据了。
+* 修复了 `ruyi admin` 子命令无法调用的问题。
+* 修复了 Ruyi 虚拟环境中，向无 target tuple 前缀的命令（如一系列 LLVM 工具）的转发。
+* 应 RuyiSDK 项目需求方要求，移除了插件机制的 Starlark 沙箱。这有助于简化打包与降低开发门槛。
+
+注意：由于 Starlark 与 Python 存在细微的语义差异，在升级到 ruyi 0.20.0 之后，您必须将软件源
+`ruyi update` 到最新，才能继续使用 `ruyi` 的部分功能（如 `ruyi venv` 等）。
+
+注意：我们可能在今后的一到两个版本期间，实装 RuyiSDK 遥测机制。届时，您可自行决定是否主动上传这部分匿名统计信息，以便
+RuyiSDK 团队改进产品；您也可以选择删除先前的遥测数据，以及是否禁用遥测。您可用
+`ruyi self clean --telemetry` 删除所有的遥测信息，包括设备信息。详情请见 RuyiSDK 0.19
+的发布说明：[《RuyiSDK 双周进展汇报 第 030 期·2024年09月30日》][ruyisdk-biweekly-30]。
+
+[ruyisdk-biweekly-30]: ./20240930-ruyisdk-biweekly-30.md
+
+欢迎试用或来上游围观；您的需求是我们迭代开发的目标和动力。您也可以亲自参与
+RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查看、修改我们的[部分打包脚本](https://github.com/ruyisdk/ruyici)与[软件源仓库](https://github.com/ruyisdk/packages-index)。今后，按照本年度的开发计划，我们也将支持有权的第三方贡献者通过程序化的方式上传软件包、系统镜像等分发文件，以便利打包工作。
+
 ## IDE
 
 ## GCC
