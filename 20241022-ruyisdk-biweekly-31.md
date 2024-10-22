@@ -42,8 +42,11 @@ RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查�
 - XTHeadVector 拓展正在逐渐 rebase 到 LLVM 19.1.1 上，目前已经完成了大部分的 rebase 工作，正在进行测试
 
 ## V8
+1. 修复若干Maglev相关的CI bug。
+2. 继续完善leaptiering特性。
 
 ## 官网
+本期暂无更新。
 
 ## 操作系统支持矩阵
 
