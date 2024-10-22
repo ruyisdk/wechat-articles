@@ -10,6 +10,9 @@
 
 ## LLVM
 
+- 支持 rv64ilp32 ABI，目前可以成功编译 rv64ilp32 Linux kernel（bf63582b08）并进入用户态了（需要使用 [rv64ilp32](https://github.com/ruyisdk/llvm-project/tree/rv64ilp32) 分支下的代码），还有部分小问题正在修复中
+- XTHeadVector 拓展正在逐渐 rebase 到 LLVM 19.1.1 上，目前已经完成了大部分的 rebase 工作，正在进行测试
+
 ## V8
 
 ## 官网
