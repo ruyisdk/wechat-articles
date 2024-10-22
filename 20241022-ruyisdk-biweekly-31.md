@@ -8,6 +8,7 @@
 从零开始开发VSCode插件与Ruyi IDE插件 第2课已经上线B站。视频可以在[此](https://space.bilibili.com/13429452)观看。欢迎点赞关注一键三连！
 
 ## GCC
+支持了ssqosid扩展，正在添加P扩展的新草案支持中(p-dev分支)，提交了target_clone功能的patch支持
 
 ## LLVM
 
