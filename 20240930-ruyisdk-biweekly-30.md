@@ -5,7 +5,7 @@ RuyiSDK V0.19 版本已于今日发布。包管理器工具为 **`ruyi venv` 新
 
 此外，ruyi 工具基于主流的Linux发行版的打包工作基本完成，已经**基于Debian、Ubuntu、Fedora、openEuler、Arch Linux等多个Linux发行版的流行版本完成了 ruyi v0.18 的打包**，目前初步开放供用户尝鲜。
 
-**Eclipse 上游初步支持 RISC-V**，[每日构建镜像](https://riscv.org/blog-chinese/2024/09/eclipse-riscv64-support-upstreamed/)已经可以下载试用。
+**[Eclipse 上游初步支持 RISC-V](https://riscv.org/blog-chinese/2024/09/eclipse-riscv64-support-upstreamed/)**，[每日构建镜像](https://download.eclipse.org/eclipse/downloads/index.html)已经可以下载试用。
 Visual Studio Code IDE插件也正式开启开发，并输出视频教程以吸引更多开发者参与，第一课将于十月一日零点推送，欢迎[关注](https://space.bilibili.com/13429452)。
 
 RuyiSDK更多进展细节详见下方详情，欢迎大家试用并提供反馈和建议 ，下一个开发版本 RuyiSDK V0.20 版本将在 10 月 22 日发布。
