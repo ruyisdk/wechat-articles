@@ -1,6 +1,15 @@
 # RuyiSDK双周进展汇报  第032期·2024年11月05日
 
 ## 卷首语
+RuyiSDK包管理器 V0.21 版本已于今日发布。包管理器近期主要修复了一些测试出的缺陷，并增加兼容性支持和一些小功能的实现，进一步完善了包管理器工具；
+
+Milkv Duo SDK建设计划已经完成第一阶段的验证和缺陷整理，后续可以有针对性的进行SDK的优化了。
+
+《从零开始开发VSCode插件与Ruyi IDE插件》 第3课已经上线B站。Eclipse 插件开发当前成功的搭建并解决了依赖项的问题，eclipse-embed-cdt/eclipse-plugins下的所有插件已经可以在Eclipse IDE中以插件工程方式成功运行和调试，后续可以基于现有的嵌入式插件学习并开展相关开发工作了。
+
+操作系统支持矩阵本期有大量更新，包括了测试报告元数据、首页表格 CI、issue 模板、测试报告更新等。
+
+RuyiSDK更多进展细节详见下方详情，欢迎大家试用并提供反馈和建议 ，下一个开发版本 RuyiSDK V0.22 版本将在 11 月 19 日发布。
 
 ## 包管理器
 
@@ -35,7 +44,8 @@ RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查�
 ## IDE
 从零开始开发VSCode插件与Ruyi IDE插件 第3课已经上线B站。视频可以在[此](https://www.bilibili.com/video/BV1dxSXYzE6L/?share_source=copy_web&vd_source=ec7b3fbeca3203e5c990a2be1cbdeb2e)观看。欢迎点赞关注一键三连！
 
-Eclipse插件部分完成了基于 eclipse-embed-cdt eclipse-plugins([https://github.com/eclipse-embed-cdt/eclipse-plugins](https://github.com/eclipse-embed-cdt/eclipse-plugins/tree/master/plugins)) 开发环境的搭建和初步运行。
+Eclipse 插件开发当前成功的搭建并解决了依赖项的问题，[eclipse-embed-cdt/eclipse-plugins]([https://github.com/eclipse-embed-cdt/eclipse-plugins](https://github.com/eclipse-embed-cdt/eclipse-plugins/tree/master/plugins)下的所有插件已经可以在Eclipse IDE中以插件工程方式成功运行和调试，后续可以开展相关开发工作了。
+
 
 ## GCC
 继续推进P扩展在binutils上的草案支持，尝试更新新32位在glibc上的支持工作
@@ -49,7 +59,7 @@ Eclipse插件部分完成了基于 eclipse-embed-cdt eclipse-plugins([https://gi
 3. 实现wasm JSPI特性。
 
 ## 官网
-RuyiSDK官网博客板块中新增文章：[Eclipse 上游初步支持 RISC-V，每日构建镜像已经可以下载试用](https://ruyisdk.org/blog/2024/09/30/eclipse-riscv64)
+RuyiSDK官网博客板块中新增文章：[Eclipse 上游初步支持 RISC-V，每日构建镜像已经可以下载试用](https://ruyisdk.org/blog/2024/09/30/eclipse-riscv64) 。
 
 ## 操作系统支持矩阵
 
