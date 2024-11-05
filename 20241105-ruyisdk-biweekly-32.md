@@ -65,9 +65,6 @@ RuyiSDK官网博客板块中新增文章：[Eclipse 上游初步支持 RISC-V，
 
 本期支持矩阵有大量更新，包括：测试报告元数据、首页表格 CI、issue 模板、测试报告更新等等。
 
-<details>
-<summary> 点击展开 </summary>
-
 - CI Table gen [PR #49](https://github.com/ruyisdk/support-matrix/pull/49)
 - VisionFive2/Ubuntu Ubuntu 24.10 & Ubuntu 24.04.1 LTS [PR #50](https://github.com/ruyisdk/support-matrix/pull/50)
 - VisionFive2/Openkylin Openkylin 2.0，VisionFive2/Alpine [PR #51](https://github.com/ruyisdk/support-matrix/pull/51)
@@ -102,7 +99,7 @@ RuyiSDK官网博客板块中新增文章：[Eclipse 上游初步支持 RISC-V，
 - LPi4a/deepin: Update to 20240815 [PR #95](https://github.com/ruyisdk/support-matrix/pull/95)
 - Metadata: Add multi-language support [PR #96](https://github.com/ruyisdk/support-matrix/pull/96)
 - Duo/BuildRoot: Update to v1.1.3 [PR #98](https://github.com/ruyisdk/support-matrix/pull/98)
-</details>
+
 
 
 ## SDK
