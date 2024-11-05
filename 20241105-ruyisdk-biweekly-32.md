@@ -49,6 +49,7 @@ Eclipse插件部分完成了基于 eclipse-embed-cdt eclipse-plugins([https://gi
 3. 实现wasm JSPI特性。
 
 ## 官网
+RuyiSDK官网博客板块中新增文章：[Eclipse 上游初步支持 RISC-V，每日构建镜像已经可以下载试用](https://ruyisdk.org/blog/2024/09/30/eclipse-riscv64)
 
 ## 操作系统支持矩阵
 
@@ -92,3 +93,9 @@ Eclipse插件部分完成了基于 eclipse-embed-cdt eclipse-plugins([https://gi
 - Metadata: Add multi-language support [PR #96](https://github.com/ruyisdk/support-matrix/pull/96)
 - Duo/BuildRoot: Update to v1.1.3 [PR #98](https://github.com/ruyisdk/support-matrix/pull/98)
 </details>
+
+
+## SDK
+完成 Milkv Duo 官方SDK 的验证及缺陷总结，为后续SDK优化做准备。
+- [Milkv Duo/Duo256/DuoS C/C++ 应用编程和调试](https://gitee.com/yunxiangluo/milkv-duo/blob/master/README.md)
+- [Milkv Duo/Duo 256M/DuoS 缺陷](https://gitee.com/yunxiangluo/milkv-duo/blob/master/todo.md)
