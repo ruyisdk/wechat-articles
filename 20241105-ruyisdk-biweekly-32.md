@@ -35,7 +35,7 @@ RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查�
 ## IDE
 从零开始开发VSCode插件与Ruyi IDE插件 第3课已经上线B站。视频可以在[此](https://www.bilibili.com/video/BV1dxSXYzE6L/?share_source=copy_web&vd_source=ec7b3fbeca3203e5c990a2be1cbdeb2e)观看。欢迎点赞关注一键三连！
 
-Eclipse插件部分完成了基于 eclipse-embed-cdt [eclipse-plugins](https://github.com/eclipse-embed-cdt/eclipse-plugins) 开发环境的搭建。
+Eclipse插件部分完成了基于 eclipse-embed-cdt eclipse-plugins([https://github.com/eclipse-embed-cdt/eclipse-plugins](https://github.com/eclipse-embed-cdt/eclipse-plugins/tree/master/plugins)) 开发环境的搭建和初步运行。
 
 ## GCC
 继续推进P扩展在binutils上的草案支持，尝试更新新32位在glibc上的支持工作
