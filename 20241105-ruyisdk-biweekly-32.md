@@ -4,6 +4,34 @@
 
 ## 包管理器
 
+RuyiSDK 0.21 对应的包管理器版本也为 0.21.0，已于昨日发布。您可移步
+[GitHub Releases][ruyi-0.21.0-gh] 或 [ISCAS 镜像源][ruyi-0.21.0-iscas]下载体验。
+
+[ruyi-0.21.0-gh]: https://github.com/ruyisdk/ruyi/releases/tag/0.21.0
+[ruyi-0.21.0-iscas]: https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.21.0/
+
+本次 RuyiSDK 包管理器的更新主要包含了以下内容：
+
+* 将 RuyiSDK 软件源打包辅助命令 `ruyi admin manifest` 重命名为 `ruyi admin checksum` 了。如果您在为
+  RuyiSDK 打包，您可能需要更新您的脚本。
+* `ruyi self clean` 支持删除新闻（`ruyi news`）的阅读状态了：`ruyi self clean --news-read-status`。
+* `ruyi self clean` 也支持一次性删除 `ruyi` 产生的所有可变状态文件了：`ruyi self clean --all`。
+* 修复了 `ruyi` 测试用例与 Python 3.11 的兼容性。我们现在以 CI 形式确保 `ruyi`
+  能够在 Python 3.11、3.12、3.13 这三个版本通过测试，这将有助于保障后续 `ruyi`
+  在多种 Linux 发行版上的兼容性。
+* 新增声明了遗漏的 `typing_extensions` 依赖，以修复第三方打包。
+* 重构了 `ruyi` 子命令的声明与实现方式，后续扩展 `ruyi` 命令行功能更加方便了。
+
+注意：我们可能在今后的一到两个版本期间，实装 RuyiSDK 遥测机制。届时，您可自行决定是否主动上传这部分匿名统计信息，以便
+RuyiSDK 团队改进产品；您也可以选择删除先前的遥测数据，以及是否禁用遥测。您可用
+`ruyi self clean --telemetry` 删除所有的遥测信息，包括设备信息。详情请见 RuyiSDK 0.19
+的发布说明：[《RuyiSDK 双周进展汇报 第 030 期·2024年09月30日》][ruyisdk-biweekly-30]。
+
+[ruyisdk-biweekly-30]: ./20240930-ruyisdk-biweekly-30.md
+
+欢迎试用或来上游围观；您的需求是我们迭代开发的目标和动力。您也可以亲自参与
+RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查看、修改我们的[部分打包脚本](https://github.com/ruyisdk/ruyici)与[软件源仓库](https://github.com/ruyisdk/packages-index)。今后，按照本年度的开发计划，我们也将支持有权的第三方贡献者通过程序化的方式上传软件包、系统镜像等分发文件，以便利打包工作。
+
 ## IDE
 从零开始开发VSCode插件与Ruyi IDE插件 第3课已经上线B站。视频可以在[此](https://www.bilibili.com/video/BV1dxSXYzE6L/?share_source=copy_web&vd_source=ec7b3fbeca3203e5c990a2be1cbdeb2e)观看。欢迎点赞关注一键三连！
 
