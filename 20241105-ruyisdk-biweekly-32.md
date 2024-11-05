@@ -12,6 +12,9 @@
 ## LLVM
 
 ## V8
+1. 修复和完善TurboShaft IR、Maglev JIT 的RISC-V架构相关部分。
+2. 继续移植LeapTiering特性。
+3. 实现wasm JSPI特性。
 
 ## 官网
 
