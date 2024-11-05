@@ -10,6 +10,7 @@
 继续推进P扩展在binutils上的草案支持，尝试更新新32位在glibc上的支持工作
 
 ## LLVM
+本期暂无ruyisdk相关更新。
 
 ## V8
 1. 修复和完善TurboShaft IR、Maglev JIT 的RISC-V架构相关部分。
