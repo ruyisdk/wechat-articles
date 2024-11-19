@@ -30,18 +30,17 @@ RuyiSDK 团队改进产品；您也可以选择删除先前的遥测数据，以
 RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查看、修改我们的[部分打包脚本](https://github.com/ruyisdk/ruyici)与[软件源仓库](https://github.com/ruyisdk/packages-index)。今后，按照本年度的开发计划，我们也将支持有权的第三方贡献者通过程序化的方式上传软件包、系统镜像等分发文件，以便利打包工作。
 
 ## IDE
+"探路 Eclipse RISC-V 插件开发”系列学习日志已将前期学习总结梳理后通过 [eclipse-myplugins](https://github.com/xijing21/eclipse-myplugins) 公开分享，配套的视频后续也可访问 [B站](https://space.bilibili.com/405461644) ，欢迎更多的人加入到 Eclipse RISC-V 插件的学习和开发。
 
 ## GCC
 添加了TARGET_CLONE特性的支持，目前已合入gcc上游，继续添加P扩展的草案支持，开始进行svvptc扩展的工具链支持工作
 
-## LLVM
 
 ## V8
 1. 适配上游 硬编码实现JumpTableAssembler的 jit 功能。
 2. 在 v8 模拟器中实现 js 堆栈切换。
 3. 适配turboshaf中word32cmpare的指令选择并修复 turboshaf相关的错误。
 
-## 官网
 
 ## 操作系统支持矩阵
 
