@@ -7,6 +7,7 @@
 ## IDE
 
 ## GCC
+添加了TARGET_CLONE特性的支持，目前已合入gcc上游，继续添加P扩展的草案支持，开始进行svvptc扩展的工具链支持工作
 
 ## LLVM
 
