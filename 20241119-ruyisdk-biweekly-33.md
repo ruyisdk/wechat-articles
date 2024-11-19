@@ -11,6 +11,9 @@
 ## LLVM
 
 ## V8
+1. 适配上游 硬编码实现JumpTableAssembler的 jit 功能。
+2. 在 v8 模拟器中实现 js 堆栈切换。
+3. 适配turboshaf中word32cmpare的指令选择并修复 turboshaf相关的错误。
 
 ## 官网
 
