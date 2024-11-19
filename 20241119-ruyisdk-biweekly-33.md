@@ -1,6 +1,11 @@
 # RuyiSDK双周进展汇报  第033期·2024年11月19日
 
 ## 卷首语
+RuyiSDK包管理器 V0.22 版本已于今日发布。包管理器近期主要针对 Linux发行版的兼容性支持进行了核心依赖的调研和调整，以满足 Debian、RevyOS、RuyiOS(开展中)、Ubuntu、Fedora、deepin、Arch Linux等发行版的兼容性需求。并新增了 [RuyiSDK 的平台支持文档][ruyisdk-platform-support] 告知用户RuyiSDK的兼容性支持计划。
+
+此外支持矩阵和 SDK验证都重点针对 Milkv Duo 进行测试和更新；Eclipse插件目前通过公开学习日志等方式希望更多人能够了解并加入到Eclipse插件开发，欢迎有兴趣的开发者们加入。
+
+RuyiSDK更多进展细节详见下方详情，欢迎大家试用并提供反馈和建议 ，下一个开发版本 RuyiSDK V0.23 版本将在 12 月 3 日发布。
 
 ## 包管理器
 
