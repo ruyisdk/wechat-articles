@@ -65,4 +65,22 @@ Multiversion function的支持已合入gcc上游，继续完善P扩展的支持�
 
 ## 操作系统支持矩阵
 
+本周进行了如下测试报告的更新：
+
+| PR                                                 | Content                                                  | Status             |
+| -------------------------------------------------- | -------------------------------------------------------- | ------------------ |
+| https://github.com/ruyisdk/support-matrix/pull/105 | Metadata: add some version var                           | Merged             |
+| https://github.com/ruyisdk/support-matrix/pull/106 | duo/duo256m: Add Yocto                                   | Merged             |
+| https://github.com/ruyisdk/support-matrix/pull/108 | DuoS/RT-Thread,RT-Smart: Add results                     | Merged             |
+| https://github.com/ruyisdk/support-matrix/pull/109 | duo256m: Update Alpine & RT-Thread Smart                 | Merged             |
+| https://github.com/ruyisdk/support-matrix/pull/110 | Updated OS support for DuoS and Mars                     | Merged             |
+
+### 应用软件生态观测
+
+丁丑小队本周对 OceanBase、openGauss 和 TiDB 在 TH1520 和 SG2042 平台的运行情况进行了观测。
+
+测试报告现已公开在：https://github.com/QA-Team-lo/dbtest
+
+本次测试仍存在一些问题，如有建议也欢迎各位直接在 issue 区提出。
+
 ## SDK
