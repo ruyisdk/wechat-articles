@@ -54,6 +54,7 @@ upload_consent = 2024-12-32T25:61:00+08:00
 RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查看、修改我们的[部分打包脚本](https://github.com/ruyisdk/ruyici)与[软件源仓库](https://github.com/ruyisdk/packages-index)。今后，按照本年度的开发计划，我们也将支持有权的第三方贡献者通过程序化的方式上传软件包、系统镜像等分发文件，以便利打包工作。
 
 ## IDE
+"探路 Eclipse RISC-V 插件开发”系列学习日志更新了Embeded CDT 插件的本地构建等实践说明。详见  [eclipse-myplugins](https://github.com/xijing21/eclipse-myplugins)  和[视频](https://space.bilibili.com/405461644)，欢迎更多的人加入到 Eclipse RISC-V 插件的学习和开发。
 
 ## GCC
 Multiversion function的支持已合入gcc上游，继续完善P扩展的支持，重新提交了RISC-V Profiles的支持patch,正在沟通RV64ILP32规范格式问题。
