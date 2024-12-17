@@ -9,6 +9,11 @@
 ## GCC
 
 ## V8
+1. 移植Growable stack到RISC-V的Wasm liftoff baseline compiler和turbofan compiler
+2. 修复ICache flush在多核芯片上的bug，将flush范围从local harts改为包括remo特harts
+3. 移植和实现MutableInt32 to ScriptContext slots优化
+4. 在正则表达式编译器中添加压栈后栈内存边界检测，加强安全性
+5. 继续实现Leap tiering功能
 
 ## 操作系统支持矩阵
 
