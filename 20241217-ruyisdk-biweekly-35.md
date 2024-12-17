@@ -4,6 +4,32 @@
 
 ## 包管理器
 
+RuyiSDK 0.24 对应的包管理器版本也为 0.24.0，已于昨日发布。您可移步
+[GitHub Releases][ruyi-0.24.0-gh] 或 [ISCAS 镜像源][ruyi-0.24.0-iscas]下载体验。
+
+[ruyi-0.24.0-gh]: https://github.com/ruyisdk/ruyi/releases/tag/0.24.0
+[ruyi-0.24.0-iscas]: https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.24.0/
+
+本次 RuyiSDK 包管理器的更新主要包含了以下内容：
+
+* 更新了依赖版本。
+
+本次 RuyiSDK 软件源的更新主要包括了以下内容：
+
+* 更新了以下软件到最新版本：
+    * `board-image/armbian-pine64-star64`
+    * `board-image/buildroot-sdk-milkv-duo`
+    * `board-image/buildroot-sdk-milkv-duos-sd`
+    * `board-image/buildroot-sdk-sipeed-licheervnano`
+    * `board-image/debian-fishwaldo-sg200x-sipeed-licheervnano`
+    * `board-image/revyos-sipeed-lpi4a`
+    * `board-image/uboot-revyos-sipeed-lpi4a-16g`
+    * `board-image/uboot-revyos-sipeed-lpi4a-8g`
+    * `extra/wps-office`
+
+欢迎试用或来上游围观；您的需求是我们迭代开发的目标和动力。您也可以亲自参与
+RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查看、修改我们的[部分打包脚本](https://github.com/ruyisdk/ruyici)与[软件源仓库](https://github.com/ruyisdk/packages-index)。今后，按照本年度的开发计划，我们也将支持有权的第三方贡献者通过程序化的方式上传软件包、系统镜像等分发文件，以便利打包工作。
+
 ## IDE
 RuyiSDK IDE V0.0.1版本发布，本版本面向RuyiSDK测试人员，提供Linux系统 x86_64、riscv64、aarch64三架构的安装程序。本版本在Eclipse开源IDE基础上进行定制开发，目前除了继承了项目管理、编辑器、构建、调试等常用功能，能够支持创建、构建、调试 RISC-V 项目等。
 
