@@ -17,6 +17,11 @@ RuyiSDK IDE V0.0.1版本发布，本版本面向RuyiSDK测试人员，提供Linu
 5. 继续实现Leap tiering功能
 
 ## 操作系统支持矩阵
+1. 继续推进 packages-index 元数据同步 CI [#107](https://github.com/ruyisdk/support-matrix/pull/107)
+2. 分离 LicheeRV 和 Nezha 测试报告 [#115](https://github.com/ruyisdk/support-matrix/pull/115)
+3. 添加 BPI-F3 Alpine 测试报告 [#116](https://github.com/ruyisdk/support-matrix/pull/116)
+4. 添加 BeagleV-Ahead RevyOS 和 openSUSE 测试报告 [#117](https://github.com/ruyisdk/support-matrix/pull/117)
+5. 添加/更新 LicheeRV Nano Alpine/Buildroot/Fedora 测试报告 [#119](https://github.com/ruyisdk/support-matrix/pull/119)
 
 ## SDK
 
