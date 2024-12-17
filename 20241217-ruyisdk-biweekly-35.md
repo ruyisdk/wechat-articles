@@ -7,6 +7,8 @@
 ## IDE
 RuyiSDK IDE V0.0.1版本发布，本版本面向RuyiSDK测试人员，提供Linux系统 x86_64、riscv64、aarch64三架构的安装程序。本版本在Eclipse开源IDE基础上进行定制开发，目前除了继承了项目管理、编辑器、构建、调试等常用功能，能够支持创建、构建、调试 RISC-V 项目等。
 
+RuyiSDK IDE V0.0.1 下载地址为：https://mirror.iscas.ac.cn/ruyisdk/ide/0.0.1/  请按照设备环境选择合适的安装包。
+
 ## GCC
 向GCC上游重新发送了Profiles支持，目前正在讨论实现的规范细节中，开始支持Zilsd/Zclsd扩展
 
