@@ -7,6 +7,11 @@ RuyiSDK包管理器针对兼容性进一步优化更新了依赖版本。RuyiSDK
 
 GCC向上游重新发送了Profiles支持，目前正在讨论实现的规范细节中，并开始支持Zilsd/Zclsd扩展。v8部分也有较多性能优化、安全性优化相关的更新。
 
+此外，PLCT实验室分别与矽速科技、群芯闪耀达成合作，将LicheePi 4A和Milk-V Meles的软件生态并入RuyiSDK项目，共同推动RISC-V开发者生态的建设。相关新闻如下：
+1. [矽速科技与PLCT实验室联合宣布：LicheePi 4A 软件生态并入 RuyiSDK 项目，共建 RISC-V 开发者生态](https://mp.weixin.qq.com/s/gp5dxM_OqZLE6hGa1djc3A)
+2. [群芯闪耀与PLCT实验室联合宣布：Milk-V Meles 软件生态并入 RuyiSDK 项目，共建 RISC-V 开发者生态](https://mp.weixin.qq.com/s/mun-iFtxs8Mozh6Jn5KD7Q)
+
+
 RuyiSDK更多进展细节详见下方详情，欢迎大家试用并提供反馈和建议 ，下一个开发版本 RuyiSDK V0.25 版本将在 12 月 31 日发布。
 
 ## 包管理器
