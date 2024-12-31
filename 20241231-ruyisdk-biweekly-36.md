@@ -11,6 +11,10 @@ RuyiSDK IDE 目前针对 milkv duo 开发板进行了应用示例环境搭建和
 支持矩阵项目一如既往的发现镜像的更新情况并进行验证，本期支持矩阵有3类设备有镜像添加或更新；
 gcc在Zilsd/Zclsd扩展支持和Profiles命名规范上取得很大进展；V8 增加了对 Embedded Object 的 reloc 支持，减少加载此类对象的指令数量，同时合入 Syntacore 对浮点数四舍五入的指令生成的优化。
 
+**面向 TH1520 的 RuyiSDK 操作系统发了新版本，内核从 5.10 升级到了 6.6，meles 和 lpi4a 升级后的系统镜像已发布**：
+- meles最新镜像下载地址：https://mirror.iscas.ac.cn/revyos/extra/images/meles/20241229/
+- lpi4a最新镜像下载地址：https://mirror.iscas.ac.cn/revyos/extra/images/lpi4a/20241229/
+
 RuyiSDK更多进展细节详见下方详情，欢迎大家试用并提供反馈和建议。RuyiSDK 在2024年度一直保持着双周滚动的频率，在2025年度我们将持续按照这个频率快速迭代，下一个开发版本将在 2025 年 1 月 14 日发布。
 
 
