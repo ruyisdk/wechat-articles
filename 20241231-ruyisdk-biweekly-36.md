@@ -7,6 +7,7 @@
 ## IDE
 
 ## GCC
+提交了Zilsd/Zclsd扩展支持的patch，补充了相应的测试用例。开始更新Profiles命名规范，同步LLVM已有的实现方式。
 
 ## V8
 
