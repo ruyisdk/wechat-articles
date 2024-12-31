@@ -5,6 +5,9 @@
 ## 包管理器
 
 ## IDE
+RuyiSDK IDE V0.0.2 版本发布，下载地址为：https://mirror.iscas.ac.cn/ruyisdk/ide/0.0.2/ 请按照设备环境选择合适的安装包。
+V0.0.2 主要针对 Milk-V Duo example 示例在 RuyiSDK IDE 中的编译器安装配置、构建、目标程序传输、运行等进行验证并创建使用文档。在 RuyiSDK IDE 的 Welcome 中定制了 RuyiSDK 和 Milk-V Duo 的文档链接。
+
 
 ## GCC
 提交了Zilsd/Zclsd扩展支持的patch，补充了相应的测试用例。开始更新Profiles命名规范，同步LLVM已有的实现方式。
