@@ -1,6 +1,18 @@
 # RuyiSDK双周进展汇报  第036期·2024年12月31日
 
 ## 卷首语
+今天是2024年度的最后一天，在这个辞旧迎新的时刻，我谨代表RuyiSDK项目团队，向所有项目的贡献者、参与者表示最诚挚的感谢！衷心感谢大家的关注和支持，祝愿各位元旦快乐，万事如意！
+
+这一期，RuyiSDK包管理器 V0.25 、RuyiSDK IDE V0.0.2 版本已发布。
+
+RuyiSDK包管理器重点完善遥测配置、软件源包版本规范化，并修复了一些已知的问题；
+RuyiSDK IDE 目前针对 milkv duo 开发板进行了应用示例环境搭建和开发运行，并将相关文档产出集成定制到 IDE Welcome 中；
+
+支持矩阵项目一如既往的发现镜像的更新情况并进行验证，本期支持矩阵有3类设备有镜像添加或更新；
+gcc在Zilsd/Zclsd扩展支持和Profiles命名规范上取得很大进展；V8 增加了对 Embedded Object 的 reloc 支持，减少加载此类对象的指令数量，同时合入 Syntacore 对浮点数四舍五入的指令生成的优化。
+
+RuyiSDK更多进展细节详见下方详情，欢迎大家试用并提供反馈和建议。RuyiSDK 在2024年度一直保持着双周滚动的频率，在2025年度我们将持续按照这个频率快速迭代，下一个开发版本将在 2025 年 1 月 14 日发布。
+
 
 ## 包管理器
 
@@ -22,9 +34,9 @@ RuyiSDK 0.25 对应的包管理器版本也为 0.25.0，已于今日发布。您
 RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查看、修改我们的[部分打包脚本](https://github.com/ruyisdk/ruyici)与[软件源仓库](https://github.com/ruyisdk/packages-index)。今后，按照本年度的开发计划，我们也将支持有权的第三方贡献者通过程序化的方式上传软件包、系统镜像等分发文件，以便利打包工作。
 
 ## IDE
-RuyiSDK IDE V0.0.2 版本发布，下载地址为：https://mirror.iscas.ac.cn/ruyisdk/ide/0.0.2/ 请按照设备环境选择合适的安装包。
-V0.0.2 主要针对 Milk-V Duo example 示例在 RuyiSDK IDE 中的编译器安装配置、构建、目标程序传输、运行等进行验证并创建使用文档。在 RuyiSDK IDE 的 Welcome 中定制了 RuyiSDK 和 Milk-V Duo 的文档链接。
-
+RuyiSDK IDE V0.0.2 版本发布，下载地址为：https://mirror.iscas.ac.cn/ruyisdk/ide/0.0.2/ 请按照设备环境选择合适的安装包。V0.0.2 主要进展如下：
+- 针对 Milk-V Duo example 示例在 RuyiSDK IDE 中的编译器安装配置、构建、目标程序传输、运行等进行验证并创建使用文档。
+- 在 RuyiSDK IDE 的 Welcome 中定制了 RuyiSDK 和 Milk-V Duo 的文档链接。
 
 ## GCC
 提交了Zilsd/Zclsd扩展支持的patch，补充了相应的测试用例。开始更新Profiles命名规范，同步LLVM已有的实现方式。
@@ -43,4 +55,3 @@ V0.0.2 主要针对 Milk-V Duo example 示例在 RuyiSDK IDE 中的编译器安�
 | https://github.com/ruyisdk/support-matrix/pull/125 | m0sense: Add RT-Thread                           | Merged |
 | https://github.com/ruyisdk/support-matrix/pull/126 | BPI-F3: bianbu update to 2.0.4                   | Merged |
 
-## SDK
