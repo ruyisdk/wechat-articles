@@ -12,7 +12,7 @@ V0.0.3 主要修改和更新了 RuyiSDK IDE 的 Welcome 中的 RuyiSDK 相关引
 1. 增加了 Run as Remote Application 方式的运行；
 2. 增加了 Debug 示例和基于 Terminal 和 Debug as Remote Application 方式调试说明；
 3. 进一步明确和优化了编译参数。
-4. 整理 milkv duo sdk 改进需求：milkv duo镜像需要增加 sftp、gdbserver 程序，方便在开发时进行文件传输和调试支持。
+4. 整理 milkv duo sdk 改进需求：milkv duo镜像需要增加 sftp-server、gdbserver 程序，方便在开发时进行文件传输和调试支持。
 
 ## GCC
 更新了Profiles实现规则，在GLIBC中添加了IFUNC符号用于调用，更新了新32位的GDB支持，开始启动GDB SIM的调试工作。
