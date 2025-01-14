@@ -7,8 +7,10 @@
 ## IDE
 
 ## GCC
-更新了Profiles实现规则，在GLIBC中添加了IFUNC符号用于调用，更新了新32位的GDB支持，开始启动GDB SIM的调试工作
+更新了Profiles实现规则，在GLIBC中添加了IFUNC符号用于调用，更新了新32位的GDB支持，开始启动GDB SIM的调试工作。
 
 ## V8
+1. Refactor Relocation支持部分的代码。
+2. 修复 strict 模式下的构建错误问题。
 
 ## 操作系统支持矩阵
