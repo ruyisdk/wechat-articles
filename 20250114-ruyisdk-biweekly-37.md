@@ -22,3 +22,13 @@ V0.0.3 主要修改和更新了 RuyiSDK IDE 的 Welcome 中的 RuyiSDK 相关引
 2. 修复 strict 模式下的构建错误问题。
 
 ## 操作系统支持矩阵
+
+- [Duo/Buildroot: Bump to v1.1.4](https://github.com/ruyisdk/support-matrix/pull/127)
+- [CI: Add NixOS and DietPi in system parser matadata](https://github.com/ruyisdk/support-matrix/pull/128)
+- [CI: Fix: bump Python version](https://github.com/ruyisdk/support-matrix/pull/130)
+- [Licheepi4A/openKylin: Bump version to v2.0-sp1](https://github.com/ruyisdk/support-matrix/pull/131)
+- [LicheePi4A/RevyOS(main): update revyos 20241229](https://github.com/ruyisdk/support-matrix/pull/133)
+- [LicheePi4A/openKylin: fix broken link](https://github.com/ruyisdk/support-matrix/pull/135)
+- [LicheePi 4A/openEuler: Bump version to 24.03 LTS-SP1](https://github.com/ruyisdk/support-matrix/pull/136)
+- [LicheePi4A/RevyOS: bump to 20250110](https://github.com/ruyisdk/support-matrix/pull/137)
+- [DuoS/Buildroot: Bump version to v2.0.0, change repo url](https://github.com/ruyisdk/support-matrix/pull/138)
