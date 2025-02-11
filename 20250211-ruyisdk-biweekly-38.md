@@ -47,3 +47,8 @@ RuyiSDK Eclipse Plugins 插件 v0.0.1 发布：
 ## V8
 
 ## 操作系统支持矩阵
+
+- [CI: Fix restrict field](https://github.com/ruyisdk/support-matrix/pull/156)
+- [duo/duo256m: Add NixOS](https://github.com/ruyisdk/support-matrix/pull/157)
+- [Refactor Tools](https://github.com/ruyisdk/support-matrix/pull/158)
+- [Updator: Allow bootstrap a new image, Add pulgin to update images from mirrorsite](https://github.com/ruyisdk/support-matrix/pull/159)
