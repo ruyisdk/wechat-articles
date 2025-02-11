@@ -31,6 +31,15 @@ RuyiSDK 0.27 对应的包管理器版本也为 0.27.0，已于昨日发布。您
 RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查看、修改我们的[部分打包脚本](https://github.com/ruyisdk/ruyici)与[软件源仓库](https://github.com/ruyisdk/packages-index)。今后，按照本年度的开发计划，我们也将支持有权的第三方贡献者通过程序化的方式上传软件包、系统镜像等分发文件，以便利打包工作。
 
 ## IDE
+RuyiSDK Eclipse Plugins 插件 v0.0.1 发布：
+- 新增 RuyiSDK 菜单及官网访问命令。
+
+插件使用说明：
+1. 下载 [org.ruyisdk.ide_0.0.1.jar](https://github.com/xijing21/eclipse-plugins/releases/download/v0.0.1/org.ruyisdk.ide_0.0.1.jar)。
+2. 访问 https://mirror.iscas.ac.cn/ruyisdk/ide/0.0.3/ 下载 ruyisdk-0.0.3 并解压。
+3. 将 org.ruyisdk.ide_0.0.1.jar 放入 ruyisdk ide 的 dropins 目录。
+4. 执行 ./ruyisdk 重启 IDE。
+5. 通过菜单栏 RuyiSDK > Official Website 访问官网。
 
 ## GCC
 更新了P扩展草案的工具链支持至0.14版本，更新了Profiles的规范格式说明。
