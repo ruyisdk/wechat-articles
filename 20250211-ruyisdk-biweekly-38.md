@@ -39,8 +39,9 @@ RuyiSDK 0.27 对应的包管理器版本也为 0.27.0，已于昨日发布。您
 RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查看、修改我们的[部分打包脚本](https://github.com/ruyisdk/ruyici)与[软件源仓库](https://github.com/ruyisdk/packages-index)。今后，按照本年度的开发计划，我们也将支持有权的第三方贡献者通过程序化的方式上传软件包、系统镜像等分发文件，以便利打包工作。
 
 ## IDE
-RuyiSDK Eclipse Plugins 插件 v0.0.1 发布：
-- 新增 RuyiSDK 菜单及官网访问命令。
+RuyiSDK IDE 为了提升易用性，目前以新插件的方式进行了功能扩展。 RuyiSDK IDE Plugins 插件 v0.0.1 发布，新增 RuyiSDK 菜单及官网访问命令。
+
+目前插件整合到RuyiSDK IDE 的工程工作还在完善，当前需要手动将插件拷贝到 RuyiSDK IDE dropins目录使用，未来我们会完善相关工程，提供更加便捷的安装和使用方式。当前您可以参考下方的使用说明来安装和使用。
 
 插件使用说明：
 1. 下载 [org.ruyisdk.ide_0.0.1.jar](https://github.com/xijing21/eclipse-plugins/releases/download/v0.0.1/org.ruyisdk.ide_0.0.1.jar)。
