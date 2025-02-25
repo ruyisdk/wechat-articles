@@ -31,9 +31,18 @@ RuyiSDK 0.28 对应的包管理器版本也为 0.28.0，已于今日发布。您
 RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查看、修改我们的[部分打包脚本](https://github.com/ruyisdk/ruyici)与[软件源仓库](https://github.com/ruyisdk/packages-index)。今后，按照本年度的开发计划，我们也将支持有权的第三方贡献者通过程序化的方式上传软件包、系统镜像等分发文件，以便利打包工作。
 
 ## IDE
-继续 RuyiSDK IDE Plugins 插件功能开发：
-- 增加启动时执行 `ruyi update` 命令，并展示未读的 `ruyi news` 信息
-- 实现关于缓存/配置路径的 RuyiPaths 工具类
+- 实现 Eclipse 插件的三种导出和安装方式，输出[操作文档](https://github.com/xijing21/eclipse-myplugins/blob/main/chapter2-pluginIntro/2.4-exportAndInstall.md)
+- 继续 RuyiSDK IDE Plugins 插件功能开发：
+  - 增加启动时执行 `ruyi update` 命令，并展示未读的 `ruyi news` 信息（基于接口协议）
+  - 实现关于缓存/配置路径的 RuyiPaths 工具类
+  
+  插件使用说明：
+  
+  0. 环境要求：要求环境中已经安装好了 ruyi ,您可以参考[文档](https://ruyisdk.org/docs/Package-Manager/installation)安装
+  1. 下载 [org.ruyisdk.ide_0.0.2.jar](https://github.com/xijing21/eclipse-plugins/releases/download/v0.0.2/org.ruyisdk.ide_0.0.2.jar)。
+  2. 访问 https://mirror.iscas.ac.cn/ruyisdk/ide/0.0.3/ 下载 ruyisdk-0.0.3 并解压。
+  3. 将 org.ruyisdk.ide_0.0.2.jar 放入 ruyisdk ide 的 dropins 目录。
+  4. 执行 ./ruyisdk 重启 IDE。启动后会自动弹出未读 News。
 
 ## GCC
 
