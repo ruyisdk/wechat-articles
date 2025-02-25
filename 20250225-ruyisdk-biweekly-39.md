@@ -4,6 +4,32 @@
 
 ## 包管理器
 
+RuyiSDK 0.28 对应的包管理器版本也为 0.28.0，已于今日发布。您可移步
+[GitHub Releases][ruyi-0.28.0-gh] 或 [ISCAS 镜像源][ruyi-0.28.0-iscas]下载体验。
+
+[ruyi-0.28.0-gh]: https://github.com/ruyisdk/ruyi/releases/tag/0.28.0
+[ruyi-0.28.0-iscas]: https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.28.0/
+
+本次 RuyiSDK 包管理器的更新主要包含了以下内容：
+
+* 首次运行不依赖软件源的命令时，不会自动拉取软件源仓库了。
+* `ruyi list` 现在支持基本的过滤查询了：使用 `--category-is` 查询某个分类下的软件包，使用
+  `--name-contains` 查询名称中包含特定字样的软件包。
+* 考虑到软件包的数量持续增加，不带任何参数的 `ruyi list` 不再受到支持。如果您有依赖先前行为的脚本等，请按照提示修改使用方式。
+
+本次 RuyiSDK 软件源的更新主要包含了以下内容：
+
+* 新增了以下软件包：
+    * `source/wiringx`: wiringX 项目的官方源码。wiringX 是模块化的 GPIO 支持组件。
+* 更新了以下软件包：
+    * `board-image/bianbu-bpi-f3`
+    * `board-image/revyos-milkv-meles`
+    * `board-image/revyos-sg2042-milkv-pioneer`
+* 修复了 `board-image/revyos-milkv-meles` 的 `boot` 分区的文件类型标记。
+
+欢迎试用或来上游围观；您的需求是我们迭代开发的目标和动力。您也可以亲自参与
+RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查看、修改我们的[部分打包脚本](https://github.com/ruyisdk/ruyici)与[软件源仓库](https://github.com/ruyisdk/packages-index)。今后，按照本年度的开发计划，我们也将支持有权的第三方贡献者通过程序化的方式上传软件包、系统镜像等分发文件，以便利打包工作。
+
 ## IDE
 
 ## GCC
