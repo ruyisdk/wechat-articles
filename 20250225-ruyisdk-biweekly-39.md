@@ -1,4 +1,4 @@
-# RuyiSDK双周进展汇报  第039期·2025年02月25日
+# RuyiSDK 双周进展汇报  第 039 期·2025 年 02 月 25 日
 
 ## 卷首语
 
@@ -46,7 +46,7 @@ RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查�
 
 ## GCC
 
-实现了Xqc系列自定义厂商扩展支持，等待上游review中，继续维护p扩展实现，修复了工具链构建中的一些问题。
+实现了 Xqc 系列自定义厂商扩展支持，等待上游 review 中，继续维护 p 扩展实现，修复了工具链构建中的一些问题。
 
 ## LLVM
 
@@ -56,8 +56,22 @@ RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查�
 - 在 19.1.6 版本中修复了 MC 汇编器生成部分指令会出现编译器内部错误的问题
 
 ## V8
-- Review并合入 Leaptiering 支持
+- Review 并合入 Leaptiering 支持
 - 添加模拟器中对 fp16 类型指令的模拟例程
 - 继续增加 Maglev 的特性支持
   
 ## 操作系统支持矩阵
+
+- [meles/revyos: update to 20250123](https://github.com/ruyisdk/support-matrix/pull/160)
+- [CI: Fix: Bump python version](https://github.com/ruyisdk/support-matrix/pull/161)
+- [Updator: Add milkv-meles, milkv pioneer revyos](https://github.com/ruyisdk/support-matrix/pull/162)
+- [Fix: exclude u-boot from boot](https://github.com/ruyisdk/support-matrix/pull/164)
+- [Refactor: Use ruyi's minifest defination](https://github.com/ruyisdk/support-matrix/pull/165)
+- [Updator: Add plugin for bpi-f3 ok and pioneer ok](https://github.com/ruyisdk/support-matrix/pull/166)
+- [Megrez: update RockOS 20250219](https://github.com/ruyisdk/support-matrix/pull/167)
+- [VisionFive2,LicheeRV Dock: update to Ubuntu 24.04.2 LTS](https://github.com/ruyisdk/support-matrix/pull/168)
+- [Add TTGO T-Display-GD32 board & Add μC/OS-II](https://github.com/ruyisdk/support-matrix/pull/169)
+- [Icicle: Ubuntu 24.04.2 LTS](https://github.com/ruyisdk/support-matrix/pull/171)
+- [PIC64GX: Ubuntu 24.04.2](https://github.com/ruyisdk/support-matrix/pull/172)
+- [Mars: Ubuntu 24.04.2](https://github.com/ruyisdk/support-matrix/pull/173)
+- [Unmatched: Ubuntu 24.04.2](https://github.com/ruyisdk/support-matrix/pull/174)
