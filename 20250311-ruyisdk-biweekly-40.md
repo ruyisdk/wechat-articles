@@ -7,7 +7,7 @@
 ## IDE
 
 ## GCC
-更新了p扩展寄存器对指令的工具链支持，正在实现RVA23S的有关特权指令扩展中。
+- 更新了p扩展寄存器对指令的工具链支持，正在实现RVA23S的有关特权指令扩展中。
 
 ## LLVM
 
@@ -15,6 +15,10 @@
 - 在 17.1.6 版本中新增部分 XTHeadVector intrinsic 的操作数范围检查，和 RVV 1.0 行为对齐
 
 ## V8
+- 在陆续添加TurborShaft IR支持后，删除TurboFan SON IR相关的旧代码
+- 审核类型转换优化、32bit比较优化patch（来自syntacore）
+- 实现Wasm JSPI功能中沙盒内的chain of stacks功能
+- 删除RISCV指令集不支持的ByteSwap 代码生成支持
 
 ## 操作系统支持矩阵
 
