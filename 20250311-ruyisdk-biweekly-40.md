@@ -23,6 +23,14 @@ RuyiSDK 0.29 对应的包管理器版本也为 0.29.0，已于今日发布。您
 RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查看、修改我们的[部分打包脚本](https://github.com/ruyisdk/ruyici)与[软件源仓库](https://github.com/ruyisdk/packages-index)。今后，按照本年度的开发计划，我们也将支持有权的第三方贡献者通过程序化的方式上传软件包、系统镜像等分发文件，以便利打包工作。
 
 ## IDE
+- RuyiSDK IDE Plugins 插件，新增 RISC-V 开发板管理功能，支持添加、编辑、删除及设置默认开发板。
+
+   插件使用说明：
+   1. 下载 [org.ruyisdk.ide_0.0.3.jar](https://github.com/xijing21/eclipse-plugins/releases/download/v0.0.3/org.ruyisdk.ide_0.0.3.jar)。
+   2. 访问 https://mirror.iscas.ac.cn/ruyisdk/ide/0.0.3/ 下载 ruyisdk-0.0.3 并解压。
+   3. 将 org.ruyisdk.ide_0.0.3.jar 放入 ruyisdk ide 的 dropins 目录。
+   4. 执行 ./ruyisdk 重启 IDE。
+   5. 启动后在菜单栏点击 "RuyiSDK" > "Open Board Manager" 即可打开 "RISC-V Board Manager" View 进行添加、编辑、删除及设置默认开发板等操作。
 
 ## GCC
 - 更新了p扩展寄存器对指令的工具链支持，正在实现RVA23S的有关特权指令扩展中。
