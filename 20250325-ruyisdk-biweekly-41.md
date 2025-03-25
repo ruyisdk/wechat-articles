@@ -1,6 +1,26 @@
 # RuyiSDK 双周进展汇报  第 041 期·2025 年 03 月 25 日
 
 ## 卷首语
+大家好，RuyiSDK 项目组为了更好地帮助开发者掌握 RuyiSDK 的使用，让开发团队能更加深入了解大家的需求从而改进产品，我们诚挚邀请您参加 RuyiSDK Office Hours 线上会议（类似于RISC-V技术答疑时间）。我们期待与您通过线上会议的方式相聚，共同探讨如何提升 RuyiSDK 的用户体验。会议内容将主要围绕 RuyiSDK 的使用、问题与缺陷、改进建议等话题进行交流，同时也欢迎大家讨论与 RISC-V 相关的任何问题。
+
+会议安排如下：
+- 会议频率：每两周一次，默认使用中文沟通 
+- 首次会议时间：2025年3月27日下午3:00（新加坡时间） 
+- 加入会议：请点击以下链接参与 Zoom 会议：https://us02web.zoom.us/j/82424890125?pwd=GYiiMlWRzdatEgJbA1dCerlQIL41IE.1
+- 会议 ID：824 2489 0125
+- 密码：233233
+- 请下载并导入以下的 iCalendar (.ics) 文件到您的日历系统：
+ https://us02web.zoom.us/meeting/tZYpde2gpzsrGNELFFQsiXxsuF4htOrGV-wi/ics?icsToken=DNPKYCH23urOsaw6vwAALAAAAFpgDa4z_GQJOIDExsX09zeLWMjANUsgJt1_BJdOEWqW3bxsq1z4d0mPa2DBhhGcC-KVmYeQCvtTcF_dpjAwMDAwMQ
+
+我们期待在会议中与您交流，共同推动 RuyiSDK 的发展！
+
+参考链接：
+- RuyiSDK ： https://ruyisdk.org/
+- RevyOS ：https://docs.revyos.dev/  
+- PLCT Lab ：https://plctlab.org/
+
+下一个开发版本预计将在 2025 年 4 月 8 日发布。感谢您一直以来的支持与关注，如有任何问题，欢迎[联系我们](https://ruyisdk.org/contact/#%E8%81%94%E7%B3%BB%E6%88%91%E4%BB%AC)，您的反馈是我们前进的动力！
+
 
 ## 包管理器
 
