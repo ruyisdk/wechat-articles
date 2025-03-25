@@ -16,6 +16,16 @@
 - 在 17.1.6 中补全 vector integer merge 和 vector floating-point merge 相关的内建指令。
 
 ## V8
+- 继续增加 WASM JSPI 的支持功能： 
+  - in-sandbox chain of stacks 
+  - 删除 jump buffer 外部指针
+- 增加 C++ 垃圾回收模块的 Scan simulator stack and registers 功能
+- 修复 WASM OOB Trap Handler 特性中，Fault Address Register 没有在 mcontext 中被正确设置的 bug
+- 审阅并合入 syntacore 的2个 patch ：
+  - 优化32位比较操作代码生成 
+  - 类型转换优化
+- 修复非对齐 load/store 的代码生成中临时寄存器不够用的问题
+- 在指令选择阶段内联 Adapter's DeoptimizeView
 
 ## 操作系统支持矩阵
 
