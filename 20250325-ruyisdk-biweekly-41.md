@@ -5,6 +5,9 @@
 ## 包管理器
 
 ## IDE
+RuyiSDK IDE 近期正在实现基于包管理器（ruyi list）的软件包资源管理，功能开发中。
+
+此外，RuyiSDK IDE 正在招聘插件开发实习生，欢迎有兴趣的小伙伴加入开发团队，详情参考 [J159 RuyiSDK IDE 开发实习生](https://github.com/lazyparser/weloveinterns/blob/master/open-internships.md) ，期待您的加入。
 
 ## GCC
 提交了Ssnpm, Smnpm与Smmpm 的工具链支持，在社区中对玄铁C系列RISC-V芯片添加了mcpu选项支持
