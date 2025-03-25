@@ -7,6 +7,7 @@
 ## IDE
 
 ## GCC
+提交了Ssnpm, Smnpm与Smmpm 的工具链支持，在社区中对玄铁C系列RISC-V芯片添加了mcpu选项支持
 
 ## LLVM
 
