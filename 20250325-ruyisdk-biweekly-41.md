@@ -24,6 +24,25 @@
 
 ## 包管理器
 
+RuyiSDK 0.30 对应的包管理器版本也为 0.30.0，已于今日发布。您可移步
+[GitHub Releases][ruyi-0.30.0-gh] 或 [ISCAS 镜像源][ruyi-0.30.0-iscas]下载体验。
+
+[ruyi-0.30.0-gh]: https://github.com/ruyisdk/ruyi/releases/tag/0.30.0
+[ruyi-0.30.0-iscas]: https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.30.0/
+
+本次 RuyiSDK 包管理器的更新主要包含了以下内容：
+
+* 修复了 `ruyi list --category-contains` 不工作的问题。
+* 修复了全新安装 `ruyi` 之后直接进行 `ruyi install` 会崩溃的问题。
+* 软件源格式更新：
+    * 基于目前的设备安装器配置数据，新增实验性的结构化设备型号描述数据库，初期支持为每种设备型号描述其 CPU 与微架构能力。
+* 工程化迭代：
+    * 将 AArch64 架构的构建任务迁移至 GitHub Actions 公开免费提供的实例上，以降低 RuyiSDK 团队的维护成本。
+    * 修复了 CI 开源许可证检查任务。
+
+欢迎试用或来上游围观；您的需求是我们迭代开发的目标和动力。您也可以亲自参与
+RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查看、修改我们的[部分打包脚本](https://github.com/ruyisdk/ruyici)与[软件源仓库](https://github.com/ruyisdk/packages-index)。今后，按照本年度的开发计划，我们也将支持有权的第三方贡献者通过程序化的方式上传软件包、系统镜像等分发文件，以便利打包工作。
+
 ## IDE
 RuyiSDK IDE 近期正在实现基于包管理器（ruyi list）的软件包资源管理，功能开发中。
 
