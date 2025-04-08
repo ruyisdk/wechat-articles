@@ -18,3 +18,14 @@
 - 优化后端 opcde , 删除 RiscvCtz/RiscvPopcnt
 
 ## 操作系统支持矩阵
+
+- [BPI-F3/openHarmony: Fix date](https://github.com/ruyisdk/support-matrix/pull/212)
+- [Duo/OpenWrt: new test report](https://github.com/ruyisdk/support-matrix/pull/213)
+- [Duo/OpenWrt: remove others.yml](https://github.com/ruyisdk/support-matrix/pull/214)
+- [Add Fedora and update Debian test reports for Mars; fix some typos.](https://github.com/ruyisdk/support-matrix/pull/216)
+- [Star64/Armbian: update link](https://github.com/ruyisdk/support-matrix/pull/235)
+- [Ports documentation from oscompare](https://github.com/ruyisdk/support-matrix/pull/163)
+- [LicheePi4A: add openEuler 25.03](https://github.com/ruyisdk/support-matrix/pull/237)
+- 网页前端 [VeRForTe](https://github.com/panglars/VeRForTe):
+  - 新增：Others
+  - 支持 GitHub Markdown 语法
