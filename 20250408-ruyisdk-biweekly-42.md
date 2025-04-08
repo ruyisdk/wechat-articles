@@ -1,6 +1,25 @@
 # RuyiSDK 双周进展汇报  第 042 期·2025 年 04 月 08 日
 
 ## 卷首语
+大家好，RuyiSDK 近期在持续迭代的基础上，也在用户支持上做出更多努力。围绕 RuyiSDK 的使用、问题与缺陷、改进建议等在线会议 RuyiSDK Office Hours 本周四将迎来第二次会议，欢迎您的关注与加入。
+
+第2次RuyiSDK Office Hours会议安排如下：
+- 会议频率：每两周一次，默认使用中文沟通 
+- 首次会议时间：2025年4月10日下午3:00（新加坡时间） 
+- 加入会议：请点击以下链接参与 Zoom 会议：https://us02web.zoom.us/j/82424890125?pwd=GYiiMlWRzdatEgJbA1dCerlQIL41IE.1
+- 会议 ID：824 2489 0125
+- 密码：233233
+- 请下载并导入以下的 iCalendar (.ics) 文件到您的日历系统：
+ https://us02web.zoom.us/meeting/tZYpde2gpzsrGNELFFQsiXxsuF4htOrGV-wi/ics?icsToken=DNPKYCH23urOsaw6vwAALAAAAFpgDa4z_GQJOIDExsX09zeLWMjANUsgJt1_BJdOEWqW3bxsq1z4d0mPa2DBhhGcC-KVmYeQCvtTcF_dpjAwMDAwMQ
+
+我们期待在会议中与您交流，共同推动 RuyiSDK 的发展！
+
+参考链接：
+- RuyiSDK ： https://ruyisdk.org/
+- RevyOS ：https://docs.revyos.dev/  
+- PLCT Lab ：https://plctlab.org/
+
+下一个开发版本预计将在 2025 年 4 月 22 日发布。感谢您一直以来的支持与关注，如有任何问题，欢迎[联系我们](https://ruyisdk.org/contact/#%E8%81%94%E7%B3%BB%E6%88%91%E4%BB%AC)，您的反馈是我们前进的动力！
 
 ## 包管理器
 
@@ -26,8 +45,8 @@ RuyiSDK 0.31 对应的包管理器版本也为 0.31.0，已于今日发布。您
 RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查看、修改我们的[部分打包脚本](https://github.com/ruyisdk/ruyici)与[软件源仓库](https://github.com/ruyisdk/packages-index)。今后，按照本年度的开发计划，我们也将支持有权的第三方贡献者通过程序化的方式上传软件包、系统镜像等分发文件，以便利打包工作。
 
 ## IDE
-RuyiSDK IDE 近期正在优化启动功能，增加包管理器的安装检查、安装、版本检查、升级等功能；及执行过程中的执行状态显示；
-RuyiSDK IDE 正在招聘插件开发实习生，详情参考 J159 RuyiSDK IDE 开发实习生 ，欢迎加入。
+- RuyiSDK IDE 近期正在优化启动功能，增加包管理器的安装检查、安装、版本检查、升级等功能；及执行过程中的执行状态显示；
+- RuyiSDK IDE 正在招聘插件开发实习生，详情参考 [J159 RuyiSDK IDE 开发实习生](https://github.com/lazyparser/weloveinterns/blob/master/open-internships.md)  ，欢迎加入。
 
 ## GCC
 - 修复了zicbop 的回归测试问题，正在实现 zvfbfa 扩展支持。
