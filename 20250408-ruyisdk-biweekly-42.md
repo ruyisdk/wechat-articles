@@ -13,5 +13,7 @@
 - 在 17.1.6 版本中修复了 vector reduction 内建指令的指令选择问题。
 
 ## V8
+- Atomic views 适配 Tuboshaft IR；修复trap handler崩溃的问题
+- 优化后端 opcde , 删除 RiscvCtz/RiscvPopcnt
 
 ## 操作系统支持矩阵
