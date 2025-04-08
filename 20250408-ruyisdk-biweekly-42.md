@@ -40,6 +40,21 @@ RuyiSDK 0.31 对应的包管理器版本也为 0.31.0，已于今日发布。您
 * 工程化迭代：
     * 为避免 CI 物理机资源的临时下线等原因影响到发版，将 RISC-V 架构的构建任务也暂时迁移至 GitHub Actions 公开免费提供的实例上了。
     * 将构建 `ruyi` 的单文件分发版本所用的 Python 版本升级到了 3.13.2。
+      
+本次 RuyiSDK 软件源的更新主要包含了以下内容：
+* 更新了 `toolchain/gnu-plct` 与 `toolchain/gnu-upstream` 两种工具链包到 0.20250401.0。敬请试用！
+    * 其中，`gnu-plct` 工具链套件提供的软件版本如下：
+       * binutils 2.42，PLCT 维护分支
+       * gcc 14.1.0，PLCT 维护分支，含 P 扩展与 RV64ILP32 ABI 支持
+       * gdb 16.0，PLCT 维护分支
+       * glibc 2.40，PLCT 维护分支
+       * linux-headers 6.13
+    * `gnu-upstream` 工具链套件提供的软件版本如下：
+       * binutils 2.43.1
+       * gcc 14.2.0
+       * gdb 16.2
+       * glibc 2.41
+       * linux-headers 6.13
 
 欢迎试用或来上游围观；您的需求是我们迭代开发的目标和动力。您也可以亲自参与
 RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查看、修改我们的[部分打包脚本](https://github.com/ruyisdk/ruyici)与[软件源仓库](https://github.com/ruyisdk/packages-index)。今后，按照本年度的开发计划，我们也将支持有权的第三方贡献者通过程序化的方式上传软件包、系统镜像等分发文件，以便利打包工作。
