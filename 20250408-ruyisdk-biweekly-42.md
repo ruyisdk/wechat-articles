@@ -7,6 +7,7 @@
 ## IDE
 
 ## GCC
+- 修复了zicbop 的回归测试问题，正在实现 zvfbfa 扩展支持。
 
 ## LLVM
 
