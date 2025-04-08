@@ -26,6 +26,8 @@ RuyiSDK 0.31 对应的包管理器版本也为 0.31.0，已于今日发布。您
 RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查看、修改我们的[部分打包脚本](https://github.com/ruyisdk/ruyici)与[软件源仓库](https://github.com/ruyisdk/packages-index)。今后，按照本年度的开发计划，我们也将支持有权的第三方贡献者通过程序化的方式上传软件包、系统镜像等分发文件，以便利打包工作。
 
 ## IDE
+RuyiSDK IDE 近期正在优化启动功能，增加包管理器的安装检查、安装、版本检查、升级等功能；及执行过程中的执行状态显示；
+RuyiSDK IDE 正在招聘插件开发实习生，详情参考 J159 RuyiSDK IDE 开发实习生 ，欢迎加入。
 
 ## GCC
 - 修复了zicbop 的回归测试问题，正在实现 zvfbfa 扩展支持。
