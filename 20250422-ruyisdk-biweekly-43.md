@@ -7,6 +7,7 @@
 ## IDE
 
 ## GCC
+添加了zama16b，sdtrig，zvfbfmin扩展的支持，重新提交了ssnpm的patch
 
 ## LLVM
 
