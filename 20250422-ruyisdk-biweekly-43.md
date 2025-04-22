@@ -39,6 +39,7 @@ RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查�
 ## IDE
 
 ## GCC
+添加了zama16b，sdtrig，zvfbfmin扩展的支持，重新提交了ssnpm的patch
 
 ## LLVM
 
