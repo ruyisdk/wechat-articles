@@ -3,7 +3,7 @@
 ## 卷首语
 近两周进展已呈上，欢迎阅读《RuyiSDK 双周进展汇报》第 43 期。如果您在 RuyiSDK 的使用中遇到问题，欢迎参加每双周四下午 15:00 开展的 [“RuyiSDK Office Hours”](https://github.com/ruyisdk/ruyisdk/discussions/19) 获得在线答疑支持服务（下一次在4月25日），也可以在[ RuyiSDK讨论区](https://github.com/ruyisdk/ruyisdk/discussions) 反馈。
 
-我们计划在2025年5月13日发布下一个开发版本，届时将带来更多创新与改进。感谢您一直以来的支持与关注，您的反馈是我们前进的动力！
+受五一假期影响，下个开发版本将顺延至5月13日发布，我们将持续带来更多创新改进。
 
 ## 包管理器
 
