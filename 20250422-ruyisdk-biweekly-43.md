@@ -37,6 +37,10 @@ RuyiSDK 0.32 对应的包管理器版本也为 0.32.0，已于今日发布。您
 RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查看、修改我们的[部分打包脚本](https://github.com/ruyisdk/ruyici)与[软件源仓库](https://github.com/ruyisdk/packages-index)。今后，按照本年度的开发计划，我们也将支持有权的第三方贡献者通过程序化的方式上传软件包、系统镜像等分发文件，以便利打包工作。
 
 ## IDE
+- 将插件仓库规范化迁移到[ruyisdk-eclipse-plugins](https://github.com/ruyisdk/ruyisdk-eclipse-plugins) ，并对代码进行了重构和优化：
+   - 重构插件组织，基础类调整到 org.ruyisdk.core 包下，作为其它插件的依赖项；实现XDG规范目录的设置和路径获取；
+   - 重构和优化设备管理，调整配置文件到 ~/.config/ruyisdkide 下，并将UI从继承 viewpart 实现修改为 PreferencePage，实现了通过 Windows > preferences > Device Manage 进行管理，更加符合使用场景。
+- 新增 ruyi 包管理器安装检测、版本检测等基础类；
 
 ## GCC
 添加了zama16b，sdtrig，zvfbfmin扩展的支持，重新提交了ssnpm的patch
