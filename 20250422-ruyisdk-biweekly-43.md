@@ -46,6 +46,7 @@ RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查�
 - 添加了zama16b，sdtrig，zvfbfmin 扩展的支持，重新提交了ssnpm 的 patch。
 
 ## LLVM
+- upstream：[Add smcntrpmf extension](https://github.com/llvm/llvm-project/pull/136556)
 
 ## V8
 - 处理 scriptcontext 里面 let 涉及的常量和变量，避免重复堆分配和垃圾回收开销。
