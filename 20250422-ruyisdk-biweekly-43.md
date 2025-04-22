@@ -43,11 +43,14 @@ RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查�
 - 新增 ruyi 包管理器安装检测、版本检测等基础类；
 
 ## GCC
-添加了zama16b，sdtrig，zvfbfmin扩展的支持，重新提交了ssnpm的patch
+- 添加了zama16b，sdtrig，zvfbfmin 扩展的支持，重新提交了ssnpm 的 patch。
 
 ## LLVM
 
 ## V8
+- 处理 scriptcontext 里面 let 涉及的常量和变量，避免重复堆分配和垃圾回收开销。
+- 修复了构建错误和段错误 bug。
+- 优化 RiscvCmpDouble 和 RiscvCmpSingle 的 codegen。
 
 ## 操作系统支持矩阵
 
