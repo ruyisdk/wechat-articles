@@ -1,7 +1,7 @@
 # RuyiSDK 双周进展汇报  第 043 期·2025 年 04 月 22 日
 
 ## 卷首语
-近两周进展已呈上，欢迎阅读《RuyiSDK 双周进展汇报》第 43 期。如果您在 RuyiSDK 的使用中遇到问题，欢迎参加每双周四下午 15:00 开展的 [“RuyiSDK Office Hours”](https://github.com/ruyisdk/ruyisdk/discussions/19) 获得在线答疑支持服务（下一次在4月25日），也可以在[ RuyiSDK讨论区](https://github.com/ruyisdk/ruyisdk/discussions) 反馈。
+近两周进展已呈上，欢迎阅读《RuyiSDK 双周进展汇报》第 43 期。如果您在 RuyiSDK 的使用中遇到问题，欢迎参加每双周四下午 15:00 开展的 [“RuyiSDK Office Hours”](https://github.com/ruyisdk/ruyisdk/discussions/19) 获得在线答疑支持服务（下一次在4月24日），也可以在[ RuyiSDK讨论区](https://github.com/ruyisdk/ruyisdk/discussions) 反馈。
 
 受五一假期影响，下个开发版本将顺延至5月13日发布，我们将持续带来更多创新改进。
 
