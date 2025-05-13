@@ -42,6 +42,12 @@ RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查�
 
 ## LLVM
 
+- upstream：[Add zihintpause LLVM/Clang intrinsic](https://github.com/llvm/llvm-project/pull/139519)
+
+- xtheadvector: [Add more semacheck for xtheadvector intrinsics](https://github.com/ruyisdk/llvm-project/pull/150)
+- xtheadvector: [Fix vector integer minmax intrinsics and add wrappers](https://github.com/ruyisdk/llvm-project/pull/152)
+- xtheadvector: [fix vmulhsu/vmulhu intrinsics](https://github.com/ruyisdk/llvm-project/pull/153)
+
 ## V8
 * 增加从 isolate 中加载 JS Dispatch Table 的机制
 * 增加 riscv zfh 指令集支持
