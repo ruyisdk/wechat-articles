@@ -1,6 +1,9 @@
 # RuyiSDK 双周进展汇报  第 044 期·2025 年 05 月 13 日
 
 ## 卷首语
+欢迎阅读《RuyiSDK 双周进展汇报》第 44 期，包管理器 和 ide 都有版本更新，欢迎下载试用。如果您在 RuyiSDK 的使用中遇到问题，欢迎参加每双周四下午 15:00 开展的 [“RuyiSDK Office Hours”](https://github.com/ruyisdk/ruyisdk/discussions/19) 获得在线答疑支持服务（下一次在5月22日），也可以在 [RuyiSDK讨论区](https://github.com/ruyisdk/ruyisdk/discussions) 反馈。
+
+下个开发版本计划 5月27日发布，我们将持续带来更多改进。
 
 ## 包管理器
 
@@ -85,4 +88,3 @@ RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查�
 - [megrez: RockOS: update to 20250423](https://github.com/ruyisdk/support-matrix/pull/288)
 - [Pioneer/openCloudOS: Bump to main repo version](https://github.com/ruyisdk/support-matrix/pull/289)
 
-## 官网
