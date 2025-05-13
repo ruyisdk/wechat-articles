@@ -36,13 +36,16 @@ RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查�
 ## IDE
 
 ## GCC
-更新了RUYISDK仓库中的gcc版本到gcc16, binutils版本到binutils-2.45。支持了Profiles特性，包括RV20/22/23A|B, 使用-march=Profiles可直接使能Profiles规定的强制支持扩展
-支持了`Sha`扩展组合，该扩展为RVA23S64中针对RISC-V虚拟化特性提出的最新扩展组合，用于高效实现虚拟化特性。修复回归测试中发现的gcc错误，限制了错误测试case中
-`-mgeneral-regs-only`选项对应的架构范围，已被上游接收
+* 更新了 RUYISDK 仓库中的 gcc 版本到 gcc16, binutils 版本到 binutils-2.45。支持了 Profiles 特性，包括 RV20/22/23A|B, 使用 -march=Profiles 可直接使能 Profiles 规定的强制支持扩展
+* 支持了`Sha`扩展组合，该扩展为 RVA23S64 中针对 RISC-V 虚拟化特性提出的最新扩展组合，用于高效实现虚拟化特性。修复回归测试中发现的 gcc 错误，限制了错误测试 case 中
+* `-mgeneral-regs-only` 选项对应的架构范围，已被上游接收
 
 ## LLVM
 
 ## V8
+* 增加从 isolate 中加载 JS Dispatch Table 的机制
+* 增加 riscv zfh 指令集支持
+* 添加 wasm growble stack 的特性
 
 ## 操作系统支持矩阵
 
