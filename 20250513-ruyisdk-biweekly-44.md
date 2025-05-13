@@ -49,4 +49,16 @@ RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查�
 
 ## 操作系统支持矩阵
 
+- [Update Ubuntu test reports to 25.04 for Mars.](https://github.com/ruyisdk/support-matrix/pull/279)
+- [Add OpenWRT and NuttX test reports for Mars and fix some typos.](https://github.com/ruyisdk/support-matrix/pull/281)
+- [DuoS: Bump FreeRTOS to 1.1.4](https://github.com/ruyisdk/support-matrix/pull/283)
+- [Star64/NuttX: Bump to 12.9.0](https://github.com/ruyisdk/support-matrix/pull/284)
+- [Star64/Ubuntu: fix typo](https://github.com/ruyisdk/support-matrix/pull/285)
+- [Duo/Alpine: Bump to 3.21.3](https://github.com/ruyisdk/support-matrix/pull/286)
+- [Megrez/RockOS: Bump to 20250423](https://github.com/ruyisdk/support-matrix/pull/287)
+- [LicheePi4A8+32G: Add Arch Linux](https://github.com/ruyisdk/support-matrix/pull/290)
+- [Add ArchLinux test reports for Mars.](https://github.com/ruyisdk/support-matrix/pull/291)
+- [megrez: RockOS: update to 20250423](https://github.com/ruyisdk/support-matrix/pull/288)
+- [Pioneer/openCloudOS: Bump to main repo version](https://github.com/ruyisdk/support-matrix/pull/289)
+
 ## 官网
