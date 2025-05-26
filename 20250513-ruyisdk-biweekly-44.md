@@ -57,7 +57,7 @@ RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查�
    * 配置路径：Windows > Preferences > RuyiSDK > Ruyi Config。
 
 ## GCC
-* 更新了 RUYISDK 仓库中的 gcc 版本到 gcc16, binutils 版本到 binutils-2.45。支持了 Profiles 特性，包括 RV20/22/23A|B, 使用 -march=Profiles 可直接使能 Profiles 规定的强制支持扩展
+* 更新了 RUYISDK 仓库中的 gcc 版本到 gcc15, binutils 版本到 binutils-2.45。支持了 Profiles 特性，包括 RV20/22/23A|B, 使用 -march=Profiles 可直接使能 Profiles 规定的强制支持扩展
 * 支持了`Sha`扩展组合，该扩展为 RVA23S64 中针对 RISC-V 虚拟化特性提出的最新扩展组合，用于高效实现虚拟化特性。修复回归测试中发现的 gcc 错误，限制了错误测试 case 中
 * `-mgeneral-regs-only` 选项对应的架构范围，已被上游接收
 
