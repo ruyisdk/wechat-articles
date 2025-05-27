@@ -55,10 +55,17 @@ RuyiSDK 0.34 对应的包管理器版本也为 0.34.0，已于今日发布。您
 RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查看、修改我们的[部分打包脚本](https://github.com/ruyisdk/ruyici)与[软件源仓库](https://github.com/ruyisdk/packages-index)。今后，按照本年度的开发计划，我们也将支持有权的第三方贡献者通过程序化的方式上传软件包、系统镜像等分发文件，以便利打包工作。
 
 ## IDE
+- ruyi 安装/更新：
+   - 针对 ruyi 安装向导中下载进度条不能达到100%的问题进行了修复；
+   - 删除 ruyi 安装向导中将 ruyi 加入到 path 路径的设定和步骤，改为使用 ruyi 绝对路径
+- 软件包资源：
+   - 通过树状结构分类展示软件包资源，并通过 checkbox 状态表示软件包资源的下载状态
+   - 实现对软件包的下载
+   - 支持打开软件包资源的本地缓存等路径，方便查看缓存文件
 
 ## GCC
-Binutils上游已合并Profiles RV20/22/23支持，更新了Smcdeleg，Ssccfg扩展支持，
-向FFmpeg上游提交了gcc构建时配置选项的修改，目前仍在讨论中
+- Binutils上游已合并Profiles RV20/22/23支持，更新了Smcdeleg，Ssccfg扩展支持，
+- 向FFmpeg上游提交了gcc构建时配置选项的修改，目前仍在讨论中
 
 ## LLVM
 
