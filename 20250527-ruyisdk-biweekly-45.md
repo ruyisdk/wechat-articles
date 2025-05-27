@@ -64,7 +64,7 @@ RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查�
    - 支持打开软件包资源的本地缓存等路径，方便查看缓存文件
 
 ## GCC
-- Binutils上游已合并Profiles RV20/22/23支持，更新了Smcdeleg，Ssccfg扩展支持，
+- Binutils上游已合并Profiles RV20/22/23支持，更新了Smcdeleg，Ssccfg扩展支持
 - 向FFmpeg上游提交了gcc构建时配置选项的修改，目前仍在讨论中
 
 ## LLVM
@@ -75,6 +75,10 @@ RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查�
 - xtheadvector: [Clang][XTHeadVector] fix vector widening integer multiply-add intrinsics: https://github.com/ruyisdk/llvm-project/pull/157
 
 ## V8
+
+- wasm struct.atomic 特性在RISC-V平台上的实现
+- 修复trampoline emit和scratch寄存器使用的bug
+- 审阅和合入进迭时空comparisionOP 代码生成，load word unsigned op的0扩展优化
 
 ## 操作系统支持矩阵
 
