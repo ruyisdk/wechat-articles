@@ -78,6 +78,20 @@ RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查�
 
 ## 操作系统支持矩阵
 
+- [Meles/RevyOS: Bump to 20250420](https://github.com/ruyisdk/support-matrix/pull/292)
+- [Add Pine64 Ox64](https://github.com/ruyisdk/support-matrix/pull/293)
+- [Update RV-STAR](https://github.com/ruyisdk/support-matrix/pull/294)
+- [Add new Board HengShanPi and it's RT-Thread test report.](https://github.com/ruyisdk/support-matrix/pull/295)
+- [Add Alpine test report for Mars and fix typos.](https://github.com/ruyisdk/support-matrix/pull/296)
+- [Update Ubuntu 24.04.02 test report for Nezha.](https://github.com/ruyisdk/support-matrix/pull/297)
+- [Update: ESP32C2, ESP32H2, ESP32C6 test reports](https://github.com/ruyisdk/support-matrix/pull/298)
+- [LicheeRV_Dock: update ubuntu to 25.04](https://github.com/ruyisdk/support-matrix/pull/299)
+- [Metadata: fix wrong sys metadata](https://github.com/ruyisdk/support-matrix/pull/300)
+- [LiP4A_8_32: Add NixOS and Slackware](https://github.com/ruyisdk/support-matrix/pull/301)
+- [Pioneer/OpenCloudOS: Add desktop](https://github.com/ruyisdk/support-matrix/pull/302)
+- [Add new board OrangePi RV with OpenWRT and Ubuntu LTS test report and…](https://github.com/ruyisdk/support-matrix/pull/304)
+- [DuoS: dump Debian to 1.6.23](https://github.com/ruyisdk/support-matrix/pull/310)
+
 ## 官网
 
 新实习生的加入，推动 [ruyisdk.org](https://ruyisdk.org/) 首页[焕然一新](https://github.com/ruyisdk/ruyisdk-website/pull/128)。不过当前尚余一些小问题需要修复，具体见 issue [#135](https://github.com/ruyisdk/ruyisdk-website/issues/135)。大家觉得新的首页怎么样呢，欢迎在该 issue 下添加评论！
