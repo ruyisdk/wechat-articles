@@ -1,6 +1,9 @@
 # RuyiSDK 双周进展汇报  第 046 期·2025 年 06 月 10 日
 
 ## 卷首语
+欢迎阅读第46期《RuyiSDK双周进展》！包管理器已更新新版本，欢迎下载试用。如果您在 RuyiSDK 的使用中遇到问题，欢迎参加每双周四下午 15:00 开展的 [“RuyiSDK Office Hours”](https://github.com/ruyisdk/ruyisdk/discussions/19) 获得在线答疑支持服务（下一次在6月19日），也可以在 [RuyiSDK讨论区](https://github.com/ruyisdk/ruyisdk/discussions) 反馈。
+
+下个开发版本计划6月24日发布，我们将持续带来更多改进。
 
 ## 包管理器
 
