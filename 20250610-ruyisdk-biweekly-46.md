@@ -7,6 +7,8 @@
 ## IDE
 
 ## GCC
+添加香山昆明湖CPU到gcc RISC-V后端，目前已合入gcc上游，添加时补充了一系列gcc缺失的特权模式扩展指令集。
+修复了binutils中smnrmi缺失zicsr依赖的问题。
 
 ## LLVM
 
