@@ -7,10 +7,8 @@
 ## IDE
 
 ## GCC
-添加香山昆明湖CPU到gcc RISC-V后端，目前已合入gcc上游，添加时补充了一系列gcc缺失的特权模式扩展指令集。
-修复了binutils中smnrmi缺失zicsr依赖的问题。
-
-## LLVM
+- 添加香山昆明湖CPU到gcc RISC-V后端，目前已合入gcc上游，添加时补充了一系列gcc缺失的特权模式扩展指令集。
+- 修复了binutils中smnrmi缺失zicsr依赖的问题。
 
 ## V8
 1.  在turbofan RISC-V后端中支持非经典NAN
@@ -49,5 +47,3 @@
 - [Visionfive/Alpine: Update result to basic.](https://github.com/ruyisdk/support-matrix/pull/320)
 - [LicheePi 3A: Add board and systems; Some fixes and tweaks](https://github.com/ruyisdk/support-matrix/pull/321)
 - [DuoS: Dump Debian to v1.6.31](https://github.com/ruyisdk/support-matrix/pull/322)
-
-## 官网
