@@ -29,6 +29,7 @@ RuyiSDK 0.35 对应的包管理器版本也为 0.35.0，已于今日发布。您
 RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查看、修改我们的[部分打包脚本](https://github.com/ruyisdk/ruyici)与[软件源仓库](https://github.com/ruyisdk/packages-index)。今后，按照本年度的开发计划，我们也将支持有权的第三方贡献者通过程序化的方式上传软件包、系统镜像等分发文件，以便利打包工作。
 
 ## IDE
+* RuyiSDK IDE 插件近期新增了自定义的 Welcome 欢迎页面的插件。通过自定义 Welcome，将产品简介、官网、博客、联系我们等常用链接都挂到了页面中；此外还提供了 New Project、Open Project、Setting的快速入口；还有Support Matrix、Documents、Discussions 链接。功能目前已经就绪，但是在以插件方式运行时还存在icon资源找不到的[问题](https://github.com/ruyisdk/ruyisdk-eclipse-plugins/issues/20)，预计下个周期发布。可通过[Draft](https://github.com/ruyisdk/ruyisdk-eclipse-plugins/releases/download/untagged-3fb765ac95877af17b18/org.ruyisdk.intro_1.0.0.202506101633.jar)链接下载尝鲜。
 
 ## GCC
 - 添加香山昆明湖CPU到gcc RISC-V后端，目前已合入gcc上游，添加时补充了一系列gcc缺失的特权模式扩展指令集。
