@@ -36,4 +36,16 @@
 
 ## 操作系统支持矩阵
 
+- [Duo 256M: update Debian 13.0 test report and fix some typos.](https://github.com/ruyisdk/support-matrix/pull/311)
+- [Update ESP32P4 test report and fix metadata errors](https://github.com/ruyisdk/support-matrix/pull/312)
+- [Mars: Add irradium, openKylin, openSUSE test reports.](https://github.com/ruyisdk/support-matrix/pull/313)
+- [OrangePi RV2: Add irradium test report.](https://github.com/ruyisdk/support-matrix/pull/314)
+- [LicheePi4A: Add irradium test report (CFT).](https://github.com/ruyisdk/support-matrix/pull/315)
+- [Metadata: Fix redundant vendor, update CONTRIBUTING and temple metadata, add esp32-p4 metadata](https://github.com/ruyisdk/support-matrix/pull/316)
+- [Clean deprecated codes](https://github.com/ruyisdk/support-matrix/pull/317)
+- [Add metadata for oz64 and pinecone](https://github.com/ruyisdk/support-matrix/pull/319)
+- [Visionfive/Alpine: Update result to basic.](https://github.com/ruyisdk/support-matrix/pull/320)
+- [LicheePi 3A: Add board and systems; Some fixes and tweaks](https://github.com/ruyisdk/support-matrix/pull/321)
+- [DuoS: Dump Debian to v1.6.31](https://github.com/ruyisdk/support-matrix/pull/322)
+
 ## 官网
