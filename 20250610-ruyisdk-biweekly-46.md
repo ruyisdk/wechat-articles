@@ -4,6 +4,30 @@
 
 ## 包管理器
 
+RuyiSDK 0.35 对应的包管理器版本也为 0.35.0，已于今日发布。您可移步
+[GitHub Releases][ruyi-0.35.0-gh] 或 [ISCAS 镜像源][ruyi-0.35.0-iscas]下载体验。
+
+[ruyi-0.35.0-gh]: https://github.com/ruyisdk/ruyi/releases/tag/0.35.0
+[ruyi-0.35.0-iscas]: https://mirror.iscas.ac.cn/ruyisdk/ruyi/tags/0.35.0/
+
+本次 RuyiSDK 包管理器的更新主要包含了以下内容：
+
+* 现在会记录软件包的安装状态了。该信息在 `ruyi list` 输出中也会体现，并且支持在 `ruyi list` 时传入 `--is-installed y/n` 参数进行过滤。
+* `ruyi entity list` 可以带一个或多个 `-t` / `--entity-type` 参数，用来列举特定类型的实体了。
+* `ruyi entity list` 现在支持机读模式（porcelain mode）输出了。
+
+本次 RuyiSDK 软件源的更新主要包含了以下内容：
+
+* 新增了 Milk-V Duo (128M & 156M) 开发板镜像的历史版本。
+* 修复了 Milk-V Duo (128M & 256M) 开发板镜像 2.0.0 版本的配置。
+* 更新了多个 Milk-V Meles 的 RevyOS 镜像。
+* 修复了 Milk-V Meles 的 RevyOS 镜像 1.20250123.0 版本的配置。
+* 更新了一些文档链接的指向。
+* 清理了已于 RuyiSDK 0.33 版本弃用的 RuyiSDK 设备安装器的旧版配置数据。
+
+欢迎试用或来上游围观；您的需求是我们迭代开发的目标和动力。您也可以亲自参与
+RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查看、修改我们的[部分打包脚本](https://github.com/ruyisdk/ruyici)与[软件源仓库](https://github.com/ruyisdk/packages-index)。今后，按照本年度的开发计划，我们也将支持有权的第三方贡献者通过程序化的方式上传软件包、系统镜像等分发文件，以便利打包工作。
+
 ## IDE
 
 ## GCC
