@@ -13,3 +13,8 @@
 ## V8
 
 ## 操作系统支持矩阵
+
+- [Bit-Brick_K1: add test for bianbu 2.2 minimal](https://github.com/ruyisdk/support-matrix/pull/323)
+- [LiP4A: merge 8+32G and 16+128G](https://github.com/ruyisdk/support-matrix/pull/324)
+- [LPi4A/RevyOS: Bump to 20250526](https://github.com/ruyisdk/support-matrix/pull/325)
+- [LicheePi4A: Add irradium test report (good).](https://github.com/ruyisdk/support-matrix/pull/327)
