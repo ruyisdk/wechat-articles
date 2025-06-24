@@ -32,10 +32,18 @@ RuyiSDK 0.36 对应的包管理器版本也为 0.36.0，已于今日发布。您
 RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查看、修改我们的[部分打包脚本](https://github.com/ruyisdk/ruyici)与[软件源仓库](https://github.com/ruyisdk/packages-index)。今后，按照本年度的开发计划，我们也将支持有权的第三方贡献者通过程序化的方式上传软件包、系统镜像等分发文件，以便利打包工作。
 
 ## IDE
+RuyiSDK IDE 插件版本 0.0.6 发布：https://github.com/ruyisdk/ruyisdk-eclipse-plugins/releases/tag/v0.0.6
+
+- 软件包资源：   
+   - 新增接入软件包资源管理器适配设备型号接口，支持显示Ruyi包管理器已集成的设备型号；
+   - 界面优化，优化设备展示窗口尺寸；
+   - 代码优化，修复存在安全漏洞的代码；
+- 定制 Welcome 界面：
+   - 修复以插件方式运行时存在的 icon 等资源找不到的问题；
 
 ## GCC
-更新了-mcpu的默认参数，使用generic替代具体的rocket cpu模型
-同步了-mtune的配置设置，将branch_cost更新为4，以便更好的适配Zicond扩展，生成对应的分支指令
+- 更新了-mcpu的默认参数，使用generic替代具体的rocket cpu模型
+- 同步了-mtune的配置设置，将branch_cost更新为4，以便更好的适配Zicond扩展，生成对应的分支指令
 
 ## LLVM
 
