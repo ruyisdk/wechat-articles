@@ -7,6 +7,8 @@
 ## IDE
 
 ## GCC
+更新了-mcpu的默认参数，使用generic替代具体的rocket cpu模型
+同步了-mtune的配置设置，将branch_cost更新为4，以便更好的适配Zicond扩展，生成对应的分支指令
 
 ## LLVM
 
