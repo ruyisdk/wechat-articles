@@ -15,6 +15,18 @@
 
 
 ## V8
+- 实现struct/array.atomic.rmw.xchg的原子交换操作 
+  - [6633523: [riscv][wasm][shared] Implement struct/array.atomic.rmw.xchg](https://chromium-review.googlesource.com/c/v8/v8/+/6633523)
+- 将 suspender 对象迁移到可信空间
+  - [6637888: [riscv][wasm][jspi] Move suspender object to trusted space](https://chromium-review.googlesource.com/c/v8/v8/+/6637888)
+- 引入简单的截断优化pass
+  - [6638821: [riscv][maglev] Simple truncation pass](https://chromium-review.googlesource.com/c/v8/v8/+/6638821)
+- 在release模式中在常量池前增加检查
+  - [6653368: [riscv] Check trampoline before Constant pool in Release mode](https://chromium-review.googlesource.com/c/v8/v8/+/6653368)
+- 避免在JSPI内置函数中进行可信写入
+  - [6656978: [riscv] [wasm][sandbox] Avoid a trusted write in a JSPI builtin](https://chromium-review.googlesource.com/c/v8/v8/+/6656978)
+- 在Maglev中加入额外的peephole优化
+  - [6656979: [riscv][maglev] Add some peephole optimisations](https://chromium-review.googlesource.com/c/v8/v8/+/6656979)
 
 ## 操作系统支持矩阵
 
