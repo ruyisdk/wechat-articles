@@ -16,3 +16,10 @@
 ## V8
 
 ## 操作系统支持矩阵
+
+- [Add test for booting from SATA on Megrez](https://github.com/ruyisdk/support-matrix/pull/331)
+- [Jupiter/openKylin: Fix wrong `sys_ver`](https://github.com/ruyisdk/support-matrix/pull/337)
+- [Duo S: Dump BuildRoot](https://github.com/ruyisdk/support-matrix/pull/339)
+- [LiP4A: Fix broken download links](https://github.com/ruyisdk/support-matrix/pull/340)
+
+RuyiSDK GNU 工具链测试（GCC 16）：https://github.com/QA-Team-lo/ruyisdk-gnu-tests
