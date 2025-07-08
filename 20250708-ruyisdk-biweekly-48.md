@@ -7,6 +7,14 @@
 ## IDE
 
 ## GCC
+更新了P扩展的Binutils实现，rebase到2.44版本
+https://github.com/ruyisdk/riscv-binutils/commits/p-dev/
+
+Rebase了 0.9.11 版本的P扩展支持到gcc 15.1,正在review中
+https://github.com/ruyisdk/riscv-gcc/pull/5
+
+Porting了RVA23特性到revyos-gcc 14.3
+https://github.com/pz9115/revyos-gcc/tree/14.3
 
 ## LLVM
 
