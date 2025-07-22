@@ -2,6 +2,19 @@
 
 ## 卷首语
 
+近期，RISC-V 生态发展迎来了一系列重要活动——"RISC-V 中国峰会"、"RISC-V 全球生态论坛（香港）"等盛会相继举办。团队小伙伴积极参与其中，不仅展示了我们的成果，也与行业同仁进行了深入交流，共同探讨技术发展趋势。由于这段时间的精力部分投入在这些行业活动中，本期更新内容相对精简，还请大家理解。后续我们将持续带来更多精彩内容，敬请关注！
+
+我们特别欣喜地发现，[RuyiSDK 论坛](https://ruyisdk.cn) 正变得越来越活跃，我们也收到了一些开发者在这里分享使用心得、提出宝贵建议。大家的每一条反馈我们都在认真对待，并已着手进行针对性优化——正是这些真诚的声音推动着我们不断进步，在此向所有支持者致以衷心感谢！也欢迎更多小伙伴加入，一起打造更好的 RuyiSDK。
+
+如果您在使用过程中遇到任何问题，还可以通过以下方式获得支持：
+
+- 参与 7月31日（周四）15:00 举办的 [第十次 RuyiSDK Office Hours](https://github.com/ruyisdk/ruyisdk/discussions/19)，我们将提供在线答疑服务
+
+- 在 [ruyisdk.cn RuyiSDK](https://ruyisdk.cn/c/ruyisdk/9)板块 或者 [RuyiSDK GitHub 讨论区](https://github.com/ruyisdk/ruyisdk/discussions) 留言交流
+
+根据当前规划，下一个开发版本将于 8月12日 发布，我们将持续优化功能体验，为大家带来更多惊喜。期待与您共同见证 RuyiSDK 的成长！
+
+
 ## 包管理器
 
 RuyiSDK 0.38 对应的包管理器版本也为 0.38.0，已于今日发布。您可移步
@@ -40,8 +53,6 @@ RuyiSDK IDE 进展：
 - 支持了P扩展 v015 版本与B扩展、K扩展的重复部分指令编码，添加了相关测试用例，已同步至RUYISDK仓库与社区
 - 初步完成了P扩展 v015 版本的 intrinsic 草案，正在进行GCC开发支持
 - Rebase了P扩展 v0911 版本的GCC支持到 GCC15
-
-## LLVM
 
 ## V8
 - [删除RISCV32下的冗余sign extend指令(只有32位计算，不需要向高32位扩展)](https://chromium-review.googlesource.com/c/v8/v8/+/6732071)
