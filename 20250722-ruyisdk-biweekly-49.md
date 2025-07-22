@@ -7,6 +7,9 @@
 ## IDE
 
 ## GCC
+- 支持了P扩展 v015 版本与B扩展、K扩展的重复部分指令编码，添加了相关测试用例，已同步至RUYISDK仓库与社区
+- 初步完成了P扩展 v015 版本的 intrinsic 草案，正在进行GCC开发支持
+- Rebase了P扩展 v0911 版本的GCC支持到 GCC15
 
 ## LLVM
 
