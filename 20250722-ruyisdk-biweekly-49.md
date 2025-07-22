@@ -4,6 +4,30 @@
 
 ## 包管理器
 
+RuyiSDK 0.38 对应的包管理器版本也为 0.38.0，已于今日发布。您可移步
+[GitHub Releases][ruyi-0.38.0-gh] 或 [ISCAS 镜像源][ruyi-0.38.0-iscas]下载体验。
+
+[ruyi-0.38.0-gh]: https://github.com/ruyisdk/ruyi/releases/tag/0.38.0
+[ruyi-0.38.0-iscas]: https://mirror.iscas.ac.cn/ruyisdk/ruyi/tags/0.38.0/
+
+本次 RuyiSDK 包管理器的更新主要包含了以下内容：
+
+* 为 RuyiSDK 设备安装器新增了 `ruyi device flash` 这一别名，以便理解记忆。感谢 RuyiSDK 社区论坛的 [@Sequel] 同学反馈！
+* 当 `ruyi` 需要调用某些外部命令但无法找到时，如果当前终端可以交互，会等待您安装以便重试了。您可以在另一个终端下安装所需命令，再回到 `ruyi` 所在终端按回车键继续。您也可以按 Ctrl+C 退出。感谢 RuyiSDK 社区论坛的 [@Sequel] 同学反馈！
+
+[@Sequel]: https://ruyisdk.cn/u/Sequel
+
+本次 RuyiSDK 软件源的更新主要包含了以下内容：
+
+* 完善了设备支持：
+    * 新增了 Sipeed LicheePi 4A 的 RevyOS 的历史版本。感谢 [@Cyl18] 的贡献！
+    * 新增了 Milk-V Duo 的 Arduino 的 1.1.2 与 1.1.4 两个版本。感谢 [@Cyl18] 的贡献！
+
+[@Cyl18]: https://github.com/Cyl18
+
+欢迎试用或来上游围观；您的需求是我们迭代开发的目标和动力。您也可以亲自参与
+RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查看、修改我们的[部分打包脚本](https://github.com/ruyisdk/ruyici)与[软件源仓库](https://github.com/ruyisdk/packages-index)。今后，按照本年度的开发计划，我们也将支持有权的第三方贡献者通过程序化的方式上传软件包、系统镜像等分发文件，以便利打包工作。
+
 ## IDE
 
 ## GCC
