@@ -29,6 +29,12 @@ RuyiSDK 0.38 对应的包管理器版本也为 0.38.0，已于今日发布。您
 RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查看、修改我们的[部分打包脚本](https://github.com/ruyisdk/ruyici)与[软件源仓库](https://github.com/ruyisdk/packages-index)。今后，按照本年度的开发计划，我们也将支持有权的第三方贡献者通过程序化的方式上传软件包、系统镜像等分发文件，以便利打包工作。
 
 ## IDE
+RuyiSDK IDE 进展：
+- 新增了自定义统一日志和Console管理功能：
+   - 统一日志管理：集成控制台输出、文件日志和Eclipse日志系统
+   - 多级日志输出：支持DEBUG/INFO/WARN/ERROR分级输出
+   - 日志存储：日志文件存储路径兼容XDG规范，默认存储于标准目录（~/.local/state/ruyisdkide/logs）
+- 代码规范化管理：对代码格式进行规范化调整，进行中
 
 ## GCC
 
