@@ -4,7 +4,7 @@
 
 欢迎阅读第50期《RuyiSDK双周进展》！
 
-本期，值得欣喜的是：`ruyi` 现已在 PyPI [同步发布](https://pypi.org/project/ruyi/)！您只需在 Python 环境中执行 pip install ruyi 命令，即可轻松安装 RuyiSDK 包管理器，开启您的 RISC-V 开发之旅。
+本期，值得欣喜的是：`ruyi` 现已在 PyPI [同步发布](https://pypi.org/project/ruyi/)！您只需在 Python 环境中执行 `pip install ruyi` 命令，即可轻松安装 RuyiSDK 包管理器，开启您的 RISC-V 开发之旅。
 
 如果您在使用过程中遇到任何问题，还可以通过以下方式获得支持：
 
