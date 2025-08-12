@@ -5,6 +5,9 @@
 ## 包管理器
 
 ## IDE
+为了方便开发协作，RuyiSDK IDE 插件项目（[ruyisdk-eclipse-plugins](https://github.com/ruyisdk/ruyisdk-eclipse-plugins)） 近期进行了一些代码规范化改进，制定了[Java Code 规范指南](https://github.com/ruyisdk/ruyisdk-eclipse-plugins/blob/main/docs/developer/coding-guidelines/index.md)，明确代码样式要求，并对部分代码进行了格式规范化调整。
+
+此外，欢迎对Eclipse插件开发有兴趣的小伙伴加入开发团队，详情参考 [J159 RuyiSDK IDE 开发实习生](https://github.com/lazyparser/weloveinterns/blob/master/open-internships.md) ，期待您的加入。
 
 ## GCC
 
