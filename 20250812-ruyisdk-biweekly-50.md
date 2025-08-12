@@ -8,6 +8,10 @@
 
 ## GCC
 
+## LLVM
+
+- xtheadvector: [LLVM][XTHeadVector] xtheadvector implies zfh by default: https://github.com/ruyisdk/llvm-project/pull/162
+
 ## V8
 
 ## 操作系统支持矩阵
