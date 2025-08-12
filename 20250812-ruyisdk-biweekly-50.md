@@ -4,6 +4,46 @@
 
 ## 包管理器
 
+RuyiSDK 0.39 对应的包管理器版本也为 0.39.0，已于今日发布。您可移步
+[GitHub Releases][ruyi-0.39.0-gh]、[PyPI][ruyi-0.39.0-pypi] 或 [ISCAS 镜像源][ruyi-0.39.0-iscas]下载体验。
+
+[ruyi-0.39.0-gh]: https://github.com/ruyisdk/ruyi/releases/tag/0.39.0
+[ruyi-0.39.0-pypi]: https://pypi.org/project/ruyi/0.39.0/
+[ruyi-0.39.0-iscas]: https://mirror.iscas.ac.cn/ruyisdk/ruyi/tags/0.39.0/
+
+本次 RuyiSDK 包管理器的更新主要包含了以下内容：
+
+* `ruyi` 现已在 PyPI [同步发布](https://pypi.org/project/ruyi/)。只要您有 Python 环境，您就可以使用 `pip install ruyi` 或类似的命令安装 RuyiSDK 包管理器了。
+* 如用户自定义了软件源 Git 仓库的存放路径，当该仓库当前分支的远端 URL 与 `ruyi` 的相应配置项不同时，`ruyi update` 会报错退出了，而不再将用户配置覆盖。
+* 继续打磨 Shell 自动补全：
+    * 优化了常规（非自动补全）模式下的 `ruyi` 启动延迟；
+    * 如本地没有同步过软件源，不会在补全命令行时尝试同步了。
+* 工程化迭代：
+    * 现在会给每个 PR 进行端到端的集成测试了，以确保常规命令行使用方式不被破坏。
+    * 将 Shell 自动补全脚本整合进了 `ruyi` 源码发行：位于 `contrib/shell-completions` 目录。发行版打包人员可进行集成了。
+    * 为给 Ubuntu 22.04 LTS 打包做好准备：支持以 pytest 6.2.5 运行测试套件了。
+    * 在构建 `ruyi` 的单文件发行版时，为 RISC-V 架构使用了预制的 `cffi` 与 `pygit2`，以节省构建时间。
+    * 简化了 `ruyi` 的发版工作：支持了自助打 tag 并触发发版流程。
+
+本次 RuyiSDK 软件源的更新主要包含了以下内容：
+
+* 更新软件包：
+    * `source/milkv-duo-examples`: Milk-V Duo 示例代码，20241219 版本。
+* 完善了设备支持：
+    * Milk-V Meles（4/8/16G 变体）的 RevyOS U-Boot：补齐了上游版本。
+    * Milk-V Pioneer、Milk-V Meles 的 RevyOS：补齐缺失版本
+    * Sipeed LicheeRV Nano 的 buildroot SDK：补齐了上游版本。
+* 工程化迭代：
+    * 自动格式化了所有包版本描述，并以 CI 形式确保了新增的包遵循统一格式。
+
+感谢 [@Cyl18]、[@weilinfox] 的贡献！
+
+[@Cyl18]: https://github.com/Cyl18
+[@weilinfox]: https://github.com/weilinfox
+
+欢迎试用或来上游围观；您的需求是我们迭代开发的目标和动力。您也可以亲自参与
+RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查看、修改我们的[部分打包脚本](https://github.com/ruyisdk/ruyici)与[软件源仓库](https://github.com/ruyisdk/packages-index)。今后，按照本年度的开发计划，我们也将支持有权的第三方贡献者通过程序化的方式上传软件包、系统镜像等分发文件，以便利打包工作。
+
 ## IDE
 为了方便开发协作，RuyiSDK IDE 插件项目（[ruyisdk-eclipse-plugins](https://github.com/ruyisdk/ruyisdk-eclipse-plugins)） 近期进行了一些代码规范化改进，制定了[Java Code 规范指南](https://github.com/ruyisdk/ruyisdk-eclipse-plugins/blob/main/docs/developer/coding-guidelines/index.md)，明确代码样式要求，并对部分代码进行了格式规范化调整。
 
