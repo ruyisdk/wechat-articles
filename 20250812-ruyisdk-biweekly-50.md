@@ -2,6 +2,18 @@
 
 ## 卷首语
 
+欢迎阅读第50期《RuyiSDK双周进展》！
+
+本期，值得欣喜的是：`ruyi` 现已在 PyPI [同步发布](https://pypi.org/project/ruyi/)！您只需在 Python 环境中执行 pip install ruyi 命令，即可轻松安装 RuyiSDK 包管理器，开启您的 RISC-V 开发之旅。
+
+如果您在使用过程中遇到任何问题，还可以通过以下方式获得支持：
+
+- 参与 8月14日（周四）15:00 举办的 [第十一次 RuyiSDK Office Hours](https://github.com/ruyisdk/ruyisdk/discussions/19)，我们将提供在线答疑服务。
+
+- 在 [ruyisdk.cn RuyiSDK](https://ruyisdk.cn/c/ruyisdk/9)板块 或者 [RuyiSDK GitHub 讨论区](https://github.com/ruyisdk/ruyisdk/discussions) 留言交流。
+
+根据当前规划，下一个开发版本将于 8月26日 发布，我们将持续优化功能体验，为大家带来更多惊喜。期待与您共同见证 RuyiSDK 的成长！
+
 ## 包管理器
 
 RuyiSDK 0.39 对应的包管理器版本也为 0.39.0，已于今日发布。您可移步
