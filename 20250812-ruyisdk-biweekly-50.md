@@ -127,3 +127,14 @@ PLCT 审核并合入的代码：
 
 
 ## 操作系统支持矩阵
+
+- 支持矩阵
+   - [Dump RT-Thread@DuoS: 5.2.0->5.2.1](https://github.com/ruyisdk/support-matrix/pull/346)
+   - [fix dead link for deepin](https://github.com/ruyisdk/support-matrix/pull/347)
+   - [metadata: use vendor to mark board manufacturer](https://github.com/ruyisdk/support-matrix/pull/348)
+   - [LicheePi4A: Add openEuler RISC-V 24.03 LTS-SP2 test report (good).](https://github.com/ruyisdk/support-matrix/pull/349)
+   - [docs(treewide): unify case of distro names & fix typo](https://github.com/ruyisdk/support-matrix/pull/351)
+   - [LiP3A: Add irradium test report (good).](https://github.com/ruyisdk/support-matrix/pull/352)
+- 前端网站
+   - [修复测试报告页面跳转](https://github.com/QA-Team-lo/support-matrix-frontend/commit/0a70f776a25579f6b5e3723516873dd4a626145e)
+   - [修复系统表格排版](https://github.com/QA-Team-lo/support-matrix-frontend/commit/a076852f3d21cdd70ef1c3589ee6f0a269a82041)
