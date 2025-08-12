@@ -15,6 +15,11 @@
 
 正在实现p扩展的gcc支持，预计本月底完成初步实现
 
+## LLVM
+
+根据社区的建议，在 XTHeadVector 拓展开启时一同开启 zfh 拓展，解决 intrinsic 遇到 float16 无法提升的问题。
+- xtheadvector: [LLVM][XTHeadVector] xtheadvector implies zfh by default: https://github.com/ruyisdk/llvm-project/pull/162
+
 ## V8
 PLCT 提交并合入的代码：
 
