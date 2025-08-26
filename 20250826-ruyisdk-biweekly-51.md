@@ -52,7 +52,6 @@ Eclipse 插件本期无进展，欢迎对Eclipse插件开发有兴趣的小伙�
 更新了RUYISDK-Toolchain仓库的gcc版本编号，生成了新的release包文件。
 向上游提交了Zvabd扩展的支持，正在完善P扩展的gcc实现部分，在Smmtt扩展工作组讨论了特权寄存器的地址问题。
 
-## LLVM
 
 ## V8
 PLCT提交并合入的代码：
