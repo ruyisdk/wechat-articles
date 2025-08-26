@@ -49,6 +49,8 @@ RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查�
 Eclipse 插件本期无进展，欢迎对Eclipse插件开发有兴趣的小伙伴加入开发团队，详情参考 [J159 RuyiSDK IDE 开发实习生](https://github.com/lazyparser/weloveinterns/blob/master/open-internships.md) ，期待您的加入。
 
 ## GCC
+更新了RUYISDK-Toolchain仓库的gcc版本编号，生成了新的release包文件。
+向上游提交了Zvabd扩展的支持，正在完善P扩展的gcc实现部分，在Smmtt扩展工作组讨论了特权寄存器的地址问题。
 
 ## LLVM
 
