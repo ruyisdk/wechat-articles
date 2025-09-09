@@ -4,6 +4,33 @@
 
 ## 包管理器
 
+RuyiSDK 0.40 对应的包管理器版本也为 0.40.0，已于今日发布。您可移步
+[GitHub Releases][ruyi-0.40.0-gh]、[PyPI][ruyi-0.40.0-pypi] 或 [ISCAS 镜像源][ruyi-0.40.0-iscas]下载体验。
+
+* [PyPI][ruyi-0.40.0-pypi]: `pip install ruyi`
+* [GitHub Releases][ruyi-0.40.0-gh]
+* [ISCAS 镜像源][ruyi-0.40.0-iscas]
+
+[elexcon]: https://www.elexcon.com/
+[ruyi-0.40.0-gh]: https://github.com/ruyisdk/ruyi/releases/tag/0.40.0
+[ruyi-0.40.0-pypi]: https://pypi.org/project/ruyi/0.40.0/
+[ruyi-0.40.0-iscas]: https://mirror.iscas.ac.cn/ruyisdk/ruyi/tags/0.40.0/
+
+本次 RuyiSDK 软件源的更新主要包含了以下内容：
+
+* 完善了设备支持：
+    * Sipeed LicheeRV Nano 的 fishwaldo 构建的 Debian：新增了历史版本 1.2.0 与 1.3.0。
+    * Milk-V Pioneer 的 RevyOS：更新了 0.20250901.0 版本。
+* 工程化迭代：
+    * 修复了 `board-image/debian-desktop-sdk-milkv-mars-cm-sd` 的数据结构，并以 CI 形式确保了类似问题不会再发生。
+
+感谢 [@weilinfox] 的贡献！
+
+[@weilinfox]: https://github.com/weilinfox
+
+欢迎试用或来上游围观；您的需求是我们迭代开发的目标和动力。您也可以亲自参与
+RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查看、修改我们的[部分打包脚本](https://github.com/ruyisdk/ruyici)与[软件源仓库](https://github.com/ruyisdk/packages-index)。今后，按照本年度的开发计划，我们也将支持有权的第三方贡献者通过程序化的方式上传软件包、系统镜像等分发文件，以便利打包工作。
+
 ## IDE
 Eclipse 插件本期无新增特性，欢迎对Eclipse插件开发有兴趣的小伙伴加入开发团队，详情参考 [J159 RuyiSDK IDE 开发实习生](https://github.com/lazyparser/weloveinterns/blob/master/open-internships.md) ，期待您的加入。
 
