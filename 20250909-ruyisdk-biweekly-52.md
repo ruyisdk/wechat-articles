@@ -16,3 +16,6 @@ Eclipse 插件本期无新增特性，欢迎对Eclipse插件开发有兴趣的�
 ## V8
 
 ## 操作系统支持矩阵
+
+- [Dump ArchLinux@Duo_S](https://github.com/ruyisdk/support-matrix/pull/365)
+- [Fix OrangePi-RV metadata](https://github.com/ruyisdk/support-matrix/pull/366)
