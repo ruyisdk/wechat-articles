@@ -70,3 +70,6 @@ PLCT提交并合入的patch：
     [chromium-review.googlesource.com/c/6873190](https://chromium-review.googlesource.com/c/6873190)
 
 ## 操作系统支持矩阵
+
+- [Dump ArchLinux@Duo_S](https://github.com/ruyisdk/support-matrix/pull/365)
+- [Fix OrangePi-RV metadata](https://github.com/ruyisdk/support-matrix/pull/366)
