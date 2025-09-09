@@ -14,5 +14,59 @@ Eclipse 插件本期无新增特性，欢迎对Eclipse插件开发有兴趣的�
 ## LLVM
 
 ## V8
+PLCT提交并合入的patch：
+1. **[riscv] Optimize Overflow check when right operand is Immediate**  
+   [RISC-V] 当右操作数为立即数时优化溢出检查  
+   [chromium-review.googlesource.com/c/6732519](https://chromium-review.googlesource.com/c/6732519)
+2. **[riscv][sandbox] Bottleneck kUnknownIndirectPointerTag**  
+   [RISC-V][sandbox] 处理 kUnknownIndirectPointerTag的性能瓶颈  
+   [chromium-review.googlesource.com/c/6907272](https://chromium-review.googlesource.com/c/6907272)
+3. **[riscv][wasm, codegen] Add skipped write barrier verification to Liftoff**  
+   [RISC-V][WebAssembly，codegen] 向 Liftoff 添加跳过的写屏障验证  
+   [chromium-review.googlesource.com/c/6914315](https://chromium-review.googlesource.com/c/6914315)
+4. **[riscv] Revert "Reland "Reland "[turboshaft] Direct call for known functions"""**  
+   [RISC-V] 撤销 "Reland"Reland "[turboshaft] Direct call for known functions"""  
+   [chromium-review.googlesource.com/c/6907270](https://chromium-review.googlesource.com/c/6907270)
+5. **[riscv][wasmfx] Implement the resume instruction**  
+   [RISC-V][wasmfx] 实现 resume 指令  
+   [chromium-review.googlesource.com/c/6908524](https://chromium-review.googlesource.com/c/6908524)
+
+审阅并合入的patch:
+1. **[riscv] Remove branch instrution in AssembleReturn**  
+   [RISC-V] 移除 AssembleReturn 中的分支指令  
+   [chromium-review.googlesource.com/c/6873604](https://chromium-review.googlesource.com/c/6873604)
+2. **[risc-v] Use bexti for kRiscvCvtDS**  
+   [RISC-V] 对 kRiscvCvtDS 使用 bexti 指令  
+   [chromium-review.googlesource.com/c/6873191](https://chromium-review.googlesource.com/c/6873191)
+3. **[riscv] Hoisting sign extension for switch table**  
+   [RISC-V] 为切换表提升符号扩展操作  
+   [chromium-review.googlesource.com/c/6873189](https://chromium-review.googlesource.com/c/6873189)
+4. **[risc-v] Remove sll32 instruction if r2 is less than 0x7FFFFFFF**  
+   [RISC-V] 若 r2 小于 0x7FFFFFFF 则移除 sll32 指令  
+   [chromium-review.googlesource.com/c/6873603](https://chromium-review.googlesource.com/c/6873603)
+5. **[riscv] Use zextw in DecompressTagged to reduce the number of instructions**  
+   [RISC-V] 在 DecompressTagged 中使用 zextw 以减少指令数量  
+   [chromium-review.googlesource.com/c/6873192](https://chromium-review.googlesource.com/c/6873192)
+6. **[riscv] Handle kRiscvPeek with simd128 output**  
+   [RISC-V] 处理带有 simd128 输出的 kRiscvPeek  
+   [chromium-review.googlesource.com/c/6879783](https://chromium-review.googlesource.com/c/6879783)
+7. **[risc-v] Only save clobbered registers when calling RecordWrite**  
+   [RISC-V] 调用 RecordWrite 时仅保存被破坏的寄存器  
+   [chromium-review.googlesource.com/c/6873602](https://chromium-review.googlesource.com/c/6873602)
+8. **[riscv] Don't round to zero when doing an i32x4-mul operation**  
+   [RISC-V] 执行 i32x4-mul 操作时不向零舍入  
+   [chromium-review.googlesource.com/c/6916101](https://chromium-review.googlesource.com/c/6916101)
+9. **[riscv] Use a function to save and restore Wasm params**  
+   [RISC-V] 使用函数来保存和恢复 WebAssembly 参数  
+   [chromium-review.googlesource.com/c/6842159](https://chromium-review.googlesource.com/c/6842159)
+10. **[riscv][compiler] Support skipped skipped write barrier verification in Turbofan**  
+    [RISC-V][compiler] 在 Turbofan 中支持跳过的写屏障验证  
+    [chromium-review.googlesource.com/c/6917460](https://chromium-review.googlesource.com/c/6917460)
+11. **[riscv][maglev] Reset last young allocation in stack checks**  
+    [RISC-V][Maglev] 在栈检查中重置最后的年轻代分配  
+    [chromium-review.googlesource.com/c/6904549](https://chromium-review.googlesource.com/c/6904549)
+12. **[riscv] Use shxadd instruction to calculate address for load & store**  
+    [RISC-V] 使用 shxadd 指令计算加载和存储的地址  
+    [chromium-review.googlesource.com/c/6873190](https://chromium-review.googlesource.com/c/6873190)
 
 ## 操作系统支持矩阵
