@@ -109,3 +109,15 @@ PLCT提交并合入的patch：
 
 - [Dump ArchLinux@Duo_S](https://github.com/ruyisdk/support-matrix/pull/365)
 - [Fix OrangePi-RV metadata](https://github.com/ruyisdk/support-matrix/pull/366)
+
+## 版本测试及遗留问题
+RuyiSDK 包管理器 0.40.0 已通过[发版测试](https://gitee.com/yunxiangluo/ruyisdk-test/blob/master/20250903/README.md)，该版本存在部分不影响核心功能的已知问题，请您在下载使用前务必了解相关情况，审慎评估，以避免可能的不良体验或损失。
+
+| 缺陷      | 问题等级 | 备注 |
+| ----------- | ----------- | --- |
+| [文档代码块格式不统一 #93](https://github.com/ruyisdk/docs/issues/93)       | 修复 | 见 issue 下方更新 |
+| [链接中的 RuyiSDK 大小写问题 #94](https://github.com/ruyisdk/docs/issues/94)   | 修复 | 见 issue 下方更新      |
+| [关于 fastboot 的文档提示 #95](https://github.com/ruyisdk/docs/issues/95)   | 严重 | 建立新的 [issue](https://github.com/ruyisdk/ruyisdk/issues/52) 进行更新，且已拟订相关修复版本号为 0.42.0 版本  |
+| [关于使用 pip 安装 ruyi 的文档提示 #96](https://github.com/ruyisdk/docs/issues/96)   | 严重 | 已有文档整体更新计划，已有具体时间节点和时间表安排  |
+| [有一部分包无法下载 #37](https://github.com/ruyisdk/packages-index/issues/37)     | 一般 | 已有相关 issue 回复且已经在修复中 |
+| [BananaPi BPI-F3 eMMC storage variant did not refer to any combo #101](https://github.com/ruyisdk/packages-index/issues/101)     | 一般 | 软件自带修复功能，且已有相关 issue 回复 |
