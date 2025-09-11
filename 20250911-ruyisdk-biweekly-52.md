@@ -25,7 +25,7 @@ RuyiSDK 0.40 对应的包管理器版本也为 0.40.0，已于 9 月 9 日发布
 [ruyi-0.40.0-pypi]: https://pypi.org/project/ruyi/0.40.0/
 [ruyi-0.40.0-iscas]: https://mirror.iscas.ac.cn/ruyisdk/ruyi/tags/0.40.0/
 
-> [!INFO]
+> [!NOTE]
 > RISC-V 用户可以使用 `pip` 安装 `ruyi`，但由于 `ruyi` 依赖的部分 Python
 > 库暂未在 PyPI 上提供 RISC-V 架构的预编译包，安装 `ruyi` 时 Python
 > 包管理器会尝试从源代码编译安装这些依赖，可能非常耗时或编译失败。
