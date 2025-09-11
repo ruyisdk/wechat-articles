@@ -49,8 +49,6 @@ Eclipse 插件本期无新增特性，欢迎对Eclipse插件开发有兴趣的�
 为官方工具链添加了'--with-profiles'选项用来指定构建时默认使能的RISC-V Profiles, 将GCC上游中Profiles定义整理至'riscv-profiles.def'中,
 更新了RVP的Intrinsics文档，GCC同步实现中。
 
-## LLVM
-
 ## V8
 PLCT提交并合入的patch：
 1. **[riscv] Optimize Overflow check when right operand is Immediate**  
