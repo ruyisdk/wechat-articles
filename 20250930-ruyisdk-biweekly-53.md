@@ -10,6 +10,12 @@
 
 ## LLVM
 
+upstream:
+- [[LLDB] Fix GetIndexOfChildMemberWithName to handle anonymous struct in base classes](https://github.com/llvm/llvm-project/pull/158256)
+
+xtheadvector:
+- [[LLVM][XTHeadVector] fix vwcvt, vwcvtu](https://github.com/ruyisdk/llvm-project/pull/163)
+
 ## V8
 
 ## 操作系统支持矩阵
