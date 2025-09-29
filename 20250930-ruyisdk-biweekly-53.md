@@ -5,15 +5,23 @@
 ## 包管理器
 
 ## IDE
+**VSCode 插件：** 新增 VS Code 插件对 Ruyi 的检测与安装支持。主要包括：
+- 新增 ruyi.detect 命令：启动自动检测，缺失时提示安装或打开指南
+- 新增 ruyi.install 命令：通过 PyPI 安装/升级 Ruyi，仅支持 Linux
+- 在 extension.ts 注册命令并触发检测
+-  [feat: add Ruyi detect & install commands](https://github.com/ruyisdk/ruyisdk-vscode-extension/pull/1)
+
+**Eclipse 插件：**
+本期无新增特性，欢迎对Eclipse插件开发有兴趣的小伙伴加入开发团队，详情参考 [J159 RuyiSDK IDE 开发实习生](https://github.com/lazyparser/weloveinterns/blob/master/open-internships.md) ，期待您的加入。
 
 ## GCC
 
 ## LLVM
 
-upstream:
+**upstream:**
 - [[LLDB] Fix GetIndexOfChildMemberWithName to handle anonymous struct in base classes](https://github.com/llvm/llvm-project/pull/158256)
 
-xtheadvector:
+**xtheadvector:**
 - [[LLVM][XTHeadVector] fix vwcvt, vwcvtu](https://github.com/ruyisdk/llvm-project/pull/163)
 
 ## V8
@@ -33,6 +41,7 @@ xtheadvector:
 5. **[riscv] Fix custom-descriptors-inlining.js failed**  
    [RISC-V] 修复 custom-descriptors-inlining.js 执行失败问题  
    [chromium-review.googlesource.com/c/6928701](https://chromium-review.googlesource.com/c/6928701)
+
 **审阅并合入的patch：**
 1. **[riscv] Only compile vlen intrinsic for RVV targets**  
    [RISC-V] 仅为 RVV 目标编译 vlen 内在函数  
