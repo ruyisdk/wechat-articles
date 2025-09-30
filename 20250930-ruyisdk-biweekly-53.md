@@ -79,3 +79,26 @@
 - Opennovation.org 工程软件在 RISC-V 上的测试验证：https://github.com/QA-Team-lo/engineering-riscv
 
 ## 版本测试及遗留问题
+
+RuyiSDK 0.41.0 版本已通过[发版测试](https://gitee.com/yunxiangluo/ruyisdk-test/blob/master/20250922/README.md)。该
+版本测试是基于 0.41.0-beta.20250922 和 0.41.0-beta.20250926 两个测试版本开展的，预期 0.41.0 版本将基于
+ 0.41.0-beta.20250926 版本代码发版。下面的表格记录了 0.41.0-beta.20250922 版本缺陷，该缺陷已在 0.41.0-beta.20250926
+版本修复：
+
+| 缺陷      | 问题等级 |判定依据 |
+| ----------- | ----------- | --- |
+| [[Feature Request] Provide information prompts when automatically running ruyi update #352](https://github.com/ruyisdk/ruyi/issues/352) | 修复 | 在 0.41.0-beta-20250926 修复 |
+
+同时可以参考下面的表格来跟踪历史遗留问题的修复进度：
+
+| 缺陷      | 问题等级 | 备注 |
+| ----------- | ----------- | --- |
+| [关于 fastboot 的文档提示 #95](https://github.com/ruyisdk/docs/issues/95)   | 严重 | 建立新的 [issue](https://github.com/ruyisdk/ruyisdk/issues/52) 进行更新，且已拟订相关修复版本号为 0.42.0 版本  |
+| [关于使用 pip 安装 ruyi 的文档提示 #96](https://github.com/ruyisdk/docs/issues/96)   | 严重 | 已有文档整体更新计划，已有具体时间节点和时间表安排  |
+| [有一部分包无法下载 #37](https://github.com/ruyisdk/packages-index/issues/37)     | 一般 | 已有相关 issue 回复且已经在修复中 |
+| [BananaPi BPI-F3 eMMC storage variant did not refer to any combo #101](https://github.com/ruyisdk/packages-index/issues/101)     | 一般 | 软件自带修复功能，且已有相关 issue 回复 |
+
+这些遗留问题并不会影响 Ruyi 包管理器核心功能的实现，但可能影响用户体验，故建议在下载和更新您的 Ruyi 包管理器版本前了
+解。其中 packages-index 相关问题将主要影响 ``ruyi device provision`` 功能，请不要使用 ``BananaPi BPI-F3`` 开发板的
+ ``BananaPi BPI-F3 (eMMC storage)`` 镜像和 ``Pine64 Star64`` 开发板的 ``Armbian for Pine64 Star64`` 镜像，相关缺陷修
+复后可以通过 ``ruyi update`` 解决。
