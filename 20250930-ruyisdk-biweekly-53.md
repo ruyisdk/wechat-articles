@@ -16,6 +16,9 @@
 
 ## GCC
 
+修复了Binutils中p扩展支持的一些编码问题，更新了GCC回归测试中发现的部分错误。
+提交了Zvabd的binutils支持，正在处理Binutils寄存器对使用编号不正确的问题。
+
 ## LLVM
 
 **upstream:**
