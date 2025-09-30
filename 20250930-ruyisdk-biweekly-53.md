@@ -4,6 +4,65 @@
 
 ## 包管理器
 
+RuyiSDK 0.41 对应的包管理器版本也为 0.41.0，已于今日发布。您可移步
+[GitHub Releases][ruyi-0.41.0-gh]、[PyPI][ruyi-0.41.0-pypi] 或 [ISCAS 镜像源][ruyi-0.41.0-iscas]下载体验。
+
+* [PyPI][ruyi-0.41.0-pypi]: `pip install ruyi`
+* [GitHub Releases][ruyi-0.41.0-gh]
+* [ISCAS 镜像源][ruyi-0.41.0-iscas]
+
+[ruyi-0.41.0-gh]: https://github.com/ruyisdk/ruyi/releases/tag/0.41.0
+[ruyi-0.41.0-pypi]: https://pypi.org/project/ruyi/0.41.0/
+[ruyi-0.41.0-iscas]: https://mirror.iscas.ac.cn/ruyisdk/ruyi/tags/0.41.0/
+
+> [!NOTE]
+> RISC-V 用户可以使用 `pip` 安装 `ruyi`，但由于 `ruyi` 依赖的部分 Python
+> 库暂未在 PyPI 上提供 RISC-V 架构的预编译包，安装 `ruyi` 时 Python
+> 包管理器会尝试从源代码编译安装这些依赖，可能非常耗时或编译失败。
+>
+> 如果您在 RISC-V 设备上安装 `ruyi` 时遇到问题，建议使用其他安装方法。
+
+本次 RuyiSDK 包管理器的更新主要包含了以下内容：
+
+* `ruyi update` 在访问网络前后会打印提示信息了。
+* 如果执行 `ruyi` 命令时触发了软件源同步动作，会打印提示信息了。
+* `ruyi news`（不带子命令调用时）会提示当前未读新闻的信息了。
+* 当您在 bash 或 zsh 环境下首次执行单文件发行版的 `ruyi` 时，会提示配置 Shell 自动补全了。
+* RuyiSDK 设备安装器在询问 `dd` 命令的目标设备文件时，会检查其是否当前正被挂载，并拒绝您填入正被挂载的设备了。
+* 工程化迭代：
+    * 为方便发行版打包工作，重新提供了兼容 Poetry 1.0.7 版本的 Python 项目元数据。
+    * 为方便测试工作，现在会为 Debian、deepin、Ubuntu 三种发行版为每个 `ruyi` tag 自动化打包了。
+
+本次 RuyiSDK 软件源的更新主要包含了以下内容：
+
+* 新增软件包：
+    * `source/jdk23u`: OpenJDK 23 源码。
+    * `source/llvm`: LLVM 源码。
+    * `source/llvm-plct`: PLCT 维护的 LLVM 源码，带 RVP 扩展支持。
+    * `source/opencv`: OpenCV 源码。
+    * `source/qemu`: QEMU 源码。
+    * `source/qemu-plct`: PLCT 维护的 QEMU 源码，带 RVP 扩展支持。
+    * `source/v8`: V8 JavaScript 引擎。
+* 更新软件包：
+    * `toolchain/gnu-plct`: PLCT 维护的 GNU 工具链，0.20250912.0 版本。
+    * `toolchain/llvm-plct`: PLCT 维护的 LLVM 工具链，21.1.0 版本。
+    * `toolchain/llvm-upstream`: 上游版本 LLVM 工具链，21.1.1 版本。
+* 完善了设备支持：
+    * `board-image/freebsd-riscv64-mini-live`: 移除无法使用的旧版本，更新了新版本。
+    * `board-image/openbsd-riscv64-live`: 移除无法使用的旧版本，更新了新版本。
+    * `board-image/ubuntu-server-riscv64-sifive-unmatched`: 移除无法使用的旧版本，更新了新版本。
+    * 为 `ruyi` 虚拟环境新增了 `manual` profile 支持。该 profile 不会代您配置任何编译参数，适用于需要自行控制 `-march`、`-mabi` 或 `-mcpu` 等参数的使用场景。
+* 工程化迭代：
+    * 移除了 `ruyi` 0.33.0 及更早版本的支持，以降低维护负担。
+    * 系统性地为第三方软件源配置了相应的镜像列表。
+
+感谢 [@weilinfox] 的贡献！
+
+[@weilinfox]: https://github.com/weilinfox
+
+欢迎试用或来上游围观；您的需求是我们迭代开发的目标和动力。您也可以亲自参与
+RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查看、修改我们的[部分打包脚本](https://github.com/ruyisdk/ruyici)与[软件源仓库](https://github.com/ruyisdk/packages-index)。今后，按照本年度的开发计划，我们也将支持有权的第三方贡献者通过程序化的方式上传软件包、系统镜像等分发文件，以便利打包工作。
+
 ## IDE
 **VSCode 插件：** 新增 VS Code 插件对 Ruyi 的检测与安装支持。主要包括：
 - 新增 ruyi.detect 命令：启动自动检测，缺失时提示安装或打开指南
