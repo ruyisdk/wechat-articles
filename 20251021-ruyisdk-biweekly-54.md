@@ -1,10 +1,10 @@
-# RuyiSDK 双周进展汇报  第 054 期·2025 年 10 月 21 日
+# RuyiSDK 双周进展汇报 第 054 期·2025 年 10 月 21 日
 
 ## 卷首语
 
 ## 包管理器
 
-RuyiSDK 0.42 对应的包管理器版本也为 0.42.0，已于 TBD 日发布。您可移步
+RuyiSDK 0.42 对应的包管理器版本也为 0.42.0，已于 10 月 24 日发布。您可移步
 [PyPI][ruyi-0.42.0-pypi]、[GitHub Releases][ruyi-0.42.0-gh] 或 [ISCAS 镜像源][ruyi-0.42.0-iscas]下载体验。
 
 * [PyPI][ruyi-0.42.0-pypi]: `pip install ruyi`
@@ -47,12 +47,6 @@ RuyiSDK 0.42 对应的包管理器版本也为 0.42.0，已于 TBD 日发布。�
 
 本次 RuyiSDK 软件源的更新主要包含了以下内容：
 
-* 新增软件包：
-    * TODO
-* 更新软件包：
-    * TODO
-* 完善了设备支持：
-    * TODO
 * 实体数据库更新：
     * Ruyi 虚拟环境所用的 profiles 现已通过 `profile-v1` 实体类型暴露，如 `profile-v1:generic`。
 * 工程化迭代：
