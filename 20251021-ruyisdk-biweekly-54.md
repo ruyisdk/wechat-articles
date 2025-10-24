@@ -77,6 +77,33 @@ Eclipse 插件开发恢复！欢迎对Eclipse插件开发有兴趣的小伙伴�
 ## LLVM
 
 ## V8
+**PLCT提交并合入的patch：**
+1. **[riscv] Implement Zicfiss for simulator**  
+   [RISC-V] 为模拟器实现 Zicfiss 扩展  
+   [chromium-review.googlesource.com/c/6987768](https://chromium-review.googlesource.com/c/6987768)
+2. **[riscv] Refactor the DEBUG_RISCV to support dumping log to a file.**  
+   [RISC-V] 重构 DEBUG_RISCV 以支持将日志转储到文件  
+   [chromium-review.googlesource.com/c/6979424](https://chromium-review.googlesource.com/c/6979424)
+3. **[riscv] zicfiss assembler and disassembler**  
+   [RISC-V] Zicfiss 扩展的汇编器和反汇编器  
+   [chromium-review.googlesource.com/c/6978248](https://chromium-review.googlesource.com/c/6978248)
+4. **[riscv][deopt] Change deopt entries into builtins**  
+   [RISC-V][反优化] 将反优化入口转换为内置函数  
+   [chromium-review.googlesource.com/c/7000607](https://chromium-review.googlesource.com/c/7000607)
+
+**审阅并合入的patch：**
+1. **[riscv][maglev/turbolev] Optimize Math.max/min Float64 cases**  
+   [RISC-V][Maglev/Turbolev] 优化 Math.max/min 的 Float64 场景  
+   [chromium-review.googlesource.com/c/7066840](https://chromium-review.googlesource.com/c/7066840)
+2. **[riscv][wasmfx] Implement suspend instruction**  
+   [RISC-V][wasmfx] 实现 suspend 指令  
+   [chromium-review.googlesource.com/c/7045130](https://chromium-review.googlesource.com/c/7045130)
+3. **[riscv] Remove inactive owners**  
+   [RISC-V] 移除不活跃的所有者  
+   [chromium-review.googlesource.com/c/6905229](https://chromium-review.googlesource.com/c/6905229)
+4. **[riscv] Preserve signalling NaNs for float32.**  
+   [RISC-V] 保留 float32 类型的信号 NaN  
+   [chromium-review.googlesource.com/c/6973906](https://chromium-review.googlesource.com/c/6973906)
 
 ## 操作系统支持矩阵
 
