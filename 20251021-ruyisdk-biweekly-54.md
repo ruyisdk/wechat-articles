@@ -73,6 +73,7 @@ RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查�
 Eclipse 插件开发恢复！欢迎对Eclipse插件开发有兴趣的小伙伴加入开发团队，详情参考 [J159 RuyiSDK IDE 开发实习生](https://github.com/lazyparser/weloveinterns/blob/master/open-internships.md) ，期待您的加入。
 
 ## GCC
+修复了RUYISDK-GCC回归测试中发现的一些问题，更新了RVP 0.9.11版本的支持，对部分ABI引起的冲突进行了解决。
 
 ## LLVM
 
