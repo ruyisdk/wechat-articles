@@ -10,6 +10,12 @@
 
 ## LLVM
 
+Upstream:
+- [LLDB][Editline] empty current line before el_wgets 
+ lldb (https://github.com/llvm/llvm-project/pull/165830)
+- [LLDB][DWARF] Use the same qualified name computation for Rust 
+ lldb (https://github.com/llvm/llvm-project/pull/165840)
+
 ## V8
 **提交的patch：**
 1. **[riscv] Fix incorrect check supports_wasm_simd_128**  
