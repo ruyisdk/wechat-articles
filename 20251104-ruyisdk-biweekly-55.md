@@ -26,6 +26,7 @@
 - 支持构建包含 RuyiSDK 插件的 RuyiSDK IDE
 
 ## GCC
+更新了RVP测试中发现的构建问题，修复了zpsfoperand命名不一致的问题
 
 ## LLVM
 
