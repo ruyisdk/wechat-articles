@@ -6,6 +6,14 @@
 
 ## IDE
 
+**VS Code插件：**
+ - 添加解压 source 功能
+ - 添加下载进度
+ - 添加虚拟环境管理图形化入口
+ - 将配置项（Ruyi 包管理器目录、遥测信息）移动至插件设置
+ - 交付测试团队准备上架 vscode marketplace
+
+
 ## GCC
 
 ## LLVM
