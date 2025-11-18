@@ -21,8 +21,6 @@
 ## GCC
 修复了回归测试中发现的一些BUG，对仓库说明文档添加了中文支持，对Binutils测试模块进行了更新。
 
-## LLVM
-
 ## V8
 提交并合入的patch：
 1. **[riscv][wasm][liftoff][growable-stacks] Do not change cache state in branch**  
