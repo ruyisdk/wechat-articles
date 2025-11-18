@@ -46,7 +46,7 @@
 12. **[maglev][riscv] Replace the DataViewElementOperand with StoreDataViewElement/LoadDataViewElement**  
     [Maglev编译器][RISC-V] 将 DataViewElementOperand 替换为 StoreDataViewElement/LoadDataViewElement（https://chromium-review.googlesource.com/c/7155968）
 
-审阅并何入的patch：
+审阅并合入的patch：
 1. **[riscv] Fix deoptimization failure due to register clobbering**  
    [RISC-V] 修复因寄存器被破坏导致的去优化失败问题（https://chromium-review.googlesource.com/c/7139894）
 2. **[riscv] Fix kIndirectPointer issue in store node selection**  
