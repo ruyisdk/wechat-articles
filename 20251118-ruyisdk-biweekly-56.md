@@ -13,6 +13,10 @@
  - 将配置项（Ruyi 包管理器目录、遥测信息）移动至插件设置
  - 交付测试团队准备上架 vscode marketplace
 
+**Eclipse 插件：**
+ - 引入 CI 检查 DCO 规范并在 GitHub Pages 自动发布插件
+ - 重构插件目录、优化现有文档
+ - 解决 Eclipse SDK IDE 中的开发、调试问题
 
 ## GCC
 修复了回归测试中发现的一些BUG，对仓库说明文档添加了中文支持，对Binutils测试模块进行了更新。
