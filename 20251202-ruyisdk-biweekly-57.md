@@ -6,13 +6,18 @@
 
 ## IDE
 
+**VSCode 插件：**
+
+**Eclipse 插件：**
+ - 制定代码风格约束，审查所有代码。
+ - 添加“新闻”模块。
+
 ## GCC
 
 ## LLVM
 
 ## V8
-本期亮点：
-Zba扩展的shxadd指令可融合移位与加法，加速RISC-V的地址计算。V8实现了这项优化，结合偏移调整，加载指令数可减半（从4条指令降低为2条）。
+本期亮点：Zba扩展的shxadd指令可融合移位与加法，加速RISC-V的地址计算。V8实现了这项优化，结合偏移调整，加载指令数可减半（从4条指令降低为2条）。
 
 本期提交的patch：
 1. **[riscv] Encode AccessMode with kMemoryAccessProtectedNullDereference in visitAtomicLoad**  
