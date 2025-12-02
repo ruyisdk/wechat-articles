@@ -65,6 +65,9 @@ RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查�
 
 ## LLVM
 
+1. [[DAG] Update canCreateUndefOrPoison to handle ISD::VECTOR_COMPRESS](https://github.com/llvm/llvm-project/pull/168010)
+2. [[DAG] Add generic m_TernaryOp() / m_c_TernaryOp() matchers](https://github.com/llvm/llvm-project/pull/165520)
+
 ## V8
 本期亮点：Zba扩展的shxadd指令可融合移位与加法，加速RISC-V的地址计算。V8实现了这项优化，结合偏移调整，加载指令数可减半（从4条指令降低为2条）。
 
