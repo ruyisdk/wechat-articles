@@ -13,6 +13,7 @@
  - 添加“新闻”模块。
 
 ## GCC
+发布了gcc-15tag,更新了--with-cpu构建选项支持，同步了binutils支持RV架构记录测试结果的补丁。
 
 ## LLVM
 
