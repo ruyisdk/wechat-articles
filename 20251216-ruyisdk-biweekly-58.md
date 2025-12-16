@@ -60,8 +60,6 @@ RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查�
 ## GCC
 更新P扩展支持至018版本，正在修复gcc15.2回归测试中出现的问题。
 
-## LLVM
-
 ## V8
 本期亮点：
 1. RISE基金会官网报道了V8的最新进展: https://riseproject.dev/2025/12/09/a-glimpse-into-v8-development-for-risc-v/
