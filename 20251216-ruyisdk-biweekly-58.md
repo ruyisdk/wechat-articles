@@ -7,6 +7,9 @@
 ## IDE
 **VSCode 插件：**
 
+- 添加 Release CI
+- 预发布 1.0 版本
+
 **Eclipse 插件：**
 
 ## GCC
