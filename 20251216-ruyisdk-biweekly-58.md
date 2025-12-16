@@ -1,4 +1,4 @@
-# RuyiSDK 双周进展汇报 第 058 期·2025 年 12 月 16 日
+<img width="415" height="463" alt="image" src="https://github.com/user-attachments/assets/f508b849-2ecf-454e-b3f0-c01fc3bf552b" /># RuyiSDK 双周进展汇报 第 058 期·2025 年 12 月 16 日
 
 ## 卷首语
 
@@ -56,3 +56,23 @@ RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查�
 ## LLVM
 
 ## V8
+本期亮点：
+1. RISE基金会官网报道了V8的最新进展: https://riseproject.dev/2025/12/09/a-glimpse-into-v8-development-for-risc-v/
+
+本期提交的patch：
+1. **[riscv] rename x0 to tmp1 in ByteSwap**  
+   [RISC-V] 在ByteSwap中将x0重命名为tmp1（https://chromium-review.googlesource.com/c/7220250）
+2. **[frames] Track stack frame iteration depth in StackFrameIterator**  
+   [栈帧实现] 在StackFrameIterator中跟踪栈帧迭代深度（https://chromium-review.googlesource.com/c/7206634）
+3. **[riscv][maglev] Fix clobbering the data view length**  
+   [RISC-V][Maglev编译器] 修复数据视图长度被覆盖的问题（https://chromium-review.googlesource.com/c/7250928）
+4. **[riscv][maglev] Materialize undefined for undefined nan on exception**  
+   [RISC-V][Maglev编译器] 针对异常场景下未定义的NaN，显式生成undefined值（https://chromium-review.googlesource.com/c/7252469）
+5. **[riscv][wasmfx] Support return values in stack wrapper**  
+   [RISC-V][WebAssemblyFx扩展] 在栈包装器中支持返回值（https://chromium-review.googlesource.com/c/7255074）
+6. **[riscv][api] Flatten v8::FunctionCallbackInfo<T>**  
+   [RISC-V][API] 扁平化v8::FunctionCallbackInfo<T>结构（https://chromium-review.googlesource.com/c/7259655）
+
+本期审阅的patch：
+1. **[riscv] Change 'zextw + add' to 'add.uw'**  
+   [RISC-V] 将“zextw + add”组合操作改为“add.uw”指令（https://chromium-review.googlesource.com/c/v8/v8/+/7255075）
