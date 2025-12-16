@@ -1,4 +1,4 @@
-<img width="415" height="463" alt="image" src="https://github.com/user-attachments/assets/f508b849-2ecf-454e-b3f0-c01fc3bf552b" /># RuyiSDK 双周进展汇报 第 058 期·2025 年 12 月 16 日
+# RuyiSDK 双周进展汇报 第 058 期·2025 年 12 月 16 日
 
 ## 卷首语
 
