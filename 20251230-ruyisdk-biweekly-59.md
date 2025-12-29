@@ -14,4 +14,7 @@
 
 ## LLLVM
 
+- [[LLVM][XTHeadVector] Implement th.vwcvt{u}.x.x.v](https://github.com/ruyisdk/llvm-project/pull/165)
+- [[LLVM][XTHeadVector] fix vadd, vsub, vrsub masked intrinsics](https://github.com/ruyisdk/llvm-project/pull/166)
+
 ## V8
