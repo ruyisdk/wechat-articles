@@ -4,6 +4,51 @@
 
 ## 包管理器
 
+RuyiSDK 0.44 已于今日发布，对应的包管理器版本也为 0.44.0。您可前往以下位置之一下载 RuyiSDK 包管理器：
+
+* [PyPI](https://pypi.org/project/ruyi/0.44.0/): `pip install ruyi`
+* <https://github.com/ruyisdk/ruyi/releases/tag/0.44.0>
+* <https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.44.0/>
+
+> [!NOTE]
+> RISC-V 用户可以使用 `pip` 安装 `ruyi`，但由于 `ruyi` 依赖的部分 Python
+> 库暂未在 PyPI 上提供 RISC-V 架构的预编译包，安装 `ruyi` 时 Python
+> 包管理器会尝试从源代码编译安装这些依赖，可能非常耗时或编译失败。
+>
+> 如果您在 RISC-V 设备上安装 `ruyi` 时遇到问题，建议使用其他安装方法。
+
+> [!NOTE]
+> 请注意：[已知][ruyi-pipx]使用 `pipx` 安装 `ruyi` 会导致随后创建的 Ruyi
+> 虚拟环境不可用，将在下个版本修复。在此之前，请不要使用 `pipx` 安装 `ruyi`。
+
+本次 RuyiSDK 包管理器的更新主要包含了以下内容：
+
+* 遥测功能变更：
+    * 修复了遥测模式为 `local` 时，主动进行的 `ruyi telemetry upload` 不生效的问题。
+    * 出于 RuyiSDK 运营需要，如您的遥测模式为 `on` 且距离上次上传遥测数据至少 7 天，`ruyi`
+      则会在您下一次调用时上传遥测数据，不论预定的上传日为星期几。
+    * 出于 RuyiSDK 运营需要，如您在首次运行 `ruyi` 时选择了禁用数据收集与上传，`ruyi`
+      仍然会进行一次上传，内容为不被保存的随机 ID 与当前 `ruyi` 版本号。
+      如您不希望进行此类上传，请确保您使用 `ruyi` 前为其设置了环境变量 `RUYI_TELEMETRY_OPTOUT=1`。
+
+对于低频使用 `ruyi` 的用户而言，本次更新包含的变更可能允许 RuyiSDK 团队就您的安装
+ID 而言观测到比先前更具体的行为模式。截至目前 RuyiSDK 团队未进行过任何有关数据挖掘。
+
+本次 RuyiSDK 软件源的更新主要包含了以下内容：
+
+* 新增设备支持：
+    * Milk-V Megrez: 兼容各类 Bianbu 镜像。感谢 [@weilinfox] 的贡献！
+* 完善设备支持：
+    * 重命名 RV32 的 `manual` profile（用于手工管理编译参数）为 `manual-rv32` 以避免与 RV64 同名 profile 冲突。感谢 [@Cyl18] [报告][issue149]！
+
+[@Cyl18]: https://github.com/Cyl18
+[@weilinfox]: https://github.com/weilinfox
+[issue149]: https://github.com/ruyisdk/packages-index/issues/149
+[ruyi-pipx]: https://github.com/ruyisdk/ruyi/issues/414
+
+欢迎试用或来上游围观；您的需求是我们迭代开发的目标和动力。您也可以亲自参与
+RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查看、修改我们的[部分打包脚本](https://github.com/ruyisdk/ruyici)与[软件源仓库](https://github.com/ruyisdk/packages-index)。今后，按照本年度的开发计划，我们也将支持有权的第三方贡献者通过程序化的方式上传软件包、系统镜像等分发文件，以便利打包工作。
+
 ## IDE
 
 **VSCode 插件：**
