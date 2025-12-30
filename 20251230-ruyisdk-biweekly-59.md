@@ -56,6 +56,7 @@ RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查�
 **Eclipse 插件：**
 
 ## GCC
+修复了Zilsd扩展回归测试中发现的错误，更新了B扩展优化补丁。
 
 ## LLLVM
 
