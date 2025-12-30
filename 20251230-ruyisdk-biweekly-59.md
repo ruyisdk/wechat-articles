@@ -37,7 +37,7 @@ ID 而言观测到比先前更具体的行为模式。截至目前 RuyiSDK 团�
 本次 RuyiSDK 软件源的更新主要包含了以下内容：
 
 * 新增设备支持：
-    * Milk-V Megrez: 兼容各类 Bianbu 镜像。感谢 [@weilinfox] 的贡献！
+    * Milk-V Megrez: 兼容 RockOS。感谢 [@weilinfox] 的贡献！
 * 完善设备支持：
     * 重命名 RV32 的 `manual` profile（用于手工管理编译参数）为 `manual-rv32` 以避免与 RV64 同名 profile 冲突。感谢 [@Cyl18] [报告][issue149]！
 
