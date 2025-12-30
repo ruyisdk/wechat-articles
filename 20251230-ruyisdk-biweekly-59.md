@@ -14,6 +14,9 @@
 
 ## LLLVM
 
+- [[LLVM][XTHeadVector] Implement th.vwcvt{u}.x.x.v](https://github.com/ruyisdk/llvm-project/pull/165)
+- [[LLVM][XTHeadVector] fix vadd, vsub, vrsub masked intrinsics](https://github.com/ruyisdk/llvm-project/pull/166)
+
 ## V8
 本期提交的patch：
 1. **[riscv] Enable CanUseGenericJsToWasmWrapper** [RISCV] 启用 GenericJsToWasmWrapper 功能，节省Wasm Import function的调用开销（https://chromium-review.googlesource.com/c/7268664） 
