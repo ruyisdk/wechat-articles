@@ -85,7 +85,7 @@ RuyiSDK 基于VSCode 和 Eclipse 均开发了插件以集成 Ruyi 包管理器�
 ## GCC
 修复了Zilsd扩展回归测试中发现的错误，更新了B扩展优化补丁。
 
-## LLLVM
+## LLVM
 
 - [[LLVM][XTHeadVector] Implement th.vwcvt{u}.x.x.v](https://github.com/ruyisdk/llvm-project/pull/165)
 - [[LLVM][XTHeadVector] fix vadd, vsub, vrsub masked intrinsics](https://github.com/ruyisdk/llvm-project/pull/166)
