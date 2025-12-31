@@ -97,3 +97,42 @@ RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查�
 
 本期审阅的patch：
 1. **[maglev] Do not use condition flags on loong64 and riscv64** [Maglev编译器] 取消loong64和riscv64架构条件标志位在IR上的使用（https://chromium-review.googlesource.com/c/7273937）
+
+## 版本测试及遗留问题
+
+RuyiSDK 0.44.0 版本已通过[发版测试](https://gitee.com/yunxiangluo/ruyisdk-test/blob/master/20251222/README.md)。该版本测试是基于 0.44.0-beta.20251219 版本开展的，0.44.0
+版本将基于 0.44.0-beta.20251219 版本代码发版。下面的表格记录了当前版本新增未修复缺陷：
+
+| 缺陷      | 问题等级 |判定依据 |
+| ----------- | ----------- | --- |
+| [Occasional pygit2 failures during testing #415](https://github.com/ruyisdk/ruyi/issues/415) | 一般 | 已有 issue 回复 |
+
+VSCode 插件版本测试基于 ruyisdk-vscode-extension [0.1.0](https://github.com/ruyisdk/ruyisdk-vscode-extension/releases/tag/0.1.0) 前的测试版本开展多轮手动测试，并以经过测试的
+最新 commit 发版。下面的表格记录了当前版本新增待改进内容：
+
+| 缺陷 | 问题等级 | 备注 |
+| ----- | ----- | ----- |
+| [激活虚拟环境时图标未正确显示 #94](https://github.com/ruyisdk/ruyisdk-vscode-extension/issues/94) | 建议 |  |
+| [安装包时弹窗中的进度条不动 #95](https://github.com/ruyisdk/ruyisdk-vscode-extension/issues/95) | 建议 |  |
+| [新闻的搜索功能中的使用id搜索应如何使用？ #96](https://github.com/ruyisdk/ruyisdk-vscode-extension/issues/96) | 建议 |  |
+
+Eclipse 插件版本测试基于 ruyisdk-eclipse-plugins [v0.1.0](https://github.com/ruyisdk/ruyisdk-eclipse-plugins/releases/tag/v0.1.0) 前的测试版本开展多轮手动测试，并以经过测试的
+最新 [Continuous](https://github.com/ruyisdk/ruyisdk-eclipse-plugins/releases/tag/continuous) tag 发版。下面的表格记录了当前版本新增待改进内容：
+
+| 缺陷      | 问题等级 | 备注 |
+| ----------- | ----------- | --- |
+| [命令执行提示框可以任意关闭且无法重新打开 #82](https://github.com/ruyisdk/ruyisdk-eclipse-plugins/issues/82)   | 建议 |   |
+| [开发板选择框中开发板型号未排序 #83](https://github.com/ruyisdk/ruyisdk-eclipse-plugins/issues/83) | 建议 |  |
+| [虚拟环境建立的项目绑定问题 #84](https://github.com/ruyisdk/ruyisdk-eclipse-plugins/issues/84) | 建议 |  |
+| [安装插件时 Eclipse 提示未签名 #85](https://github.com/ruyisdk/ruyisdk-eclipse-plugins/issues/85) | 建议 |  |
+| [打开 Ruyi Package Explorer 时必须选择某款开发板 #86](https://github.com/ruyisdk/ruyisdk-eclipse-plugins/issues/86) | 建议 |  |
+| [虚拟环境建立的 quirks 过滤问题 #87](https://github.com/ruyisdk/ruyisdk-eclipse-plugins/issues/87) | 建议 |  |
+| [虚拟环境建立的 ruyi update 错误处理问题 #88](https://github.com/ruyisdk/ruyisdk-eclipse-plugins/issues/88) | 建议 |  |
+| [虚拟环境建立的 profile 排序问题 #89](https://github.com/ruyisdk/ruyisdk-eclipse-plugins/issues/89) | 建议 |  |
+| [有一些可以自动获取的东西，不需要手动填写 #90](https://github.com/ruyisdk/ruyisdk-eclipse-plugins/issues/90) | 建议 |  |
+| [RuyiSDK IDE 主文档的更新 #123](https://github.com/ruyisdk/docs/issues/123) | 一般 | 已有修复计划 |
+
+参与当前版本测试的实习生：
+
++ [@Cyl18](https://github.com/Cyl18)
++ [@YXCZS](https://github.com/YXCZS)
