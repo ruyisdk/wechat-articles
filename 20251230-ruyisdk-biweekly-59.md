@@ -59,22 +59,28 @@ ID 而言观测到比先前更具体的行为模式。截至目前 RuyiSDK 团�
 RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查看、修改我们的[部分打包脚本](https://github.com/ruyisdk/ruyici)与[软件源仓库](https://github.com/ruyisdk/packages-index)。今后，按照本年度的开发计划，我们也将支持有权的第三方贡献者通过程序化的方式上传软件包、系统镜像等分发文件，以便利打包工作。
 
 ## IDE
+RuyiSDK 基于VSCode 和 Eclipse 均开发了插件以集成 Ruyi 包管理器方便开发者在 IDE 中快速完成环境准备，VSCode 插件 0.1.0 版本和 Eclipse 插件 0.1.0 版本均于今日发布。您可前往以下位置之一下载：
+* RuyiSDK VSCode Extension：
+   * <https://github.com/ruyisdk/ruyisdk-vscode-extension/releases/tag/0.1.0/>
+   * <https://mirror.isrc.ac.cn/ruyisdk/ide/plugins/vscode/>
+* RuyiSDK Eclipse Plugins：
+   * <https://github.com/ruyisdk/ruyisdk-eclipse-plugins/releases/tag/v0.1.0/>
+   * <https://mirror.isrc.ac.cn/ruyisdk/ide/plugins/eclipse/>
 
-**VSCode 插件：**
+**近期更新：**
+   * VSCode 插件：
+      - 优化虚拟环境模块的逻辑
+      - 修复重复的命令
+      - 发布beta1版本
 
-- 优化虚拟环境模块的逻辑
-- 修复重复的命令
-- 发布beta1版本
-
-**Eclipse 插件：**
-
-- 发布：准备版本 0.1.0 。
-- 菜单栏：在 "RuyiSDK" 下添加新闻和虚拟环境模块的入口。
-- 新闻：使较新的新闻位于更高位置。
-- 虚拟环境：可一键配置工具链到已打开的项目中。
-- 日志：为新闻和虚拟环境模块添加必要的日志。
-- 构建：修复第三方库缺失的问题；整理 .target 目标文件，为使用其他 IDE 开发本插件做初步准备。
-- 编码：使用现代 Java 的特性并统一类名、变量名等代码风格。
+   * Eclipse 插件：
+      - 发布：准备版本 0.1.0 。
+      - 菜单栏：在 "RuyiSDK" 下添加新闻和虚拟环境模块的入口。
+      - 新闻：使较新的新闻位于更高位置。
+      - 虚拟环境：可一键配置工具链到已打开的项目中。
+      - 日志：为新闻和虚拟环境模块添加必要的日志。
+      - 构建：修复第三方库缺失的问题；整理 .target 目标文件，为使用其他 IDE 开发本插件做初步准备。
+      - 编码：使用现代 Java 的特性并统一类名、变量名等代码风格。
 
 ## GCC
 修复了Zilsd扩展回归测试中发现的错误，更新了B扩展优化补丁。
