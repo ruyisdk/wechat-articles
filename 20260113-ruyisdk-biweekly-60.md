@@ -15,6 +15,7 @@
 
 
 ## GCC
+更新了P扩展intrinsic的支持，添加了zvzip扩展的binutils实现。
 
 
 ## LLVM
