@@ -19,6 +19,7 @@
 - 虚拟环境模块添加刷新功能。
 
 ## GCC
+更新了P扩展intrinsic的支持，添加了zvzip扩展的binutils实现。
 
 
 ## LLVM
