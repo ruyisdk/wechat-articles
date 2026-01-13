@@ -1,20 +1,37 @@
 # RuyiSDK 双周进展汇报 第 060 期·2026 年 01 月 13 日
 
 ## 卷首语
+各位 RuyiSDK 的开发者伙伴，大家好！
+
+若您在开发中需要部署 GNU/LLVM 工具链、QEMU 模拟器，或为 RISC-V 开发板烧录镜像，欢迎使用 RuyiSDK 包管理器 Ruyi（最新版 v0.44.0）。我们也为您提供了 VSCode 和 Eclipse 插件，助您一键获取所需工具，快速搭建开发环境。RuyiSDK 拥有丰富的工具链生态，并提供基于虚拟环境的隔离构建能力，希望能为您的开发工作带来实实在在的便利。
+
+我们提供了多种安装方式和下载入口，欢迎试用：
+* Ruyi 包管理器 (v0.44.0) ：
+   * PyPI 安装：pip install ruyi
+   * 手动下载安装：
+      * GitHub Releases：https://github.com/ruyisdk/ruyi/releases/tag/0.44.0
+      * ISCAS 镜像源：https://mirror.iscas.ac.cn/ruyisdk/ruyi/tags/0.44.0/
+   * 使用文档：https://ruyisdk.org/docs/Package-Manager/
+* RuyiSDK VSCode Extension (0.1.0) ：
+   * VSCode Extensions 中搜索 `RuyiSDK` 安装
+   * 手动下载安装(install from VSIX):
+      * GitHub Releases：https://github.com/ruyisdk/ruyisdk-vscode-extension/releases/tag/0.1.0/
+      * ISCAS 镜像源：https://mirror.isrc.ac.cn/ruyisdk/ide/plugins/vscode/
+   * 使用文档：https://ruyisdk.org/docs/IDE/
+* RuyiSDK Eclipse Plugins (0.1.0) ：
+   * 手动下载安装：
+      * GitHub Releases：https://github.com/ruyisdk/ruyisdk-eclipse-plugins/releases/tag/v0.1.0/
+      * ISCAS 镜像源：https://mirror.isrc.ac.cn/ruyisdk/ide/plugins/eclipse/
+   * 使用文档：https://ruyisdk.org/docs/VSCode-Plugins/
+   
+我们诚挚邀请您常来 [RuyiSDK 技术社区](https://ruyisdk.cn/) 交流想法，共同成长。
+
+每一次版本的迭代，都离不开社区伙伴的反馈与贡献。下个版本计划于 1 月底发布，让我们共同期待 RuyiSDK 在新的一年里带来更多惊喜！
 
 
 ## 包管理器
 
-由于 RuyiSDK 发版周期调整，RuyiSDK 包管理器的 0.45.0
-版本预期将在 1 月底正式发布。您仍可通过以下渠道下载 RuyiSDK 包管理器的 0.44.0 版本：
-
-* [PyPI][ruyi-0.44.0-pypi]: `pip install ruyi`
-* [GitHub Releases][ruyi-0.44.0-gh]
-* [ISCAS 镜像源][ruyi-0.44.0-iscas]
-
-[ruyi-0.44.0-gh]: https://github.com/ruyisdk/ruyi/releases/tag/0.44.0
-[ruyi-0.44.0-pypi]: https://pypi.org/project/ruyi/0.44.0/
-[ruyi-0.44.0-iscas]: https://mirror.iscas.ac.cn/ruyisdk/ruyi/tags/0.44.0/
+由于 RuyiSDK 发版周期调整，RuyiSDK 包管理器的 0.45.0 版本预期将在 1 月底正式发布。欢迎下载 RuyiSDK 包管理器当前最新版本 0.44.0 试用。
 
 RuyiSDK 团队仍在常态化维护 RuyiSDK 软件源。如您已有 RuyiSDK 包管理器了，您可通过 `ruyi update` 获取近两周的更新：我们保证这些内容兼容 RuyiSDK 包管理器的近 3 个正式版本。
 
@@ -49,10 +66,6 @@ RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查�
 
 ## GCC
 更新了P扩展intrinsic的支持，添加了zvzip扩展的binutils实现。
-
-
-## LLVM
-
 
 ## V8
 
