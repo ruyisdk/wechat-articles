@@ -8,6 +8,10 @@
 
 ### VSCode 插件
 
+- 解压包模板功能添加suggested folder（一键选择解压到当前目录或子目录）
+- 重构虚拟环境功能
+- 修复vscode marketplace的图片失效问题
+
 ### Eclipse 插件
 
 ## GCC
