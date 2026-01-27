@@ -4,6 +4,41 @@
 
 ## 包管理器
 
+RuyiSDK 0.45 已于今日发布，对应的包管理器版本也为 0.45.0。您可前往以下位置之一下载 RuyiSDK 包管理器：
+
+* [PyPI](https://pypi.org/project/ruyi/0.45.0/): `pip install ruyi`
+* <https://github.com/ruyisdk/ruyi/releases/tag/0.45.0>
+* <https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.45.0/>
+
+> [!NOTE]
+> RISC-V 用户可以使用 `pip` 安装 `ruyi`，但由于 `ruyi` 依赖的部分 Python
+> 库暂未在 PyPI 上提供 RISC-V 架构的预编译包，安装 `ruyi` 时 Python
+> 包管理器会尝试从源代码编译安装这些依赖，可能非常耗时或编译失败。
+>
+> 如果您在 RISC-V 设备上安装 `ruyi` 时遇到问题，建议使用其他安装方法。
+
+本次 RuyiSDK 包管理器的更新主要包含了以下内容：
+
+* 由 `pipx` 安装的 `ruyi` 可以正常创建虚拟环境了。
+* 包管理器（本体部分）现已支持简体中文本地化。
+
+本次 RuyiSDK 软件源的更新主要包含了以下内容：
+
+* 完善了设备支持：
+    * Milk-V Meles 的 RevyOS: 更新到 20251226。
+    * Milk-V Pioneer 的 RevyOS: 更新到 20251226。
+    * Sipeed Laptop 4A 的 RevyOS: 更新到 20251226。
+    * Sipeed LicheePi 4A 的 RevyOS: 更新到 20251226。
+    * Sipeed LicheePi Console 4A 的 RevyOS: 更新到 20251226。
+    * Sipeed LicheeRV Nano 的 Buildroot SDK: 更新到 20251230。
+
+感谢 [@weilinfox] 的贡献！
+
+[@weilinfox]: https://github.com/weilinfox
+
+欢迎试用或来上游围观；您的需求是我们迭代开发的目标和动力。您也可以亲自参与
+RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查看、修改我们的[部分打包脚本](https://github.com/ruyisdk/ruyici)与[软件源仓库](https://github.com/ruyisdk/packages-index)。今后，按照本年度的开发计划，我们也将支持有权的第三方贡献者通过程序化的方式上传软件包、系统镜像等分发文件，以便利打包工作。
+
 ## IDE
 
 ### VSCode 插件
