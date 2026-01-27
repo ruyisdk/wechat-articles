@@ -14,6 +14,10 @@
 
 ### Eclipse 插件
 
+- 修复新闻模块第三方库的依赖问题。
+- 虚拟环境模块支持自动探测工作区中的项目。
+- 测试 Update Site 以准备上架 Eclipse Marketplace 。
+
 ## GCC
 
 ## LLVM
