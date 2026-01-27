@@ -55,6 +55,8 @@ RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查�
 
 ## GCC
 
+添加了Zalasr扩展支持，更新了P扩展文档手册。
+
 ## LLVM
 
 xtheadvector 分支更新内容如下：
