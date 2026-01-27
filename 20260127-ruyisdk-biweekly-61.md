@@ -1,22 +1,42 @@
 # RuyiSDK 双周进展汇报 第 061 期·2026 年 01 月 27 日
 
 ## 卷首语
+各位 RuyiSDK 的开发者伙伴，大家好！
+
+本期包管理器、 VSCode 和 Eclipse 插件都提供了新的版本，包管理器主要提供了中文支持（部分插件中文支持还在完善），VSCode 和 Eclipse 插件也均对虚拟环境的支持进行了完善，更多更新详见下方，欢迎大家下载体验。
+
+每个组件都提供了多种下载或安装方式，您可以任意选择一个：
+* Ruyi 包管理器 (v0.45.0) ：
+   * [PyPI](https://pypi.org/project/ruyi/0.45.0/) 安装：pip install ruyi
+   * 手动下载安装：
+      * GitHub Releases：https://github.com/ruyisdk/ruyi/releases/tag/0.45.0
+      * ISCAS 镜像源：https://mirror.iscas.ac.cn/ruyisdk/ruyi/tags/0.45.0/
+   * 使用文档：https://ruyisdk.org/docs/Package-Manager/
+   > [!NOTE]
+   > RISC-V 用户可以使用 `pip` 安装 `ruyi`，但由于 `ruyi` 依赖的部分 Python
+   > 库暂未在 PyPI 上提供 RISC-V 架构的预编译包，安装 `ruyi` 时 Python
+   > 包管理器会尝试从源代码编译安装这些依赖，可能非常耗时或编译失败。
+   >
+   > 如果您在 RISC-V 设备上安装 `ruyi` 时遇到问题，建议使用其他安装方法。
+* RuyiSDK VSCode Extension (0.1.1) ：
+   * VSCode Extensions 中搜索 `RuyiSDK` 安装
+   * 手动下载安装(install from VSIX):
+      * GitHub Releases：https://github.com/ruyisdk/ruyisdk-vscode-extension/releases/tag/0.1.1/
+      * ISCAS 镜像源：https://mirror.isrc.ac.cn/ruyisdk/ide/plugins/vscode/
+   * 使用文档：https://ruyisdk.org/docs/IDE/
+* RuyiSDK Eclipse Plugins (0.1.1) ：
+   * 手动下载安装：
+      * GitHub Releases：https://github.com/ruyisdk/ruyisdk-eclipse-plugins/releases/tag/v0.1.1/
+      * ISCAS 镜像源：https://mirror.isrc.ac.cn/ruyisdk/ide/plugins/eclipse/
+   * 使用文档：https://ruyisdk.org/docs/VSCode-Plugins/
+   
+我们诚挚邀请您常来 [RuyiSDK 技术社区](https://ruyisdk.cn/) 交流想法，共同成长。
+
+每一次版本的迭代，都离不开社区伙伴的反馈与贡献。下个版本计划于春节前发布，让我们共同期待 RuyiSDK 在新的一年里带来更多惊喜！
 
 ## 包管理器
 
-RuyiSDK 0.45 已于今日发布，对应的包管理器版本也为 0.45.0。您可前往以下位置之一下载 RuyiSDK 包管理器：
-
-* [PyPI](https://pypi.org/project/ruyi/0.45.0/): `pip install ruyi`
-* <https://github.com/ruyisdk/ruyi/releases/tag/0.45.0>
-* <https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.45.0/>
-
-> [!NOTE]
-> RISC-V 用户可以使用 `pip` 安装 `ruyi`，但由于 `ruyi` 依赖的部分 Python
-> 库暂未在 PyPI 上提供 RISC-V 架构的预编译包，安装 `ruyi` 时 Python
-> 包管理器会尝试从源代码编译安装这些依赖，可能非常耗时或编译失败。
->
-> 如果您在 RISC-V 设备上安装 `ruyi` 时遇到问题，建议使用其他安装方法。
-
+RuyiSDK 0.45 已于今日发布，对应的包管理器版本也为 0.45.0。
 本次 RuyiSDK 包管理器的更新主要包含了以下内容：
 
 * 由 `pipx` 安装的 `ruyi` 可以正常创建虚拟环境了。
