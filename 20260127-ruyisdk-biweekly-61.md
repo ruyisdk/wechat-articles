@@ -18,6 +18,10 @@
 
 ## LLVM
 
+xtheadvector 分支更新内容如下：
+- [[LLVM][Clang][MC][XTHeadVector] add missing vncvt.x.x.w](https://github.com/ruyisdk/llvm-project/pull/167)
+
+
 ## V8
 本期亮点：在SG2042平台上修复了两个Chromium主线上的构建bug
 
