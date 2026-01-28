@@ -110,3 +110,40 @@ xtheadvector 分支更新内容如下：
 
 
 ## 版本测试及遗留问题
+
+RuyiSDK 0.45.0 版本已通过[发版测试](https://gitee.com/yunxiangluo/ruyisdk-test/blob/master/20260120/README.md)。该版本测试是基于 0.45.0-beta.20260119 版本开展的，0.45.0
+版本将基于 0.45.0-beta.20260119 版本代码发版。下面的表格记录了当前版本新增未修复缺陷：
+
+| 缺陷      | 问题等级 |判定依据 |
+| ----------- | ----------- | --- |
+| [Occasional pygit2 failures during testing #415](https://github.com/ruyisdk/ruyi/issues/415) | 一般 | 已有 issue 回复 |
+
+VSCode 插件版本测试基于 ruyisdk-vscode-extension [0.1.1-beta.1](https://github.com/ruyisdk/ruyisdk-vscode-extension/releases/tag/0.1.1-beta.1) 测试版本开展手动测试，并以该版本为基础
+发版。下面的表格记录了当前版本新增待改进内容，均已有修复计划：
+
+| 缺陷 | 问题等级 | 备注 |
+| ----- | ----- | ----- |
+| [查看未读新闻命令失效 #106](https://github.com/ruyisdk/ruyisdk-vscode-extension/issues/106) | 建议 | 和 #108 为同一问题 |
+| [新闻UI界面已读状态未更新 #108](https://github.com/ruyisdk/ruyisdk-vscode-extension/issues/108) | 建议 | 已知问题，已有修复计划 |
+
+Eclipse 插件版本测试基于 ruyisdk-eclipse-plugins [v0.1.1](https://github.com/ruyisdk/ruyisdk-eclipse-plugins/releases/tag/v0.1.1) 版开展手动测试并发版。
+下面的表格记录了当前版本新增待改进内容，和上一版本相比没有增减：
+
+| 缺陷      | 问题等级 | 备注 |
+| ----------- | ----------- | --- |
+| [命令执行提示框可以任意关闭且无法重新打开 #82](https://github.com/ruyisdk/ruyisdk-eclipse-plugins/issues/82)   | 建议 |   |
+| [开发板选择框中开发板型号未排序 #83](https://github.com/ruyisdk/ruyisdk-eclipse-plugins/issues/83) | 建议 |  |
+| [虚拟环境建立的项目绑定问题 #84](https://github.com/ruyisdk/ruyisdk-eclipse-plugins/issues/84) | 建议 |  |
+| [安装插件时 Eclipse 提示未签名 #85](https://github.com/ruyisdk/ruyisdk-eclipse-plugins/issues/85) | 建议 |  |
+| [打开 Ruyi Package Explorer 时必须选择某款开发板 #86](https://github.com/ruyisdk/ruyisdk-eclipse-plugins/issues/86) | 建议 |  |
+| [虚拟环境建立的 quirks 过滤问题 #87](https://github.com/ruyisdk/ruyisdk-eclipse-plugins/issues/87) | 建议 |  |
+| [虚拟环境建立的 ruyi update 错误处理问题 #88](https://github.com/ruyisdk/ruyisdk-eclipse-plugins/issues/88) | 建议 |  |
+| [虚拟环境建立的 profile 排序问题 #89](https://github.com/ruyisdk/ruyisdk-eclipse-plugins/issues/89) | 建议 |  |
+| [有一些可以自动获取的东西，不需要手动填写 #90](https://github.com/ruyisdk/ruyisdk-eclipse-plugins/issues/90) | 建议 |  |
+| [RuyiSDK IDE 主文档的更新 #123](https://github.com/ruyisdk/docs/issues/123) | 一般 | 已有修复计划 |
+
+参与当前版本测试的实习生：
+
++ [@Cyl18](https://github.com/Cyl18)
++ [@YXCZS](https://github.com/YXCZS)
++ [@jxy687](https://github.com/jxy687)
