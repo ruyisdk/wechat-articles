@@ -10,6 +10,10 @@
 
 ### Eclipse 插件
 
+- 上架 Eclipse Marketplace 并更新文档: https://marketplace.eclipse.org/content/ruyisdk 。
+- 调整 Ruyi 安装向导中错误的按钮状态。
+- 更新依赖的第三方库和 Maven 插件，限制构建环境为 Linux Java 21+ 。
+
 ## GCC
 
 ## LLVM
