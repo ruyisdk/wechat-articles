@@ -2,7 +2,65 @@
 
 ## 卷首语
 
+每个组件都提供了多种下载或安装方式，您可以任意选择一种：
+
+* RuyiSDK 包管理器 0.46.0
+    * 从 [PyPI](https://pypi.org/project/ruyi/0.46.0/) 安装：`pip install ruyi`
+    * 手动下载安装：
+        * [GitHub Releases](https://github.com/ruyisdk/ruyi/releases/tag/0.46.0)
+        * [ISCAS 镜像源](https://mirror.iscas.ac.cn/ruyisdk/ruyi/tags/0.46.0/)
+    * [使用文档](https://ruyisdk.org/docs/Package-Manager/)
+
+    > [!NOTE]
+    > RISC-V 用户可以使用 `pip` 安装 `ruyi`，但由于 `ruyi` 依赖的部分 Python
+    > 库暂未在 PyPI 上提供 RISC-V 架构的预编译包，安装 `ruyi` 时 Python
+    > 包管理器会尝试从源代码编译安装这些依赖，可能非常耗时或编译失败。
+    >
+    > 如果您在 RISC-V 设备上安装 `ruyi` 时遇到问题，建议使用其他安装方法。
+
+* RuyiSDK VSCode Extension 0.1.1
+    * VSCode Extensions 中搜索 `RuyiSDK` 安装
+    * 手动下载安装 (Install from VSIX):
+        * [GitHub Releases](https://github.com/ruyisdk/ruyisdk-vscode-extension/releases/tag/0.1.1/)
+        * [ISCAS 镜像源](https://mirror.iscas.ac.cn/ruyisdk/ide/plugins/vscode/)
+    * [使用文档](https://ruyisdk.org/docs/VSCode-Plugins/)
+
+* RuyiSDK Eclipse Plugins 0.1.1
+    * 手动下载安装：
+        * [GitHub Releases](https://github.com/ruyisdk/ruyisdk-eclipse-plugins/releases/tag/v0.1.1/)
+        * [ISCAS 镜像源](https://mirror.iscas.ac.cn/ruyisdk/ide/plugins/eclipse/)
+    * [使用文档](https://ruyisdk.org/docs/IDE/)
+
 ## 包管理器
+
+RuyiSDK 0.46 已于今日发布，对应的包管理器版本也为 0.46.0。
+
+本次 RuyiSDK 包管理器的更新主要包含了以下内容：
+
+* 完善了插件架构，现已支持包管理器插件内字符串的本地化：
+    * 新增 `RUYI.has_feature()` 以便探测特定的功能特性是否受到当前运行环境支持。为支持旧版
+      RuyiSDK 包管理器，您可首先使用 `hasattr(RUYI, "has_feature")` 检查该方法是否存在，再进行使用（不然您的插件则会崩溃）；如该方法不存在，则您所要探测的功能肯定不受支持。
+    * 新增 `i18n-v1` 功能特性，对应新增的 `RUYI.i18n` 接口：
+        * `RUYI.i18n.locale: str` 是当前运行环境的区域（locale）取值；
+        * `RUYI.i18n.msg(msgid: str, locale: str | None = None) -> str | None`
+          从当前软件源的 `messages.toml` 查询给定 ID 在给定 locale（默认为当前 locale）的消息字符串。目前建议用
+          `format()` 方法对取得的字符串进行变量替换（格式化）。
+* 您在 PyPI 上可以用更多关键词搜索到我们了。
+* 工程化迭代：
+    * 为 CI 任务的执行环境配置了初步的安全加固措施，其中包含初步的网络流量审计，以预防 CI 相关的供应链攻击。
+
+本次 RuyiSDK 软件源的更新主要包含了以下内容：
+
+* 为 RuyiSDK 设备安装器所用到的插件增加了完整的简体中文支持。
+* 更新软件包：
+    * `toolchain/gnu-upstream`: RuyiSDK 从上游源码构建的 GNU 工具链，0.20260201.0 版本。包含 GNU binutils 2.45、GCC 15.2.0 以及 glibc 2.43。
+* 完善了设备支持：
+    * Sipeed LicheeRV Nano 的 Buildroot SDK: 更新到 20260114。感谢 [@smullllu] 的贡献！
+
+[@smullllu]: https://github.com/smullllu
+
+欢迎试用或来上游围观；您的需求是我们迭代开发的目标和动力。您也可以亲自参与
+RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查看、修改我们的[部分打包脚本](https://github.com/ruyisdk/ruyici)与[软件源仓库](https://github.com/ruyisdk/packages-index)。今后，按照本年度的开发计划，我们也将支持有权的第三方贡献者通过程序化的方式上传软件包、系统镜像等分发文件，以便利打包工作。
 
 ## IDE
 
