@@ -66,6 +66,10 @@ RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查�
 
 ### VSCode 插件
 
+- 添加新人引导
+- 优化新闻读取逻辑（使用porcelain mode）
+- 添加关键词以便VSCode marketplace搜索
+
 ### Eclipse 插件
 
 - 上架 Eclipse Marketplace 并更新文档: https://marketplace.eclipse.org/content/ruyisdk 。
