@@ -14,6 +14,12 @@
 
 ## LLVM
 
+upstream 进展：
+
+- [InstCombine] fold gepi _, (srem x, y) to gepi _, (urem x, y) if y is power-of-2  https://github.com/llvm/llvm-project/pull/180148
+- [DAGCombiner] Fold trunc(build_vector(ext(x), ext(x)) -> build_vector(x,x)#179857 
+https://github.com/llvm/llvm-project/pull/179857
+
 ## V8
 本期亮点：来自软件所的工程师 wangruikang 解决了node.js长久以来存在的疑难bug（ https://ruyisdk.cn/t/topic/403 ）， patch提交至上游并合入（CL7540554），Node for RISC-V 的稳定性得到提升。
 本期提交的patch：
