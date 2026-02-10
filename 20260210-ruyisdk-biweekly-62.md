@@ -15,7 +15,7 @@
 ## LLVM
 
 ## V8
-本期亮点：来自软件所的工程师 wangruikang 解决了node.js长久以来存在的疑难bug（https://ruyisdk.cn/t/topic/403）， patch提交至上游并合入（CL7540554），Node for RISC-V 的稳定性得到提升。
+本期亮点：来自软件所的工程师 wangruikang 解决了node.js长久以来存在的疑难bug（ https://ruyisdk.cn/t/topic/403 ）， patch提交至上游并合入（CL7540554），Node for RISC-V 的稳定性得到提升。
 本期提交的patch：
 1. **[riscv] Only Enable CheckMemoryAccess in V8_COMPRESS_POINTERS mode**  
    [RISC-V] 仅在 V8_COMPRESS_POINTERS 模式下启用 CheckMemoryAccess 功能（https://chromium-review.googlesource.com/c/7555683）
