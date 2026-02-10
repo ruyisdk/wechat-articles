@@ -15,6 +15,7 @@
 - 更新依赖的第三方库和 Maven 插件，限制构建环境为 Linux Java 21+ 。
 
 ## GCC
+提交了 svrsw60t59b 扩展支持及 Zibi 扩展的RFC patch，等待新版本 binutils 合入中。
 
 ## LLVM
 
