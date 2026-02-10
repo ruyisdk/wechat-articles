@@ -1,6 +1,19 @@
 # RuyiSDK 双周进展汇报 第 062 期·2026 年 02 月 10 日
 
 ## 卷首语
+各位 RuyiSDK 的开发者伙伴，大家好！
+
+金蛇辞旧，骏马迎新。在这辞旧迎新的美好时节，首先㊗️**大家新春快乐，阖家幸福，万事如意！**
+
+本期是农历乙巳年的最后一次更新。回首这一年，RuyiSDK 一步一个脚印，稳步前行：包管理器基础功能逐步成熟稳定，现已支持完整的插件架构和本地化（i18n）特性，让中文开发者使用更加亲切；VSCode 和 Eclipse 插件从零起步，如今双双上架官方市场，为不同偏好的开发者提供便利的工具支持。
+
+在底层技术生态方面，我们持续深耕，围绕 RISC-V 扩展指令集进行了大量的实现与优化工作：推动 GNU 工具链对更多扩展特性的支持，向 LLVM 上游提交了多项编译器优化补丁，并显著提升了 V8 引擎及 Node.js 在 RISC-V 平台上的稳定性与兼容性。
+
+这个过程离不开社区伙伴的支持和贡献，每一份代码提交、每一个问题反馈，都是推动 RuyiSDK 向前的重要力量。
+
+展望 2026 年，我们将持续打磨产品体验，增加对更多设备的支持，共同丰富 RuyiSDK 的软件生态。
+
+**本期主要更新亮点包括：** 包管理器 0.46.0 版本发布，新增完整的中文本地化支持；Eclipse 插件成功登陆 Eclipse Marketplace（VSCode插件新版本虽迟但会到，将另行告知）；V8 引擎多项优化补丁合入上游，Node for RISC-V 稳定性显著提升。更多更新详见下方，欢迎大家下载体验。
 
 每个组件都提供了多种下载或安装方式，您可以任意选择一种：
 
@@ -18,18 +31,24 @@
     >
     > 如果您在 RISC-V 设备上安装 `ruyi` 时遇到问题，建议使用其他安装方法。
 
-* RuyiSDK VSCode Extension 0.1.1
-    * VSCode Extensions 中搜索 `RuyiSDK` 安装
+* RuyiSDK VSCode Extension 0.1.1 （本期未同步更新）
+    * VSCode Extensions 中搜索 `RuyiSDK`或者`RISC-V`等关键字查询 安装 RuyiSDK 插件
     * 手动下载安装 (Install from VSIX):
         * [GitHub Releases](https://github.com/ruyisdk/ruyisdk-vscode-extension/releases/tag/0.1.1/)
         * [ISCAS 镜像源](https://mirror.iscas.ac.cn/ruyisdk/ide/plugins/vscode/)
     * [使用文档](https://ruyisdk.org/docs/VSCode-Plugins/)
 
-* RuyiSDK Eclipse Plugins 0.1.1
+* RuyiSDK Eclipse Plugins 0.1.2
+    * Eclipse Marketplace 中搜索 `RuyiSDK`或者`RISC-V`等关键字查询 安装 RuyiSDK 插件
     * 手动下载安装：
-        * [GitHub Releases](https://github.com/ruyisdk/ruyisdk-eclipse-plugins/releases/tag/v0.1.1/)
+        * [GitHub Releases](https://github.com/ruyisdk/ruyisdk-eclipse-plugins/releases/tag/v0.1.2/)
         * [ISCAS 镜像源](https://mirror.iscas.ac.cn/ruyisdk/ide/plugins/eclipse/)
     * [使用文档](https://ruyisdk.org/docs/IDE/)
+
+每一次版本的迭代，都离不开社区伙伴的反馈与贡献。下个版本计划于 3 月底发布，我们将持续给您带来更新！
+
+**新春佳节，瑞气盈门。愿您在新的一年里，代码无 Bug，提交顺利合，生活美满，事业腾飞！**
+
 
 ## 包管理器
 
