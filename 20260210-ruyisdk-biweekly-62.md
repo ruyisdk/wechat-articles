@@ -3,7 +3,7 @@
 ## 卷首语
 各位 RuyiSDK 的开发者伙伴，大家好！
 
-金蛇辞旧，骏马迎新。在这辞旧迎新的美好时节，首先㊗️**大家新春快乐，阖家幸福，万事如意！**
+金蛇辞旧，骏马迎新。在这辞旧迎新的美好时节，首先㊗️**大家新春快乐，阖家幸福，万事如意！** 🎉
 
 本期是农历乙巳年的最后一次更新。回首这一年，RuyiSDK 一步一个脚印，稳步前行：包管理器基础功能逐步成熟稳定，现已支持完整的插件架构和本地化（i18n）特性，让中文开发者使用更加亲切；VSCode 和 Eclipse 插件从零起步，如今双双上架官方市场，为不同偏好的开发者提供便利的工具支持。
 
@@ -15,9 +15,9 @@
 
 **本期主要更新亮点包括：** 包管理器 0.46.0 版本发布，新增完整的中文本地化支持；Eclipse 插件成功登陆 Eclipse Marketplace（VSCode插件新版本虽迟但会到，将另行告知）；V8 引擎多项优化补丁合入上游，Node for RISC-V 稳定性显著提升。更多更新详见下方，欢迎大家下载体验。
 
-每个组件都提供了多种下载或安装方式，您可以任意选择一种：
+⏬ 每个组件都提供了多种下载或安装方式，您可以任意选择一种：
 
-* RuyiSDK 包管理器 0.46.0
+* RuyiSDK 包管理器 0.46.0🚀
     * 从 [PyPI](https://pypi.org/project/ruyi/0.46.0/) 安装：`pip install ruyi`
     * 手动下载安装：
         * [GitHub Releases](https://github.com/ruyisdk/ruyi/releases/tag/0.46.0)
@@ -38,7 +38,7 @@
         * [ISCAS 镜像源](https://mirror.iscas.ac.cn/ruyisdk/ide/plugins/vscode/)
     * [使用文档](https://ruyisdk.org/docs/VSCode-Plugins/)
 
-* RuyiSDK Eclipse Plugins 0.1.2
+* RuyiSDK Eclipse Plugins 0.1.2🚀
     * Eclipse Marketplace 中搜索 `RuyiSDK`或者`RISC-V`等关键字查询 安装 RuyiSDK 插件
     * 手动下载安装：
         * [GitHub Releases](https://github.com/ruyisdk/ruyisdk-eclipse-plugins/releases/tag/v0.1.2/)
@@ -47,7 +47,7 @@
 
 每一次版本的迭代，都离不开社区伙伴的反馈与贡献。下个版本计划于 3 月底发布，我们将持续给您带来更新！
 
-**新春佳节，瑞气盈门。愿您在新的一年里，代码无 Bug，提交顺利合，生活美满，事业腾飞！**
+🎊  **新春佳节，瑞气盈门。愿您在新的一年里，代码无 Bug，提交顺利合，生活美满，事业腾飞！** 🎊
 
 
 ## 包管理器
