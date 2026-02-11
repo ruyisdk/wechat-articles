@@ -143,3 +143,48 @@ https://github.com/llvm/llvm-project/pull/179857
    [RISC-V] 修复因不支持的 SEW（向量元素宽度）和 LMUL 配置组合导致的非法指令问题（https://chromium-review.googlesource.com/c/7502635）
 
 ## 版本测试及遗留问题
+
+RuyiSDK 0.46.0 版本已通过[发版测试](https://gitee.com/yunxiangluo/ruyisdk-test/blob/master/20260207/README.md)。该版本测试是基于 0.46.0-beta.20260203 和
+ 0.46.0-beta.20260206 版本开展的，其中 0.46.0-beta.20260203 发现了严重缺陷，修复后发布了新的测试版本。 0.46.0 版本将基于 v0.46.0-beta.20260206 版本代码
+发版。
+
+下面的表格记录了 0.46.0-beta.20260203 版本发现的严重缺陷：
+
+| 缺陷      | 问题等级 | 备注 |
+| ----------- | ----------- | --- |
+| [Many commands failed: ModuleNotFoundError: No module named 'rich.\_unicode\_data.unicode17-0-0' #428](https://github.com/ruyisdk/ruyi/issues/428)   | 严重 |   |
+
+
+下面的表格记录了上一版本遗留未修复缺陷：
+
+| 缺陷      | 问题等级 |判定依据 |
+| ----------- | ----------- | --- |
+| [Occasional pygit2 failures during testing #415](https://github.com/ruyisdk/ruyi/issues/415) | 一般 | 已有 issue 回复 |
+
+VSCode 插件没有同步发布新版本。下面的表格记录了上一版本遗留待改进内容，均已有修复计划：
+
+| 缺陷 | 问题等级 | 备注 |
+| ----- | ----- | ----- |
+| [查看未读新闻命令失效 #106](https://github.com/ruyisdk/ruyisdk-vscode-extension/issues/106) | 建议 | 和 #108 为同一问题 |
+| [新闻UI界面已读状态未更新 #108](https://github.com/ruyisdk/ruyisdk-vscode-extension/issues/108) | 建议 | 已知问题，已有修复计划 |
+
+Eclipse 插件版本测试基于 ruyisdk-eclipse-plugins [v0.1.2](https://github.com/ruyisdk/ruyisdk-eclipse-plugins/releases/tag/v0.1.2) 版开展手动测试并发版。
+下面的表格记录了上一版本遗留待改进内容：
+
+| 缺陷      | 问题等级 | 备注 |
+| ----------- | ----------- | --- |
+| [命令执行提示框可以任意关闭且无法重新打开 #82](https://github.com/ruyisdk/ruyisdk-eclipse-plugins/issues/82)   | 建议 |   |
+| [开发板选择框中开发板型号未排序 #83](https://github.com/ruyisdk/ruyisdk-eclipse-plugins/issues/83) | 建议 |  |
+| [虚拟环境建立的项目绑定问题 #84](https://github.com/ruyisdk/ruyisdk-eclipse-plugins/issues/84) | 建议 |  |
+| [安装插件时 Eclipse 提示未签名 #85](https://github.com/ruyisdk/ruyisdk-eclipse-plugins/issues/85) | 建议 |  |
+| [打开 Ruyi Package Explorer 时必须选择某款开发板 #86](https://github.com/ruyisdk/ruyisdk-eclipse-plugins/issues/86) | 建议 |  |
+| [虚拟环境建立的 quirks 过滤问题 #87](https://github.com/ruyisdk/ruyisdk-eclipse-plugins/issues/87) | 建议 |  |
+| [虚拟环境建立的 ruyi update 错误处理问题 #88](https://github.com/ruyisdk/ruyisdk-eclipse-plugins/issues/88) | 建议 |  |
+| [虚拟环境建立的 profile 排序问题 #89](https://github.com/ruyisdk/ruyisdk-eclipse-plugins/issues/89) | 建议 |  |
+| [有一些可以自动获取的东西，不需要手动填写 #90](https://github.com/ruyisdk/ruyisdk-eclipse-plugins/issues/90) | 建议 |  |
+| [RuyiSDK IDE 主文档的更新 #123](https://github.com/ruyisdk/docs/issues/123) | 一般 | 已有修复计划 |
+
+参与当前版本测试的实习生：
+
++ [@YXCZS](https://github.com/YXCZS)
++ [@jxy687](https://github.com/jxy687)
