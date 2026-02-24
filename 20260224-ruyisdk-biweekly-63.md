@@ -15,6 +15,10 @@
 
 ## LLVM
 
+upstream 进展：
+
+- [RISCV] Add riscv_simd.h for P extension intrinsics https://github.com/llvm/llvm-project/pull/181115
+
 ## V8
 本期提交的patch：
 1. **[riscv][ic] Introduce CallNamedInterceptorGetter builtin**  
