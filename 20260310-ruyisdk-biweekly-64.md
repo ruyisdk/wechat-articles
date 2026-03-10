@@ -8,6 +8,10 @@
 
 ### VSCode 插件
 
+- 多版本管理对不受支持的Ruyi包管理器版本添加outdated标记
+- 上架 [Open VSX](https://open-vsx.org/extension/RuyiSDK/ruyisdk-vscode-extension)
+- 发布 0.1.2 版本！
+
 ### Eclipse 插件
 
 ## GCC
