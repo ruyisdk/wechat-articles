@@ -14,6 +14,11 @@
 
 ## LLVM
 
+- [IA][RISCV] Make the isDeInterleaveMask check the contents of shuffle
+ https://github.com/llvm/llvm-project/pull/185384
+- [InstCombine] make foldBinOpIntoSelectOrPhi fold on all operands
+ https://github.com/llvm/llvm-project/pull/183692
+
 ## V8
 本期亮点：
 下文提到的第5项代码提交，将JSToWasmInterpreterWrapper迁移至Torque语言， 统一了V8内置组件的开发范式。这意味着如意V8团队作为RISC-V架构维护者不再仅局限于“适配移植”层面，而是开始深度跟进并参与到V8核心主体功能（WASM解释器核心逻辑）的架构改进与原生实现中，为后续RISC-V架构下V8核心功能的原生优化奠定了基础。
