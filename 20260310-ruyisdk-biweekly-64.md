@@ -10,6 +10,11 @@
 
 ### Eclipse 插件
 
+- 重写项目中英文文档。
+- 支持在内置的终端内执行 ruyi device provision 程序。
+- 引入 Maven Wrapper 管理 Maven 并更新相关配置。
+- 引入 PMD 对代码做静态分析，移除未使用的函数和变量。
+
 ## GCC
 
 ## LLVM
