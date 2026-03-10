@@ -21,6 +21,9 @@
 
 ## GCC
 
+- 更新了Binutils版本到2.46 release
+- Rebase了Svrsw60t59b和Zibi扩展的Binutils实现.
+
 ## LLVM
 
 - [IA][RISCV] Make the isDeInterleaveMask check the contents of shuffle
