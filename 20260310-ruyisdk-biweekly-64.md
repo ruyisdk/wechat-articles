@@ -29,6 +29,8 @@
    [RISC-V][Maglev编译器] 处理 Float64Max/Min 操作中输入值相等的场景（https://chromium-review.googlesource.com/c/7599842）
 5. **[wasm-interpreter] Port JSToWasmInterpreterWrapper into torque**  
    [WASM解释器] 将 JSToWasmInterpreterWrapper 迁移至 Torque 语言实现（https://chromium-review.googlesource.com/c/v8/v8/+/7455469）
-
+   ### 格式化提交记录
+6. **[riscv] Remove kCArgsSlotsSize/kCArgSlotCount**  
+   [RISC-V] 移除 kCArgsSlotsSize/kCArgSlotCount 两个常量（https://chromium-review.googlesource.com/c/v8/v8/+/7649603）
 
 ## 版本测试及遗留问题
