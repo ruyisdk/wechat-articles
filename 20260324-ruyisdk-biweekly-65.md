@@ -35,5 +35,24 @@ P 拓展：
 修复 topperc P intrinsics spec 文档多处指令、函数名错误，以及一些格式修复。 已合并
 
 ## V8
+本期提交的patch：
+1. **[riscv][wasm] Fix walking WasmLiftoffSetupFrame**
+   [RISC-V][WASM] 修复 WasmLiftoffSetupFrame 栈帧遍历问题（https://chromium-review.googlesource.com/c/7660033）
+2. **[riscv][wasm] Really fix walking WasmLiftoffSetupFrame**
+   [RISC-V][WASM] 彻底修复 WasmLiftoffSetupFrame 栈帧遍历问题（https://chromium-review.googlesource.com/c/7665010）
+3. **[riscv] Optimize memory access for allocatable double registers in DeoptimizationEntry**
+   [RISC-V] 在 DeoptimizationEntry 中优化可分配双精度寄存器的内存访问（https://chromium-review.googlesource.com/c/7669917）
+4. **[riscv] Fix vector lmul calculation for RVV**
+   [RISC-V] 修复 RVV 向量扩展的 LMUL 计算问题（https://chromium-review.googlesource.com/c/7669710）
+5. **[riscv][liftoff] Separate floating-point and simd registers**
+   [RISC-V][Liftoff] 分离浮点寄存器与 SIMD 寄存器（https://chromium-review.googlesource.com/c/7658971）
+6. **[base] Refactor CPU detection code into architecture-specific files**
+   [基础库] 将 CPU 检测代码重构至对应架构专用文件中（https://chromium-review.googlesource.com/c/7683553）
+7. **[riscv][wasmfx] Trap on null for resume_throw_ref**
+   [RISC-V][WasmFX] 为 resume_throw_ref 实现空指针陷阱（https://chromium-review.googlesource.com/c/7685620）
+8. **[riscv][maps] Prepare for splitting MAP_TYPE into multiple values**
+   [RISC-V][Maps] 为拆分 MAP_TYPE 为多个枚举值做准备（https://chromium-review.googlesource.com/c/7687330）
+9. **[Reland "[riscv][superspread] port to riscv"]**
+   [RISC-V][Superspread] 完成 RISC-V 架构移植（https://chromium-review.googlesource.com/c/7683933）
 
 ## 版本测试及遗留问题
