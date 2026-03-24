@@ -8,6 +8,9 @@
 
 ### VSCode 插件
 
+- [修复创建虚拟环境时 sysroot 缺失127](https://github.com/ruyisdk/ruyisdk-vscode-extension/issues/127)
+- 重构虚拟环境 profile 提取逻辑
+
 ### Eclipse 插件
 
 - 重构代码，集中插件内所有对 Ruyi 包管理器的调用，为将来铺路。
