@@ -107,3 +107,11 @@ P 扩展：
    [RISC-V][Superspread] 完成 RISC-V 架构移植（https://chromium-review.googlesource.com/c/7683933）
 
 ## 版本测试及遗留问题
+RuyiSDK 0.47.0 版本已通过[发版测试](https://gitee.com/yunxiangluo/ruyisdk-test/blob/master/20260317/README.md)。该版本测试是基于 0.47.0-beta.20260316 版本开展的，0.47.0
+版本将基于 0.47.0-beta.20260316 版本代码发版。下面的表格记录了当前版本新增未修复缺陷：
+
+| 缺陷      | 问题等级 |判定依据 |
+| ----------- | ----------- | --- |
+| [Occasional pygit2 failures during testing #415](https://github.com/ruyisdk/ruyi/issues/415) | 一般 | 已有 issue 回复 |
+
+本次没有同步发布的 Eclipse 和 VSCode 插件。
