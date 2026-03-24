@@ -11,6 +11,7 @@
 ### Eclipse 插件
 
 ## GCC
+提交了Zibi扩展的工具链支持，修复了RVP在RV32构建时intrinsic生成不正确的问题
 
 ## LLVM
 
