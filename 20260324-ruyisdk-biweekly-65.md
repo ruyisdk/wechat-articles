@@ -18,6 +18,22 @@
 
 ## LLVM
 
+上游：
+- [RISCV]Lower one active interleaved load to normal segmented load (#185602) https://github.com/llvm/llvm-project/pull/185602
+生成stride load指令。已经合并
+- [InstCombine] Fold fcmp (C - [su]itofp X), C to integer compares https://github.com/llvm/llvm-project/pull/185826
+将含有整数转换成的浮点数的比较转换成整数比较。正在 review
+- [PatternMatch][NFC] Add m_IToFP and m_FPToI https://github.com/llvm/llvm-project/pull/188040
+新增 m_IToFP 和 m_FPToI 两个 IR 模式匹配函数。已经合并
+
+
+P 拓展：
+- add missing blank lines https://github.com/riscv/riscv-p-spec/pull/229
+修复 P spec 文档格式错误 已合并
+
+- Minor fixes for typos and inconsistencies - https://github.com/topperc/p-ext-intrinsics/pull/2
+修复 topperc P intrinsics spec 文档多处指令、函数名错误，以及一些格式修复。 已合并
+
 ## V8
 
 ## 版本测试及遗留问题
