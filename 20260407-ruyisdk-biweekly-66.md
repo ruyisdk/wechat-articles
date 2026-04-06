@@ -8,6 +8,8 @@
 
 ### VSCode 插件
 
+- 更新 Ruyi 包管理器旧版本检测机制
+
 ### Eclipse 插件
 
 ## GCC
