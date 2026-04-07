@@ -22,6 +22,12 @@
 
 ## LLVM
 
+https://github.com/llvm/llvm-project/pull/190303
+为 P 扩展添加 add(vec, splat(scalar)) 到 PADD_*S 的指令选择支持
+
+https://github.com/llvm/llvm-project/pull/181115
+添加了更多的 intrinsic 支持
+
 ## V8
 本期提交的patch：
 1.  **[riscv] Fix SIMD lane load source register**
