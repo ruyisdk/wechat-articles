@@ -11,6 +11,7 @@
 ### Eclipse 插件
 
 ## GCC
+更新了P扩展的工具链实现到草案0.20版本,开始进行gcc-precommit-ci的维护工作，更新了zibi扩展的binutils patch.
 
 ## LLVM
 
