@@ -24,7 +24,10 @@
 
 
 ## LLVM
-
+- [InstCombine] Fold select of ordered fcmps of fabs over isKnownNeverNaN-selects to a single select https://github.com/llvm/llvm-project/pull/192182
+简化非NaN浮点数的嵌套select指令为单层select
+- https://github.com/topperc/p-ext-intrinsics/pull/6
+修复 riscv p 拓展 intriniscs 文档一些错误
 
 ## V8
 本期提交的patch：
