@@ -5,6 +5,36 @@
 
 ## 包管理器
 
+RuyiSDK 0.48 预计将于下周发布，对应的包管理器版本也为 0.48.0。该版本的 Beta 测试版 0.48.0-beta.20260421 已于今日发布。您可前往以下位置之一下载 RuyiSDK 包管理器：
+
+* 从 [PyPI](https://pypi.org/project/ruyi/0.48.0b20260421/) 安装：`pip install ruyi==0.48.0b20260421`
+* 手动下载安装：
+    * [GitHub Releases](https://github.com/ruyisdk/ruyi/releases/tag/0.48.0-beta.20260421)
+    * [ISCAS 镜像源](https://mirror.iscas.ac.cn/ruyisdk/ruyi/testing/0.48.0-beta.20260421/)
+* [使用文档](https://ruyisdk.org/docs/intro/)（[English](https://ruyisdk.org/en/docs/intro/)）
+
+> [!NOTE]
+> 对于 `ruyi` 的单文件二进制发行版，您必须将下载的文件重命名为一字不差的 `ruyi` 才能正常使用。
+
+请注意：从 RuyiSDK 0.48.0 开始，Ubuntu 22.04 LTS 与 Python 3.10 环境不再受到支持。相关用户，尤其是发行版打包者、CI 环境维护者与仍在使用旧版 Python 运行环境的用户，在升级前请提前确认兼容性影响并完成验证。
+
+本次 RuyiSDK 包管理器的更新主要包含了以下内容：
+
+* 新增了为虚拟环境指定自备 sysroot 的支持，现可在创建虚拟环境时使用目录形式的 sysroot 来源，不再局限于使用软件源中的现成 sysroot 软件包。
+* 工程化迭代：
+    * 调整了运行与构建环境基线，现已提升至 Ubuntu 24.04 LTS 与 Python 3.11。
+    * 面向 RuyiSDK 一方与三方打包场景补充了软件包构建相关能力，并完善了构建配方机制及相关插件宿主实现。
+    * 修复了部分类型标注与国际化细节问题。
+
+本次 RuyiSDK 软件源的更新主要包含了以下内容：
+
+* 软件源格式更新：
+    * 在软件源元数据中显式加入了软件源名称字段，便于后续更清晰地展示软件源信息。
+* 完善了设备支持：
+    * 为 Milk-V Duo 对应 profile 补充了 xthead quirk 指定，以改善相关目标场景下的配置准确性。
+
+欢迎试用或来上游围观；您的需求是我们迭代开发的目标和动力。您也可以亲自参与
+RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查看、修改我们的[部分打包脚本](https://github.com/ruyisdk/ruyici)与[软件源仓库](https://github.com/ruyisdk/packages-index)。今后，按照本年度的开发计划，我们也将支持有权的第三方贡献者通过程序化的方式上传软件包、系统镜像等分发文件，以便利打包工作。
 
 ## IDE
 
