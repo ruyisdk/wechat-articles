@@ -10,6 +10,10 @@
 
 ### VSCode 插件
 
+- 添加 RuyiSDK 论坛入口
+- 修复[多版本管理的错误 pip 升级提示](https://github.com/ruyisdk/ruyisdk-vscode-extension/issues/115)
+- 新增项目一键编译
+- CMake 项目一键编译支持复用工具链
 
 ### Eclipse 插件
 
