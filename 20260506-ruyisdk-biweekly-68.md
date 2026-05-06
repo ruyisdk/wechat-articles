@@ -28,6 +28,25 @@
 
 ## LLVM
 
+- [RISCV][MC] Support experimental Zvdota Family instructions 
+https://github.com/llvm/llvm-project/pull/195069
+为 RISC-V 中的 Zvdota 扩展添加 MC 支持
+正在 review
+
+- [RISCV][MC] Add experimental Zvvmm MC support
+https://github.com/llvm/llvm-project/pull/193956
+为 RISC-V 的 Zvvmm 拓展增加初步的 MC 汇编支持
+已经合并
+
+- [InstCombine] Fold select of ordered fcmps of fabs over NaN-scrubber selects to a single select
+https://github.com/llvm/llvm-project/pull/192182
+将不可能是NaN的嵌套select ordered fcmp fabs 化简为单层select
+已经合并
+
+- [IRBuilder][NFC] Add CreateFAbs helper
+https://github.com/llvm/llvm-project/pull/193421
+在 IRBuilder 中创建并重构代码库中通用的 CreateFAbs 辅助函数
+已经合并
 
 ## V8
 
