@@ -114,3 +114,45 @@ https://github.com/llvm/llvm-project/pull/193421
    [构建工具] 执行 checkout_riscv64 时自动下载 riscv64 系统根文件系统（https://chromium-review.googlesource.com/c/7781706）
 
 ## 版本测试及遗留问题
+
+### Ruyi 测试
+
+报告 https://gitee.com/yunxiangluo/ruyisdk-test/tree/master/20260421
+
+新增缺陷
+
+| 缺陷 | 问题等级 | 判定依据 |
+| --- | ---- | ----- |
+| [bash-completion: not work properly when running ruyi for the first time #452](https://github.com/ruyisdk/ruyi/issues/452) | 一般 | 在边缘情况才会遇到 |
+| [ruyi version: show welcome message before print ruyi version #453](https://github.com/ruyisdk/ruyi/issues/453) | 一般 | 在边缘情况才会遇到 |
+| [ruyi extract --extract-without-subdir: does not print destination directory properly #454](https://github.com/ruyisdk/ruyi/issues/454) | 一般 | 在边缘情况才会遇到 |
+
+### RuyiSDK Eclipse IDE 测试
+
+本版本同步发版的 Eclipse 插件测试[报告](https://github.com/ruyisdk-test/ruyisdk-eclipse-plugins-test/tree/v0.1.3)。
+
+新增缺陷
+
+| 缺陷      | 问题等级 | 备注 |
+| ----------- | ----------- | --- |
+| [ruyi venv 没有显示虚拟环境名称，具体名称只会在sysroot路径列表出现 #151](https://github.com/ruyisdk/ruyisdk-eclipse-plugins/issues/151)   | 建议 |   |
+| [ruyi-venv中的vnev path需要手动点击右侧列表，显示项目路径 #152](https://github.com/ruyisdk/ruyisdk-eclipse-plugins/issues/152) | 建议 |  |
+| [ruyi-venv名称可以默认设置为ruyi-venv-profile属性 #153](https://github.com/ruyisdk/ruyisdk-eclipse-plugins/issues/153) | 建议 |  |
+| [eclipse中版本检测中升级ruyi包管理器，显示由于不支持utf8报错 #154](https://github.com/ruyisdk/ruyisdk-eclipse-plugins/issues/154) | 建议 |  |
+
+### RuyiSDK VSCode IDE 测试
+
+本版本同步发布的 VSCode 插件测试[报告](https://github.com/ruyisdk-test/ruyisdk-vscode-extension-test/tree/v0.1.3)。
+
+新增缺陷
+
+| 缺陷      | 问题等级 | 备注 |
+| ----------- | ----------- | --- |
+| [vscode插件更新后通过.vsix重新安装插件后存在缓存问题，仍是上个版本内容，建议加个重启vscode弹窗 #136](https://github.com/ruyisdk/ruyisdk-vscode-extension/issues/136) | 建议 |  |
+| [ruyi-venv创建过程中配置sysroot选项中输入非法字符仍可正常配置sysroot #144](https://github.com/ruyisdk/ruyisdk-vscode-extension/issues/144) | 建议 |  |
+
+## 测试结论
+
+- 本版本包含遗留的严重缺陷，均按照修复时间表修复中；
+- 本版本包含新增的一般缺陷，下一个版本修复；
+
