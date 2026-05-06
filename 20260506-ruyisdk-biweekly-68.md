@@ -1,24 +1,54 @@
 # RuyiSDK 双周进展汇报 第 068 期·2026 年 05 月 06 日
 
 ## 卷首语
+各位 RuyiSDK 的开发者伙伴，大家好！夏日将至，RuyiSDK 双周进展已更新到第 068 期。
+本期看点集中在以下几个方面：
+- 包管理器：RuyiSDK 0.48.0 正式发布，首次引入 build recipe 工作流与 `ruyi admin build-package` 子命令，同时停止对 Ubuntu 22.04 与 Python 3.10 的支持，将兼容性基线提升至 Ubuntu 24.04 LTS，为后续企业级与 CI 场景打下更稳固的基础。
+- 软件源：持续完善设备支持，为 Milk‑V Duo 补充 xthead quirks 等档案细节，提升开发板的可用性；同时为软件源格式演进做好准备（如 manifests → packages 重命名等）。
+- IDE：VSCode 与 Eclipse 插件同步发布 0.1.3 版本，VSCode 插件新增一键编译系统与新版欢迎页，优化包管理器安装与升级流程；Eclipse 插件持续提升 OSGi 一致性与设备列表的交互体验。
+- 工具链与上游：GCC 更新到 16.1.0 并增加 Zalasr 扩展支持；LLVM 为 RISC‑V 的 Zvdota 与 Zvvmm 等向量/矩阵扩展增加或完善 MC 支持，并合入针对 select/fabs 等模式的优化；V8 围绕 RISC‑V 后续提交与合入多项补丁，重点优化 ZFA 扩展下的浮点 min/max 与 WASM 宽整数运算等。
 
+更多进展细节详见下方各板块，欢迎试用并在 GitHub 或社区中反馈建议，期待更多伙伴一起共建 RISC‑V 软件开发生态。
+
+⏬ 每个组件都提供了多种下载或安装方式，您可以任意选择一种：
+
+* RuyiSDK 包管理器 0.48.0🚀
+    * 从 [PyPI](https://pypi.org/project/ruyi/0.48.0/) 安装：`pip install ruyi`
+    * 手动下载安装：
+        * [GitHub Releases](https://github.com/ruyisdk/ruyi/releases/tag/0.48.0)
+        * [ISCAS 镜像源](https://mirror.iscas.ac.cn/ruyisdk/ruyi/tags/0.48.0/)
+    * [使用文档](https://ruyisdk.org/docs/Package-Manager/)
+
+    > [!NOTE]
+    > RISC-V 用户可以使用 `pip` 安装 `ruyi`，但由于 `ruyi` 依赖的部分 Python
+    > 库暂未在 PyPI 上提供 RISC-V 架构的预编译包，安装 `ruyi` 时 Python
+    > 包管理器会尝试从源代码编译安装这些依赖，可能非常耗时或编译失败。
+    >
+    > 如果您在 RISC-V 设备上安装 `ruyi` 时遇到问题，建议使用其他安装方法。对于 `ruyi` 的单文件二进制发行版，您必须将下载的文件重命名为一字不差的 `ruyi` 才能正常使用。
+    >
+    > 请注意：从 RuyiSDK 0.48.0 开始，Ubuntu 22.04 LTS 与 Python 3.10 环境不再受到支持。相关用户，尤其是发行版打包者、CI 环境维护者与仍在使用旧版 Python 运行环境的用户，在升级前请提前确认兼容性影响并完成验证。
+
+* RuyiSDK VSCode Extension 0.1.3🚀
+    * VSCode/VSCodium Extensions 中搜索 `RuyiSDK`关键字查询 安装 RuyiSDK 插件
+    * 手动下载安装 (Install from VSIX):
+        * [GitHub Releases](https://github.com/ruyisdk/ruyisdk-vscode-extension/releases/tag/0.1.3/)
+        * [ISCAS 镜像源](https://mirror.iscas.ac.cn/ruyisdk/ide/plugins/vscode/)
+    * [使用文档](https://ruyisdk.org/docs/VSCode-Plugins/)
+
+* RuyiSDK Eclipse Plugins 0.1.3🚀
+    * Eclipse Marketplace 中搜索 `RuyiSDK`关键字查询 安装 RuyiSDK 插件
+    * 手动下载安装：
+        * [GitHub Releases](https://github.com/ruyisdk/ruyisdk-eclipse-plugins/releases/tag/v0.1.3/)
+        * [ISCAS 镜像源](https://mirror.iscas.ac.cn/ruyisdk/ide/plugins/eclipse/)
+    * [使用文档](https://ruyisdk.org/docs/IDE/)
+
+如果您不清楚怎么选择，可以参考不同渠道和下载方式的说明：https://ruyisdk.cn/t/topic/2479 
+
+每一次版本的迭代，都离不开社区伙伴的反馈与贡献。下个版本计划于 5 月底发布，我们将持续给您带来更新！我们诚挚邀请您常来 [RuyiSDK 技术社区](https://ruyisdk.cn/) 交流想法，共同成长。
 
 ## 包管理器
 
-RuyiSDK 0.48 已于 2026 年 4 月 28 日发布，对应的包管理器版本也为 0.48.0。您可前往以下位置之一下载 RuyiSDK 包管理器：
-
-* 从 [PyPI](https://pypi.org/project/ruyi/0.48.0/) 安装：`pip install ruyi`
-* 手动下载安装：
-    * [GitHub Releases](https://github.com/ruyisdk/ruyi/releases/tag/0.48.0)
-    * [ISCAS 镜像源](https://mirror.iscas.ac.cn/ruyisdk/ruyi/testing/0.48.0/)
-* [使用文档](https://ruyisdk.org/docs/intro/)（[English](https://ruyisdk.org/en/docs/intro/)）
-
-> [!NOTE]
-> 对于 `ruyi` 的单文件二进制发行版，您必须将下载的文件重命名为一字不差的 `ruyi` 才能正常使用。
-
-请注意：从 RuyiSDK 0.48.0 开始，Ubuntu 22.04 LTS 与 Python 3.10 环境不再受到支持。相关用户，尤其是发行版打包者、CI 环境维护者与仍在使用旧版 Python 运行环境的用户，在升级前请提前确认兼容性影响并完成验证。
-
-本次 RuyiSDK 包管理器的更新主要包含了以下内容：
+RuyiSDK 0.48 已于 2026 年 4 月 28 日发布，对应的包管理器版本也为 0.48.0。本次 RuyiSDK 包管理器的更新主要包含了以下内容：
 
 * 在包管理器中引入了首个 build recipe 工作流：
     * 新增 `ruyi admin build-package` 子命令。
