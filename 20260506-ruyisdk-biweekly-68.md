@@ -5,6 +5,44 @@
 
 ## 包管理器
 
+RuyiSDK 0.48 已于 2026 年 4 月 28 日发布，对应的包管理器版本也为 0.48.0。您可前往以下位置之一下载 RuyiSDK 包管理器：
+
+* 从 [PyPI](https://pypi.org/project/ruyi/0.48.0/) 安装：`pip install ruyi`
+* 手动下载安装：
+    * [GitHub Releases](https://github.com/ruyisdk/ruyi/releases/tag/0.48.0)
+    * [ISCAS 镜像源](https://mirror.iscas.ac.cn/ruyisdk/ruyi/testing/0.48.0/)
+* [使用文档](https://ruyisdk.org/docs/intro/)（[English](https://ruyisdk.org/en/docs/intro/)）
+
+> [!NOTE]
+> 对于 `ruyi` 的单文件二进制发行版，您必须将下载的文件重命名为一字不差的 `ruyi` 才能正常使用。
+
+请注意：从 RuyiSDK 0.48.0 开始，Ubuntu 22.04 LTS 与 Python 3.10 环境不再受到支持。相关用户，尤其是发行版打包者、CI 环境维护者与仍在使用旧版 Python 运行环境的用户，在升级前请提前确认兼容性影响并完成验证。
+
+本次 RuyiSDK 包管理器的更新主要包含了以下内容：
+
+* 在包管理器中引入了首个 build recipe 工作流：
+    * 新增 `ruyi admin build-package` 子命令。
+    * 新增 build recipe 执行器、标记文件加载器，以及配套的 pluginhost API 与专用 load scheme。
+    * 为插件新增首批 `build-recipe-v1` 能力门控。
+* 继续加固 pluginhost，使插件代码运行在更收敛、可移植性更好的语言子集之内：
+    * 新增对 decorators、类型注解、f-strings、生成器表达式、`del`、矩阵乘法运算符、链式比较、仅位置参数、`while` 循环、切片表达式、带星号的赋值目标，以及 `is` / `is not` 运算符等语言特性的门控。
+    * 改进了门控报错信息，并补充更新了 pluginhost 的威胁模型文档。
+* 为软件源格式调整做准备：将 `manifests` 目录重命名为 `packages`。
+* 为虚拟环境创建流程增加了基于目录的 sysroot 来源选项。
+* 工程化迭代：
+    * 更新发行镜像与依赖基线，其中包括迁移到 Ubuntu 24.04 LTS。
+    * 停止支持 Ubuntu 22.04 与 Python 3.10。
+    * 刷新依赖基线元数据，并增强 CI 镜像构建场景下用户主目录处理的健壮性。
+
+本次 RuyiSDK 软件源的更新主要包含了以下内容：
+
+* 完善了设备支持：
+    * 为 Milk-V Duo 的设备档案补充 `xthead` quirk。感谢 [@weilinfox] 的贡献！
+
+[@weilinfox]: https://github.com/weilinfox
+
+欢迎试用或来上游围观；您的需求是我们迭代开发的目标和动力。您也可以亲自参与
+RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查看、修改我们的[部分打包脚本](https://github.com/ruyisdk/ruyici)与[软件源仓库](https://github.com/ruyisdk/packages-index)。今后，按照本年度的开发计划，我们也将支持有权的第三方贡献者通过程序化的方式上传软件包、系统镜像等分发文件，以便利打包工作。
 
 ## IDE
 
