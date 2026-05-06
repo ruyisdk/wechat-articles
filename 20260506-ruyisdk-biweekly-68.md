@@ -49,6 +49,30 @@ https://github.com/llvm/llvm-project/pull/193421
 已经合并
 
 ## V8
+本期提交的patch：
+1. **[riscv][codegen] Fix signed integer overflow in Assembler::GrowBuffer**
+   [RISC-V][代码生成] 修复 Assembler::GrowBuffer 中的有符号整数溢出问题（https://chromium-review.googlesource.com/c/7800114）
+2. **[riscv] Reland [wasm][shared] Fix write barrier DCHECK for unshared cmpxchg of tagged**
+   [RISC-V] 重提「[WASM][共享] 修复非共享标记比较交换的写屏障 DCHECK 问题」（https://chromium-review.googlesource.com/c/7804857）
+3. **[riscv][wasm-wide-arith] Turboshaft x64 implementation of wide add op.**
+   [RISC-V][WASM 大位宽计算] Turboshaft x64 宽加法指令实现（https://chromium-review.googlesource.com/c/7784730）
+4. **[riscv][compiler] 10-bit ArchOpcodes**
+   [RISC-V][编译器] 支持 10 位架构操作码（ArchOpcodes）（https://chromium-review.googlesource.com/c/7781567）
+5. **[Reland "[riscv] Optimize code gen by zfa"]**
+   [重提] [RISC-V] 基于 ZFA 扩展优化代码生成（https://chromium-review.googlesource.com/c/7785250）
+6. **[riscv] Optimize float min/max codegen with ZFA extension**
+   [RISC-V] 使用 ZFA 扩展优化浮点取最小/最大值代码生成（https://chromium-review.googlesource.com/c/7787832）
+7. **[riscv][wasm-wide-arith] Implement Wide Multiplication in Liftoff**
+   [RISC-V][WASM 大位宽计算] 在 Liftoff 中实现宽乘法指令（https://chromium-review.googlesource.com/c/7790661）
+8. **[riscv][wasm-wide-arith] Implement Wide Multiplication in turboshaft**
+   [RISC-V][WASM 大位宽计算] 在 Turboshaft 中实现宽乘法指令（https://chromium-review.googlesource.com/c/7790660）
 
+本期审阅并合入的patch：
+1. **[riscv] Fix typo in RVV SEW handling**
+   [RISC-V] 修复 RVV SEW 处理中的拼写错误（https://chromium-review.googlesource.com/c/7763223）
+2. **[highway: add riscv RVV to BROKEN_TARGETS]**
+   [Highway] 将 RISC-V RVV 添加到 BROKEN_TARGETS 禁用列表（https://chromium-review.googlesource.com/c/7781707）
+3. **[Download riscv64 sysroot when checkout_riscv64]**
+   [构建工具] 执行 checkout_riscv64 时自动下载 riscv64 系统根文件系统（https://chromium-review.googlesource.com/c/7781706）
 
 ## 版本测试及遗留问题
