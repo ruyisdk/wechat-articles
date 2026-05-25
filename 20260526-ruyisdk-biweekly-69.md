@@ -65,6 +65,33 @@ https://github.com/riscv/riscv-p-spec/pull/284
 ## 语言运行时
 
 ### V8
+本期提交并合入的patch：
+1. **[riscv][headers] roots-inl.h should not include objects-inl.h**
+   [RISC-V][头文件] 修复 roots-inl.h 不应包含 objects-inl.h 的问题（https://chromium-review.googlesource.com/c/7819506）
+2. **[riscv][turboshaft][wasm] Decouple SIMD from WebAssembly**
+   [RISC-V][Turboshaft][WASM] 将 SIMD 模块与 WebAssembly 解耦（https://chromium-review.googlesource.com/c/7819100）
+3. **[riscv][wasm-wide-arith] implement sub128 for Turboshaft**
+   [RISC-V][WASM宽算术] 在 Turboshaft 中实现 sub128 指令（https://chromium-review.googlesource.com/c/7830322）
+4. **[riscv] Enable zba/zbb/zbs/zicond when enable rva23u64**
+   [RISC-V] 启用 rva23u64 时自动开启 zba/zbb/zbs/zicond 扩展（https://chromium-review.googlesource.com/c/7831421）
+5. **[riscv] Delete zero_extend after fcvtmod_w_d in TruncateDoubleToInt32**
+   [RISC-V] 在 TruncateDoubleToInt32 中移除 fcvtmod_w_d 后的冗余零扩展操作（https://chromium-review.googlesource.com/c/7839765）
+6. **[riscv][debugger] Fix a crash when debugging**
+   [RISC-V][调试器] 修复调试过程中出现的崩溃问题（https://chromium-review.googlesource.com/c/7846282）
+7. **[riscv][wasm-wide-arith] Implement Add128/Sub128 for riscv64**
+   [RISC-V][WASM宽算术] 为 riscv64 实现 Add128/Sub128 指令（https://chromium-review.googlesource.com/c/7847572）
+8. **[riscv] Detect RVC in cpu-riscv and rename SIMD flag to RVV**
+   [RISC-V] 在 cpu-riscv 中增加 RVC 检测，并将 SIMD 标识重命名为 RVV（https://chromium-review.googlesource.com/c/7834018）
+9. **[riscv] Fix AtomicCompareExchange write barrier**
+   [RISC-V] 修复 AtomicCompareExchange 写屏障问题（https://chromium-review.googlesource.com/c/7858601）
+10. **[riscv]Wide multiplication implementation in liftoff**
+    [RISC-V] 在 Liftoff 中实现宽乘法指令（https://chromium-review.googlesource.com/c/7862260）
+11. **[riscv][wasm][fuzzer] Optimize CheckMaxSteps with platform-specific code**
+    [RISC-V][WASM][模糊测试] 使用平台专属代码优化 CheckMaxSteps（https://chromium-review.googlesource.com/c/7862178）
+12. **[riscv]Lower LoadTrustedPointer in the code generators**
+    [RISC-V] 在代码生成器中实现 LoadTrustedPointer 指令下沉（https://chromium-review.googlesource.com/c/7866844）
+13. **[riscv] Fix condition inversion in kArchLoadTrustedPointer**
+    [RISC-V] 修复 kArchLoadTrustedPointer 中的条件反转错误（https://chromium-review.googlesource.com/c/7870367）
 
 ### OpenJDK
 
