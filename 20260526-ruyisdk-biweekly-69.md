@@ -126,7 +126,17 @@ https://github.com/riscv/riscv-p-spec/pull/284
 - https://github.com/openjdk/jdk/pull/30545 (8381554: RISC-V: Small refactoring for cmp_klass_compressed macro-assembler routine)  为RISC-V重构压缩对象类指针比较汇编函数逻辑
 
 ### Go
+本期提交的Go主线CL:
+- 782760: crypto/internal/poly1305: implement function update in assembly on riscv64 | https://go-review.googlesource.com/c/crypto/+/782760
 
+本期合并的Go主线CL：
+- 663778: cmd/asm, cmd/internal/obj: add zvbb/zvbc for riscv64 | https://go-review.googlesource.com/c/go/+/663778 添加zvbb/zvbc汇编支持
+- 762880: riscv64: add support for zvk instructions | https://go-review.googlesource.com/c/arch/+/762880 objdump添加zvk* 指令支持
+
+本期审阅并合入的CL：
+- 770200: cmd/compile: simplify closure name | https://go-review.googlesource.com/c/go/+/770200 修复plugin 链接bug
+- 758020: cmd/compile, runtime: use fine-grained FENCE instructions on riscv64 | https://go-review.googlesource.com/c/go/+/758020 FENCE指令细化
+- 760900: cmd/compile/internal/ssa: prefer registers x8-x15/f8-f15 on riscv64 | https://go-review.googlesource.com/c/go/+/760900 C扩展前置CL，优先C psABI寄存器
 
 ## 版本测试及遗留问题
 
