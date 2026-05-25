@@ -32,7 +32,7 @@
 - GLIBC:
    - 移植了 cbrtf、cosf、coshf 接口到现有的 glibc libmvec 框架，在测试范围内最大误差相对于 mpfr 均小于等于 1 ULP。
 - newlib:
-   - 提交了 memccpy、memchr、memcmp、mempcpy、memrchr、rawmemchr 接口 RVV 优化实现到上游（https://sourceware.org/pipermail/newlib/2026/022437.html）。
+   - 提交了 memccpy、memchr、memcmp、mempcpy、memrchr、rawmemchr 接口的 RVV 优化实现到上游（https://sourceware.org/pipermail/newlib/2026/022437.html）。
    - 实现了 strcasecmp、strncasecmp、strcspn、strncmp、strspn 接口的 RVV 优化。
 - MUSL:
    - 实现了 strcasecmp、strncasecmp、strcspn、strncmp、strspn 接口的 RVV 优化。
