@@ -13,7 +13,7 @@
 - 新增中文翻译
 - 为虚拟环境的 sysroot 添加额外包选择框
 - 重新设计新闻页面，添加中英文翻译与动画
-- 修复一键编译识别 cmake 错误
+- 修复一键编译识别 CMake 错误
 - 在 ruyisdk home 页面添加 board 文档入口
 
 ### RuyiSDK Eclipse 插件
