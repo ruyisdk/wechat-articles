@@ -145,6 +145,18 @@ https://github.com/riscv/riscv-p-spec/pull/284
 - 758020: cmd/compile, runtime: use fine-grained FENCE instructions on riscv64 | https://go-review.googlesource.com/c/go/+/758020 FENCE指令细化
 - 760900: cmd/compile/internal/ssa: prefer registers x8-x15/f8-f15 on riscv64 | https://go-review.googlesource.com/c/go/+/760900 C扩展前置CL，优先C psABI寄存器
 
+## 模拟器QEMU
+
+RuyiSDK QEMU新建开发分支develop（目前基于QEMU v11.0.0），未来开发工作将在该分支上进行。
+- https://github.com/ruyisdk/qemu/tree/develop
+
+本期添加了多款CPU Model的支持，包括THead C908/910/920，Spacemit X60，Sifive U74:
+- https://github.com/ruyisdk/qemu/commit/98864cb044304c8f79dd435cdd6142a8d350353c
+- https://github.com/ruyisdk/qemu/commit/3bca67d3a19a19297c60872d572ceea903115f74
+- https://github.com/ruyisdk/qemu/commit/815ff8ad3728c46e538570e4de24126df52fc4e7
+- https://github.com/ruyisdk/qemu/commit/3216cf397cc9d43216b8ec5e67dbbd958c30917c
+
+
 ## 版本测试及遗留问题
 
 RuyiSDK 0.49.0 测试报告尚未发布，只更新部分测试情况。
