@@ -29,6 +29,13 @@
 ## 编译工具链
 
 ### 基础C库
+- GLIBC:
+   - 移植了 cbrtf、cosf、coshf 接口到现有的 glibc libmvec 框架，在测试范围内最大误差相对于 mpfr 均小于等于 1 ULP。
+- newlib:
+   - 提交了 memccpy、memchr、memcmp、mempcpy、memrchr、rawmemchr 接口的 RVV 优化实现到上游（https://sourceware.org/pipermail/newlib/2026/022437.html）。
+   - 实现了 strcasecmp、strncasecmp、strcspn、strncmp、strspn 接口的 RVV 优化。
+- MUSL:
+   - 实现了 strcasecmp、strncasecmp、strcspn、strncmp、strspn 接口的 RVV 优化。
 
 ### GCC
 更新GCC版本至gcc16.1, 同步了回归测试中发现的错误，更新了白名单。
@@ -126,6 +133,17 @@ https://github.com/riscv/riscv-p-spec/pull/284
 - https://github.com/openjdk/jdk/pull/30545 (8381554: RISC-V: Small refactoring for cmp_klass_compressed macro-assembler routine)  为RISC-V重构压缩对象类指针比较汇编函数逻辑
 
 ### Go
+本期提交的Go主线CL:
+- 782760: crypto/internal/poly1305: implement function update in assembly on riscv64 | https://go-review.googlesource.com/c/crypto/+/782760
+
+本期合并的Go主线CL：
+- 663778: cmd/asm, cmd/internal/obj: add zvbb/zvbc for riscv64 | https://go-review.googlesource.com/c/go/+/663778 添加zvbb/zvbc汇编支持
+- 762880: riscv64: add support for zvk instructions | https://go-review.googlesource.com/c/arch/+/762880 objdump添加zvk* 指令支持
+
+本期审阅并合入的CL：
+- 770200: cmd/compile: simplify closure name | https://go-review.googlesource.com/c/go/+/770200 修复plugin 链接bug
+- 758020: cmd/compile, runtime: use fine-grained FENCE instructions on riscv64 | https://go-review.googlesource.com/c/go/+/758020 FENCE指令细化
+- 760900: cmd/compile/internal/ssa: prefer registers x8-x15/f8-f15 on riscv64 | https://go-review.googlesource.com/c/go/+/760900 C扩展前置CL，优先C psABI寄存器
 
 ## 模拟器QEMU
 
