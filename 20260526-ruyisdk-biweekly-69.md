@@ -7,6 +7,36 @@
 
 ### 包管理器
 
+RuyiSDK 0.49 将于 2026 年 5 月 26 日发布，对应的包管理器版本也为 0.49.0。本次 RuyiSDK 包管理器的更新主要包含了以下内容：
+
+* 为 `ruyi repo list` 支持了机读模式（porcelain mode）。感谢 [@sisungo] 的贡献！
+* 新增了 `ruyi admin check` 命令，用于 RuyiSDK 第一方与第三方软件源维护者对软件源的质检。
+* 修复了 `ruyi extract` 向当前工作目录解压后报告解压到了 `None` 的小问题。
+* 修复了几处 `ruyi` 的首次运行提示、遥测、命令行自动补全三者之间的不良相互作用。
+* 不再将 `ruyi version` 调用视为 `ruyi` 的首次运行了，有助于避免特定场景下非预期的输出。
+* 为 `ruyi venv` 新增了 `--project-sysroot-from-rootfs` 选项，用来从一个发行版 chroot/rootfs 目录直接将交叉编译所需的必要部分“投射”到新创建的虚拟环境，以避免复制整个目录从而遇到涉及 `/etc`、`/root` 等文件（或文件夹）的权限问题。
+* 工程化迭代：
+    * 更新了依赖版本。
+
+[@sisungo]: https://github.com/sisungo
+
+本次 RuyiSDK 软件源的更新主要包含了以下内容：
+
+* 更新了以下软件到最新版本：
+    * `emulator/qemu-system-riscv-upstream`: 更新到了 11.0.0-ruyi.20260421 版本，支持 RVA23。
+    * `emulator/qemu-user-riscv-upstream`: 更新到了 11.0.0-ruyi.20260421 版本，支持 RVA23。
+
+本次 RuyiSDK 服务端组件的更新主要包含了以下内容：
+
+* 例行安全更新与依赖更新。
+* 修复了数据库连接的稳定性。
+* 修复了 Elasticsearch 请求超时不会重试的问题。
+* 修复了依赖版本更新导致无法正常解析客户端遥测数据的问题。
+
+欢迎试用或来上游围观；您的需求是我们迭代开发的目标和动力。您也可以亲自参与
+RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查看、修改我们的[部分打包脚本](https://github.com/ruyisdk/ruyici)与[软件源仓库](https://github.com/ruyisdk/packages-index)。今后，按照本年度的开发计划，我们也将支持有权的第三方贡献者通过程序化的方式上传软件包、系统镜像等分发文件，以便利打包工作。
+
+
 ### RuyiSDK VSCode 插件
 
 - 新增 i18n
