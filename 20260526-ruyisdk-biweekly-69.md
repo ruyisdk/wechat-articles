@@ -1,7 +1,47 @@
 # RuyiSDK 双周进展汇报 第 069 期·2026 年 05 月 26 日
 
 ## 卷首语
+各位 RuyiSDK 的开发者伙伴，大家好！
+RuyiSDK 双周进展已更新到第 69 期。本期我们随 0.49 版本一起，继续夯实全栈开发环境与基础软件栈：包管理器新增机读模式与质检命令，并优化虚拟环境与 sysroot 使用体验；VSCode 与 Eclipse 插件围绕国际化、虚拟环境与交互体验持续打磨；
+于此同时，基础 C 库、GCC、LLVM、V8、OpenJDK、Go、QEMU 等组件则围绕 RISC‑V 向量扩展、P 扩展、RVA23 等方向持续向上游贡献补丁，扩展指令集与 CPU 型号支持，提升运行时与编译器生态的完整性和稳定性。
+更多进展细节详见下方各板块，欢迎试用并在 GitHub 或社区中反馈建议，期待更多伙伴一起共建 RISC‑V 软件开发生态。
 
+
+⏬ 每个组件都提供了多种下载或安装方式，您可以任意选择一种：
+
+* RuyiSDK 包管理器 0.49.0🚀
+    * 从 [PyPI](https://pypi.org/project/ruyi/0.49.0/) 安装：`pip install ruyi`
+    * 手动下载安装：
+        * [GitHub Releases](https://github.com/ruyisdk/ruyi/releases/tag/0.49.0)
+        * [ISCAS 镜像源](https://mirror.iscas.ac.cn/ruyisdk/ruyi/tags/0.49.0/)
+    * [使用文档](https://ruyisdk.org/docs/Package-Manager/)
+
+    > [!NOTE]
+    > RISC-V 用户可以使用 `pip` 安装 `ruyi`，但由于 `ruyi` 依赖的部分 Python
+    > 库暂未在 PyPI 上提供 RISC-V 架构的预编译包，安装 `ruyi` 时 Python
+    > 包管理器会尝试从源代码编译安装这些依赖，可能非常耗时或编译失败。
+    >
+    > 如果您在 RISC-V 设备上安装 `ruyi` 时遇到问题，建议使用其他安装方法。对于 `ruyi` 的单文件二进制发行版，您必须将下载的文件重命名为一字不差的 `ruyi` 才能正常使用。
+    >
+    > 请注意：从 RuyiSDK 0.48.0 开始，Ubuntu 22.04 LTS 与 Python 3.10 环境不再受到支持。相关用户，尤其是发行版打包者、CI 环境维护者与仍在使用旧版 Python 运行环境的用户，在升级前请提前确认兼容性影响并完成验证。
+
+* RuyiSDK VSCode Extension 0.1.3
+    * VSCode/VSCodium Extensions 中搜索 `RuyiSDK`关键字查询 安装 RuyiSDK 插件
+    * 手动下载安装 (Install from VSIX):
+        * [GitHub Releases](https://github.com/ruyisdk/ruyisdk-vscode-extension/releases/tag/0.1.3/)
+        * [ISCAS 镜像源](https://mirror.iscas.ac.cn/ruyisdk/ide/plugins/vscode/)
+    * [使用文档](https://ruyisdk.org/docs/VSCode-Plugins/)
+
+* RuyiSDK Eclipse Plugins 0.1.3
+    * Eclipse Marketplace 中搜索 `RuyiSDK`关键字查询 安装 RuyiSDK 插件
+    * 手动下载安装：
+        * [GitHub Releases](https://github.com/ruyisdk/ruyisdk-eclipse-plugins/releases/tag/v0.1.3/)
+        * [ISCAS 镜像源](https://mirror.iscas.ac.cn/ruyisdk/ide/plugins/eclipse/)
+    * [使用文档](https://ruyisdk.org/docs/IDE/)
+
+如果您不清楚怎么选择，可以参考不同渠道和下载方式的说明：https://ruyisdk.cn/t/topic/2479 
+
+每一次版本的迭代，都离不开社区伙伴的反馈与贡献。下个版本计划于 5 月底发布，我们将持续给您带来更新！我们诚挚邀请您常来 [RuyiSDK 技术社区](https://ruyisdk.cn/) 交流想法，共同成长。
 
 ## 基础开发环境
 
