@@ -116,14 +116,58 @@ RuyiSDK 0.49.0 测试报告尚未发布，只更新部分测试情况。
 
 上一版本新增缺陷在本版本均修复。
 
+遗留缺陷：
+
+| 缺陷      | 问题等级 |判定依据 |
+| ----------- | ----------- | --- |
+| [Occasional pygit2 failures during testing #415](https://github.com/ruyisdk/ruyi/issues/415) | 一般 | 已有 issue 回复 |
+
 #### RuyiSDK Eclipse IDE 测试
 
-暂无测试情况更新。
+本版本同步发版的 Eclipse 插件测试[报告](https://github.com/ruyisdk-test/ruyisdk-eclipse-plugins-test/tree/v0.1.4)。
+
+遗留缺陷：
+
+| 缺陷      | 问题等级 | 备注 |
+| ----------- | ----------- | --- |
+| [命令执行提示框可以任意关闭且无法重新打开 #82](https://github.com/ruyisdk/ruyisdk-eclipse-plugins/issues/82)   | 建议 |   |
+| [开发板选择框中开发板型号未排序 #83](https://github.com/ruyisdk/ruyisdk-eclipse-plugins/issues/83) | 建议 |  |
+| [虚拟环境建立的项目绑定问题 #84](https://github.com/ruyisdk/ruyisdk-eclipse-plugins/issues/84) | 建议 |  |
+| [安装插件时 Eclipse 提示未签名 #85](https://github.com/ruyisdk/ruyisdk-eclipse-plugins/issues/85) | 建议 |  |
+| [有一些可以自动获取的东西，不需要手动填写 #90](https://github.com/ruyisdk/ruyisdk-eclipse-plugins/issues/90) | 建议 |  |
+| [UI：新闻界面切换仅未读“勾号”不明显 #98](https://github.com/ruyisdk/ruyisdk-eclipse-plugins/issues/98) | 建议 |  |
+| [ruyi-venv中的vnev path需要手动点击右侧列表，显示项目路径 #152](https://github.com/ruyisdk/ruyisdk-eclipse-plugins/issues/152) | 建议 |  |
+| [ruyi-venv名称可以默认设置为ruyi-venv-profile属性 #153](https://github.com/ruyisdk/ruyisdk-eclipse-plugins/issues/153) | 建议 |  |
+| [eclipse中版本检测中升级ruyi包管理器，显示由于不支持utf8报错 #154](https://github.com/ruyisdk/ruyisdk-eclipse-plugins/issues/154) | 建议 |  |
+
+新增缺陷
+
+| 缺陷      | 问题等级 | 备注 |
+| ----------- | ----------- | --- |
+| [ruyi installation更新异常 #164](https://github.com/ruyisdk/ruyisdk-eclipse-plugins/issues/164) | 严重 |  |
 
 #### RuyiSDK VSCode IDE 测试
 
-暂无测试情况更新。
+本版本同步发布的 VSCode 插件测试[报告](https://github.com/ruyisdk-test/ruyisdk-vscode-extension-test/tree/v0.1.4)。
 
+无遗留缺陷。
+
+新增缺陷：
+
+| 缺陷 | 问题等级 | 备注 |
+| --- | --- | --- |
+| [i18中文翻译问题 #156](https://github.com/ruyisdk/ruyisdk-vscode-extension/issues/156) | 建议 | 已有修复 commit |
+| [ruyinews界面卡片特效缩放异常 #157](https://github.com/ruyisdk/ruyisdk-vscode-extension/issues/157) | 建议 |  |
+| [新闻中英文按钮大小不一致 #160](https://github.com/ruyisdk/ruyisdk-vscode-extension/issues/160) | 建议 |  |
+| [i18n中文支持情况 #161](https://github.com/ruyisdk/ruyisdk-vscode-extension/issues/161) | 建议 | 已有修复 commit |
+| [ruyi-venv创建过程时default默认情况下sysroot配置消失 #162](https://github.com/ruyisdk/ruyisdk-vscode-extension/issues/162) | 严重 | 已有修复 commit |
+
+### 测试结论
+
+- 本版本包含遗留的严重缺陷，均按照修复时间表修复中；
+- 本版本 VSCode 和 Eclipse 插件包含新增的严重缺陷，需要需要重新发测试版测试。
+
+RuyiSDK v0.49.0-beta.20260519 版本 Ruyi 包管理器符合出口标准，准予发版； IDE 插件需要延迟发版。
 
 ## 基础组件
 
