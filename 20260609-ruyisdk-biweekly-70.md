@@ -120,4 +120,15 @@ Java重要新特性JEP 401: 值类与对象（Value Classes and Objects）的调
 
 ### Go
 
+本期提交主线的CL：
+- 788080: cmd/compile/internal/ssa: limit zbb to rva22u64 for riscv64 | https://go-review.googlesource.com/c/go/+/788080 修复原有ZBB 优化无视profile
+- 787960: cmd/compile/internal/ssa: optimaze multiply-by-constant on riscv64 | https://go-review.googlesource.com/c/go/+/787960 通过ZBB 优化常数乘法
+- 787280: test/codegen: add riscv64 check for divmod | https://go-review.googlesource.com/c/go/+/787280 添加divmod的代码生成检查
+
+本期审阅并提出修改意见CL：
+- 781080: cmd/compile/internal: add intrinsic rule for sync atomic and/or 32/64 on RISCV64 | https://go-review.googlesource.com/c/go/+/781080 添加atmoic32/64操作支持
+- 738760: crypto/internal/poly1305: provide optimised assembly for riscv64 | https://go-review.googlesource.com/c/crypto/+/738760 优化poly1305标量汇编实现
+- 787420: runtime: check RISC-V ISA profile at runtime init | https://go-review.googlesource.com/c/go/+/787420 runtime时期检查profile
+- 787401: internal/bytealg: improve Count/CountString for riscv64 | https://go-review.googlesource.com/c/go/+/787401 优化标量count实现
+
 ### 模拟器QEMU
