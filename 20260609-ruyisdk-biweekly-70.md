@@ -17,6 +17,9 @@
 ### 基础C库
 
 ### GCC
+分析了 bne/beq immediate 支持，完成了Zibi扩展的GCC实现，
+基于 riscv-isa-manual PR #2369，在Ruyisdk GCC / Binutils工具链上支持Zvbc32e / Zvkgs草案
+完成特权指令扩展Smmtt的第一子扩展Smsdid支持，已更新至Ruyisdk Binutils，正在实现第二子扩展Smmpt部分
 
 ### LLVM
 
