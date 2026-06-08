@@ -122,7 +122,7 @@ Java重要新特性JEP 401: 值类与对象（Value Classes and Objects）的调
 
 本期提交主线的CL：
 - 788080: cmd/compile/internal/ssa: limit zbb to rva22u64 for riscv64 | https://go-review.googlesource.com/c/go/+/788080 修复原有ZBB 优化无视profile
-- 787960: cmd/compile/internal/ssa: optimaze multiply-by-constant on riscv64 | https://go-review.googlesource.com/c/go/+/787960 通过ZBB 优化常数乘法
+- 787960: cmd/compile/internal/ssa: optimize multiply-by-constant on riscv64 | https://go-review.googlesource.com/c/go/+/787960 通过ZBB 优化常数乘法
 - 787280: test/codegen: add riscv64 check for divmod | https://go-review.googlesource.com/c/go/+/787280 添加divmod的代码生成检查
 
 本期审阅并提出修改意见CL：
