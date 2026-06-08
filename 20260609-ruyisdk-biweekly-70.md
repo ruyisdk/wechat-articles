@@ -17,7 +17,7 @@
 ### 基础C库
 - GLIBC:
    - 实现了 rawmemchr, strcasecmp 和 mempcpy 的通用版本 RVV 优化。
-   - 先前提交到 GLIBC 上游的 memccpy, memchr, memcmp, strchr, ctrrchr 的通用版本 RVV 优化已合入主线（https://patchwork.sourceware.org/project/glibc/list/?series=57340&state=*）。
+   - 先前提交到 GLIBC 上游的 memccpy, memchr, memcmp, strchr, strrchr 的通用版本 RVV 优化已合入主线（https://patchwork.sourceware.org/project/glibc/list/?series=57340&state=*）。
 - newlib:
    - 先前提交到 newlib 上游的 mempcpy, memrchr, memchr, memccpy 的通用版本 RVV 优化已合入主线（https://sourceware.org/pipermail/newlib/2026/022437.html）。
    - 先前提交到 newlib 上游的 rawmemchr, memcmp 接口的通用版本 RVV 优化，reviewer 提出了修改意见，已完成相关修正。
