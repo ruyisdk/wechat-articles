@@ -6,6 +6,22 @@
 
 ### 包管理器
 
+由于 RuyiSDK 发版周期调整，RuyiSDK 包管理器的 0.50.0 版本预期将在 6 月 23 日正式发布。欢迎下载 RuyiSDK 包管理器当前最新版本 0.49.0 试用。
+
+RuyiSDK 团队仍在常态化维护 RuyiSDK 软件源。如您已有 RuyiSDK 包管理器了，您可通过 `ruyi update` 获取近两周的更新：我们保证这些内容兼容 RuyiSDK 包管理器的近 3 个正式版本。
+
+目前有以下内容正在开发中：
+
+* 简化资源文件的捆绑方式，以配合 Debian 对源码包的格式要求。Debian sid 用户可以通过 `apt install ruyi` 安装发行版打包的 ruyi 了。感谢 [@RevySR] 的贡献！
+* 支持展示软件包的下载大小。
+* 支持为软件包关联更丰富的元数据，包括但不限于解压缩后体积、发行版兼容性等。
+* 迁移至测试团队新开发的集成测试套件 ruyi-pytest，替换旧的、不再维护的 ruyi-litester 套件。
+
+欢迎试用或来上游围观；您的需求是我们迭代开发的目标和动力。您也可以亲自参与
+RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查看、修改我们的[部分打包脚本](https://github.com/ruyisdk/ruyici)与[软件源仓库](https://github.com/ruyisdk/packages-index)。今后，按照本年度的开发计划，我们也将支持有权的第三方贡献者通过程序化的方式上传软件包、系统镜像等分发文件，以便利打包工作。
+
+[@RevySR]: https://github.com/RevySR
+
 ### RuyiSDK VSCode 插件
 
 - 新增：在 RuyiSDK Home 页面新增 board 文档入口，一键直达开发板相关文档，查阅资料更便捷
