@@ -8,6 +8,9 @@
 
 ### RuyiSDK VSCode 插件
 
+- 支持阅读本地已缓存的新闻
+- 支持 Ruyi 包管理器 0.49 版本 --project-sysroot-from-rootfs 选项
+
 ### RuyiSDK Eclipse 插件
 
 ### 版本测试及遗留问题
