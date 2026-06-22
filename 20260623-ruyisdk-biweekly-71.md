@@ -34,7 +34,7 @@ Eclipse 插件计划发版测试期间 <https://api.ruyisdk.cn/releases/latest-p
 
 - GLIBC:
   - 实现了 strncasecmp 和 strstr 的通用版本 RVV 优化。
-  - 在阿里玄铁 C908 平台尝试完成了一版基于 RVV 和 xthead 标量访问拓展的 memcpy 平台特定优化。
+  - 在阿里玄铁 C908 平台尝试完成了一版基于 RVV 和 xthead 标量访问扩展的 memcpy 平台特定优化。
 
 ### GCC
 
