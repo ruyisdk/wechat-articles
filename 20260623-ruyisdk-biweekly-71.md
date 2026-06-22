@@ -32,7 +32,7 @@
 
   https://github.com/ruyisdk/riscv-gcc/tree/ziccid
 
-- 协助 compiler-explorer 社区完善了 Binutils 的 trunk 分支，适配了RVA23 Profile支持。
+- 协助 compiler-explorer 社区完善了 Binutils 的 trunk 分支，适配了 RVA23 Profile 支持。
 
   - https://github.com/compiler-explorer/compiler-explorer/pull/8827
   - 示例：https://godbolt.org/z/h49rYT3To
