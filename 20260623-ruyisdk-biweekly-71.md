@@ -88,6 +88,17 @@ https://github.com/llvm/llvm-project/pull/203473
 已合并
 
 ### V8
+**本期亮点：开始支持 RISCV  ZFH 扩展，适配 Wasm FP16 特性，可以应用于加速半精度浮点计算。**
+
+本期提交并合入的 patch：
+1. **[riscv][codegen] Fix slot calculation for move cycle resolution** [RISC-V][代码生成] 修复寄存器移动循环解析的槽位计算错误（https://chromium-review.googlesource.com/c/7911096）
+2. **[riscv] Fix error that use of undeclared identifier** [RISC-V] 修复使用未声明标识符引发的编译错误（https://chromium-review.googlesource.com/c/7908311）
+3. **[riscv] Fix Debug check failed: !L->is_bound()** [RISC-V] 修复调试断言 !L->is_bound() 触发失败问题（https://chromium-review.googlesource.com/c/7917370）
+4. **[riscv][acqrel] Add acquire-release support for atomic.fence** [RISC-V][内存序] 为原子屏障指令 atomic.fence 提供获取-释放内存序支持（https://chromium-review.googlesource.com/c/7947903）
+5. **[riscv]Implement ZFH in Simulator** [RISC-V] 在模拟器中实现 ZFH 半精度浮点扩展指令集（https://chromium-review.googlesource.com/c/7897892）
+6. **[riscv] Implement CompareSmiAndAssert** [RISC-V] 实现 CompareSmiAndAssert 校验辅助逻辑（https://chromium-review.googlesource.com/c/7953184）
+7. **[riscv][debug] Move DebugInfo to trusted space** [RISC-V][调试] 将调试信息存放至可信内存区域（https://chromium-review.googlesource.com/c/7953185）
+8. **[riscv] Implement vfadd/vfsub/vfmul/vfdiv for fp16** [RISC-V] 实现半精度浮点向量四则运算指令 vfadd/vfsub/vfmul/vfdiv（https://chromium-review.googlesource.com/c/7953190）
 
 ### OpenJDK
 
