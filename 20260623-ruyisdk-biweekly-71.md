@@ -8,6 +8,9 @@
 
 ### RuyiSDK VSCode 插件
 
+- 支持阅读本地已缓存的新闻
+- 支持 Ruyi 包管理器 0.49 版本 --project-sysroot-from-rootfs 选项
+
 ### RuyiSDK Eclipse 插件
 
 - venv: 初步支持一键添加使用 qemu-user 的启动和调试配置。
