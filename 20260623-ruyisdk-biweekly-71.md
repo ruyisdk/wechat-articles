@@ -6,6 +6,43 @@
 
 ### 包管理器
 
+RuyiSDK 0.50 将于 2026 年 6 月 23 日至 6 月 26 日之间发布，对应的包管理器版本也为 0.50.0。本次 RuyiSDK 包管理器的更新主要包含了以下内容：
+
+* `ruyi list` 会展示本地未安装的软件包在当前架构的下载大小了。
+* 对于记载了相应元数据的软件包，`ruyi list` 会展示这些软件包的安装后大小了。
+* 工程化迭代：
+    * 为 macOS 做了最初的部分适配工作。
+    * 切换到了 Python 来解压缩文件，移除了 `gunzip`、`bzip2`、`lz4`、`xz`、`zstd` 这些外部命令依赖。
+    * 简化了资源文件的捆绑方式。
+    * 切换到了新的 ruyi-pytest 外部集成测试套件，替代原有的 ruyi-litester。
+    * 更新了依赖版本。
+    * 更新了平台基线依赖版本信息的文档。
+
+本次 RuyiSDK 软件源的更新主要包含了以下内容：
+
+* 软件源格式更新：
+    * 支持了给软件包附着更多元数据，当前支持记录 `binary` 类型软件包在每个架构的安装后大小。
+* 新增设备支持：
+    * SpacemiT MUSE Pi Pro: 兼容各类 Bianbu 镜像。
+* 新增了以下软件包：
+    * `board-image/bianbu-desktop-lite-uefi-spacemit-k1`: Bianbu Desktop Lite 的 UEFI 引导版本，适用于 SpacemiT K1 平台。
+    * `board-image/bianbu-desktop-lite-uefi-spacemit-k1-sd`: Bianbu Desktop Lite 的 UEFI 引导版本，适用于使用 SD 卡存储的 SpacemiT K1 平台。
+* 更新了以下软件到最新版本：
+    * `board-image/bianbu-desktop-spacemit-k1`: 更新到了 v2.3.3。
+    * `board-image/bianbu-desktop-lite-spacemit-k1`: 更新到了 v2.3.3。
+    * `board-image/bianbu-minimal-spacemit-k1`: 更新到了 v2.3.3。
+    * `board-image/bianbu-desktop-spacemit-k1-sd`: 更新到了 v2.3.3。
+    * `board-image/bianbu-desktop-lite-spacemit-k1-sd`: 更新到了 v2.3.3。
+    * `board-image/bianbu-minimal-spacemit-k1-sd`: 更新到了 v2.3.3。
+
+本次 RuyiSDK 服务端组件的更新主要包含了以下内容：
+
+* 例行安全更新与依赖更新。
+* 支持了查询 RuyiSDK Eclipse 与 VSCode 插件最新版本的 API。
+
+欢迎试用或来上游围观；您的需求是我们迭代开发的目标和动力。您也可以亲自参与
+RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查看、修改我们的[部分打包脚本](https://github.com/ruyisdk/ruyici)与[软件源仓库](https://github.com/ruyisdk/packages-index)。今后，按照本年度的开发计划，我们也将支持有权的第三方贡献者通过程序化的方式上传软件包、系统镜像等分发文件，以便利打包工作。
+
 ### RuyiSDK VSCode 插件
 
 - 支持阅读本地已缓存的新闻
