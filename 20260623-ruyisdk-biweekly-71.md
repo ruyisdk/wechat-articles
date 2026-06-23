@@ -2,6 +2,61 @@
 
 ## 卷首语
 
+端午刚过，夏至已至。过去两周，RuyiSDK 迎来了多项亮点进展。
+
+运行时方面，V8 开始支持 RISC-V ZFH 半精度浮点扩展，适配 Wasm FP16 特性以加速计算；OpenJDK 的 JEP 401（值类与对象）移植取得突破，已完成解释器与 JIT 模块解耦，成功构建 Server 模式二进制。
+
+工具链方面，GCC 提交多项草案扩展实现，并协助 compiler-explorer 社区完善 RVA23 支持；GLIBC 在玄铁 C908 平台完成 memcpy 特定优化。
+
+开发者工具方面，包管理器 0.50.0 将于本周发布，新增包大小展示、macOS 初步适配及解压模块底层重构。Eclipse 插件 0.1.4 通过测试正式发布，欢迎大家下载体验。
+
+
+更多进展细节详见下方各板块，欢迎试用并在 GitHub 或社区中反馈建议，期待更多伙伴一起共建 RISC‑V 软件开发生态。
+
+⏬ 包管理器和IDE插件工具都提供了多种下载或安装方式，您可以任意选择一种：
+
+* RuyiSDK 包管理器 0.49.0🚀
+
+  * 从 [PyPI](https://pypi.org/project/ruyi/0.49.0/) 安装：`pip install ruyi`
+  * 手动下载安装：
+    * [GitHub Releases](https://github.com/ruyisdk/ruyi/releases/tag/0.49.0)
+    * [ISCAS 镜像源](https://mirror.iscas.ac.cn/ruyisdk/ruyi/tags/0.49.0/)
+  * [使用文档](https://ruyisdk.org/docs/Package-Manager/)
+
+  > [!NOTE]
+  > RISC-V 用户可以使用 `pip` 安装 `ruyi`，但由于 `ruyi` 依赖的部分 Python
+  > 库暂未在 PyPI 上提供 RISC-V 架构的预编译包，安装 `ruyi` 时 Python
+  > 包管理器会尝试从源代码编译安装这些依赖，可能非常耗时或编译失败。
+  >
+  > 如果您在 RISC-V 设备上安装 `ruyi` 时遇到问题，建议使用其他安装方法。对于 `ruyi` 的单文件二进制发行版，您必须将下载的文件重命名为一字不差的 `ruyi` 才能正常使用。
+  >
+  > 请注意：从 RuyiSDK 0.48.0 开始，Ubuntu 22.04 LTS 与 Python 3.10 环境不再受到支持。相关用户，尤其是发行版打包者、CI 环境维护者与仍在使用旧版 Python 运行环境的用户，在升级前请提前确认兼容性影响并完成验证。
+  >
+  
+* RuyiSDK VSCode Extension 0.1.4 🚀
+
+  * VSCode/VSCodium Extensions 中搜索 `RuyiSDK`关键字查询 安装 RuyiSDK 插件
+  * 手动下载安装 (Install from VSIX):
+    * [GitHub Releases](https://github.com/ruyisdk/ruyisdk-vscode-extension/releases/tag/0.1.4/)
+    * [ISCAS 镜像源](https://mirror.iscas.ac.cn/ruyisdk/ide/plugins/vscode/)
+  * [使用文档](https://ruyisdk.org/docs/VSCode-Plugins/)
+
+* RuyiSDK Eclipse Plugins 0.1.4 🚀
+
+  * 在线安装方式: Eclipse IDE → Help → Install New Software... → Add...  →  Location: https://ruyisdk.github.io/ruyisdk-eclipse-plugins/
+  * 手动下载安装：
+    * [GitHub Releases](https://github.com/ruyisdk/ruyisdk-eclipse-plugins/releases/tag/v0.1.3/)
+    * [ISCAS 镜像源](https://mirror.iscas.ac.cn/ruyisdk/ide/plugins/eclipse/)
+  * [使用文档](https://ruyisdk.org/docs/IDE/)
+
+  > [!NOTE]
+  > 近期 Eclipse Marketplace 中的 RuyiSDK 插件查询与安装出现异常，详情可参考[【RuyiSDK Eclipse 插件安装方式临时调整通知】](https://ruyisdk.cn/t/topic/2696)，建议您通过 Eclipse 的 Install New Software… 方式安装插件。
+  >
+
+如果您不清楚怎么选择，可以参考不同渠道和下载方式的说明：https://ruyisdk.cn/t/topic/2479
+
+每一次版本的迭代，都离不开社区伙伴的反馈与贡献。下个版本计划于 7 月底发布，我们将持续给您带来更新！我们诚挚邀请您常来 [RuyiSDK 技术社区](https://ruyisdk.cn/) 交流想法，共同成长。
+
 ## 基础开发环境
 
 ### 包管理器
