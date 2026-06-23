@@ -39,6 +39,10 @@ Eclipse 插件计划发版测试期间 <https://api.ruyisdk.cn/releases/latest-p
 
 ### 基础C库
 
+- GLIBC:
+  - 实现了 strncasecmp 和 strstr 的通用版本 RVV 优化。
+  - 在阿里玄铁 C908 平台尝试完成了一版基于 RVV 和 xthead 标量访问扩展的 memcpy 平台特定优化。
+
 ### GCC
 
 - 添加 RISC-V Profiles 支持到工具链 --with-arch 选项，用于构建默认支持特定 profile 的工具链，已提 PR 至 riscv-gnu-toolchain 仓库：
