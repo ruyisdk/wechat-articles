@@ -240,4 +240,3 @@ Java重要新特性JEP 401: 值类与对象（Value Classes and Objects）的调
 - 717980: runtime, cmd/internal/obj/riscv: support spin lock on riscv64 | https://go-review.googlesource.com/c/go/+/717980 要求移除跟随ABIInternal
 - 732700: cmd/internal/obj/riscv: add assembly support of Zfa extension | https://go-review.googlesource.com/c/go/+/732700 添加ZFA 支持
 
-### QEMU模拟器
