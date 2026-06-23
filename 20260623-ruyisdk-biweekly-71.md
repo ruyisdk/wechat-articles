@@ -10,6 +10,10 @@
 
 ### RuyiSDK Eclipse 插件
 
+- venv: 初步支持一键添加使用 qemu-user 的启动和调试配置。
+- venv: 提供默认的 venv 名称并默认选择唯一打开的项目。
+- venv: 修复使用 ruyi 创建虚拟环境时错误传递的命令行参数。
+
 ### 版本测试及遗留问题
 
 Eclipse 插件计划发版测试期间 <https://api.ruyisdk.cn/releases/latest-pm> 500 故障，待测功能无法验证，故相关测试延后了一周。
