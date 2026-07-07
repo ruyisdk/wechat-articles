@@ -31,7 +31,18 @@
   - 移植了 atanh 到当前的 newlib 向量数学库框架。
 
 ### GCC
-
+- 完成了ruyisdk-gcc 16.1，ruyisdk-binutils 2.46的整合工作，支持多种新扩展及全面的RV Profiles
+  - https://github.com/ruyisdk/riscv-gcc
+  - https://github.com/ruyisdk/riscv-binutils
+- Rebase了Zcmt的Binutils支持，重新设计了link relaxation实现
+  - https://sourceware.org/pipermail/binutils/2026-June/149842.html
+- 提交了Zama16b和Ziccamoc扩展的支持patch
+  - https://sourceware.org/pipermail/binutils/2026-June/149847.html
+  - https://sourceware.org/pipermail/binutils/2026-June/149848.html
+- 修复了Zvdota扩展的altfmt识别问题，已合入上游
+  - https://sourceware.org/git/?p=binutils-gdb.git;a=commit;h=cd28fb866379c5dbbe431feb24aa62d369554f80
+- 正在推进P扩展的intrinsic支持更新中
+  - https://github.com/ruyisdk/riscv-gcc/pull/12
 ### LLVM
 - [compiler-rt][msan] Add MSan support for RISC-V 64-bit Linux | https://github.com/llvm/llvm-project/pull/206674 提供RISC-V msan 功能
 
