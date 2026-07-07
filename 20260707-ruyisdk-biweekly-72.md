@@ -6,6 +6,34 @@
 
 ### 包管理器
 
+由于 RuyiSDK 发版周期调整，RuyiSDK 包管理器的 0.51.0 版本预期将在 7 月底正式发布。欢迎下载 RuyiSDK 包管理器当前最新版本 0.50.0 试用。
+
+RuyiSDK 团队仍在常态化维护 RuyiSDK 软件源。如您已有 RuyiSDK 包管理器了，您可通过 `ruyi update` 获取近两周的更新：我们保证这些内容兼容 RuyiSDK 包管理器的近 3 个正式版本。
+
+目前有以下内容正在开发中：
+
+* 迁移大部分 RuyiSDK 打包脚本到新的 `ruyi admin build-package` 打包工作流。
+
+本次 RuyiSDK 软件源的更新主要包含了以下内容：
+
+* 更新软件包：
+    * `analyzer/dynamorio-riscv`: DynamoRIO RISC-V 性能分析工具，11.91.20630 版本。
+    * `board-util/wlink`: 社区独立实现的 WCH-Link 刷写与调试工具，0.1.2 版本。
+    * `source/opencv`: OpenCV 上游源码，4.13.0 版本。感谢 [Tanmay Gulhane][trg-rgb] 的贡献！
+    * `toolchain/gnu-ruyisdk`: 由 RuyiSDK 团队维护、构建的 GNU 工具链，0.20260625.0 版本。在 GNU binutils 2.46、GCC 16.1.1、glibc 2.43 的基础上支持了所有 2026 年 6 月前已批准（ratified）的 RISC-V 扩展。
+    * `toolchain/llvm-ruyisdk`: 由 RuyiSDK 团队维护、构建的 LLVM 工具链，0.20260625.0 版本。在 LLVM 22.1.8 的基础上支持了所有 2026 年 6 月前已批准（ratified）的 RISC-V 扩展，具体是新增了对 Svrsw60t59b 与 Ziccid 的支持。
+* 新增设备支持：
+    * SpacemiT K3 Pico-ITX: 兼容各类 Bianbu 镜像。感谢 [weilinfox][weilinfox] 的贡献！
+* 完善了设备支持：
+    * `board-image/armbian-starfive-visionfive2-minimal`: StarFive VisionFive2 的 Armbian。感谢 [SmulllLu][smullllu] 的贡献！
+
+[smullllu]: https://github.com/SmulllLu
+[trg-rgb]: https://github.com/trg-rgb
+[weilinfox]: https://github.com/weilinfox
+
+欢迎试用或来上游围观；您的需求是我们迭代开发的目标和动力。您也可以亲自参与
+RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查看、修改我们的[部分打包脚本](https://github.com/ruyisdk/ruyici)与[软件源仓库](https://github.com/ruyisdk/packages-index)。今后，按照本年度的开发计划，我们也将支持有权的第三方贡献者通过程序化的方式上传软件包、系统镜像等分发文件，以便利打包工作。
+
 ### RuyiSDK VSCode 插件
 
 ### RuyiSDK Eclipse 插件
