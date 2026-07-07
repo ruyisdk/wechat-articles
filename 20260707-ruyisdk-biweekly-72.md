@@ -49,7 +49,7 @@ https://github.com/llvm/llvm-project/pull/207110
 
 6. [RISCV][P-ext] Use brev8 for bitreverse with Zbkb
 https://github.com/llvm/llvm-project/pull/207338
-当存在 Zkbk 拓展时将 bitreverse 下降为 brev8 指令，完成 FIXME
+当存在 Zbkb 拓展时将 bitreverse 下降为 brev8 指令，完成 FIXME
 已合并
 
 7. [RISCV] Canonicalize the true operand of vselect to fold more vmerge.vvm instructions
