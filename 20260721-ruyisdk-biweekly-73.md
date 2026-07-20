@@ -27,3 +27,7 @@
 ### Go
 
 ### QEMU模拟器
+
+实现RISC-V Packed-SIMD扩展的QEMU模拟器支持，提交至上游，Review中。
+
+https://lists.nongnu.org/archive/html/qemu-riscv/2026-07/msg00697.html
