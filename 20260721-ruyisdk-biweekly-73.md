@@ -137,7 +137,28 @@ https://github.com/llvm/llvm-project/pull/208685
 正在 review
 
 ### V8
+本期提交patch如下：
+1. **[riscv][wasm][debug] Fix OSR safepoint mismatch in Liftoff**
+   [RISC-V][WASM][调试] 修复 Liftoff 中 OSR 安全点不匹配问题（https://chromium-review.googlesource.com/c/8071149）
 
+2. **[maglev][riscv] Fix SmiSubConstant overflow false positive under pointer compression**
+   [Maglev][RISC-V] 修复指针压缩场景下 SmiSubConstant 溢出误报断言（https://chromium-review.googlesource.com/c/8074004）
+
+3. **[wasm][riscv] Add SwitchSimulatorStackLimit in WasmHandleStackOverflow**
+   [WASM][RISC-V] 在栈溢出处理函数 WasmHandleStackOverflow 中添加模拟器栈边界切换逻辑（https://chromium-review.googlesource.com/c/8049967）
+
+4. **[riscv][wasm-wide-arith] fix incorrect DCHECK in VisitWideAddSub**
+   [RISC-V][WASM宽算术] 修复 VisitWideAddSub 内错误的调试断言（https://chromium-review.googlesource.com/c/8084001）
+
+5. **[riscv][regexp]Skip the JS stack guard check for register-light patterns**
+   [RISC-V][正则引擎] 对寄存器轻量正则模式跳过 JS 栈保护校验（https://chromium-review.googlesource.com/c/8089969）
+
+6. **[riscv] Implement F16x8/I16x8 vector conversions**
+   [RISC-V] 实现 F16x8 与 I16x8 向量类型转换指令（https://chromium-review.googlesource.com/c/8095784）
+
+7. **[riscv] Fix undeclared identifier 'kWRegSize'**
+   [RISC-V] 修复标识符 kWRegSize 未声明编译错误（https://chromium-review.googlesource.com/c/8097963）
+   
 ### OpenJDK
 
 本期提交的OpenJDK Valhalla仓patch:
