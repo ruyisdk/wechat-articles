@@ -23,6 +23,11 @@
 ### 基础C库
 
 ### GCC
+提交了Ziccid, Ziccamoc, Ssccfg, Smcdeleg, Smctr, Smsdid, Ssctr, Ssqosid， Svrsw60t59b的扩展支持到gcc上游：
+https://patchwork.sourceware.org/project/gcc/list/?series=63789&state=%2A&archive=both
+
+Rebase了P扩展的gcc工具链支持到gcc-16.1 release分支，后续等待P扩展草案冻结后向上游同步提交：
+https://github.com/ruyisdk/riscv-gcc/tree/p-rebase
 
 ### LLVM
 
