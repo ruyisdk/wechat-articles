@@ -22,6 +22,14 @@
 
 ### 基础C库
 
+- GLIBC:
+  - 实现了 strcasecmp、strcasecmp_l、strncasecmp 和 strncasecmp_l 的通用版本 RVV 优化。
+  - 移植了 exp2m1 和 exp2m1f 至现有的 glibc libmvec 框架。
+  - 之前提交的 stpncpy 和 strncpy 已经合入 glibc 上游主线。
+- newlib:
+  - 提交了向量数学库 RFC patch 到 newlib 上游。
+  - 提交了 str* 相关共 17 个接口实现的 patch 到 newlib 上游。
+
 ### GCC
 
 ### LLVM
