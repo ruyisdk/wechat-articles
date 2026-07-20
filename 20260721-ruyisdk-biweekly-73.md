@@ -66,3 +66,7 @@ Review
 - 801360: test/codegen: add riscv64 checks for conditional subtractions | https://go-review.googlesource.com/c/go/+/801360 添加codegen 检查（目前 zkt 才有const time能力，大概率拒收）
 
 ### QEMU模拟器
+
+实现RISC-V Packed-SIMD扩展的QEMU模拟器支持，提交至上游，Review中。
+
+https://lists.nongnu.org/archive/html/qemu-riscv/2026-07/msg00697.html
