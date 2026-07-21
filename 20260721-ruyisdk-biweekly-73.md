@@ -6,6 +6,53 @@
 
 ### 包管理器
 
+RuyiSDK 0.51 已于 2026 年 7 月 21 日发布，对应的包管理器版本也为 0.51.0。本次 RuyiSDK 包管理器的更新主要包含了以下内容：
+
+* 修复了 `ruyi` 在自动补全命令行时无法补出文件路径的问题。
+* 本地软件源 Git 元数据损坏时，会输出更友好的错误信息了。
+* 修复了非交互终端情况下 `ruyi repo add` 命令的报错信息中 `[repo]` 字样缺失的问题。感谢 [SmulllLu] 报告此问题！
+* 现在可以用 `ruyi repo` 禁用默认软件源（`ruyisdk`）了。感谢 [sisungo] 报告此问题！
+* 发行版打包工作者可以通过配置的方式完全禁用首次运行上报安装信息的功能和遥测功能了。
+* 工程化迭代：
+    * 为方便测试工作，允许将 `ruyi` 二进制命名为带版本号的形式了：如 `ruyi-0.51.0`。
+    * 更新了依赖版本。
+    * 减少了对 `typing_extensions` 的使用。
+
+本次 RuyiSDK 软件源的更新主要包含了以下内容：
+
+* 更新软件包：
+  * `analyzer/dynamorio-riscv`: DynamoRIO RISC-V 性能分析工具，11.91.20630 版本。
+  * `board-util/wlink`: 社区独立实现的 WCH-Link 刷写与调试工具，0.1.2 版本。
+  * `source/opencv`: OpenCV 上游源码，4.13.0 版本。感谢 [Tanmay Gulhane][trg-rgb] 的贡献！
+  * `toolchain/gnu-ruyisdk`: 由 RuyiSDK 团队维护、构建的 GNU 工具链，0.20260625.0 版本。在 GNU binutils 2.46、GCC 16.1.1、glibc 2.43 的基础上支持了所有 2026 年 6 月前已批准（ratified）的 RISC-V 扩展。
+  * `toolchain/llvm-ruyisdk`: 由 RuyiSDK 团队维护、构建的 LLVM 工具链，0.20260625.0 版本。在 LLVM 22.1.8 的基础上支持了所有 2026 年 6 月前已批准（ratified）的 RISC-V 扩展，具体是新增了对 Svrsw60t59b 与 Ziccid 的支持。
+* 新增设备支持：
+  * SpacemiT K3 Pico-ITX: 兼容各类 Bianbu 镜像。感谢 [weilinfox] 的贡献！
+  * OrangePi RV2: 兼容各类 Armbian 镜像。感谢 [SmulllLu] 的贡献！
+* 完善了设备支持：
+  * `board-image/armbian-orangepi-rv2-minimal`: OrangePi RV2 的 Armbian。感谢 [SmulllLu] 的贡献！
+  * `board-image/armbian-orangepi-rv2-xfce`: OrangePi RV2 的 Armbian，XFCE 桌面。感谢 [SmulllLu] 的贡献！
+  * `board-image/armbian-starfive-visionfive2-xfce`: StarFive VisionFive2 的 Armbian，XFCE 桌面。感谢 [SmulllLu] 的贡献！
+  * `board-image/armbian-spacemit-musepipro-xfce`: SpacemiT Muse Pi Pro 的 Armbian，XFCE 桌面。感谢 [SmulllLu] 的贡献！
+  * `board-image/freebsd-riscv64-mini-live`: FreeBSD Live 镜像。感谢 [SmulllLu] 的贡献！
+  * `board-image/openbsd-riscv64-live`: OpenBSD Live 镜像。感谢 [SmulllLu] 的贡献！
+  * `board-image/revyos-sipeed-laptop4a:`: Sipeed Laptop 4A 的 RevyOS。感谢 [SmulllLu] 的贡献！
+  * `board-image/revyos-sipeed-lcon4a:`: Sipeed LicheePi Console 4A 的 RevyOS。感谢 [SmulllLu] 的贡献！
+  * `board-image/revyos-sipeed-lpi4a:`: Sipeed LicheePi 4A 的 RevyOS。感谢 [SmulllLu] 的贡献！
+
+本次 RuyiSDK 服务端组件的更新主要包含了以下内容：
+
+* 例行安全更新与依赖更新。
+
+[sisungo]: https://github.com/sisungo
+[SmulllLu]: https://github.com/SmulllLu
+[trg-rgb]: https://github.com/trg-rgb
+[weilinfox]: https://github.com/weilinfox
+
+欢迎试用或来上游围观；您的需求是我们迭代开发的目标和动力。您也可以亲自参与
+RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查看、修改我们的[部分打包脚本](https://github.com/ruyisdk/ruyici)与[软件源仓库](https://github.com/ruyisdk/packages-index)。今后，按照本年度的开发计划，我们也将支持有权的第三方贡献者通过程序化的方式上传软件包、系统镜像等分发文件，以便利打包工作。
+
+
 ### RuyiSDK VSCode 插件
 
 ### RuyiSDK Eclipse 插件
