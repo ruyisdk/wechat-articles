@@ -8,6 +8,9 @@
 
 ### RuyiSDK VSCode 插件
 
+- 更新软件源时，自动执行 ruyi update
+- 删除软件时使用模态框
+
 ### RuyiSDK Eclipse 插件
 
 - 项目: 发布 0.1.6 测试版。
