@@ -6,6 +6,24 @@
 
 ### 包管理器
 
+由于 RuyiSDK 发版周期调整，RuyiSDK 包管理器的 0.52.0 版本预期将在 8 月底正式发布。欢迎下载 RuyiSDK 包管理器当前最新版本 0.51.0 试用。
+
+RuyiSDK 团队仍在常态化维护 RuyiSDK 软件源。如您已有 RuyiSDK 包管理器了，您可通过 `ruyi update` 获取近两周的更新：我们保证这些内容兼容 RuyiSDK 包管理器的近 3 个正式版本。
+
+目前有以下内容正在开发中：
+
+* RuyiSDK 工具链的 macOS 打包工作。
+
+本次 RuyiSDK 软件源的更新主要包含了以下内容：
+
+* 更新软件包：
+  * `board-image/armbian-spacemit-musepipro-minimal`: SpacemiT Muse Pi Pro 的 Armbian。感谢 [SmulllLu] 的贡献！
+
+欢迎试用或来上游围观；您的需求是我们迭代开发的目标和动力。您也可以亲自参与
+RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查看、修改我们的[部分打包脚本](https://github.com/ruyisdk/ruyici)与[软件源仓库](https://github.com/ruyisdk/packages-index)。今后，按照本年度的开发计划，我们也将支持有权的第三方贡献者通过程序化的方式上传软件包、系统镜像等分发文件，以便利打包工作。
+
+[SmulllLu]: https://github.com/SmulllLu
+
 ### RuyiSDK VSCode 插件
 
 ### RuyiSDK Eclipse 插件
