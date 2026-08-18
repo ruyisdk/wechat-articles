@@ -51,6 +51,23 @@
 
 ### OpenJDK
 
+本期审阅并合入的JDK主线patch:
+
+- https://github.com/openjdk/jdk/pull/31340 (8385702: Improve polymorphic handling in JDK-8385648)  为各CPU平台优化polymorphic相关处理的指令跳转逻辑
+- https://github.com/openjdk/jdk/pull/31358 (8384442: Shenandoah: Remove vestigial CAS barrier code)  为各CPU平台清理ShenandoahGC未使用的CAS barrier函数
+- https://github.com/openjdk/jdk/pull/31373 (8385915: RISC-V: Remove unused cmpxchg* methods)  为RISC-V平台清理未使用的cmpxchg汇编函数
+- https://github.com/openjdk/jdk/pull/31423 (8386161: RISC-V: Auto-enable Zvkn/Zvkg extension features)  为RISC-V平台自动开启Zvkn/Zvkg探测和加解密指令运用（SpaceMit K3平台加解密操作性能实测2-3倍性能加速）
+- https://github.com/openjdk/jdk/pull/31434 (8386252: Shenandoah: Polish LRB argument preparation)  为各CPU平台优化LRB参数准备
+- https://github.com/openjdk/jdk/pull/31424 (8385323: Support capstone on riscv64)  支持配置构建面向RISC-V平台的capstone反汇编器so文件
+
+Java重要新特性JEP 401: 值类与对象（Value Classes and Objects）的调研和移植工作进展：
+已完成RISC-V平台Java虚拟机的模板解释器、C1、C2 JIT即时编译器三大模块对JEP 401特性的兼容性支持，能够在Server模式下跑通JEP 401相关兼容性测试用例。
+同时，JVM相关修改可在RISC-V平台全量通过JDK自带全部回归测试用例。JEP 401兼容性相关工作已经通过PR形式提交到Valhalla代码仓，详细修改见PR链接。
+下一步工作：
+继续调研JEP 401 Value Class相关的性能优化实现细节，具体包括值类型Flattening支持（UseArrayFlattening & UseFieldFlattening）和方法调用值类型参数传递内联支持（InlineTypePassFieldsAsArgs & InlineTypeReturnedAsFields）。
+
+- https://github.com/openjdk/valhalla/pull/2531 (8386240: [lworld] Port JEP 401 to RISC-V)
+
 ### Go
 
 提交代码
