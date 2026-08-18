@@ -43,7 +43,7 @@ Review
 - 807460: cmd/internal/obj/riscv: compress function returns | https://go-review.googlesource.com/c/go/+/807460 添加C扩展的返回指令，对比原有编译器能减少~2700个指令
 - 738760: crypto/internal/poly1305: provide optimised assembly for riscv64 | https://go-review.googlesource.com/c/crypto/+/738760 poly1305添加riscv支持 【合入】
 - 808080: runtime: clear frame pointer before calling into C on RISCV64 | https://go-review.googlesource.com/c/go/+/808080 清除帧指针【合入】
-- 812961: cmd/asm, cmd/internal/obj: support 6-bit VROR.VI immediates | https://go-review.googlesource.com/c/go/+/812961 支持VRORI 的 6bit编码模式
+- 812961: cmd/asm, cmd/internal/obj: support 6-bit VROR.VI immediates | https://go-review.googlesource.com/c/go/+/812961 支持VROR.VI 的 6-bit编码模式
 - 806200: internal/cpu: detect RISC-V VLENB when the vector extension is available | https://go-review.googlesource.com/c/sys/+/806200 添加runtime VLENB
 - 815840: runtime: fix sigtramp abi in riscv64 mipsx mips64x and s390x | https://go-review.googlesource.com/c/go/+/815840 修复Go ABI 跳过了sigtramp 的save/restore 【合入】
 
