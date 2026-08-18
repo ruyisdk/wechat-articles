@@ -20,6 +20,15 @@
 
 ### 基础C库
 
+- GLIBC:
+  - 移植了 expint1、expm1、erfinv 和 erfcinv 至现有的 glibc libmvec 框架。
+  - 基于 C920 针对 strstr 接口进行了初步调优。
+- newlib:
+  - 移植了 acosh 至现有的 newlib 向量数学框架。
+  - 基于 C908 针对 memset 接口进行了初步调优。
+
+
+
 ### GCC
 1. 推进 RISC-V SIMD 扩展工具链落地
 
