@@ -67,6 +67,37 @@
 
 ### V8
 
+本期提交并合入的patch：
+1. **[riscv] Implement FP16 demote and promote SIMD operations for RISC‑V**
+[RISC‑V] 实现FP16向量降精度、升精度SIMD转换运算（https://chromium‑review.googlesource.com/c/8129298）
+
+2. **[riscv]Implement FP16 qfma/qfms SIMD operator**
+[RISC‑V] 实现FP16向量快速乘加/快速乘减(qfma/qfms)SIMD指令（https://chromium‑review.googlesource.com/c/8128824）
+
+3. **[riscv][maglev] Cache the DataView's byteLength for the bounds check**
+[RISC‑V][Maglev] 缓存DataView的字节长度，用于边界检查优化（https://chromium‑review.googlesource.com/c/7129740）
+
+4. **[riscv] Fix F16x8DemoteF64x2Zero register aliasing and tail policy**
+[RISC‑V] 修复F16x8DemoteF64x2Zero存在的寄存器别名冲突以及尾部元素处理策略问题（https://chromium‑review.googlesource.com/c/8136057）
+
+5. **[riscv][wasm‑wide‑arith] Consistently use IsUsed checks on output values**
+[RISC‑V][WASM宽算术] 统一对输出操作数做IsUsed使用状态检测（https://chromium‑review.googlesource.com/c/8222564）
+
+6. **[riscv][regexp]Skip backtrack stack setup for patterns that never backtrack**
+[RISC‑V][正则引擎] 对完全不需要回溯的正则模式，跳过回溯栈初始化（https://chromium‑review.googlesource.com/c/8225557）
+
+7. **[riscv] Add zfh/zvfh detect**
+[RISC‑V] 增加ZFH、ZVFH硬件扩展特性检测能力（https://chromium‑review.googlesource.com/c/8134337）
+
+8. **[riscv][compiler] Unify wasm code‑generator stack checks**
+[RISC‑V][编译器] 统一WASM代码生成器内部的栈溢出检测逻辑（https://chromium‑review.googlesource.com/c/8222565）
+
+本期审阅并合入的patch：
+
+**[riscv] Fix AtomicStoreTaggedPointer and AtomicStore fence order**
+[RISC‑V] 修复 `AtomicStoreTaggedPointer` 与 `AtomicStore` 的内存屏障（fence）执行顺序问题
+（https://chromium-review.googlesource.com/c/8190694）
+
 ### OpenJDK
 
 本期审阅并合入的JDK主线patch:
