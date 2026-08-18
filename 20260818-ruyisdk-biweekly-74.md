@@ -24,6 +24,29 @@
 
 ### LLVM
 
+本期提交 PR 如下
+
+- [RISCV][P-ext] Support Packed Narrowing Clip Pair
+ https://github.com/llvm/llvm-project/pull/215779
+ 补齐 P 扩展 Packed Narrowing Clip Pair，覆盖 Clang、LLVM IR、RISC-V 后端选择及 RV32/RV64 测试。已合并
+
+- [Clang][RISCV] Add packed sign and zero extend intrinsics
+ https://github.com/llvm/llvm-project/pull/211487
+ 增加 packed sign/zero extend（psext/pzext）的 Clang 内建函数、头文件封装及代码生成测试。已合并
+
+- [RISCV][P-ext] Select scalar mulhr/mulhru/mulhrsu for RV32 v2i32
+ https://github.com/llvm/llvm-project/pull/215938
+ 修复 RV32 v2i32 舍入高位乘法选择，将运算拆分为 mulhr、mulhru、mulhrsu 标量指令。已合并
+
+- [RISCV][P-ext] Support Packed Multiply High
+ https://github.com/llvm/llvm-project/pull/211223
+ 增加 P 扩展 Packed Multiply High 的 Clang 内建函数、LLVM IR 和代码生成支持，覆盖 RV32/RV64。已合并
+
+- [RISCV][MC] Add experimental Smcsps and Sscsps support
+ https://github.com/llvm/llvm-project/pull/211712
+ 增加 Smcsps 和 Sscsps 拓展的汇编支持。已合并
+
+
 ### V8
 
 ### OpenJDK
