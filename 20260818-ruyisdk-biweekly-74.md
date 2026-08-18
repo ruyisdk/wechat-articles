@@ -8,6 +8,19 @@
 
 ### RuyiSDK VSCode 插件
 
+- board docs: 将 RuyiSDK Examples/开发板文档入口切换至最新站点 boards.ruyisdk.org。
+- main: 增加工作区信任检测，在不受信任工作区中阻止构建和虚拟环境激活。
+- venv: 根据 profile 所需 quirks 筛选可用工具链，并展示相关需求。
+- setup: 新增 ruyi self clean 资源清理命令，支持选择资源并进行危险操作确认。
+- venv/packages: 工具链和软件包列表按名称及版本排序。
+- packages/UX: 安装软件包时在包树中显示“安装中”状态和动态图标。
+- setup/macOS: 支持 macOS 平台自动安装 Ruyi 0.51。
+- setup/macOS: 修复 Homebrew 安装的 pipx 未被识别的问题，并增加安装命令回退。
+- setup/UX: 安装或更新失败时改为在编辑器中查看错误详情，而不是复制到剪贴板。
+- build/i18n: 补齐构建模块缺失的本地化文本，并将构建进度提示接入翻译。
+- venv: 创建虚拟环境时仅将实际包含 sysroot 的工具链作为候选。
+- packages/i18n: 增加软件包分类名称的本地化显示。
+
 ### RuyiSDK Eclipse 插件
 
 - venv & UX: 解决进入虚拟环境向导时的性能问题。
