@@ -2,6 +2,25 @@
 
 ## 卷首语
 
+各位 RuyiSDK 的开发者伙伴，大家好！近期，RuyiSDK 在开发者工具、工具链及运行时生态方面的主要进展如下：
+
+开发者工具方面，包管理器近期主要在推进对 macOS 平台的支持和适配，工具链的 macOS 打包工作是近期的推进重点；VSCode 插件迎来了一系列体验优化，新增了工作区信任检测、资源清理命令，并补齐了本地化文本；Eclipse 插件则着重解决了虚拟环境向导的性能问题。
+
+工具链领域，LLVM 持续合入了 P 扩展的多个关键特性，覆盖窄化饱和裁剪、高位乘法及符号/零扩展内建函数等；GCC 方面则积极推进了 SIMD 扩展的工具链落地，并持续维护 RISE Toolchain CI 基础设施。基础 C 库方面，GLIBC 将 expint1、expm1 等数学函数移植至 libmvec 框架，并基于 C920 对 strstr 接口进行了初步调优，newlib 则基于 C908 对 memset 进行了调优。
+
+运行时生态方面，OpenJDK 完成了 JEP 401（值类与对象）在 RISC-V 平台上对三大执行引擎（解释器、C1、C2）的兼容性支持，相关 PR 已提交至 Valhalla 代码仓；Go 运行时继续丰富 RISC-V 后端能力，新增了对 `zvk` 加密指令集与 `vgetrandom` vDSO 的支持；V8 则实现了 FP16 向量降精度/升精度转换、qfma/qfms 快速乘加/乘减等 SIMD 运算，并增加了 ZFH、ZVFH 硬件扩展特性检测能力。
+
+欢迎阅读正文，了解更详尽的更新内容，并期待您与我们一同参与社区共建。获取更多资讯、下载最新工具或参与技术讨论，欢迎通过以下渠道找到我们：
+
+- RuyiSDK 官网：[ruyisdk.org](https://ruyisdk.org/)
+- RISC-V 开发板与操作系统支持矩阵：[matrix.ruyisdk.org](https://matrix.ruyisdk.org/)
+- RISC-V 开发板应用示例：[boards.ruyisdk.org](https://boards.ruyisdk.org/)
+- RuyiSDK 技术社区：[ruyisdk.cn](https://ruyisdk.cn/)
+- 工具下载：[官网下载页面](https://ruyisdk.org/downloads)
+- GitHub 仓库：[github.com/ruyisdk/](https://github.com/ruyisdk/)
+
+下个版本计划于 2026 年 8 月底发布，敬请期待！
+
 ## 基础开发环境
 
 ### 包管理器
@@ -17,12 +36,10 @@ RuyiSDK 团队仍在常态化维护 RuyiSDK 软件源。如您已有 RuyiSDK 包
 本次 RuyiSDK 软件源的更新主要包含了以下内容：
 
 * 更新软件包：
-  * `board-image/armbian-spacemit-musepipro-minimal`: SpacemiT Muse Pi Pro 的 Armbian。感谢 [SmulllLu] 的贡献！
+  * `board-image/armbian-spacemit-musepipro-minimal`: SpacemiT Muse Pi Pro 的 Armbian。感谢 [SmulllLu][SmulllLu] 的贡献！
 
 欢迎试用或来上游围观；您的需求是我们迭代开发的目标和动力。您也可以亲自参与
 RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查看、修改我们的[部分打包脚本](https://github.com/ruyisdk/ruyici)与[软件源仓库](https://github.com/ruyisdk/packages-index)。今后，按照本年度的开发计划，我们也将支持有权的第三方贡献者通过程序化的方式上传软件包、系统镜像等分发文件，以便利打包工作。
-
-[SmulllLu]: https://github.com/SmulllLu
 
 ### RuyiSDK VSCode 插件
 
@@ -45,8 +62,6 @@ RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查�
 - UX: 整理程序各处的文本以统一命名风格。
 - venv: 修改虚拟环境向导的部分设计，使线程间数据流向清晰。
 
-### 版本测试及遗留问题
-
 ## 基础组件
 
 ### 基础C库
@@ -58,9 +73,8 @@ RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查�
   - 移植了 acosh 至现有的 newlib 向量数学框架。
   - 基于 C908 针对 memset 接口进行了初步调优。
 
-
-
 ### GCC
+
 1. 推进 RISC-V SIMD 扩展工具链落地
 
 本周继续推进 SIMD 扩展在 GNU 工具链中的支持，更新了汇编、反汇编相关实现；同时与 SiFive 合作，进一步完善 intrinsics 功能支持和验证。目前工作正在从基础指令支持向编译器接口和完整工具链支持推进。同时继续担任 RISC-V P Extension Task Group Vice-Chair，参与后续规范、工具链及生态协同工作。
@@ -85,52 +99,41 @@ RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查�
 本期提交 PR 如下
 
 - [RISCV][P-ext] Support Packed Narrowing Clip Pair
- https://github.com/llvm/llvm-project/pull/215779
- 补齐 P 扩展 Packed Narrowing Clip Pair，覆盖 Clang、LLVM IR、RISC-V 后端选择及 RV32/RV64 测试。已合并
-
+  https://github.com/llvm/llvm-project/pull/215779
+  补齐 P 扩展 Packed Narrowing Clip Pair，覆盖 Clang、LLVM IR、RISC-V 后端选择及 RV32/RV64 测试。已合并
 - [Clang][RISCV] Add packed sign and zero extend intrinsics
- https://github.com/llvm/llvm-project/pull/211487
- 增加 packed sign/zero extend（psext/pzext）的 Clang 内建函数、头文件封装及代码生成测试。已合并
-
+  https://github.com/llvm/llvm-project/pull/211487
+  增加 packed sign/zero extend（psext/pzext）的 Clang 内建函数、头文件封装及代码生成测试。已合并
 - [RISCV][P-ext] Select scalar mulhr/mulhru/mulhrsu for RV32 v2i32
- https://github.com/llvm/llvm-project/pull/215938
- 修复 RV32 v2i32 舍入高位乘法选择，将运算拆分为 mulhr、mulhru、mulhrsu 标量指令。已合并
-
+  https://github.com/llvm/llvm-project/pull/215938
+  修复 RV32 v2i32 舍入高位乘法选择，将运算拆分为 mulhr、mulhru、mulhrsu 标量指令。已合并
 - [RISCV][P-ext] Support Packed Multiply High
- https://github.com/llvm/llvm-project/pull/211223
- 增加 P 扩展 Packed Multiply High 的 Clang 内建函数、LLVM IR 和代码生成支持，覆盖 RV32/RV64。已合并
-
+  https://github.com/llvm/llvm-project/pull/211223
+  增加 P 扩展 Packed Multiply High 的 Clang 内建函数、LLVM IR 和代码生成支持，覆盖 RV32/RV64。已合并
 - [RISCV][MC] Add experimental Smcsps and Sscsps support
- https://github.com/llvm/llvm-project/pull/211712
- 增加 Smcsps 和 Sscsps 拓展的汇编支持。已合并
-
+  https://github.com/llvm/llvm-project/pull/211712
+  增加 Smcsps 和 Sscsps 拓展的汇编支持。已合并
 
 ### V8
 
 本期提交并合入的patch：
+
 1. **[riscv] Implement FP16 demote and promote SIMD operations for RISC‑V**
-[RISC‑V] 实现FP16向量降精度、升精度SIMD转换运算（https://chromium‑review.googlesource.com/c/8129298）
-
+   [RISC‑V] 实现FP16向量降精度、升精度SIMD转换运算（https://chromium‑review.googlesource.com/c/8129298）
 2. **[riscv]Implement FP16 qfma/qfms SIMD operator**
-[RISC‑V] 实现FP16向量快速乘加/快速乘减(qfma/qfms)SIMD指令（https://chromium‑review.googlesource.com/c/8128824）
-
+   [RISC‑V] 实现FP16向量快速乘加/快速乘减(qfma/qfms)SIMD指令（https://chromium‑review.googlesource.com/c/8128824）
 3. **[riscv][maglev] Cache the DataView's byteLength for the bounds check**
-[RISC‑V][Maglev] 缓存DataView的字节长度，用于边界检查优化（https://chromium‑review.googlesource.com/c/7129740）
-
+   [RISC‑V][Maglev] 缓存DataView的字节长度，用于边界检查优化（https://chromium‑review.googlesource.com/c/7129740）
 4. **[riscv] Fix F16x8DemoteF64x2Zero register aliasing and tail policy**
-[RISC‑V] 修复F16x8DemoteF64x2Zero存在的寄存器别名冲突以及尾部元素处理策略问题（https://chromium‑review.googlesource.com/c/8136057）
-
+   [RISC‑V] 修复F16x8DemoteF64x2Zero存在的寄存器别名冲突以及尾部元素处理策略问题（https://chromium‑review.googlesource.com/c/8136057）
 5. **[riscv][wasm‑wide‑arith] Consistently use IsUsed checks on output values**
-[RISC‑V][WASM宽算术] 统一对输出操作数做IsUsed使用状态检测（https://chromium‑review.googlesource.com/c/8222564）
-
+   [RISC‑V][WASM宽算术] 统一对输出操作数做IsUsed使用状态检测（https://chromium‑review.googlesource.com/c/8222564）
 6. **[riscv][regexp]Skip backtrack stack setup for patterns that never backtrack**
-[RISC‑V][正则引擎] 对完全不需要回溯的正则模式，跳过回溯栈初始化（https://chromium‑review.googlesource.com/c/8225557）
-
+   [RISC‑V][正则引擎] 对完全不需要回溯的正则模式，跳过回溯栈初始化（https://chromium‑review.googlesource.com/c/8225557）
 7. **[riscv] Add zfh/zvfh detect**
-[RISC‑V] 增加ZFH、ZVFH硬件扩展特性检测能力（https://chromium‑review.googlesource.com/c/8134337）
-
+   [RISC‑V] 增加ZFH、ZVFH硬件扩展特性检测能力（https://chromium‑review.googlesource.com/c/8134337）
 8. **[riscv][compiler] Unify wasm code‑generator stack checks**
-[RISC‑V][编译器] 统一WASM代码生成器内部的栈溢出检测逻辑（https://chromium‑review.googlesource.com/c/8222565）
+   [RISC‑V][编译器] 统一WASM代码生成器内部的栈溢出检测逻辑（https://chromium‑review.googlesource.com/c/8222565）
 
 本期审阅并合入的patch：
 
@@ -166,7 +169,6 @@ Java重要新特性JEP 401: 值类与对象（Value Classes and Objects）的调
 - 787960: cmd/compile/internal/ssa: optimize multiply-by-constant on riscv64 | https://go-review.googlesource.com/c/go/+/787960 降低常数乘法强度 【合入】
 - 816460: internal/runtime/gc/scan: add RVV impl of filterNil. | https://go-review.googlesource.com/c/go/+/816460 新Greantea GC 添加rvv指令
 
-
 Review
 
 - 807460: cmd/internal/obj/riscv: compress function returns | https://go-review.googlesource.com/c/go/+/807460 添加C扩展的返回指令，对比原有编译器能减少~2700个指令
@@ -176,4 +178,4 @@ Review
 - 806200: internal/cpu: detect RISC-V VLENB when the vector extension is available | https://go-review.googlesource.com/c/sys/+/806200 添加runtime VLENB
 - 815840: runtime: fix sigtramp abi in riscv64 mipsx mips64x and s390x | https://go-review.googlesource.com/c/go/+/815840 修复Go ABI 跳过了sigtramp 的save/restore 【合入】
 
-### QEMU模拟器
+[SmulllLu]: https://github.com/SmulllLu
