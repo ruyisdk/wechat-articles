@@ -67,11 +67,14 @@ jobs:
             MESSAGE="${MESSAGE}📋 Recent activity details:\n\`\`\`\n${REPORT}\n\`\`\`"
           fi
           
-          curl -X POST "${{ secrets.FEISHU_WEBHOOK_URL }}" \
+          if ! curl --fail-with-body --retry 3 -X POST "${{ secrets.FEISHU_WEBHOOK_URL }}" \
             -H "Content-Type: application/json" \
             -d "{
               \"msg_type\": \"text\",
               \"content\": {
                 \"text\": \"${MESSAGE}\"
               }
-            }"
+            }"; then
+            echo "Failed to send progress report to Feishu"
+            exit 1
+          fi
