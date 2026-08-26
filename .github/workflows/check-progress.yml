@@ -1,0 +1,77 @@
+name: Check Biweekly Progress
+
+on:
+  workflow_dispatch:
+    inputs:
+      days:
+        description: 'Time window in days (default: 2)'
+        required: false
+        default: '2'
+
+jobs:
+  check-progress:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Fetch recent PRs and commits
+        id: fetch_activity
+        run: |
+          DAYS="${{ github.event.inputs.days }}"
+          SINCE_DATE=$(date -d "${DAYS} days ago" --iso-8601=seconds)
+          echo "Checking activity since: $SINCE_DATE"
+          
+          # Fetch PRs created or updated in the last ${DAYS} days
+          echo "=== Recent PRs ===" > activity_report.txt
+          gh pr list --state all --search "created:>$SINCE_DATE" \
+            --json title,state,author,url,createdAt \
+            --jq '.[] | "\(.createdAt[:10]) | \(.state) | \(.title) | @\(.author.login) | \(.url)"' >> activity_report.txt
+          
+          # Count PRs
+          PR_COUNT=$(gh pr list --state all --search "created:>$SINCE_DATE" | wc -l)
+          
+          # Fetch recent commits directly to main branch
+          echo "" >> activity_report.txt
+          echo "=== Recent Commits to main ===" >> activity_report.txt
+          gh api repos/ruyisdk/wechat-articles/commits?since=$SINCE_DATE \
+            --jq '.[] | "\(.commit.author.date[:10]) | \(.sha[:7]) | \(.commit.message | split("\n")[0]) | @\(.author.login)"' >> activity_report.txt
+          
+          # Count commits
+          COMMIT_COUNT=$(gh api repos/ruyisdk/wechat-articles/commits?since=$SINCE_DATE | jq '. | length')
+          
+          echo "pr_count=$PR_COUNT" >> $GITHUB_OUTPUT
+          echo "commit_count=$COMMIT_COUNT" >> $GITHUB_OUTPUT
+          
+          echo "report<<EOF" >> $GITHUB_OUTPUT
+          cat activity_report.txt >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Send progress report to Feishu
+        run: |
+          REPORT="${{ steps.fetch_activity.outputs.report }}"
+          PR_COUNT="${{ steps.fetch_activity.outputs.pr_count }}"
+          COMMIT_COUNT="${{ steps.fetch_activity.outputs.commit_count }}"
+          
+          # Build message
+          MESSAGE="📊 **RuyiSDK Biweekly Progress Report**\n\n"
+          MESSAGE="${MESSAGE}📈 Activity in the last ${{ github.event.inputs.days }} days:\n"
+          MESSAGE="${MESSAGE}• Pull Requests: ${PR_COUNT}\n"
+          MESSAGE="${MESSAGE}• Commits to main: ${COMMIT_COUNT}\n\n"
+          
+          if [ "$PR_COUNT" -eq 0 ] && [ "$COMMIT_COUNT" -eq 0 ]; then
+            MESSAGE="${MESSAGE}❌ No recent activity detected."
+          else
+            MESSAGE="${MESSAGE}📋 Recent activity details:\n\`\`\`\n${REPORT}\n\`\`\`"
+          fi
+          
+          curl -X POST "${{ secrets.FEISHU_WEBHOOK_URL }}" \
+            -H "Content-Type: application/json" \
+            -d "{
+              \"msg_type\": \"text\",
+              \"content\": {
+                \"text\": \"${MESSAGE}\"
+              }
+            }"
