@@ -1,0 +1,61 @@
+name: Init RuyiSDK Biweekly Template
+
+on:
+  workflow_dispatch:
+    inputs:
+      date:
+        description: '双周日期（格式：YYYYMMDD）'
+        required: true
+        default: '20260901'
+      issue_number:
+        description: '期号'
+        required: true
+        default: '75'
+
+jobs:
+  init-template:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Generate cleaned template file
+        run: |
+          DATE_RAW="${{ github.event.inputs.date }}"
+          YEAR=${DATE_RAW:0:4}
+          MONTH=${DATE_RAW:4:2}
+          DAY=${DATE_RAW:6:2}
+          DATE_FORMATTED="${YEAR} 年 ${MONTH} 月 ${DAY} 日"
+          ISSUE_NUM_PADDED=$(printf "%03d" ${{ github.event.inputs.issue_number }})
+          
+          # Read template and replace the first line with the new header
+          TEMPLATE=$(cat biweekly-template/template.md)
+
+          # Replace the first line
+          NEW_HEADER="# RuyiSDK 双周进展汇报 第 ${ISSUE_NUM_PADDED} 期 · ${DATE_FORMATTED}"
+
+          # Remove all lines starting with "> "
+          echo "$TEMPLATE" | sed "1c${NEW_HEADER}" | sed '/^> /d' > "${{ github.event.inputs.date }}-ruyisdk-biweekly-${{ github.event.inputs.issue_number }}.md"
+
+      - name: Commit and push new file
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add "${{ github.event.inputs.date }}-ruyisdk-biweekly-${{ github.event.inputs.issue_number }}.md"
+          git commit -m "chore: init biweekly-${{ github.event.inputs.issue_number }}"
+          git push
+
+      - name: Send Feishu notification
+        run: |
+          FILE_NAME="${{ github.event.inputs.date }}-ruyisdk-biweekly-${{ github.event.inputs.issue_number }}.md"
+          FILE_URL="https://github.com/ruyisdk/wechat-articles/blob/main/${FILE_NAME}"
+          curl -X POST "${{ secrets.FEISHU_WEBHOOK_URL }}" \
+            -H "Content-Type: application/json" \
+            -d "{
+              \"msg_type\": \"text\",
+              \"content\": {
+                \"text\": \"📢 第 ${{ github.event.inputs.issue_number }} 期 RuyiSDK 双周进展已初始化完成：${FILE_URL}\n大家可以开始同步各模块进展了~~~\n\n时间要求：本周二中午 12:00 之前。\n\n板块与提示可查看：https://github.com/ruyisdk/wechat-articles/blob/main/biweekly-template/template.md 如有疑问请在群内沟通。\"
+              }
+            }"
