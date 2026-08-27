@@ -54,27 +54,18 @@ jobs:
           REPORT="${{ steps.fetch_activity.outputs.report }}"
           PR_COUNT="${{ steps.fetch_activity.outputs.pr_count }}"
           COMMIT_COUNT="${{ steps.fetch_activity.outputs.commit_count }}"
+          DAYS="${{ github.event.inputs.days }}"
           
-          # Build message
-          MESSAGE="📊 **RuyiSDK Biweekly Progress Report**\n\n"
-          MESSAGE="${MESSAGE}📈 Activity in the last ${{ github.event.inputs.days }} days:\n"
-          MESSAGE="${MESSAGE}• Pull Requests: ${PR_COUNT}\n"
-          MESSAGE="${MESSAGE}• Commits to main: ${COMMIT_COUNT}\n\n"
+          # Build message with printf for proper newlines
+          MESSAGE=$(printf "📊 RuyiSDK Biweekly Progress Report\n\n📈 Activity in the last %s days:\n• Pull Requests: %s\n• Commits to main: %s\n\n📋 Recent activity details:\n%s" \
+            "$DAYS" "$PR_COUNT" "$COMMIT_COUNT" "$REPORT")
           
-          if [ "$PR_COUNT" -eq 0 ] && [ "$COMMIT_COUNT" -eq 0 ]; then
-            MESSAGE="${MESSAGE}❌ No recent activity detected."
-          else
-            MESSAGE="${MESSAGE}📋 Recent activity details:\n\`\`\`\n${REPORT}\n\`\`\`"
-          fi
+          # Use jq to construct valid JSON with the message
+          JSON_PAYLOAD=$(jq -n --arg msg "$MESSAGE" '{msg_type: "text", content: {text: $msg}}')
           
-          if ! curl --fail-with-body --retry 3 -X POST "${{ secrets.FEISHU_WEBHOOK_URL }}" \
+          # Debug: print JSON length
+          echo "JSON payload length: $(echo "$JSON_PAYLOAD" | wc -c)"
+          
+          curl -X POST "${{ secrets.FEISHU_WEBHOOK_URL }}" \
             -H "Content-Type: application/json" \
-            -d "{
-              \"msg_type\": \"text\",
-              \"content\": {
-                \"text\": \"${MESSAGE}\"
-              }
-            }"; then
-            echo "Failed to send progress report to Feishu"
-            exit 1
-          fi
+            --data-binary "$JSON_PAYLOAD"
