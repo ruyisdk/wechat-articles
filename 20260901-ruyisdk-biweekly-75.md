@@ -38,6 +38,9 @@ RuyiSDK 0.52 已于 2026 年 9 月 1 日发布，对应的包管理器版本也�
 
 本次 RuyiSDK 软件源的更新主要包含了以下内容：
 
+* 软件源格式更新：
+  * 支持为软件包附着供应商元数据：位于 manifest TOML 的 `metadata.vendor.data` 字段，其类型为 `供应商 ID: 键值对` 的字典（TOML 表格）；支持布尔型与字符串类型的值。
+  * 预留 `metadata.vendor.data.ruyisdk.certified` 为表示“RuyiSDK 认证”状态的元数据字段。
 * 更新软件包：
   * `board-image/armbian-spacemit-musepipro-minimal`: SpacemiT Muse Pi Pro 的 Armbian。感谢 [SmulllLu][SmulllLu] 的贡献！
   * `toolchain/gnu-ruyisdk`: RuyiSDK GNU 工具链，增加了实验性的 macOS AArch64 (Apple Silicon) 支持。
