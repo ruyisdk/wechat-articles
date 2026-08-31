@@ -12,6 +12,12 @@
 
 ### RuyiSDK IDE
 
+- feat: 新增复制包ID功能
+- feat: 新增 l10n CI
+- fix: 共用 toolchain 和 sysroot 组件
+- fix: 修改 repo 后没有重新加载 package tree
+- fix: package tree 的中文翻译错误
+
 ### 版本测试及遗留问题
 
 ## 社区与内容建设
