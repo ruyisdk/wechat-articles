@@ -38,7 +38,7 @@
   - 移植了 hypot、hypotf、expm1f、lgamma 和 lgammaf 至现有的 glibc libmvec 框架。
   - 基于 C908 针对 strstr 接口进行了初步调优。
 - newlib:
-  - 移植了 acospin、asinpi、atan2、atanpi 至现有的 newlib 向量数学框架。
+  - 移植了 acospi、asinpi、atan2、atanpi 至现有的 newlib 向量数学框架。
 
 ### GCC
 
