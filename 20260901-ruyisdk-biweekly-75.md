@@ -17,6 +17,10 @@
 - fix: 共用 toolchain 和 sysroot 组件
 - fix: 修改 repo 后没有重新加载 package tree
 - fix: package tree 的中文翻译错误
+- docs: 完善 Sipeed Lichee Pi 4A 的相关文档。
+- test: VSCodium 平台 RuyiSDK 插件适配，Java、JavaScript、Go、Python 语言相关插件测试。
+- ci: 维护 CI 脚本，提高安全性。
+- feat: 调整 IDE 侧边栏图标样式，提高辨识度。
 
 ### 版本测试及遗留问题
 
