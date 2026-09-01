@@ -144,6 +144,60 @@ https://github.com/riseproject-dev/riscv-gnu-toolchain-ci/pull/1
 
 ### V8
 
+本期亮点：V8 RISC-V后端增加了ZCB扩展的汇编、反汇编、内置模拟器和代码生成支持，开启该指令集后，AOT内置库的静态代码尺寸从2.70MB减小到2.43MB，减小幅度达10%。
+
+本期提交并合入的patch：
+1. **[riscv] Replace JAL with AUIPC/JALR in lazy compile jump slots**
+[RISC‑V] 将惰性编译跳转槽的 JAL 指令替换为 AUIPC/JALR 指令组合（https://chromium‑review.googlesource.com/c/8301500）
+
+2. **[riscv] Add ZCB extension and unify RVC register checks**
+[RISC‑V] 添加 ZCB 压缩扩展支持，并统一 RVC 压缩指令的寄存器校验逻辑（https://chromium‑review.googlesource.com/c/8271868）
+
+3. **[riscv][sandbox] Harden TailCalls after code update**
+[RISC‑V][沙箱] 加固代码更新完成后的尾调用安全处理逻辑（https://chromium‑review.googlesource.com/c/8311072）
+
+4. **[riscv] Fix OSR code check in OnStackReplacement**
+[RISC‑V] 修复栈上替换（OSR）流程里的代码校验逻辑（https://chromium‑review.googlesource.com/c/8311188）
+
+5. **[riscv] Harden jump offset range checks in the assembler and deoptimizer**
+[RISC‑V] 强化汇编器与反优化器中跳转偏移量的范围检查（https://chromium‑review.googlesource.com/c/8305697）
+
+6. **[riscv] Remove unused ER creation in builtins‑riscv**
+[RISC‑V] 删除 riscv 内置函数中未被使用的 ER 对象创建代码（https://chromium‑review.googlesource.com/c/8284941）
+
+7. **[riscv][maglev] Zero‑extend Int32 index in element address**
+[RISC‑V][Maglev] 在数组元素地址计算时对 Int32 索引做零扩展（https://chromium‑review.googlesource.com/c/8221145）
+
+8. **[riscv] Implement Zcb extension in RISC‑V simulator**
+[RISC‑V] 在 RISC‑V 模拟器中实现 Zcb 压缩扩展指令集（https://chromium‑review.googlesource.com/c/8268575）
+
+9. **[riscv] Add Zcb compressed extension support**
+[RISC‑V] 新增 Zcb 压缩扩展指令集后端支持（https://chromium‑review.googlesource.com/c/8263250）
+
+本期审核并合入的patch：
+1. **[riscv] Fix typo of RoundingMode in simulator**
+[RISC‑V] 修复模拟器中 RoundingMode 拼写错误（https://chromium‑review.googlesource.com/c/8251431）
+
+2. **[riscv] Fix emulator sNaN check**
+[RISC‑V] 修复模拟器信号 NaN（sNaN）检测逻辑（https://chromium‑review.googlesource.com/c/8253666）
+
+3. **[riscv] Fix some issues**
+[RISC‑V] 修复若干代码问题（https://chromium‑review.googlesource.com/c/8253281）
+
+4. **[riscv] Make Smi int32 checks safe with pointer compression**
+[RISC‑V] 保证指针压缩模式下 Smi int32 校验逻辑安全可靠（https://chromium‑review.googlesource.com/c/8236678）
+
+5. **[riscv] Avoid clobbering live input registers**
+[RISC‑V] 避免生成代码时覆盖仍处于活跃状态的输入寄存器（https://chromium‑review.googlesource.com/c/8263861）
+
+6. **[riscv] Fix integer masking and pointer branch comparisons**
+[RISC‑V] 修复整数掩码运算以及指针分支比较逻辑缺陷（https://chromium‑review.googlesource.com/c/8265241）
+
+7. **[riscv] Store Liftoff constants using their value width**
+[RISC‑V] Liftoff 按照常量实际位宽执行常量存储操作（https://chromium‑review.googlesource.com/c/8267767）
+
+8. **[riscv] Fix atomic stores of tagged and compressed values**
+[RISC‑V] 修复标记指针、压缩值的原子存储实现（https://chromium‑review.googlesource.com/c/8267768）
 ### OpenJDK
 
 本期提交的JDK主线patch:
