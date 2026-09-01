@@ -41,6 +41,32 @@ RuyiSDK 0.52 已于 2026 年 9 月 1 日发布，对应的包管理器版本也�
 
 ### 版本测试及遗留问题
 
+本版本测试增加了 macOS 14 平台测试，并给出相应的测试报告。
+
+Ruyi 包管理器遗留缺陷：
+
+| 缺陷      | 问题等级 |判定依据 |
+| ----------- | ----------- | --- |
+| [Occasional pygit2 failures during testing #415](https://github.com/ruyisdk/ruyi/issues/415) | 一般 | 已有 issue 回复 |
+| [ruyi entity list 传入多个 -t 参数时只消费其中一个 #492](https://github.com/ruyisdk/ruyi/issues/492) | 一般 | 下一版本修复 |
+
+RuyiSDK Eclipse IDE 遗留缺陷：
+
+| 缺陷      | 问题等级 | 备注 |
+| ----------- | ----------- | --- |
+| [命令执行提示框可以任意关闭且无法重新打开 #82](https://github.com/ruyisdk/ruyisdk-eclipse-plugins/issues/82)   | 建议 |   |
+| [虚拟环境建立的项目绑定问题 #84](https://github.com/ruyisdk/ruyisdk-eclipse-plugins/issues/84) | 建议 |  |
+| [安装插件时 Eclipse 提示未签名 #85](https://github.com/ruyisdk/ruyisdk-eclipse-plugins/issues/85) | 建议 |  |
+| [New Virtual environment添加虚拟环境时响应时间过长 #177](https://github.com/ruyisdk/ruyisdk-eclipse-plugins/issues/177) | 建议 |  |
+| [用户无法直观获知项目当前启用的虚拟环境 #191](https://github.com/ruyisdk/ruyisdk-eclipse-plugins/issues/191) | 建议 |  |
+| [select package 不可用 #196](https://github.com/ruyisdk/ruyisdk-eclipse-plugins/issues/196) | 建议 |  |
+
+RuyiSDK VSCode IDE 遗留缺陷：
+
+| 缺陷      | 问题等级 | 备注 |
+| ----------- | ----------- | --- |
+| [版本切换过程中中英文切换不灵活 #231](https://github.com/ruyisdk/ruyisdk-vscode-extension/issues/231)   | 建议 |   |
+
 ## 社区与内容建设
 
 
