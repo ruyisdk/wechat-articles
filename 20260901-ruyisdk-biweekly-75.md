@@ -157,6 +157,18 @@ Value Class PR详细修改如下：
 
 ### Go
 
+提交主线代码
+
+- 752981: crypto/sha256: enable zvknha for riscv64 | https://go-review.googlesource.com/c/go/+/752981 基于 vlenb 侦测要求重新编写
+- https://github.com/emmansun/gmsm/pull/586 提交sm3/sm4 支持
+
+review主线代码
+
+- 824984: cmd/compile: fix large riscv64 move/zero | https://go-review.googlesource.com/c/go/+/824984 修复SSA无法移动大范围数据
+- 748921: cmd/compile: use SLLW for Lsh32x(64|32|16|8) on riscv64 | https://go-review.googlesource.com/c/go/+/748921 算数左移启用sllw指令
+- 735520: riscv64: add disassembly support and tests for zacas | https://go-review.googlesource.com/c/arch/+/735520 arch库添加zacas 指令测试
+- 801682: internal/cpu: restrict RISC-V GODEBUG options to optional extensions | https://go-review.googlesource.com/c/go/+/801682 严格设定godebug profile 等级
+
 ### QEMU
 
 ## 社区动态
