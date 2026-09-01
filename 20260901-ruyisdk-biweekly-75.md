@@ -144,7 +144,7 @@ https://github.com/riseproject-dev/riscv-gnu-toolchain-ci/pull/1
 
 ### V8
 
-本期亮点：V8 RISC-V后端增加了ZCB扩展的汇编、反汇编、内置模拟器和代码生成支持，开启后，AOT内置库的静态代码尺寸从2.70MB减小到2.43MB，减小幅度达10%。
+本期亮点：V8 RISC-V后端增加了Zcb扩展的汇编、反汇编、内置模拟器和代码生成支持。目前V8已经完整支持Zca，Zcb，Zcd，Zcf，开启压缩指令集扩展后，AOT内置库的静态代码尺寸从2.70MB减小到2.43MB，减小幅度达10%。
 
 本期提交并合入的patch：
 1. **[riscv] Replace JAL with AUIPC/JALR in lazy compile jump slots**
