@@ -92,7 +92,7 @@
 ### QEMU
 
 ## 社区动态
-
+- [【内测开启】Ruyi Imager — RISC‑V 开发板图形化镜像刷写工具，欢迎大家体验测试！](https://ruyisdk.cn/t/topic/2803)：Ruyi Imager图形化镜像烧录工具开启内测，支持多平台与多款RISC‑V开发板，无需ruyi命令行即可完成镜像烧录，欢迎社区测试反馈。
 
 ---
 
