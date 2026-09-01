@@ -89,6 +89,17 @@ RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查�
   - 移植了 acospi、asinpi、atan2、atanpi 至现有的 newlib 向量数学框架。
 
 ### GCC
+持续推进p扩展GCC intrinsic支持，目前总体进度如下：
+
+RV32 API tester: 901 PASS / 64 FAIL / 20 SKIP
+RV64 API tester: 928 PASS / 57 FAIL
+
+https://github.com/ruyisdk/riscv-gcc/commits/p-rebase
+
+协助RISE基金会完善了CI维护工作：
+https://github.com/riseproject-dev/gcc-precommit-ci/pull/1
+https://github.com/riseproject-dev/gcc-postcommit-ci/pull/4
+https://github.com/riseproject-dev/riscv-gnu-toolchain-ci/pull/1
 
 ### LLVM
 
