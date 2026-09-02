@@ -1,0 +1,44 @@
+name: PR Check
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  link-check:
+    name: link-check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Extract links from changed lines
+        run: |
+          BASE="${{ github.event.pull_request.base.sha }}"
+          HEAD="${{ github.event.pull_request.head.sha }}"
+
+          git diff -U0 "$BASE...$HEAD" -- '*.md' \
+            | grep '^+' | grep -v '^+++' \
+            | grep -oE 'https?://[^ )"'"'"'>]+' \
+            | sed 's/[.,;:!?）)\]]*$//' \
+            | sort -u > links.txt || true
+
+          echo "===== 本次 PR 新增的链接 ====="
+          cat links.txt
+          echo "==============================="
+
+      - name: Install lychee
+        uses: taiki-e/install-action@v2
+        with:
+          tool: lychee
+
+      - name: Check links
+        run: |
+          if [ ! -s links.txt ]; then
+            echo "本次改动中没有新增链接，跳过检查。"
+            exit 0
+          fi
+          lychee --no-progress --timeout 20 --max-retries 2 - < links.txt
