@@ -1,0 +1,72 @@
+name: Automerge
+
+# 由 "PR Check" 工作流完成后触发；运行在 main 分支上下文，
+# 拥有完整 secrets 与写权限，且不 checkout PR 代码，fork 作者无法触碰 token
+on:
+  workflow_run:
+    workflows: ["PR Check"]   # 必须与 pr-check.yml 的 name 逐字一致
+    types: [completed]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  notify-on-fail:
+    name: notify-on-fail
+    runs-on: ubuntu-latest
+    if: >-
+      github.event.workflow_run.event == 'pull_request' &&
+      (github.event.workflow_run.conclusion == 'failure' ||
+       github.event.workflow_run.conclusion == 'cancelled')
+    steps:
+      - name: Comment and ping author
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}   # base 上下文，写权限足够
+          HEAD_SHA: ${{ github.event.workflow_run.head_sha }}
+          REPO: ${{ github.repository }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          set -euo pipefail
+          PR_URL=$(gh api "repos/$REPO/pulls?state=open&per_page=100" \
+            --jq ".[] | select(.head.sha == \"$HEAD_SHA\") | .html_url" | head -n1)
+          if [ -z "$PR_URL" ]; then
+            echo "No open PR matches head sha $HEAD_SHA; skip."
+            exit 0
+          fi
+          AUTHOR=$(gh pr view "$PR_URL" --json author --jq .author.login)
+          gh pr comment "$PR_URL" --body "$(cat <<EOF
+          @$AUTHOR 自动检查未通过，PR 暂未合入。失败项：
+
+          - **link-check**（本次新增链接的有效性检查）
+
+          **查看详细日志**：$RUN_URL
+
+          偶发网络超时也可能报错，确认后 Re-run 即可。
+          修复后直接 push 到当前分支，通过后会自动合入。
+          EOF
+          )"
+
+  automerge:
+    name: automerge
+    runs-on: ubuntu-latest
+    # 与 notify-on-fail 互斥（成功才合并、失败才通知），故互不 needs，
+    # 避免一方 skip 时把另一方连带跳过
+    if: >-
+      github.event.workflow_run.event == 'pull_request' &&
+      github.event.workflow_run.conclusion == 'success'
+    steps:
+      - name: Merge PR
+        env:
+          GH_TOKEN: ${{ secrets.AUTO_MERGE_TOKEN }}
+          HEAD_SHA: ${{ github.event.workflow_run.head_sha }}
+          REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          PR_URL=$(gh api "repos/$REPO/pulls?state=open&per_page=100" \
+            --jq ".[] | select(.head.sha == \"$HEAD_SHA\") | .html_url" | head -n1)
+          if [ -z "$PR_URL" ]; then
+            echo "No open PR matches head sha $HEAD_SHA; skip."
+            exit 0
+          fi
+          gh pr merge --squash "$PR_URL" --delete-branch
