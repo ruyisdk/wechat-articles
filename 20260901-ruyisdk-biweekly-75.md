@@ -52,6 +52,7 @@ RuyiSDK 0.52 已于 2026 年 9 月 1 日发布，对应的包管理器版本也�
 - test: VSCodium 平台 RuyiSDK 插件适配，Java、JavaScript、Go、Python 语言相关插件测试。
 - ci: 维护 CI 脚本，提高安全性。
 - feat: 调整 IDE 侧边栏图标样式，提高辨识度。
+- build: [发布 0.1.6 版本](https://github.com/ruyisdk/ruyisdk-vscode-extension/releases/tag/0.1.6)
 
 ### 版本测试及遗留问题
 
