@@ -116,7 +116,7 @@ RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查�
 
 ### 官网&文档
 
-- 官网上线[“软件包”](https://ruyisdk.org/packages)页面，现在可以在安装 ruyi 之前方便的查看软件包索引资源了。欢迎大家访问并提供反馈和建议。如果您有资源想要“登记”到 RuyiSDK 软件源，可以参考[《RuyiSDK 生态资源接入指南》](https://ruyisdk.org/docs/Other/partner-guide) 提交 issue需求 或者 直接发起 PR 参与贡献。
+- 官网上线[“软件包”](https://ruyisdk.org/packages)页面，现在可以在安装 ruyi 之前方便的查看软件包索引资源了。欢迎大家访问并提供反馈和建议。如果您有资源想要“登记”到 RuyiSDK 软件源，可以参考[《RuyiSDK 生态资源接入指南》](https://ruyisdk.org/docs/Other/partner-guide) 提交 issue 或者直接发起 PR 参与贡献。
 
 
 ## 基础组件
