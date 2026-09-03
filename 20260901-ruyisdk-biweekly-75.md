@@ -2,7 +2,21 @@
 
 ## 卷首语
 
->
+各位 RISC-V 开发者与 RuyiSDK 社区伙伴，大家好！
+
+RuyiSDK 0.52 已于 9 月 1 日发布，包管理器同步更新至 0.52.0。本次更新为未来的 “RuyiSDK 认证” 做了包管理器层面的预留，修复了 `ruyi entity list` 多参数解析问题以及服务端 macOS 二进制条目键名错误，并优化了依赖与构建维护逻辑。RuyiSDK IDE 发布 0.1.6 版本，新增复制包 ID、本地化 CI 等功能，修复了仓库切换后包树未刷新等问题，并调整了侧边栏图标样式。测试工作新增 macOS 14 平台覆盖，相关遗留缺陷已明确分类与跟踪。
+
+社区与内容建设方面，软件源格式更新支持供应商元数据，并为认证状态预留字段；新增**RuyiSDK GNU 工具链 macOS AArch64 实验支持**、SpacemiT Muse Pi Pro Armbian 镜像，以及知合 A210 SODIMM 官方 EVB 系统镜像。
+开发板支持矩阵新增 VisionFive 2 Lite 多系统测试报告，更新 K510 Buildroot 报告；
+开发板示例仓库新增 SpacemiT K3 Pico-ITX、BPI-CANMV-K230D-Zero 等板卡文档与示例，并为 15 款开发板完善英文入门文档。
+官网同步上线 [“软件包” 页面](https://ruyisdk.org/packages/)，方便用户提前浏览软件包资源。
+此外，社区近期开启了 Ruyi Imager 图形化镜像刷写工具[内测](https://ruyisdk.cn/t/topic/2803)，欢迎大家体验反馈。
+
+基础组件方面，基础 C 库在 GLIBC 的 libmvec 框架下移植了 hypot、expm1f、lgamma 等函数，并针对 C908 对 strstr 进行初步调优；newlib 则新增 acospi、asinpi 等向量数学函数。GCC 持续推动 P 扩展 intrinsic 支持，API 测试通过率进一步提升，并协助 RISE 基金会完善 CI 维护。LLVM 围绕 P 扩展与整数比较优化合入多个补丁，支持多种 packed 运算与 intrinsic 接口。V8 后端新增 Zcb 压缩扩展支持，开启压缩指令集后内置库静态代码尺寸减小约 10%。OpenJDK 完成了 JEP 401 值对象的 RISC-V 初步移植并通过兼容性测试，同时优化 G1GC barrier、新增 GCM intrinsic 等。Go 提交了 sha256 的 zvknha 支持等主线补丁，并审阅多项编译优化与指令支持修改。
+
+欢迎阅读正文，了解更详尽的更新内容，并期待您与我们一同参与社区共建。获取更多资讯、下载最新工具或参与技术讨论，欢迎通过文章最下方的[项目资源入口](#project-resources) 找到我们。
+下个版本计划于 2026 年 9 月下旬发布，敬请期待！
+
 
 ## 基础开发环境
 
@@ -102,11 +116,10 @@ RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查�
 
 ### 官网&文档
 
-- 官网上线[【软件包】](https://ruyisdk.org/packages)页面，现在可以在安装 ruyi 之前方便的查看软件包索引资源了。欢迎大家访问并提供反馈和建议。
+- 官网上线[“软件包”](https://ruyisdk.org/packages)页面，现在可以在安装 ruyi 之前方便的查看软件包索引资源了。欢迎大家访问并提供反馈和建议。如果您有资源想要“登记”到 RuyiSDK 软件源，可以参考[《RuyiSDK 生态资源接入指南》](https://ruyisdk.org/docs/Other/partner-guide) 提交 issue 或者直接发起 PR 参与贡献。
 
 
 ## 基础组件
-
 
 ### 基础C库
 
@@ -117,17 +130,14 @@ RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查�
   - 移植了 acospi、asinpi、atan2、atanpi 至现有的 newlib 向量数学框架。
 
 ### GCC
-持续推进p扩展GCC intrinsic支持，目前总体进度如下：
+- 持续推进 p 扩展 GCC intrinsic 支持 (https://github.com/ruyisdk/riscv-gcc/commits/p-rebase )，目前总体进度如下：
+  - RV32 API tester: 901 PASS / 64 FAIL / 20 SKIP
+  - RV64 API tester: 928 PASS / 57 FAIL
 
-RV32 API tester: 901 PASS / 64 FAIL / 20 SKIP
-RV64 API tester: 928 PASS / 57 FAIL
-
-https://github.com/ruyisdk/riscv-gcc/commits/p-rebase
-
-协助RISE基金会完善了CI维护工作：
-https://github.com/riseproject-dev/gcc-precommit-ci/pull/1
-https://github.com/riseproject-dev/gcc-postcommit-ci/pull/4
-https://github.com/riseproject-dev/riscv-gnu-toolchain-ci/pull/1
+- 协助RISE基金会完善了CI维护工作：
+  - https://github.com/riseproject-dev/gcc-precommit-ci/pull/1
+  - https://github.com/riseproject-dev/gcc-postcommit-ci/pull/4
+  - https://github.com/riseproject-dev/riscv-gnu-toolchain-ci/pull/1
 
 ### LLVM
 
@@ -263,14 +273,13 @@ review主线代码
 - 735520: riscv64: add disassembly support and tests for zacas | https://go-review.googlesource.com/c/arch/+/735520 arch库添加zacas 指令测试
 - 801682: internal/cpu: restrict RISC-V GODEBUG options to optional extensions | https://go-review.googlesource.com/c/go/+/801682 严格设定godebug profile 等级
 
-### QEMU
 
 ## 社区动态
 - [【内测开启】Ruyi Imager — RISC‑V 开发板图形化镜像刷写工具，欢迎大家体验测试！](https://ruyisdk.cn/t/topic/2803)：Ruyi Imager图形化镜像烧录工具开启内测，支持多平台与多款RISC‑V开发板，无需ruyi命令行即可完成镜像烧录，欢迎社区测试反馈。
 
 ---
 
-## 项目资源入口
+## 项目资源入口 {#project-resources}
 
 获取更多资讯、下载最新工具、查阅硬件适配资料或参与社区共建，欢迎通过以下官方渠道访问：
 
