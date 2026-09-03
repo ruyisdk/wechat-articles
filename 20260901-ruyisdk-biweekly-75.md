@@ -6,7 +6,7 @@
 
 RuyiSDK 0.52 已于 9 月 1 日发布，包管理器同步更新至 0.52.0。本次更新为未来的 “RuyiSDK 认证” 做了包管理器层面的预留，修复了 `ruyi entity list` 多参数解析问题以及服务端 macOS 二进制条目键名错误，并优化了依赖与构建维护逻辑。RuyiSDK IDE 发布 0.1.6 版本，新增复制包 ID、本地化 CI 等功能，修复了仓库切换后包树未刷新等问题，并调整了侧边栏图标样式。测试工作新增 macOS 14 平台覆盖，相关遗留缺陷已明确分类与跟踪。
 
-社区与内容建设方面，软件源格式更新支持供应商元数据，并为认证状态预留字段；新增**RuyiSDK GNU 工具链 macOS AArch64 实验支持**、SpacemiT Muse Pi Pro Armbian 镜像、，以及知合 A210 SODIMM 官方 EVB 系统镜像。
+社区与内容建设方面，软件源格式更新支持供应商元数据，并为认证状态预留字段；新增**RuyiSDK GNU 工具链 macOS AArch64 实验支持**、SpacemiT Muse Pi Pro Armbian 镜像，以及知合 A210 SODIMM 官方 EVB 系统镜像。
 开发板支持矩阵新增 VisionFive 2 Lite 多系统测试报告，更新 K510 Buildroot 报告；
 开发板示例仓库新增 SpacemiT K3 Pico-ITX、BPI-CANMV-K230D-Zero 等板卡文档与示例，并为 15 款开发板完善英文入门文档。
 官网同步上线 [“软件包” 页面](https://ruyisdk.org/packages/)，方便用户提前浏览软件包资源。
