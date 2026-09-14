@@ -22,9 +22,15 @@
 
 ### 开发板支持矩阵
 
+- 更新 HiFive Premier P550 的 Debian 中英文测试报告。[PR #393](https://github.com/ruyisdk/support-matrix/pull/393)
+- 更新 Milk-V Duo S 的 Arch Linux、Debian、RT-Thread、RT-Thread Smart 和 Ubuntu 24.04 中英文测试报告。[PR #394](https://github.com/ruyisdk/support-matrix/pull/394)、[PR #395](https://github.com/ruyisdk/support-matrix/pull/395)、[PR #396](https://github.com/ruyisdk/support-matrix/pull/396)、[PR #397](https://github.com/ruyisdk/support-matrix/pull/397)、[PR #398](https://github.com/ruyisdk/support-matrix/pull/398)
+- 新增 SpacemiT K3 CoM260 Kit 的 Buildroot 中英文测试报告。[PR #399](https://github.com/ruyisdk/support-matrix/pull/399)
 
 ### 开发板示例仓库
 
+- 统一 SpaceMIT 厂商名称在开发板元数据及中英文索引中的拼写。[PR #43](https://github.com/ruyisdk/board-docs/pull/43)
+- 为 K3 Pico-ITX 新增 ROS 2 课程入口和第一章课程元数据，并将课程文档来源切换至 GitHub 镜像。[PR #44](https://github.com/ruyisdk/board-docs/pull/44)、[PR #45](https://github.com/ruyisdk/board-docs/pull/45)
+- 开发板文档前端新增 ROS 2 课程页面及中英文访问路由，并优化课程列表和课程正文的移动端显示。[PR #9](https://github.com/DuoQilai/board-docs-frontend/pull/9)、[PR #10](https://github.com/DuoQilai/board-docs-frontend/pull/10)
 
 ### 官网&文档
 
