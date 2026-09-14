@@ -43,6 +43,21 @@
 
 ### LLVM
 
+本期提交 PR 如下
+
+- [RISCV][SLP] Use common alignment when checking constant-stride loads
+  https://github.com/llvm/llvm-project/pull/222520
+  修复 SLP 常量步长加载合法性检查中的对齐判断，使用 `CommonAlignment`，避免将 32 位加载扩宽为未对齐的 64 位 RVV 访问而触发 `SIGBUS`。已合并
+- [RISCV][SLP] Precommit strided-load alignment tests (NFC)
+  https://github.com/llvm/llvm-project/pull/222863
+  补充 RV32/RV64 下 SLP 步长加载对齐测试，覆盖相邻加载组对齐不同及严格对齐场景，为后续合法性修复提供回归测试。已合并
+- [RISCV] Support Packed Multiplication with Horizontal Addition
+  https://github.com/llvm/llvm-project/pull/218430
+  实现 packed multiplication with horizontal addition 的 Clang、LLVM intrinsic、后端选择及 RV32/RV64 测试。上期正在 review，本期已合并
+- [InstCombine] Fold `uitofp nneg` comparisons above the signed maximum
+  https://github.com/llvm/llvm-project/pull/221118
+  在浮点比较折叠中将 `uitofp nneg` 的上界收紧为有符号整数最大值，简化超出其有效范围的比较。正在 review
+
 ### V8
 
 ### OpenJDK
