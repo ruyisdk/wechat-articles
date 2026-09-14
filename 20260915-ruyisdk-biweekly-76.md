@@ -34,6 +34,11 @@
 
 ### 基础C库
 
+- GLIBC:
+  - 移植了 log10, log10f, log10p1, log10p1f, log1p, log1pf 至现有的 glibc libmvec 框架。
+- newlib:
+  - 移植了 atan2pi, exp2, cbrt, cospi, exp10, log2p1 至现有的 newlib 向量数学框架。
+
 ### GCC
 
 ### LLVM
