@@ -141,6 +141,25 @@ RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查�
   将 `__riscv_sshl_u32` 和 `__riscv_sshlr_u32` 的 `rs1` 参数改为无符号类型，修正规范中的参数类型错误。已合并
 
 ### V8
+本期修复了若干bug，提升了RISC-V V8的稳定性，提交并合入的patch如下：
+1. **[riscv64] Zero-extend JSDispatchHandle before computing table offsets**
+   [RISC-V] 在计算表偏移前对JSDispatchHandle做零扩展 [CL8342529](https://chromium-review.googlesource.com/c/8342529)
+2. **[riscv][maglev] Keep Word32 values sign-extended in all producers**
+   [RISC-V][Maglev] 在所有生成节点保持Word32数值带符号扩展 [CL8335670](https://chromium-review.googlesource.com/c/8335670)
+3. **[riscv] Use or instead of add for decompression**
+   [RISC-V] 使用OR指令替代ADD完成解压缩运算 [CL8334087](https://chromium-review.googlesource.com/c/8334087)
+4. **[riscv] Sign-extend operands of 32-bit compares in Select**
+   [RISC-V] 在Select节点对32位比较操作数做符号扩展 [CL8342851](https://chromium-review.googlesource.com/c/8342851)
+5. **[riscv] Sign-extend AMO.W results in simulator**
+   [RISC-V] 在模拟器中对AMO.W原子操作结果进行符号扩展 [CL8350097](https://chromium-review.googlesource.com/c/8350097)
+6. **[riscv] Fix unordered FP comparison and emit at the consumer**
+   [RISC-V] 修复无序浮点数比较逻辑，在消费端生成指令 [CL8360836](https://chromium-review.googlesource.com/c/8360836)
+7. **[riscv] Fix input constraint in BuiltinStringFromCharCode::SetValueLocationConstraints()**
+   [RISC-V] 修复BuiltinStringFromCharCode::SetValueLocationConstraints()中的输入寄存器约束 [CL8349148](https://chromium-review.googlesource.com/c/8349148)
+8. **[riscv][wasm] Fix Liftoff sub-word atomic RMW**
+   [RISC-V][WASM] 修复Liftoff中半字粒度原子读改写(RMW)操作 [CL8378121](https://chromium-review.googlesource.com/c/8378121)
+9. **[riscv] Preserve vector registers in PushCallerSaved**
+   [RISC-V] 在PushCallerSaved函数中保留向量寄存器 [CL8395546](https://chromium-review.googlesource.com/c/8395546)
 
 ### OpenJDK
 
@@ -163,6 +182,10 @@ JEP 544提案在X86/ARM64平台详细实现：
 ### Go
 
 ### QEMU
+
+本期为QEMU P扩展添加了tcg测试：
+- 在 tests/tcg/riscv 下新增 RV32 和 RV64 汇编测试，测试覆盖算术、移位、乘法、窄化、饱和运算、寄存器重叠以及零寄存器对操作数。
+https://github.com/mollybuild/qemu/tree/dev-p-020
 
 ## 社区动态
 
