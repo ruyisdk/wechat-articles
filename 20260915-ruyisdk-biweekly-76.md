@@ -188,6 +188,20 @@ JEP 544提案在X86/ARM64平台详细实现：
 
 ### Go
 
+本期提出的主线CL:
+
+- 830525: cmd/internal/obj/riscv: reject extra operands for single-register branches | https://go-review.googlesource.com/c/go/+/830525 -- 拒绝分支汇编代码中多余的寄存器
+- 830544: cmd/internal/obj/riscv: reject extra operands for jumps | https://go-review.googlesource.com/c/go/+/830544 -- 拒绝跳转代码中多余的寄存器
+- 832084: internal/runtime/gc/scan: use RVV for span scanning on riscv64 | https://go-review.googlesource.com/c/go/+/832084 -- GreenTea GC中添加基于 RVV 的扫描支持
+
+本期审阅的主线CL:
+
+- 821220: cmd/compile/internal/ssa: optimise bit tests on riscv64 | https://go-review.googlesource.com/c/go/+/821220 -- 优化 bits 相关指令及测试
+- 828344: riscv64: use absolute addresses for branch and jump targets | https://go-review.googlesource.com/c/arch/+/828344 -- 由于开启了C扩展，跳转地址使用绝对地址跳转指令
+- 827225: cmd/internal/obj/riscv: unify the ADDI immediate split point | https://go-review.googlesource.com/c/go/+/827225 -- 低于12bits的加法使用ADDI指令
+- 827224: cmd/internal/obj/riscv: use a single ADDI for load/store offsets where possible | https://go-review.googlesource.com/c/go/+/827224 -- 对于加载/保存内存指令，条件允许的情况下优先使用ADDI
+
+
 ### QEMU
 
 本期为QEMU P扩展添加了tcg测试：
