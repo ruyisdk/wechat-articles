@@ -2,7 +2,16 @@
 
 ## 卷首语
 
->
+各位 RISC-V 开发者与 RuyiSDK 社区伙伴，大家好！
+
+在基础开发环境方面，包管理器按照调整后的发版节奏，0.53.0 版本预计 9 月底正式发布，当前 0.52.0 版本可继续使用。团队在维护软件源的同时，正在推进二进制包 ABI 兼容性检测与报告基础设施，以及更多官方维护软件包的 macOS 打包工作。RuyiSDK IDE 近期新增了安装进度显示、virtual workspaces 支持，并为已测试语言推荐第三方插件，同时修复了底栏版本按钮弹窗等细节问题。
+
+社区与内容建设方面，软件源完成了一轮镜像更新与清理：多个 Armbian、RevyOS、OpenWrt 等板级镜像同步至新版本，上游停止维护的 XFCE 镜像按状态移除。开发板支持矩阵持续扩充，HiFive Premier P550、Milk-V Duo S 及 SpacemiT K3 CoM260 Kit 的测试报告得到更新或新增；
+
+基础组件领域的迭代同样密集。基础 C 库方面，GLIBC 与 newlib 分别将多组数学函数移植到向量化框架；GCC 侧 Sspmp 扩展支持已合入 Binutils 上游，P 扩展指令别名与 intrinsics 测试问题得到修复；LLVM 围绕 SLP 向量化、P 扩展 intrinsic 与 Sspmp 等提交多项 PR，多数已进入主线；V8 修复了原子操作、浮点比较、符号扩展等一系列缺陷，稳定性进一步提升；OpenJDK 合入 Zfa、Zvbc、Zvfhmin 等扩展的自动使能支持，并启动 Project Leyden 的 AOT 静态编译（JEP 544）移植调研；Go 在分支与跳转合法性校验、以及 RVV 扫描等方面持续推进；QEMU 新增了 P 扩展的 TCG 测试用例。
+
+欢迎阅读正文，了解更详尽的更新内容，并期待您与我们一同参与社区共建。
+获取更多资讯、下载最新工具或参与技术讨论，欢迎通过文章最下方的渠道找到我们。
 
 ## 基础开发环境
 
@@ -29,7 +38,6 @@ RuyiSDK 团队仍在常态化维护 RuyiSDK 软件源。如您已有 RuyiSDK 包
 - fix: 修复底栏 ruyi 版本按钮弹窗
 - chore: 测试简化的 VSCodium 仓库
 
-### 版本测试及遗留问题
 
 ## 社区与内容建设
 
@@ -68,8 +76,6 @@ RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查�
 - 统一 SpaceMIT 厂商名称在开发板元数据及中英文索引中的拼写。[PR #43](https://github.com/ruyisdk/board-docs/pull/43)
 - 为 K3 Pico-ITX 新增 ROS 2 课程入口和第一章课程元数据，并将课程文档来源切换至 GitHub 镜像。[PR #44](https://github.com/ruyisdk/board-docs/pull/44)、[PR #45](https://github.com/ruyisdk/board-docs/pull/45)
 - 开发板文档前端新增 ROS 2 课程页面及中英文访问路由，并优化课程列表和课程正文的移动端显示。[PR #9](https://github.com/DuoQilai/board-docs-frontend/pull/9)、[PR #10](https://github.com/DuoQilai/board-docs-frontend/pull/10)
-
-### 官网&文档
 
 
 ## 基础组件
