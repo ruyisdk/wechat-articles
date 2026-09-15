@@ -209,7 +209,7 @@ JEP 544提案在X86/ARM64平台详细实现：
 https://github.com/mollybuild/qemu/tree/dev-p-020
 
 ## 社区动态
-
+ [RuyiSDK 软件包页面上线：一站式查取与共建 RISC-V 软硬件开发资源](https://ruyisdk.cn/t/topic/2829)：一站式浏览和查询 RISC-V 开发生态资源。支持按设备或软件包查看开发板支持、系统镜像及相关软件包信息，也欢迎生态伙伴与开发团队接入优质资源，共建 RISC-V 生态。
 
 ---
 
