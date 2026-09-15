@@ -9,6 +9,16 @@
 
 ### 包管理器
 
+由于 RuyiSDK 发版周期调整，RuyiSDK 包管理器的 0.53.0 版本预期将在 9 月底正式发布。欢迎下载 RuyiSDK 包管理器当前最新版本 0.52.0 试用。
+
+RuyiSDK 团队仍在常态化维护 RuyiSDK 软件源。如您已有 RuyiSDK 包管理器了，您可通过 `ruyi update` 获取近两周的更新：我们保证这些内容兼容 RuyiSDK 包管理器的近 3 个正式版本。
+
+目前有以下内容正在开发中：
+
+* 关于 `ruyi` 二进制包 ABI 兼容性检测与报告的基础设施。
+* 更多 RuyiSDK 官方维护软件包的 macOS 打包工作。
+
+欢迎试用或来上游围观；您的需求是我们迭代开发的目标和动力。
 
 ### RuyiSDK IDE
 
@@ -26,6 +36,26 @@
 
 ### packages-index 资源更新
 
+本次 RuyiSDK 软件源的更新主要包含了以下内容：
+
+* 更新软件包：
+  * `board-image/ubuntu-server-riscv64-sifive-unmatched`: 修正下载链接。
+  * `board-image/revyos-sg2042`: 更新版本。
+  * `board-image/armbian-spacemit-musepipro-minimal`: 更新版本。
+  * `board-image/armbian-starfive-visionfive2-minimal`: 更新版本、移除上游不再维护的版本。
+  * `board-image/armbian-orangepi-rv2-minimal`: 更新版本、移除上游不再维护的版本。
+  * `board-image/openwrt-sifive-unmatched`: 更新版本。
+* 移除软件包：
+  * `board-image/armbian-orangepi-rv2-xfce`: 上游不再维护 XFCE 构建、且不再提供下载，故移除软件包。
+  * `board-image/armbian-spacemit-musepipro-xfce`: 上游不再维护 XFCE 构建、且不再提供下载，故移除软件包。
+  * `board-image/armbian-starfive-visionfive2-xfce`: 上游不再维护 XFCE 构建、且不再提供下载，故移除软件包。
+
+感谢 [SmulllLu][SmulllLu] 的贡献！
+
+您也可以亲自参与
+RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查看、修改我们的[部分打包脚本](https://github.com/ruyisdk/ruyici)与[软件源仓库](https://github.com/ruyisdk/packages-index)。今后，按照本年度的开发计划，我们也将支持有权的第三方贡献者通过程序化的方式上传软件包、系统镜像等分发文件，以便利打包工作。
+
+[SmulllLu]: https://github.com/SmulllLu
 
 ### 开发板支持矩阵
 
@@ -53,6 +83,16 @@
   - 移植了 atan2pi, exp2, cbrt, cospi, exp10, log2p1 至现有的 newlib 向量数学框架。
 
 ### GCC
+
+- 提交了 Sspmp 扩展的工具链支持，已合入 Binutils 上游：
+  - https://sourceware.org/git/?p=binutils-gdb.git;a=commit;h=b16f10037c4814ab03416a4ab143337591881e2b
+- 补充了 P 扩展的 Binutils 指令别名支持，，修复了 intrinsics api 测试中发现的一些问题
+  - https://github.com/ruyisdk/riscv-gcc/commits/p-rebase/
+  - https://github.com/ruyisdk/riscv-binutils/commit/cf8cab68b5addd773e86619f974c9dbbf91cc37a
+- RISE-CI 的维护 PR 通过了会议审核，已经正式合入 RISE-CI 上游代码中
+  - https://github.com/riseproject-dev/gcc-postcommit-ci/pull/4
+  - https://github.com/riseproject-dev/gcc-precommit-ci/pull/1
+  - https://github.com/riseproject-dev/riscv-gnu-toolchain-ci/pull/1
 
 ### LLVM
 
@@ -108,12 +148,51 @@
   将 `__riscv_sshl_u32` 和 `__riscv_sshlr_u32` 的 `rs1` 参数改为无符号类型，修正规范中的参数类型错误。已合并
 
 ### V8
+本期修复了若干bug，提升了RISC-V V8的稳定性，提交并合入的patch如下：
+1. **[riscv64] Zero-extend JSDispatchHandle before computing table offsets**
+   [RISC-V] 在计算表偏移前对JSDispatchHandle做零扩展 [CL8342529](https://chromium-review.googlesource.com/c/8342529)
+2. **[riscv][maglev] Keep Word32 values sign-extended in all producers**
+   [RISC-V][Maglev] 在所有生成节点保持Word32数值带符号扩展 [CL8335670](https://chromium-review.googlesource.com/c/8335670)
+3. **[riscv] Use or instead of add for decompression**
+   [RISC-V] 使用OR指令替代ADD完成解压缩运算 [CL8334087](https://chromium-review.googlesource.com/c/8334087)
+4. **[riscv] Sign-extend operands of 32-bit compares in Select**
+   [RISC-V] 在Select节点对32位比较操作数做符号扩展 [CL8342851](https://chromium-review.googlesource.com/c/8342851)
+5. **[riscv] Sign-extend AMO.W results in simulator**
+   [RISC-V] 在模拟器中对AMO.W原子操作结果进行符号扩展 [CL8350097](https://chromium-review.googlesource.com/c/8350097)
+6. **[riscv] Fix unordered FP comparison and emit at the consumer**
+   [RISC-V] 修复无序浮点数比较逻辑，在消费端生成指令 [CL8360836](https://chromium-review.googlesource.com/c/8360836)
+7. **[riscv] Fix input constraint in BuiltinStringFromCharCode::SetValueLocationConstraints()**
+   [RISC-V] 修复BuiltinStringFromCharCode::SetValueLocationConstraints()中的输入寄存器约束 [CL8349148](https://chromium-review.googlesource.com/c/8349148)
+8. **[riscv][wasm] Fix Liftoff sub-word atomic RMW**
+   [RISC-V][WASM] 修复Liftoff中半字粒度原子读改写(RMW)操作 [CL8378121](https://chromium-review.googlesource.com/c/8378121)
+9. **[riscv] Preserve vector registers in PushCallerSaved**
+   [RISC-V] 在PushCallerSaved函数中保留向量寄存器 [CL8395546](https://chromium-review.googlesource.com/c/8395546)
 
 ### OpenJDK
+
+本期审阅并合入的JDK主线PR:
+- https://github.com/openjdk/jdk/pull/31853 (8388035: RISC-V: Auto-enable Zfa extension features)  -- 为RISC-V添加Zfa扩展的自动探测和使能
+- https://github.com/openjdk/jdk/pull/31862 (8388075: RISC-V: Auto-enable Zvbc extension features)  -- 为RISC-V添加Zvbc扩展的自动探测和使能
+- https://github.com/openjdk/jdk/pull/31934 (8388399: RISC-V: Enable vector FP16 conversions with Zvfhmin)  -- 为RISC-V添加Zvfhmin半精度浮点矢量转换支持
+- https://github.com/openjdk/jdk/pull/31958 (8388459: RISC-V: Add specialized CMove patterns with zero operand)  -- 为RISC-V优化零操作数场景条件Move优化
+- https://github.com/openjdk/jdk/pull/31880 (8321012: RISC-V: C2 ExtractUB)  -- 为RISC-V添加矢量无符号字节元素提取优化
+
+本期审阅并合入的JDK-updates PRs:
+- https://github.com/openjdk/jdk25u-dev/pull/653 (8387381: RISC-V: assert failed with fastdebug build on systems with different core types)  -- 为RISC-V修复异构CPU探测断言错误
+- https://github.com/openjdk/jdk17u-dev/pull/4407 (8383601: RISC-V: ShenandoahBarrierSetAssembler::load_reference_barrier calls "weak" on "phantom" path)  -- 为RISC-V修复ShenandoahGC Barrier调用对象错误
+
+Java重要新特性JEP 544: AOT静态编译（Ahead-of-Time Code Compilation）RISC-V移植工作进展：
+已初步开展调研工作 (https://openjdk.org/jeps/401)，先通过在X86/ARM64平台调试，逐步熟悉和了解该特性的设计思路和代码实现细节，为后续将该特性移植到RISC-V平台做好准备。
+JEP 544提案在X86/ARM64平台详细实现：
+- https://github.com/openjdk/jdk/pull/30778 (8380476: Implement JEP 544: Ahead-of-Time Code Compilation)
 
 ### Go
 
 ### QEMU
+
+本期为QEMU P扩展添加了tcg测试：
+- 在 tests/tcg/riscv 下新增 RV32 和 RV64 汇编测试，测试覆盖算术、移位、乘法、窄化、饱和运算、寄存器重叠以及零寄存器对操作数。
+https://github.com/mollybuild/qemu/tree/dev-p-020
 
 ## 社区动态
 
