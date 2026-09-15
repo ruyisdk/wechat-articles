@@ -12,6 +12,10 @@
 
 ### RuyiSDK IDE
 
+- feat: 安装软件包时显示下载进度
+- feat: 支持 virtual workspaces
+- chore: 更新插件描述
+
 ### 版本测试及遗留问题
 
 ## 社区与内容建设
