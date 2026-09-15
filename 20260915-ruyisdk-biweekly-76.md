@@ -47,6 +47,16 @@
 
 ### GCC
 
+- 提交了 Sspmp 扩展的工具链支持，已合入 Binutils 上游：
+  - https://sourceware.org/git/?p=binutils-gdb.git;a=commit;h=b16f10037c4814ab03416a4ab143337591881e2b
+- 补充了 P 扩展的 Binutils 指令别名支持，，修复了 intrinsics api 测试中发现的一些问题
+  - https://github.com/ruyisdk/riscv-gcc/commits/p-rebase/
+  - https://github.com/ruyisdk/riscv-binutils/commit/cf8cab68b5addd773e86619f974c9dbbf91cc37a
+- RISE-CI 的维护 PR 通过了会议审核，已经正式合入 RISE-CI 上游代码中
+  - https://github.com/riseproject-dev/gcc-postcommit-ci/pull/4
+  - https://github.com/riseproject-dev/gcc-precommit-ci/pull/1
+  - https://github.com/riseproject-dev/riscv-gnu-toolchain-ci/pull/1
+
 ### LLVM
 
 本期提交 PR 如下
