@@ -153,6 +153,10 @@ JEP 544提案在X86/ARM64平台详细实现：
 
 ### QEMU
 
+本期为QEMU P扩展添加了tcg测试：
+- 在 tests/tcg/riscv 下新增 RV32 和 RV64 汇编测试，测试覆盖算术、移位、乘法、窄化、饱和运算、寄存器重叠以及零寄存器对操作数。
+https://github.com/mollybuild/qemu/tree/dev-p-020
+
 ## 社区动态
 
 
