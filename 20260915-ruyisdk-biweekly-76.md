@@ -104,6 +104,22 @@
 
 ### OpenJDK
 
+本期审阅并合入的JDK主线PR:
+- https://github.com/openjdk/jdk/pull/31853 (8388035: RISC-V: Auto-enable Zfa extension features)  -- 为RISC-V添加Zfa扩展的自动探测和使能
+- https://github.com/openjdk/jdk/pull/31862 (8388075: RISC-V: Auto-enable Zvbc extension features)  -- 为RISC-V添加Zvbc扩展的自动探测和使能
+- https://github.com/openjdk/jdk/pull/31934 (8388399: RISC-V: Enable vector FP16 conversions with Zvfhmin)  -- 为RISC-V添加Zvfhmin半精度浮点矢量转换支持
+- https://github.com/openjdk/jdk/pull/31958 (8388459: RISC-V: Add specialized CMove patterns with zero operand)  -- 为RISC-V优化零操作数场景条件Move优化
+- https://github.com/openjdk/jdk/pull/31880 (8321012: RISC-V: C2 ExtractUB)  -- 为RISC-V添加矢量无符号字节元素提取优化
+
+本期审阅并合入的JDK-updates PRs:
+- https://github.com/openjdk/jdk25u-dev/pull/653 (8387381: RISC-V: assert failed with fastdebug build on systems with different core types)  -- 为RISC-V修复异构CPU探测断言错误
+- https://github.com/openjdk/jdk17u-dev/pull/4407 (8383601: RISC-V: ShenandoahBarrierSetAssembler::load_reference_barrier calls "weak" on "phantom" path)  -- 为RISC-V修复ShenandoahGC Barrier调用对象错误
+
+Java重要新特性JEP 544: AOT静态编译（Ahead-of-Time Code Compilation）RISC-V移植工作进展：
+已初步开展调研工作 (https://openjdk.org/jeps/401)，先通过在X86/ARM64平台调试，逐步熟悉和了解该特性的设计思路和代码实现细节，为后续将该特性移植到RISC-V平台做好准备。
+JEP 544提案在X86/ARM64平台详细实现：
+- https://github.com/openjdk/jdk/pull/30778 (8380476: Implement JEP 544: Ahead-of-Time Code Compilation)
+
 ### Go
 
 ### QEMU
