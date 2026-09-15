@@ -15,6 +15,9 @@
 - feat: 安装软件包时显示下载进度
 - feat: 支持 virtual workspaces
 - chore: 更新插件描述
+- feat: 为已经过测试的数种语言推荐第三方插件
+- fix: 修复底栏 ruyi 版本按钮弹窗
+- chore: 测试简化的 VSCodium 仓库
 
 ### 版本测试及遗留问题
 
