@@ -64,6 +64,54 @@
 
 ### LLVM
 
+本期提交 PR 如下
+
+- [Clang][RISCV] Add packed widening add accumulate intrinsics
+  https://github.com/llvm/llvm-project/pull/221622
+  为 RISC-V P 扩展新增 packed widening add accumulate intrinsic 支持，并完善 RV32/RV64 CodeGen 覆盖。上期正在 review，本期已合并
+- [RISCV][P-ext] Support Packed Element Insert
+  https://github.com/llvm/llvm-project/pull/222268
+  为 RISC-V P 扩展新增 Packed Element Insert intrinsic 支持。上期正在 review，本期已合并
+- [Clang][RISCV] Add scalar saturating add/sub, absolute value and rev intrinsics
+  https://github.com/llvm/llvm-project/pull/224377
+  为 RISC-V P 扩展新增第一批 Scalar Intrinsics，支持标量饱和加减、绝对值和位反转操作。已合并
+- [Clang][RISCV] Add packed subvector extract intrinsics
+  https://github.com/llvm/llvm-project/pull/224429
+  为 RISC-V P 扩展新增 packed subvector extract intrinsics，支持从 64 位 packed vector 中提取 32 位子向量。已合并
+- [RISCV] Add OPERAND_UIMM4_PLUS1 to RISCVInstrInfo::verifyInstruction
+  https://github.com/llvm/llvm-project/pull/224423
+  在 `RISCVInstrInfo::verifyInstruction` 中补充 `psati.h` 和 `psati.dh` 使用的 `OPERAND_UIMM4_PLUS1` 校验，解决相关崩溃。已合并
+- [RISCV][P-ext] Support Packed Load
+  https://github.com/llvm/llvm-project/pull/223313
+  为 RISC-V P 扩展新增 Packed Load intrinsic 支持。已合并
+- [RISCV][P-ext] Support Packed Store
+  https://github.com/llvm/llvm-project/pull/223619
+  为 RISC-V P 扩展新增 Packed Store intrinsic 支持。已合并
+- [RISCV][P-ext] Support Packed Element Join
+  https://github.com/llvm/llvm-project/pull/223931
+  为 RISC-V P 扩展新增 Packed Element Join intrinsic 支持。已合并
+- [RISCV]Add RVA23.1 and RVB23.1 experimental profiles
+  https://github.com/llvm/llvm-project/pull/217199
+  新增 RVA23.1 和 RVB23.1 实验性 profile 支持。已合并
+- [RISCV][MC] Require H for HINVAL instructions
+  https://github.com/llvm/llvm-project/pull/223588
+  修正 `HINVAL.VVMA` 和 `HINVAL.GVMA` 指令的扩展依赖，要求启用 H 扩展。已合并
+- [MC][RISCV] Make Zve32x a dependency of Zvabd
+  https://github.com/llvm/llvm-project/pull/223901
+  在 MC 实现中补充 Zvabd 对 Zve32x 的扩展依赖。已合并
+- [RISCV] Fix immediate operand ranges for XCVsimd instructions
+  https://github.com/llvm/llvm-project/pull/224876
+  修正 XCVsimd 指令的立即数操作数范围。已合并
+- [RISCV][MC] Reject invalid combined immediates for `cv.insert`
+  https://github.com/llvm/llvm-project/pull/224985
+  为 `cv.insert` 补充组合立即数约束检查，拒绝不满足 `Is3 + Is2 < 32` 的操作数。已合并
+- [RISCV][P-ext] Add packed saturation intrinsics
+  https://github.com/llvm/llvm-project/pull/224432
+  为 RISC-V P 扩展新增 packed saturation intrinsics 支持。正在 review
+- [RISCV][P-ext] Support Packed Multiply High Parts
+  https://github.com/llvm/llvm-project/pull/225015
+  为 RISC-V P 扩展新增 Packed Multiply High Parts intrinsic 支持。正在 review
+
 ### V8
 本期亮点：对Word32Equal，Word32NotEqual IR的代码生成进行了优化，优化后，提前编译（AOT）的内置库静态代码尺寸降低了2.7%。
 
