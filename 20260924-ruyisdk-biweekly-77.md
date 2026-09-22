@@ -41,9 +41,16 @@
 
 ### 开发板支持矩阵
 
+- 新增 HiFive Premier P550 的 Fedora 44 Server 中英文测试报告。[PR #400](https://github.com/ruyisdk/support-matrix/pull/400)
+- 新增 SpacemiT K3 CoM260 Kit 的 Bianbu 4.0.6、OpenHarmony 6.1 中英文测试报告，并补充 openEuler 24.03-LTS-SP4 中英文待测文档。[PR #401](https://github.com/ruyisdk/support-matrix/pull/401)、[PR #402](https://github.com/ruyisdk/support-matrix/pull/402)、[PR #403](https://github.com/ruyisdk/support-matrix/pull/403)
+- 更新 CH32V307 的 RT-Thread 5.3.1 中英文测试报告。[PR #404](https://github.com/ruyisdk/support-matrix/pull/404)
+- 更新 Milk-V Duo S 的 Zephyr 4.1.99 中英文测试报告。[PR #405](https://github.com/ruyisdk/support-matrix/pull/405)
 
 ### 开发板示例仓库
 
+- 新增 HiFive Premier P550 中英文板卡文档及 HelloWorld、CoreMark 示例。[PR #46](https://github.com/ruyisdk/board-docs/pull/46)
+- 新增 SpacemiT K3 CoM260 Kit 中英文板卡文档和 HelloWorld 示例，补充中文 CoreMark 示例及 ROS 2 前两章课程入口。[PR #47](https://github.com/ruyisdk/board-docs/pull/47)
+- 开发板文档前端新增课程前后章节导航，并在首页展示最新课程章节预览。[PR #11](https://github.com/DuoQilai/board-docs-frontend/pull/11)
 
 ### 官网&文档
 
