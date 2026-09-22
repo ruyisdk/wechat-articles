@@ -39,6 +39,43 @@
 ### LLVM
 
 ### V8
+本期亮点：对Word32Equal，Word32NotEqual IR的代码生成进行了优化，优化后，提前编译（AOT）的内置库静态代码尺寸降低了2.7%。
+
+本期提交并合入的patch：
+1. **[riscv][sandbox] Remove kDefaultCodeEntrypointTag, pt.1**
+   [RISC-V][沙箱] 移除 kDefaultCodeEntrypointTag（第一部分）[CL8400460](https://chromium-review.googlesource.com/c/8400460)
+2. **[riscv][wasm-wide-arith] optimize nested 128 bit additions**
+   [RISC-V][Wasm 宽位算术] 优化嵌套128位加法 [CL8404059](https://chromium-review.googlesource.com/c/8404059)
+3. **[riscv] Fix 32-bit add/sub overflow check with dirty upper bits**
+   [RISC-V] 修复高位脏数据场景下32位加减溢出检查 [CL8411269](https://chromium-review.googlesource.com/c/8411269)
+4. **[riscv] Handle kProjection in ZeroExtendsWord32ToWord64NoPhis**
+   [RISC-V] 在 ZeroExtendsWord32ToWord64NoPhis 中处理 kProjection [CL8413986](https://chromium-review.googlesource.com/c/8413986)
+5. **[riscv][wasm] Fix safepoints in huge-frame stack check**
+   [RISC-V][Wasm] 修复超大栈帧栈检查中的安全点 [CL8424461](https://chromium-review.googlesource.com/c/8424461)
+6. **[riscv][wasm] Remove the trap_on_null bit/NullDereference memory access mode**
+   [RISC-V][Wasm] 移除 trap_on_null 标记与空解引用内存访问模式 [CL8417701](https://chromium-review.googlesource.com/c/8417701)
+7. **[riscv][wasm-wide-arith] optimize nested 128 bit additions**
+   [RISC-V][Wasm 宽位算术] 优化嵌套128位加法 [CL8411268](https://chromium-review.googlesource.com/c/8411268)
+8. **[riscv][wasm-wide-arith] Fix incorrect carry in Add128**
+   [RISC-V][Wasm 宽位算术] 修复 Add128 进位错误 [CL8411517](https://chromium-review.googlesource.com/c/8411517)
+9. **[riscv][compiler] Optimize Word32 equality/inequality comparisons**
+   [RISC-V][编译器] 优化 Word32 相等/不等比较 [CL8414493](https://chromium-review.googlesource.com/c/8414493)
+10. **[riscv] Fix ZeroExtendsWord32ToWord64NoPhis for atomic loads**
+    [RISC-V] 修复原子加载场景下 ZeroExtendsWord32ToWord64NoPhis 逻辑 [CL8414976](https://chromium-review.googlesource.com/c/8414976)
+11. **[riscv] Optimize tagged comparison branches with subw**
+    [RISC-V] 使用 subw 优化带标记值的比较分支 [CL8411262](https://chromium-review.googlesource.com/c/8411262)
+12. **[riscv] Fix Word32And zero test with dirty upper bits**
+    [RISC-V] 修复高位脏数据下 Word32And 判零逻辑 [CL8403122](https://chromium-review.googlesource.com/c/8403122)
+13. **[riscv] Fix register constraint field layout after AccessMode shrink**
+    [RISC-V] 修复 AccessMode 缩减后的寄存器约束字段布局 [CL8431981](https://chromium-review.googlesource.com/c/8431981)
+
+本期审阅并合入的patch：
+1. **[riscv] Fix register clobbering for atomic compare-exchange**
+   [RISC-V] 修复原子比较交换的寄存器覆盖问题 [CL8411976](https://chromium-review.googlesource.com/c/8411976)
+2. **[riscv] Avoid clobbering expect value in atomic compare-exchange**
+   [RISC-V] 避免原子比较交换中覆盖预期值 [CL8319928](https://chromium-review.googlesource.com/c/8319928)
+3. **[riscv][maglev] Use public Float64Min/Max helpers**
+   [RISC-V][Maglev] 使用公开的 Float64Min/Max 辅助函数 [CL8397048](https://chromium-review.googlesource.com/c/8397048)
 
 ### OpenJDK
 
