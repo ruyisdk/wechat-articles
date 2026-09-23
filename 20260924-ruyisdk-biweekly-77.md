@@ -183,6 +183,26 @@ https://sourceware.org/pipermail/binutils/2026-September/151491.html
 
 ### OpenJDK
 
+本期审阅并合入的JDK主线PR:
+- https://github.com/openjdk/jdk27u/pull/84 (8391041: RISC-V: Fix out-of-bounds read in string_indexof_char intrinsic)  -- 为RISC-V修复string_indexof_char intrinsic越界访问风险
+- https://github.com/openjdk/jdk/pull/32020 (8388837: RISC-V: Track card addresses directly in G1 array post-write barrier loop)  -- 为RISC-V优化G1GC数组post-write barrier汇编
+- https://github.com/openjdk/jdk/pull/32043 (8388474: RISC-V: Relax satp mode check for sv57)  -- 尝试为RISC-V添加SV57寻址空间，风险待确认
+- https://github.com/openjdk/jdk/pull/31956 (8388458: RISC-V: Optimize G1 post-write barrier conditional card mark)  -- 为RISC-V优化G1GC数组post-write barrier寻址
+- https://github.com/openjdk/jdk/pull/32076 (8389312: RISC-V: vector_update_crc32 wrongly assumes undisturbed tail elements)  -- 为RISC-V修复矢量CRC32计算场景矢量格式设置问题
+- https://github.com/openjdk/jdk/pull/32162 (8389581: RISC-V: building fails with clang toolchain)  -- 为RISC-V修复clang构建编译错误问题
+- https://github.com/openjdk/jdk/pull/31961 (8388460: RISC-V: Auto-enable Zcb extension features)  -- 为RISC-V打开Zcb扩展，提升性能
+- https://github.com/openjdk/jdk/pull/32192 (8389677: RISC-V: Prefer vmv.v.i to zero vector registers)  -- 为RISC-V优化矢量寄存器清零操作，提升性能
+- https://github.com/openjdk/jdk/pull/32290 (8390101: RISC-V: Use vmandn.mm for vector mask and-not)  -- 为RISC-V添加掩码矢量与运算优化，提升性能
+- https://github.com/openjdk/jdk/pull/32289 (8390044: RISC-V: Support vector integer division)  -- 为RISC-V添加整型矢量除法运算支持
+- https://github.com/openjdk/jdk/pull/32387 (8390441: RISC-V: Fix C2 stack-to-stack spill copies with large offsets)  -- 为RISC-V修复大堆栈场景矢量寄存器spill操作问题
+
+Java重要新特性JEP 544: AOT静态编译（Ahead-of-Time Code Compilation）RISC-V移植工作进展：
+通过在X86/ARM64平台调试，现已逐步熟悉和了解JEP 544特性的设计思路和代码实现细节。
+同时与OpenJDK社区生态伙伴沟通协作，下一步优先将JEP 483 and JEP 515特性移植到RISC-V平台。
+
+- https://openjdk.org/jeps/483 (JEP 483: Ahead-of-Time Class Loading & Linking)
+- https://openjdk.org/jeps/515 (JEP 515: Ahead-of-Time Method Profiling)
+
 ### Go
 
 本期提出的主线CL:
