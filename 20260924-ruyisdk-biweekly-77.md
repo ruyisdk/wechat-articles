@@ -9,6 +9,20 @@
 
 ### 包管理器
 
+RuyiSDK 0.53 将于 2026 年 9 月 24 日发布，对应的包管理器版本也为 0.53.0。本次 RuyiSDK 包管理器的更新主要包含了以下内容：
+
+* 新增了检测与报告二进制包 ABI 兼容性的基础设施，这将有助于判断某个二进制分发的软件在您的系统上是否能正常工作。
+* 修复了无法为默认软件源 `ruyisdk` 设置优先级的问题。感谢 [sisungo][sisungo] 报告此问题！
+* 修复了某个下载成功返回了失败页面时，不会接着尝试其他下载链接的问题。感谢 [weilinfox][weilinfox] 报告此问题！
+* 修复了多个软件源存在同名、同版本软件包时，安装状态与来源软件源失去同步的问题。感谢 [qingwan12138][qingwan12138] 报告此问题！
+* 工程化迭代：
+  * 更新了依赖版本。
+
+欢迎试用或来上游围观；您的需求是我们迭代开发的目标和动力。
+
+[qingwan12138]: https://github.com/qingwan12138
+[sisungo]: https://github.com/sisungo
+[weilinfox]: https://github.com/weilinfox
 
 ### RuyiSDK IDE
 
@@ -38,6 +52,13 @@
 
 ### packages-index 资源更新
 
+本次 RuyiSDK 软件源的更新主要包含了以下内容：
+
+* 更新软件包：
+  * `board-image/armbian-*`: 删除了上游不再提供的软件版本。感谢 [weilinfox][weilinfox] 的贡献！
+
+您也可以亲自参与
+RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查看、修改我们的[部分打包脚本](https://github.com/ruyisdk/ruyici)与[软件源仓库](https://github.com/ruyisdk/packages-index)。今后，按照本年度的开发计划，我们也将支持有权的第三方贡献者通过程序化的方式上传软件包、系统镜像等分发文件，以便利打包工作。
 
 ### 开发板支持矩阵
 
