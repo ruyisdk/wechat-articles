@@ -185,6 +185,20 @@ https://sourceware.org/pipermail/binutils/2026-September/151491.html
 
 ### Go
 
+本期提出的主线CL:
+
+- 711075: chacha20: improve performance for riscv64 by rvv | https://go-review.googlesource.com/c/crypto/+/711075 chacha20 算法针对 RVV 优化【本周期重新测试性能数据】
+- 804504: vector: add RVV SIMD assembly for riscv64 (opt-in) | https://go-review.googlesource.com/c/image/+/804504 image 库针对 RVV 进行 vector 优化
+
+本期审阅的主线CL:
+
+- 807461: cmd/internal/obj/riscv: compress jumps with known immediates | https://go-review.googlesource.com/c/go/+/807461 针对可压缩跳转立即数开启C扩展
+- 805300: cmd/internal/obj/riscv: use compressed branch instructions | https://go-review.googlesource.com/c/go/+/805300 针对跳转指令开启C扩展
+- 821221: cmd/compile: use BEXT/BEXTI for bit tests on riscv64 | https://go-review.googlesource.com/c/go/+/821221 开启 SSA 优化 BEXT/BEXTI
+- 825685: cmd/compile: use BSET/BSETI for single bit set on riscv64 | https://go-review.googlesource.com/c/go/+/825685 开启 SSA 优化 BSET/BSETI
+- 835465: cmd/compile: add riscv64 math rounding intrinsics | https://go-review.googlesource.com/c/go/+/835465 开启 SSA 优化浮点取整指令
+- 835905: cmd/compile: use runtime Zbb dispatch for riscv64 TrailingZeros | https://go-review.googlesource.com/c/go/+/835905 runtime 针对 Zbb 开启短路径
+
 ### QEMU
 
 ## 社区动态
