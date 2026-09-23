@@ -83,6 +83,15 @@ RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查�
 
 ### GCC
 
+本周 backport 了 Spacemit 厂商自定义扩展到 ruyisdk gcc 16.2 分支
+https://github.com/ruyisdk/riscv-gcc/tree/16.2
+
+修复了 packed slide intrinsic lowering 的问题
+https://github.com/riscv/riscv-p-spec/pull/369
+
+协助 review 了 tail pseudo 的寄存器选择处理支持
+https://sourceware.org/pipermail/binutils/2026-September/151491.html
+
 ### LLVM
 
 本期提交 PR 如下
