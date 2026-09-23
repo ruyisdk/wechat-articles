@@ -81,6 +81,11 @@ RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查�
 
 ### 基础C库
 
+- GLIBC:
+  - 移植了 pow 至现有的 glibc libmvec 框架。
+- newlib:
+  - 移植了 rsqrt, expm1 至现有的 newlib 向量数学框架。
+
 ### GCC
 
 本周 backport 了 Spacemit 厂商自定义扩展到 ruyisdk gcc 16.2 分支
