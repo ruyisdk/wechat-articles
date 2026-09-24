@@ -74,7 +74,7 @@ RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查�
 - 开发板文档前端新增课程前后章节导航，并在首页展示最新课程章节预览。[PR #11](https://github.com/DuoQilai/board-docs-frontend/pull/11)
 
 ### 官网&文档
-
+- 新增 Ruyi Imager 使用文档，为图形化镜像烧录工具补充了使用说明，已在 docs 仓库合入（[docs#149](https://github.com/ruyisdk/docs/pull/149)）；官网侧同步更新正在评审中（[ruyisdk-website#589](https://github.com/ruyisdk/ruyisdk-website/pull/589)），合入后即可在官网查阅。
 
 ## 基础组件
 
@@ -88,14 +88,14 @@ RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查�
 
 ### GCC
 
-本周 backport 了 Spacemit 厂商自定义扩展到 ruyisdk gcc 16.2 分支
-https://github.com/ruyisdk/riscv-gcc/tree/16.2
+- 本周 backport 了 Spacemit 厂商自定义扩展到 ruyisdk gcc 16.2 分支
+  https://github.com/ruyisdk/riscv-gcc/tree/16.2
 
-修复了 packed slide intrinsic lowering 的问题
-https://github.com/riscv/riscv-p-spec/pull/369
+- 修复了 packed slide intrinsic lowering 的问题
+  https://github.com/riscv/riscv-p-spec/pull/369
 
-协助 review 了 tail pseudo 的寄存器选择处理支持
-https://sourceware.org/pipermail/binutils/2026-September/151491.html
+- 协助 review 了 tail pseudo 的寄存器选择处理支持
+  https://sourceware.org/pipermail/binutils/2026-September/151491.html
 
 ### LLVM
 
@@ -230,7 +230,7 @@ Java重要新特性JEP 544: AOT静态编译（Ahead-of-Time Code Compilation）R
 https://lists.nongnu.org/archive/html/qemu-riscv/2026-09/msg00523.html
 
 ## 社区动态
-  [RuyiSDK 亮相 2026 云栖大会如意社区展台，展示 RISC-V 开发生态能力](https://ruyisdk.cn/t/topic/2849)：RuyiSDK 携多款 RISC-V 开发相关成果亮相云栖大会如意社区展台，现场展示一体化集成开发环境与软硬件资源共建成果，和参会开发者交流 RISC-V 生态进展。
+[RuyiSDK 亮相 2026 云栖大会如意社区展台，展示 RISC-V 开发生态能力](https://ruyisdk.cn/t/topic/2849)：RuyiSDK 携多款 RISC-V 开发相关成果亮相云栖大会如意社区展台，现场展示一体化集成开发环境与软硬件资源共建成果，和参会开发者交流 RISC-V 生态进展。
 
 ---
 
