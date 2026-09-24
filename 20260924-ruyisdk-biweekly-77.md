@@ -226,6 +226,9 @@ Java重要新特性JEP 544: AOT静态编译（Ahead-of-Time Code Compilation）R
 
 ### QEMU
 
+本期向上游提交Packed SIMD扩展V3版Patch，增加了tcg测试：
+https://lists.nongnu.org/archive/html/qemu-riscv/2026-09/msg00523.html
+
 ## 社区动态
   [RuyiSDK 亮相 2026 云栖大会如意社区展台，展示 RISC-V 开发生态能力](https://ruyisdk.cn/t/topic/2849)：RuyiSDK 携多款 RISC-V 开发相关成果亮相云栖大会如意社区展台，现场展示一体化集成开发环境与软硬件资源共建成果，和参会开发者交流 RISC-V 生态进展。
 
