@@ -81,7 +81,21 @@ RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查�
 
 ### 基础C库
 
+- GLIBC:
+  - 移植了 pow 至现有的 glibc libmvec 框架。
+- newlib:
+  - 移植了 rsqrt, expm1 至现有的 newlib 向量数学框架。
+
 ### GCC
+
+本周 backport 了 Spacemit 厂商自定义扩展到 ruyisdk gcc 16.2 分支
+https://github.com/ruyisdk/riscv-gcc/tree/16.2
+
+修复了 packed slide intrinsic lowering 的问题
+https://github.com/riscv/riscv-p-spec/pull/369
+
+协助 review 了 tail pseudo 的寄存器选择处理支持
+https://sourceware.org/pipermail/binutils/2026-September/151491.html
 
 ### LLVM
 
@@ -174,7 +188,41 @@ RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查�
 
 ### OpenJDK
 
+本期审阅并合入的JDK主线PR:
+- https://github.com/openjdk/jdk27u/pull/84 (8391041: RISC-V: Fix out-of-bounds read in string_indexof_char intrinsic)  -- 为RISC-V修复string_indexof_char intrinsic越界访问风险
+- https://github.com/openjdk/jdk/pull/32020 (8388837: RISC-V: Track card addresses directly in G1 array post-write barrier loop)  -- 为RISC-V优化G1GC数组post-write barrier汇编
+- https://github.com/openjdk/jdk/pull/32043 (8388474: RISC-V: Relax satp mode check for sv57)  -- 尝试为RISC-V添加SV57寻址空间，风险待确认
+- https://github.com/openjdk/jdk/pull/31956 (8388458: RISC-V: Optimize G1 post-write barrier conditional card mark)  -- 为RISC-V优化G1GC数组post-write barrier寻址
+- https://github.com/openjdk/jdk/pull/32076 (8389312: RISC-V: vector_update_crc32 wrongly assumes undisturbed tail elements)  -- 为RISC-V修复矢量CRC32计算场景矢量格式设置问题
+- https://github.com/openjdk/jdk/pull/32162 (8389581: RISC-V: building fails with clang toolchain)  -- 为RISC-V修复clang构建编译错误问题
+- https://github.com/openjdk/jdk/pull/31961 (8388460: RISC-V: Auto-enable Zcb extension features)  -- 为RISC-V打开Zcb扩展，提升性能
+- https://github.com/openjdk/jdk/pull/32192 (8389677: RISC-V: Prefer vmv.v.i to zero vector registers)  -- 为RISC-V优化矢量寄存器清零操作，提升性能
+- https://github.com/openjdk/jdk/pull/32290 (8390101: RISC-V: Use vmandn.mm for vector mask and-not)  -- 为RISC-V添加掩码矢量与运算优化，提升性能
+- https://github.com/openjdk/jdk/pull/32289 (8390044: RISC-V: Support vector integer division)  -- 为RISC-V添加整型矢量除法运算支持
+- https://github.com/openjdk/jdk/pull/32387 (8390441: RISC-V: Fix C2 stack-to-stack spill copies with large offsets)  -- 为RISC-V修复大堆栈场景矢量寄存器spill操作问题
+
+Java重要新特性JEP 544: AOT静态编译（Ahead-of-Time Code Compilation）RISC-V移植工作进展：
+通过在X86/ARM64平台调试，现已逐步熟悉和了解JEP 544特性的设计思路和代码实现细节。
+同时与OpenJDK社区生态伙伴沟通协作，下一步优先将JEP 483 and JEP 515特性移植到RISC-V平台。
+
+- https://openjdk.org/jeps/483 (JEP 483: Ahead-of-Time Class Loading & Linking)
+- https://openjdk.org/jeps/515 (JEP 515: Ahead-of-Time Method Profiling)
+
 ### Go
+
+本期提出的主线CL:
+
+- 711075: chacha20: improve performance for riscv64 by rvv | https://go-review.googlesource.com/c/crypto/+/711075 chacha20 算法针对 RVV 优化【本周期重新测试性能数据】
+- 804504: vector: add RVV SIMD assembly for riscv64 (opt-in) | https://go-review.googlesource.com/c/image/+/804504 image 库针对 RVV 进行 vector 优化
+
+本期审阅的主线CL:
+
+- 807461: cmd/internal/obj/riscv: compress jumps with known immediates | https://go-review.googlesource.com/c/go/+/807461 针对可压缩跳转立即数开启C扩展
+- 805300: cmd/internal/obj/riscv: use compressed branch instructions | https://go-review.googlesource.com/c/go/+/805300 针对跳转指令开启C扩展
+- 821221: cmd/compile: use BEXT/BEXTI for bit tests on riscv64 | https://go-review.googlesource.com/c/go/+/821221 开启 SSA 优化 BEXT/BEXTI
+- 825685: cmd/compile: use BSET/BSETI for single bit set on riscv64 | https://go-review.googlesource.com/c/go/+/825685 开启 SSA 优化 BSET/BSETI
+- 835465: cmd/compile: add riscv64 math rounding intrinsics | https://go-review.googlesource.com/c/go/+/835465 开启 SSA 优化浮点取整指令
+- 835905: cmd/compile: use runtime Zbb dispatch for riscv64 TrailingZeros | https://go-review.googlesource.com/c/go/+/835905 runtime 针对 Zbb 开启短路径
 
 ### QEMU
 
