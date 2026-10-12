@@ -22,9 +22,15 @@
 
 ### 开发板支持矩阵
 
+- 新增 ESP32-C3 的 RT-Thread 5.3.1 中英文测试报告。[PR #406](https://github.com/ruyisdk/support-matrix/pull/406)
+- 更新 Milk-V Duo S 的 xv6 中英文测试报告。[PR #407](https://github.com/ruyisdk/support-matrix/pull/407)
+- 新增 CH32V003 的 RT-Thread 5.3.1 中英文测试报告。[PR #408](https://github.com/ruyisdk/support-matrix/pull/408)
+- 新增 ESP32-C6 的 RT-Thread 5.3.1 中英文测试报告。[PR #409](https://github.com/ruyisdk/support-matrix/pull/409)
 
 ### 开发板示例仓库
 
+- 补充 SpacemiT K3 CoM260 Kit 的 ROS 2 第 3 至 8 章课程讲义和实验手册。[PR #48](https://github.com/ruyisdk/board-docs/pull/48)、[课程目录](https://github.com/DuoQilai/ROS2_RISCV/blob/fe977a732838de83065129ce63309ca2bb000325/course_support/k3_com260_kit/catalog.yml)
+- 开发板文档前端支持从课程仓库同步 ROS 2 目录、正文和媒体资源，并按课程目录自动生成章节页面。[PR #12](https://github.com/DuoQilai/board-docs-frontend/pull/12)
 
 ### 官网&文档
 
