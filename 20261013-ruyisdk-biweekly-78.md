@@ -2,10 +2,20 @@
 
 ## 卷首语
 
->
+各位 RISC-V 开发者与 RuyiSDK 社区伙伴，大家好！
+
+[RISC-V 中国峰会2026](https://www.google.com.hk/goto?url=CAESVwHrOzAVFUrh4BdLwfalY9r75HMW7cmVAVjxVawf22NrdkW4bgNNquIe2S-ENEtYHvqt7cJKr4o6TYZXDBUzwRmDOqhcZw3jeH9qAq4VRPNbVcioKdisqw) 即将于 2026.10.18-20 日在深圳会展中心召开，RuyiSDK 将带来主题演讲、海报展示以及 D15 展位的多种应用方案演示（详见[汇总信息](https://ruyisdk.cn/t/topic/2889)），欢迎开发者朋友到现场与我们面对面交流。[会议议程](https://riscv-summit-china.org/agenda/)奉上，RISC-V 年度盛宴欢迎大家关注~~~
+
+近期，RuyiSDK 包管理器 0.53.0 持续服务社区，0.54.0 预计 10 月底正式发布，围绕 ABI 兼容性检测、官方软件包 macOS 打包以及 SpacemiT K1/K3 工具链适配的开发也在稳步推进；RuyiSDK IDE 完成了一轮体验打磨——虚拟环境向导重构、构建失败一键查看示例、错误详情透出、IEC 单位统一显示等多项易用性改进合入。
+
+社区与内容建设方面，软件源修复了 SiFive Unmatched Ubuntu 服务器镜像的下载地址，感谢 @weilinfox 的贡献，也欢迎更多贡献者参与。开发板支持矩阵新增 ESP32-C3、ESP32-C6、CH32V003 的 RT-Thread 5.3.1 测试报告并更新 Milk-V Duo S 的 xv6 报告；开发板示例仓库补齐了 SpacemiT K3 CoM260 Kit 的 ROS 2 课程讲义，前端也实现了课程目录自动同步与章节页面生成。
+
+基础组件侧，编译器与运行时团队继续高频输出：GLIBC 与 newlib 各自补齐了一批向量数学函数，GCC 在 ZTT 后端、Zvzip 0.3 与 Packed-SIMD 扩展上取得实质进展，LLVM 本期十余个 RISC-V P 扩展及通用 RISC-V 补丁合入主线，V8 团队首次在真实硬件上开展 RVV Wasm SIMD 测试并合入 13 个补丁，OpenJDK 完成了 JEP 483 / JEP 515 AOT 特性在 RISC-V 平台的移植并合入主线，Go 也在 riscv64 原子操作与 clobberdead 调试模式上提交了多项主线 CL。
+
+欢迎阅读正文，了解更详尽的更新内容，并期待您与我们一同参与社区共建。
+获取更多资讯、下载最新工具或参与技术讨论，欢迎通过文章最下方的渠道找到我们。
 
 ## 基础开发环境
-
 
 ### 包管理器
 
@@ -32,10 +42,7 @@ RuyiSDK 团队仍在常态化维护 RuyiSDK 软件源。如您已有 RuyiSDK 包
 * 修复 curl 下载大小单位解析错误。
 * 修复搜索内容被强制转为小写的问题。
 
-### 版本测试及遗留问题
-
 ## 社区与内容建设
-
 
 ### packages-index 资源更新
 
@@ -49,8 +56,6 @@ RuyiSDK 团队仍在常态化维护 RuyiSDK 软件源。如您已有 RuyiSDK 包
 您也可以亲自参与
 RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查看、修改我们的[部分打包脚本](https://github.com/ruyisdk/ruyici)与[软件源仓库](https://github.com/ruyisdk/packages-index)。今后，按照本年度的开发计划，我们也将支持有权的第三方贡献者通过程序化的方式上传软件包、系统镜像等分发文件，以便利打包工作。
 
-[weilinfox]: https://github.com/weilinfox
-
 ### 开发板支持矩阵
 
 - 新增 ESP32-C3 的 RT-Thread 5.3.1 中英文测试报告。[PR #406](https://github.com/ruyisdk/support-matrix/pull/406)
@@ -63,11 +68,7 @@ RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查�
 - 补充 SpacemiT K3 CoM260 Kit 的 ROS 2 第 3 至 8 章课程讲义和实验手册。[PR #48](https://github.com/ruyisdk/board-docs/pull/48)、[课程目录](https://github.com/DuoQilai/ROS2_RISCV/blob/fe977a732838de83065129ce63309ca2bb000325/course_support/k3_com260_kit/catalog.yml)
 - 开发板文档前端支持从课程仓库同步 ROS 2 目录、正文和媒体资源，并按课程目录自动生成章节页面。[PR #12](https://github.com/DuoQilai/board-docs-frontend/pull/12)
 
-### 官网&文档
-
-
 ## 基础组件
-
 
 ### 基础C库
 
@@ -77,6 +78,7 @@ RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查�
   - 移植了 hypot, log10, log1p, sincospi, sinpi, tanpi 至现有的 newlib 向量数学框架。
 
 ### GCC
+
 - 完善了 ZTT 的 GNU 工具链后端，启动了 GEMM / GEMV 算子验证方案设计与优化，编译时间降低约 5.05%—6.97%，已经开始改善 GCC 后端的编译成本
   - https://github.com/ruyisdk/riscv-gcc/tree/ztt-dev
   - https://github.com/ruyisdk/AME-operator
@@ -133,9 +135,11 @@ RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查�
   在跨基本块值的扩展偏好分析中考虑 `samesign`，避免无符号同号比较取消既有的符号扩展偏好，减少部分 RISC-V `i8`/`i16` 冗余零扩展。正在 review
 
 ### V8
+
 本期我们开始在实际硬件平台上开展基于Node.js的RVV的Wasm SIMD功能/性能测试，并在一开始就发现旧版内核不提供hwprobe，导致V8 runtime无法正确获取运行时指令集特征的问题。这类问题是在仅基于V8的开发和测试中无法发现的，接下来适配会进一步推进。
 
 本期提交并合入的patch：
+
 1. **[riscv] Fix CompareTaggedAndBranch with relocatable immediates**
    [RISC-V] 修复带可重定位立即数的 CompareTaggedAndBranch [CL8436921](https://chromium-review.googlesource.com/c/8436921)
 2. **[riscv][maglev] Zero-extend string index before address computation**
@@ -164,12 +168,14 @@ RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查�
     [RISC-V] 实现 FP16 RVV 融合乘加并正确处理舍入 [CL8544731](https://chromium-review.googlesource.com/c/8544731)
 
 本期审阅并合入的patch：
+
 1. **[riscv] Fall back to /proc/cpuinfo when riscv_hwprobe is unavailable**
    [RISC-V] riscv_hwprobe 不可用时回退读取 /proc/cpuinfo [CL8473041](https://chromium-review.googlesource.com/c/8473041)
 
 ### OpenJDK
 
 本期审阅并合入的JDK主线PR:
+
 - https://github.com/openjdk/jdk/pull/32391 (8389939: RISC-V: OrderAccess can be simplified by UseZtso)  --  为RISC-V优化强内存序场景JVM C++内存访问
 - https://github.com/openjdk/jdk/pull/32392 (8390452: RISC-V: gc/shenandoah/TestSieveObjects.java fails with "assert(UseZba) failed: must be")  -- 为RISC-V修复ShenandoahGC场景断言错误
 - https://github.com/openjdk/jdk/pull/32096 (8389378: RISC-V: Eliminate redundant sext.w by fusing ConvI2L with int producers)  -- 为RISC-V优化32位整数运算符号扩展优化
@@ -177,10 +183,10 @@ RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查�
 - https://github.com/openjdk/jdk/pull/32416 (8390521: RISC-V: Clean up vector register dispatch in MachSpillCopyNode::implementation)  --  为RISC-V重构矢量寄存器SPILL相关代码实现
 
 本期审阅并合入的JDK LTS主线PR:
+
 - https://github.com/openjdk/jdk25u-dev/pull/734 (8390441: RISC-V: Fix C2 stack-to-stack spill copies with large offsets)  --  为RISC-V修复寄存器SPILL大偏移量支持问题
 - https://github.com/openjdk/jdk21u-dev/pull/3018 (8390441: RISC-V: Fix C2 stack-to-stack spill copies with large offsets)
 - https://github.com/openjdk/jdk17u-dev/pull/4623 (8390441: RISC-V: Fix C2 stack-to-stack spill copies with large offsets)
-
 - https://github.com/openjdk/jdk25u-dev/pull/748 (8390521: RISC-V: Clean up vector register dispatch in MachSpillCopyNode::implementation)  --  为RISC-V重构矢量寄存器SPILL相关代码实现
 - https://github.com/openjdk/jdk21u-dev/pull/3040 (8390521: RISC-V: Clean up vector register dispatch in MachSpillCopyNode::implementation)
 - https://github.com/openjdk/jdk17u-dev/pull/4643 (8390521: RISC-V: Clean up vector register dispatch in MachSpillCopyNode::implementation)
@@ -188,6 +194,7 @@ RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查�
 Java重要新特性JEP 544: AOT静态编译（Ahead-of-Time Code Compilation）RISC-V移植工作进展：
 
 与社区生态伙伴沟通协作，已将JEP 483 and JEP 515特性移植到RISC-V平台并合入JDK主线：
+
 - https://github.com/openjdk/jdk/pull/32311 (8390102: RISC-V: Support AOT Code Cache)  -- JEP 483 and JEP 515特性在RISC-V上的移植
 - https://github.com/openjdk/jdk/pull/32592 (8391431: RISC-V: AOTCodeTest.java fails after JDK-8388288 with fastdebug)  -- 为RISC-V相关AOT失败用例修复
 - https://github.com/openjdk/jdk/pull/32438 (8390614: RISC-V: Support VerifyOops for AOT caching stub and code)  -- 为RISC-V添加AOT VerifyOops支持
@@ -195,12 +202,14 @@ Java重要新特性JEP 544: AOT静态编译（Ahead-of-Time Code Compilation）R
 - https://github.com/openjdk/jdk/pull/32491 (8390914: [leyden] add missing relocations for addresses recorded in AOT code cache)  -- 为RISC-V添加缺失的AOT重定位信息
 
 相关JEP提案：
+
 - https://openjdk.org/jeps/483 (JEP 483: Ahead-of-Time Class Loading & Linking)
 - https://openjdk.org/jeps/515 (JEP 515: Ahead-of-Time Method Profiling)
 
 ### Go
 
 本期提出的主线CL:
+
 - 837345: internal/runtime/atomic: fix Xaddint64 return value on riscv64 | https://go-review.googlesource.com/c/go/+/837345 修复 atmoic xadd64 位 错误使用 movw
 - 844385: cmd/compile: implement clobberdead mode on riscv64 | https://go-review.googlesource.com/c/go/+/844385 添加 clobber dead 模式
 - 844366: runtime: crash the GC at clobberdead pointer on riscv64 | https://go-review.googlesource.com/c/go/+/844366 使能runtime clobber dead 模式
@@ -212,9 +221,9 @@ Java重要新特性JEP 544: AOT静态编译（Ahead-of-Time Code Compilation）R
 - 847794: riscv64: fix c.j offset decoding | https://go-review.googlesource.com/c/arch/+/847794 修复 cj 指令编码错误
 - 807980: cmd/compile: inline constant sized memclrNoHeapPointers calls on riscv64 | https://go-review.googlesource.com/c/go/+/807980 内联清零内存算法
 - 801683: runtime: save RISC-V vector registers state during async preemption | https://go-review.googlesource.com/c/go/+/801683 异步抢占时保存 v 寄存器
-### QEMU
 
 ## 社区动态
+
 **[RuyiSDK邀您一同参与第六届RISC‑V中国峰会，RuyiSDK将带来演讲与海报展示](https://ruyisdk.cn/t/topic/2889)**：RuyiSDK将亮相第六届RISC‑V中国峰会，现场将带来主题演讲以及海报展示，并在开源社区**D15**展位展示多种RuyiSDK应用方案，欢迎各位开发者到场交流。
 
 ---
@@ -229,3 +238,5 @@ Java重要新特性JEP 544: AOT静态编译（Ahead-of-Time Code Compilation）R
 - RuyiSDK 技术社区（交流、投稿、问题反馈）：[ruyisdk.cn](https://ruyisdk.cn/)
 - 官方工具下载页面：[ruyisdk.org/downloads](https://ruyisdk.org/downloads)
 - RuyiSDK 开源组织仓库：[github.com/ruyisdk/](https://github.com/ruyisdk/)
+
+[weilinfox]: https://github.com/weilinfox
