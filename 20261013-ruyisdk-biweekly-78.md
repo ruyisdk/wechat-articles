@@ -181,6 +181,18 @@ Java重要新特性JEP 544: AOT静态编译（Ahead-of-Time Code Compilation）R
 
 ### Go
 
+本期提出的主线CL:
+- 837345: internal/runtime/atomic: fix Xaddint64 return value on riscv64 | https://go-review.googlesource.com/c/go/+/837345 修复 atmoic xadd64 位 错误使用 movw
+- 844385: cmd/compile: implement clobberdead mode on riscv64 | https://go-review.googlesource.com/c/go/+/844385 添加 clobber dead 模式
+- 844366: runtime: crash the GC at clobberdead pointer on riscv64 | https://go-review.googlesource.com/c/go/+/844366 使能runtime clobber dead 模式
+
+本期审阅的主线CL:
+
+- 825684: cmd/compile: use BINV/BINVI for single bit flip on riscv64 | https://go-review.googlesource.com/c/go/+/825684 zbb 反转位支持
+- 848545: runtime: improve CALLFN macro for riscv64 | https://go-review.googlesource.com/c/go/+/848545 使用 MOV 提升函数调用性能
+- 847794: riscv64: fix c.j offset decoding | https://go-review.googlesource.com/c/arch/+/847794 修复 cj 指令编码错误
+- 807980: cmd/compile: inline constant sized memclrNoHeapPointers calls on riscv64 | https://go-review.googlesource.com/c/go/+/807980 内联清零内存算法
+- 801683: runtime: save RISC-V vector registers state during async preemption | https://go-review.googlesource.com/c/go/+/801683 异步抢占时保存 v 寄存器
 ### QEMU
 
 ## 社区动态
