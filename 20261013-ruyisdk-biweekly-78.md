@@ -49,6 +49,48 @@
 
 ### LLVM
 
+本期提交 PR 如下
+
+- [RISCV][P-ext] Add packed saturation intrinsics
+  https://github.com/llvm/llvm-project/pull/224432
+  为 RISC-V P 扩展新增 packed saturation intrinsics 支持。上期正在 review，本期已合并
+- [RISCV][P-ext] Support Packed Multiply High Parts
+  https://github.com/llvm/llvm-project/pull/225015
+  为 RISC-V P 扩展新增 Packed Multiply High Parts intrinsic 支持。上期正在 review，本期已合并
+- [RISCV][P-ext] Support the missing packed pair
+  https://github.com/llvm/llvm-project/pull/226992
+  补全 RISC-V P 扩展 Packed Pair Intrinsics 中的 `v2i16` 支持。已合并
+- [RISCV][P-ext] Support Packed Widening Unzip
+  https://github.com/llvm/llvm-project/pull/227211
+  为 RISC-V P 扩展新增 Packed Widening Unzip Intrinsics 支持。已合并
+- [RISCV] Support frame pointers in SiFive CLIC preemptible handlers
+  https://github.com/llvm/llvm-project/pull/221318
+  支持 SiFive CLIC 可抢占中断处理函数使用帧指针。已合并
+- [RISCV] Reject reserved (qc.)cm.mvsa01/(qc.)cm.mva01s encodings in the disassembler
+  https://github.com/llvm/llvm-project/pull/229091
+  在反汇编器中拒绝 `(qc.)cm.mvsa01` 和 `(qc.)cm.mva01s` 的保留编码，补充寄存器组合及 RVE 寄存器约束检查。已合并
+- [RISCV] Fix FP properties for Zvbdota instructions
+  https://github.com/llvm/llvm-project/pull/228737
+  为 Zvbdota 浮点指令补充可能触发浮点异常的属性，并为使用动态舍入模式的 `vfbdota.vv` 添加隐式 FRM 依赖。已合并
+- [RISCV][P-ext] Support Packed Slide 1 up/down
+  https://github.com/llvm/llvm-project/pull/228049
+  为 RISC-V P 扩展新增 Packed Slide 1 up/down Intrinsics 及相应代码生成支持。已合并
+- [Clang][RISCV] Add packed widening shift intrinsics
+  https://github.com/llvm/llvm-project/pull/224790
+  为 Clang RISC-V 新增 packed widening shift intrinsics 支持。已合并
+- [mlir][arith] Handle unsigned moduli in int-range optimizations
+  https://github.com/llvm/llvm-project/pull/224933
+  完善 MLIR arith 整数范围优化对无符号模数的处理，避免将最高位为 1 的无符号模数误判为负值。已合并
+- [Clang][RISCV] Add packed narrowing shift intrinsics
+  https://github.com/llvm/llvm-project/pull/228726
+  为 RISC-V P 扩展新增 packed narrowing shift intrinsics，支持逻辑右移、算术右移及舍入变体。已合并
+- [Clang][RISCV][P-ext] Add packed Q-format widening accumulate intrinsics
+  https://github.com/llvm/llvm-project/pull/228009
+  新增 P 扩展 Q-format 扩宽乘累加 intrinsics，并实现 RV32/RV64 对应的指令选择与 lowering。已合并
+- [SelectionDAG][RISCV] Account for samesign in preferred export extensions
+  https://github.com/llvm/llvm-project/pull/226013
+  在跨基本块值的扩展偏好分析中考虑 `samesign`，避免无符号同号比较取消既有的符号扩展偏好，减少部分 RISC-V `i8`/`i16` 冗余零扩展。正在 review
+
 ### V8
 本期我们开始在实际硬件平台上开展基于Node.js的RVV的Wasm SIMD功能/性能测试，并在一开始就发现旧版内核不提供hwprobe，导致V8 runtime无法正确获取运行时指令集特征的问题。这类问题是在仅基于V8的开发和测试中无法发现的，接下来适配会进一步推进。
 
