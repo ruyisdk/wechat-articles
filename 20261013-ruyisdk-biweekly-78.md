@@ -128,6 +128,35 @@
 
 ### OpenJDK
 
+本期审阅并合入的JDK主线PR:
+- https://github.com/openjdk/jdk/pull/32391 (8389939: RISC-V: OrderAccess can be simplified by UseZtso)  --  为RISC-V优化强内存序场景JVM C++内存访问
+- https://github.com/openjdk/jdk/pull/32392 (8390452: RISC-V: gc/shenandoah/TestSieveObjects.java fails with "assert(UseZba) failed: must be")  -- 为RISC-V修复ShenandoahGC场景断言错误
+- https://github.com/openjdk/jdk/pull/32096 (8389378: RISC-V: Eliminate redundant sext.w by fusing ConvI2L with int producers)  -- 为RISC-V优化32位整数运算符号扩展优化
+- https://github.com/openjdk/jdk/pull/32417 (8390522: RISC-V: Avoid clobbering ra in the nmethod entry barrier)  -- 为RISC-V改进JIT方法入口barrier寄存器使用，避免修改RA特殊寄存器
+- https://github.com/openjdk/jdk/pull/32416 (8390521: RISC-V: Clean up vector register dispatch in MachSpillCopyNode::implementation)  --  为RISC-V重构矢量寄存器SPILL相关代码实现
+
+本期审阅并合入的JDK LTS主线PR:
+- https://github.com/openjdk/jdk25u-dev/pull/734 (8390441: RISC-V: Fix C2 stack-to-stack spill copies with large offsets)  --  为RISC-V修复寄存器SPILL大偏移量支持问题
+- https://github.com/openjdk/jdk21u-dev/pull/3018 (8390441: RISC-V: Fix C2 stack-to-stack spill copies with large offsets)
+- https://github.com/openjdk/jdk17u-dev/pull/4623 (8390441: RISC-V: Fix C2 stack-to-stack spill copies with large offsets)
+
+- https://github.com/openjdk/jdk25u-dev/pull/748 (8390521: RISC-V: Clean up vector register dispatch in MachSpillCopyNode::implementation)  --  为RISC-V重构矢量寄存器SPILL相关代码实现
+- https://github.com/openjdk/jdk21u-dev/pull/3040 (8390521: RISC-V: Clean up vector register dispatch in MachSpillCopyNode::implementation)
+- https://github.com/openjdk/jdk17u-dev/pull/4643 (8390521: RISC-V: Clean up vector register dispatch in MachSpillCopyNode::implementation)
+
+Java重要新特性JEP 544: AOT静态编译（Ahead-of-Time Code Compilation）RISC-V移植工作进展：
+
+与社区生态伙伴沟通协作，已将JEP 483 and JEP 515特性移植到RISC-V平台并合入JDK主线：
+- https://github.com/openjdk/jdk/pull/32311 (8390102: RISC-V: Support AOT Code Cache)  -- JEP 483 and JEP 515特性在RISC-V上的移植
+- https://github.com/openjdk/jdk/pull/32592 (8391431: RISC-V: AOTCodeTest.java fails after JDK-8388288 with fastdebug)  -- 为RISC-V相关AOT失败用例修复
+- https://github.com/openjdk/jdk/pull/32438 (8390614: RISC-V: Support VerifyOops for AOT caching stub and code)  -- 为RISC-V添加AOT VerifyOops支持
+- https://github.com/openjdk/jdk/pull/33081 (8393051: RISC-V: Check SATP mode when loading the AOT code cache)  -- 为RISC-V添加AOT地址模式比对
+- https://github.com/openjdk/jdk/pull/32491 (8390914: [leyden] add missing relocations for addresses recorded in AOT code cache)  -- 为RISC-V添加缺失的AOT重定位信息
+
+相关JEP提案：
+- https://openjdk.org/jeps/483 (JEP 483: Ahead-of-Time Class Loading & Linking)
+- https://openjdk.org/jeps/515 (JEP 515: Ahead-of-Time Method Profiling)
+
 ### Go
 
 ### QEMU
