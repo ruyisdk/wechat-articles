@@ -71,6 +71,48 @@ RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查�
 
 ### LLVM
 
+本期提交 PR 如下
+
+- [RISCV][P-ext] Add packed saturation intrinsics
+  https://github.com/llvm/llvm-project/pull/224432
+  为 RISC-V P 扩展新增 packed saturation intrinsics 支持。上期正在 review，本期已合并
+- [RISCV][P-ext] Support Packed Multiply High Parts
+  https://github.com/llvm/llvm-project/pull/225015
+  为 RISC-V P 扩展新增 Packed Multiply High Parts intrinsic 支持。上期正在 review，本期已合并
+- [RISCV][P-ext] Support the missing packed pair
+  https://github.com/llvm/llvm-project/pull/226992
+  补全 RISC-V P 扩展 Packed Pair Intrinsics 中的 `v2i16` 支持。已合并
+- [RISCV][P-ext] Support Packed Widening Unzip
+  https://github.com/llvm/llvm-project/pull/227211
+  为 RISC-V P 扩展新增 Packed Widening Unzip Intrinsics 支持。已合并
+- [RISCV] Support frame pointers in SiFive CLIC preemptible handlers
+  https://github.com/llvm/llvm-project/pull/221318
+  支持 SiFive CLIC 可抢占中断处理函数使用帧指针。已合并
+- [RISCV] Reject reserved (qc.)cm.mvsa01/(qc.)cm.mva01s encodings in the disassembler
+  https://github.com/llvm/llvm-project/pull/229091
+  在反汇编器中拒绝 `(qc.)cm.mvsa01` 和 `(qc.)cm.mva01s` 的保留编码，补充寄存器组合及 RVE 寄存器约束检查。已合并
+- [RISCV] Fix FP properties for Zvbdota instructions
+  https://github.com/llvm/llvm-project/pull/228737
+  为 Zvbdota 浮点指令补充可能触发浮点异常的属性，并为使用动态舍入模式的 `vfbdota.vv` 添加隐式 FRM 依赖。已合并
+- [RISCV][P-ext] Support Packed Slide 1 up/down
+  https://github.com/llvm/llvm-project/pull/228049
+  为 RISC-V P 扩展新增 Packed Slide 1 up/down Intrinsics 及相应代码生成支持。已合并
+- [Clang][RISCV] Add packed widening shift intrinsics
+  https://github.com/llvm/llvm-project/pull/224790
+  为 Clang RISC-V 新增 packed widening shift intrinsics 支持。已合并
+- [mlir][arith] Handle unsigned moduli in int-range optimizations
+  https://github.com/llvm/llvm-project/pull/224933
+  完善 MLIR arith 整数范围优化对无符号模数的处理，避免将最高位为 1 的无符号模数误判为负值。已合并
+- [Clang][RISCV] Add packed narrowing shift intrinsics
+  https://github.com/llvm/llvm-project/pull/228726
+  为 RISC-V P 扩展新增 packed narrowing shift intrinsics，支持逻辑右移、算术右移及舍入变体。已合并
+- [Clang][RISCV][P-ext] Add packed Q-format widening accumulate intrinsics
+  https://github.com/llvm/llvm-project/pull/228009
+  新增 P 扩展 Q-format 扩宽乘累加 intrinsics，并实现 RV32/RV64 对应的指令选择与 lowering。已合并
+- [SelectionDAG][RISCV] Account for samesign in preferred export extensions
+  https://github.com/llvm/llvm-project/pull/226013
+  在跨基本块值的扩展偏好分析中考虑 `samesign`，避免无符号同号比较取消既有的符号扩展偏好，减少部分 RISC-V `i8`/`i16` 冗余零扩展。正在 review
+
 ### V8
 本期我们开始在实际硬件平台上开展基于Node.js的RVV的Wasm SIMD功能/性能测试，并在一开始就发现旧版内核不提供hwprobe，导致V8 runtime无法正确获取运行时指令集特征的问题。这类问题是在仅基于V8的开发和测试中无法发现的，接下来适配会进一步推进。
 
@@ -107,6 +149,35 @@ RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查�
    [RISC-V] riscv_hwprobe 不可用时回退读取 /proc/cpuinfo [CL8473041](https://chromium-review.googlesource.com/c/8473041)
 
 ### OpenJDK
+
+本期审阅并合入的JDK主线PR:
+- https://github.com/openjdk/jdk/pull/32391 (8389939: RISC-V: OrderAccess can be simplified by UseZtso)  --  为RISC-V优化强内存序场景JVM C++内存访问
+- https://github.com/openjdk/jdk/pull/32392 (8390452: RISC-V: gc/shenandoah/TestSieveObjects.java fails with "assert(UseZba) failed: must be")  -- 为RISC-V修复ShenandoahGC场景断言错误
+- https://github.com/openjdk/jdk/pull/32096 (8389378: RISC-V: Eliminate redundant sext.w by fusing ConvI2L with int producers)  -- 为RISC-V优化32位整数运算符号扩展优化
+- https://github.com/openjdk/jdk/pull/32417 (8390522: RISC-V: Avoid clobbering ra in the nmethod entry barrier)  -- 为RISC-V改进JIT方法入口barrier寄存器使用，避免修改RA特殊寄存器
+- https://github.com/openjdk/jdk/pull/32416 (8390521: RISC-V: Clean up vector register dispatch in MachSpillCopyNode::implementation)  --  为RISC-V重构矢量寄存器SPILL相关代码实现
+
+本期审阅并合入的JDK LTS主线PR:
+- https://github.com/openjdk/jdk25u-dev/pull/734 (8390441: RISC-V: Fix C2 stack-to-stack spill copies with large offsets)  --  为RISC-V修复寄存器SPILL大偏移量支持问题
+- https://github.com/openjdk/jdk21u-dev/pull/3018 (8390441: RISC-V: Fix C2 stack-to-stack spill copies with large offsets)
+- https://github.com/openjdk/jdk17u-dev/pull/4623 (8390441: RISC-V: Fix C2 stack-to-stack spill copies with large offsets)
+
+- https://github.com/openjdk/jdk25u-dev/pull/748 (8390521: RISC-V: Clean up vector register dispatch in MachSpillCopyNode::implementation)  --  为RISC-V重构矢量寄存器SPILL相关代码实现
+- https://github.com/openjdk/jdk21u-dev/pull/3040 (8390521: RISC-V: Clean up vector register dispatch in MachSpillCopyNode::implementation)
+- https://github.com/openjdk/jdk17u-dev/pull/4643 (8390521: RISC-V: Clean up vector register dispatch in MachSpillCopyNode::implementation)
+
+Java重要新特性JEP 544: AOT静态编译（Ahead-of-Time Code Compilation）RISC-V移植工作进展：
+
+与社区生态伙伴沟通协作，已将JEP 483 and JEP 515特性移植到RISC-V平台并合入JDK主线：
+- https://github.com/openjdk/jdk/pull/32311 (8390102: RISC-V: Support AOT Code Cache)  -- JEP 483 and JEP 515特性在RISC-V上的移植
+- https://github.com/openjdk/jdk/pull/32592 (8391431: RISC-V: AOTCodeTest.java fails after JDK-8388288 with fastdebug)  -- 为RISC-V相关AOT失败用例修复
+- https://github.com/openjdk/jdk/pull/32438 (8390614: RISC-V: Support VerifyOops for AOT caching stub and code)  -- 为RISC-V添加AOT VerifyOops支持
+- https://github.com/openjdk/jdk/pull/33081 (8393051: RISC-V: Check SATP mode when loading the AOT code cache)  -- 为RISC-V添加AOT地址模式比对
+- https://github.com/openjdk/jdk/pull/32491 (8390914: [leyden] add missing relocations for addresses recorded in AOT code cache)  -- 为RISC-V添加缺失的AOT重定位信息
+
+相关JEP提案：
+- https://openjdk.org/jeps/483 (JEP 483: Ahead-of-Time Class Loading & Linking)
+- https://openjdk.org/jeps/515 (JEP 515: Ahead-of-Time Method Profiling)
 
 ### Go
 
