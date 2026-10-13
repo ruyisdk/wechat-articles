@@ -46,6 +46,14 @@
   - 移植了 hypot, log10, log1p, sincospi, sinpi, tanpi 至现有的 newlib 向量数学框架。
 
 ### GCC
+- 完善了 ZTT 的 GNU 工具链后端，启动了 GEMM / GEMV 算子验证方案设计与优化，编译时间降低约 5.05%—6.97%，已经开始改善 GCC 后端的编译成本。
+  - https://github.com/ruyisdk/riscv-gcc/tree/ztt-dev
+  - https://github.com/ruyisdk/AME-operator
+- 修复了 RISE-CI 运维中发现的一些问题
+  - https://github.com/riseproject-dev/riscv-gnu-toolchain-ci/pull/2
+  - https://github.com/riseproject-dev/gcc-postcommit-ci/pull/89
+- 持续推进 Packed-SIMD 扩展更新，已同步至0.6文档版本
+  - https://github.com/riscv/riscv-p-spec/releases/tag/v0.6
 
 ### LLVM
 
