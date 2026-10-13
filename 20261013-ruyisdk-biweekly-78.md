@@ -23,6 +23,9 @@ RuyiSDK 团队仍在常态化维护 RuyiSDK 软件源。如您已有 RuyiSDK 包
 
 ### RuyiSDK IDE
 
+* 重构虚拟环境向导以避免其在丢失焦点时消失。
+* 测试由 CI 构建的 RISC-V VSCodium IDE。
+
 ### 版本测试及遗留问题
 
 ## 社区与内容建设
