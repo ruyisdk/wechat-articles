@@ -194,7 +194,7 @@ Java重要新特性JEP 544: AOT静态编译（Ahead-of-Time Code Compilation）R
 ### QEMU
 
 ## 社区动态
-
+**[RuyiSDK邀您一同参与第六届RISC‑V中国峰会，RuyiSDK将带来演讲与海报展示](https://ruyisdk.cn/t/topic/2889)**：RuyiSDK将亮相第六届RISC‑V中国峰会，现场将带来主题演讲以及海报展示，并在开源社区**D15**展位展示多种RuyiSDK应用方案，欢迎各位开发者到场交流。
 
 ---
 
