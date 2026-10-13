@@ -9,6 +9,17 @@
 
 ### 包管理器
 
+由于 RuyiSDK 发版周期调整，RuyiSDK 包管理器的 0.54.0 版本预期将在 10 月底正式发布。欢迎下载 RuyiSDK 包管理器当前最新版本 0.53.0 试用。
+
+RuyiSDK 团队仍在常态化维护 RuyiSDK 软件源。如您已有 RuyiSDK 包管理器了，您可通过 `ruyi update` 获取近两周的更新：我们保证这些内容兼容 RuyiSDK 包管理器的近 3 个正式版本。
+
+目前有以下内容正在开发中：
+
+* 检测软件包与当前系统的 ABI 兼容性的工作。
+* 更多 RuyiSDK 官方维护软件包的 macOS 打包工作。
+* 针对 SpacemiT K1/K3 的工具链适配。
+
+欢迎试用或来上游围观；您的需求是我们迭代开发的目标和动力。
 
 ### RuyiSDK IDE
 
@@ -19,6 +30,17 @@
 
 ### packages-index 资源更新
 
+本次 RuyiSDK 软件源的更新主要包含了以下内容：
+
+* 更新软件包：
+  * `board-image/ubuntu-server-riscv64-sifive-unmatched`: 修复下载地址。
+
+感谢 [weilinfox][weilinfox] 的贡献！
+
+您也可以亲自参与
+RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查看、修改我们的[部分打包脚本](https://github.com/ruyisdk/ruyici)与[软件源仓库](https://github.com/ruyisdk/packages-index)。今后，按照本年度的开发计划，我们也将支持有权的第三方贡献者通过程序化的方式上传软件包、系统镜像等分发文件，以便利打包工作。
+
+[weilinfox]: https://github.com/weilinfox
 
 ### 开发板支持矩阵
 
