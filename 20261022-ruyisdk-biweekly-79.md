@@ -34,6 +34,11 @@
 
 ### 基础C库
 
+- GLIBC:
+  - 移植了 sinh, sinhf, sinpi 至现有的 glibc libmvec 框架。
+- newlib:
+  - 移植了 acosf, logf, asinf, asinhf, asinpif, atanf 至现有的 newlib 向量数学框架。
+
 ### GCC
 
 ### LLVM
