@@ -22,9 +22,11 @@
 
 ### 开发板支持矩阵
 
+- 新增 RDC2022-D1s 开发板资料及 RT-Thread Smart 5.0.0 出厂固件中英文测试报告。[PR #410](https://github.com/ruyisdk/support-matrix/pull/410)
 
 ### 开发板示例仓库
 
+- 补充 SpacemiT K3 CoM260 Kit 的 ROS 2 第 9、10 章课程讲义和实验手册，涵盖 Gazebo 仿真与 SLAM 基础，并限定前端课程展示范围。[课程更新](https://github.com/DuoQilai/ROS2_RISCV/commit/35a4109808b24f60b26bcd901be1c2448769814e)、[前端更新](https://github.com/DuoQilai/board-docs-frontend/compare/2d2689dddc5e2affe9c5c5c0f702a1c9fde938e1...5fd4bcb986efff805df30da8122c90f4e1cba526)
 
 ### 官网&文档
 
