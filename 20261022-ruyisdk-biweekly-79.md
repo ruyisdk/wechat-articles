@@ -45,6 +45,42 @@
 
 ### LLVM
 
+本期提交 PR 如下
+
+- [RISCV] Mark RVA23.1 and RVB23.1 profiles as non-experimental
+  https://github.com/llvm/llvm-project/pull/234064
+  将已批准的 RVA23.1 和 RVB23.1 profile 标记为非实验性，并同步更新文档和测试。已合并
+- [RISCV][GlobalISel] Use Zfhmin for G_FPTRUNC to f16
+  https://github.com/llvm/llvm-project/pull/231370
+  在 GlobalISel 中使用 Zfhmin 支持 f32/f64 到 f16 的浮点截断，缺少所需扩展时回退到库调用，并补全半精度 `G_FREM` 的合法化。已合并
+- [RISCV][GISel] Implement LLT variant of allowsMisalignedMemoryAccesses
+  https://github.com/llvm/llvm-project/pull/232183
+  实现 `allowsMisalignedMemoryAccesses` 的 LLT 重载，使 GlobalISel 在启用非对齐标量访存时可使用更宽的访存指令展开 `memcpy`，避免逐字节复制。已合并
+- [RISCV][P-ext] Add scalar mulq(r) intrinsics
+  https://github.com/llvm/llvm-project/pull/232316
+  为 RISC-V P 扩展新增标量 Q-format 乘法及舍入变体 intrinsics，并实现 RV32/RV64 对应的指令选择。已合并
+- [RISCV][P-ext] Add scalar multiply high accumulate intrinsics
+  https://github.com/llvm/llvm-project/pull/232340
+  为 RISC-V P 扩展新增标量乘法高位累加 intrinsics，支持有符号、无符号、混合符号及舍入变体，并实现 RV32/RV64 对应的指令选择。已合并
+- [Clang][RISCV] Require 64bit for __builtin_riscv_rev16_64
+  https://github.com/llvm/llvm-project/pull/232362
+  修正 `__builtin_riscv_rev16_64` 的 RV64 特性约束，使 RV32 正确报告不支持该 builtin，避免后端类型合法化崩溃。已合并
+- [RISCV][P-ext] Add scalar sati/usati intrinsics
+  https://github.com/llvm/llvm-project/pull/233769
+  为 RISC-V P 扩展新增有符号和无符号标量饱和 intrinsics，支持 32 位及 RV64 专用的 64 位形式，并实现对应的指令选择。已合并
+- [RISCV][P-ext] Add missing packed pair
+  https://github.com/llvm/llvm-project/pull/232202
+  补全 RISC-V P 扩展 Packed Pair Intrinsics 中的 `v2i32` 支持。已合并
+- [RISCV][P-ext] Support Packed Multiplication with Widening Horizontal Addition intrinsics
+  https://github.com/llvm/llvm-project/pull/232612
+  为 RISC-V P 扩展新增打包乘法与扩宽横向加法 intrinsics 支持。已合并
+- [InstCombine][ValueTracking] Infer range for an addend from the sum range
+  https://github.com/llvm/llvm-project/pull/231357
+  根据和的比较结果及另一个加数的已知范围推导加数范围，消除冗余范围检查。正在 review
+- [RISCV][RuntimeLibcalls] Generate and select vector libcalls with TableGen and fix SLEEF selection on RISC-V
+  https://github.com/llvm/llvm-project/pull/231739
+  使用 TableGen 生成并选择 SLEEF、ArmPL 和 AMDLIBM 向量库调用，并修复 RISC-V 的 SLEEF 调用选择。正在 review
+
 ### V8
 
 ### OpenJDK
