@@ -42,6 +42,12 @@
   - 移植了 acosf, logf, asinf, asinhf, asinpif, atanf 至现有的 newlib 向量数学框架。
 
 ### GCC
+- Rebase了Zvdota/Zvbdota的GCC支持，修复了发现的问题
+  - https://patchwork.sourceware.org/project/gcc/patch/20261014093604.829234-2-jiawei@iscas.ac.cn/
+- 添加了Ztt扩展的Md支持
+  - https://github.com/ruyisdk/riscv-gcc/commit/368ab1b0b88984dbf9573d4eb7c324c20cd5c371
+- 更新了P扩展的支持至0.6版本
+  - https://github.com/ruyisdk/riscv-gcc/commit/883d7da2ca2f20d7ddc2b927e8d639a4eec65ecc
 
 ### LLVM
 
