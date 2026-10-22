@@ -101,6 +101,16 @@ RuyiSDK 团队仍在常态化维护 RuyiSDK 软件源。如您已有 RuyiSDK 包
 
 ### V8
 
+本期提交并合入的patch如下：
+1. **[riscv] Always sign-extend binary-search switch input on riscv64**
+   [RISC-V] riscv64 上对二分查找 switch 输入始终做符号扩展 [CL8582687](https://chromium-review.googlesource.com/c/8582687)
+2. **[riscv][sandbox] Tag entries in the TrustedPointerTable**
+   [RISC-V][Sandbox] 为可信指针表中的条目添加标记 [CL5373845](https://chromium-review.googlesource.com/c/5373845)
+3. **[riscv][liftoff] Track f32 and 32-bit f64 constants Port commit 8166bc3931b3291658874b809130e696cdd17fd0**
+   [RISC-V][Liftoff] 追踪 f32 和 32位 f64 常量，移植提交 8166bc39 [CL8581294](https://chromium-review.googlesource.com/c/8581294)
+4. **[riscv][interpreter] Check max_arguments in entry trampoline**
+   [RISC-V][解释器] 在入口跳板中增加最大参数数校验 [CL8581295](https://chromium-review.googlesource.com/c/8581295)
+   
 ### OpenJDK
 
 本期审阅并合入的JDK主线PR:
