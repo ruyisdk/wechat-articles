@@ -117,6 +117,14 @@ Java重要新特性JEP 544: AOT静态编译（Ahead-of-Time Code Compilation）R
 
 ### QEMU
 
+RuyiSDK QEMU仓库发布了P扩展V0.6版本的实现，完成了目前P扩展所有指令的模拟支持。目前P扩展分支基于上游v11.1.0开发。
+- https://github.com/ruyisdk/qemu/tree/p-dev
+
+同时，RuyiSDK QEMU仓库合并了来自达摩院的AME扩展V0.6版本的实现，已完成 ame-v0.6 主要功能开发、架构重构，支持 32/64 位用户模式与系统模式，覆盖矩阵计算、整数与浮点混合运算、数据搬运和类型转换，并支持多核共享后端、状态迁移及调试。目前AME扩展分支同样基于上游v11.1.0开发。
+- https://github.com/ruyisdk/qemu/tree/ame-0.6
+
+欢迎试用，并提出宝贵意见。
+
 ## 社区动态
 
 
