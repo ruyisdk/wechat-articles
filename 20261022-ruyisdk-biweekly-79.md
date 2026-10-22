@@ -126,7 +126,7 @@ RuyiSDK QEMU仓库发布了P扩展V0.6版本的实现，完成了目前P扩展�
 欢迎试用，并提出宝贵意见。
 
 ## 社区动态
-
+**[第六届 RISC‑V 中国峰会｜RuyiSDK 持续推进 RISC‑V 软硬件生态共建](https://ruyisdk.cn/t/topic/2893)**：RuyiSDK 在第六届 RISC‑V 中国峰会分享生态共建相关成果，推动RISC‑V软硬件生态建设。
 
 ---
 
