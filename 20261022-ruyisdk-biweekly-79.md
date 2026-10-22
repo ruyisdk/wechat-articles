@@ -115,6 +115,16 @@ Java重要新特性JEP 544: AOT静态编译（Ahead-of-Time Code Compilation）R
 
 ### Go
 
+本期提出的主线CL:
+- 849425: cmd/compile: remove MOVDnop on riscv64 | https://go-review.googlesource.com/c/go/+/849425 去除多余的 MOVDnop 空指令
+- 755840: crypto/internal/fips140/sha512: enable zvknhb for riscv64 | https://go-review.googlesource.com/c/go/+/755840 添加 sha2-512 支持【合入】
+- 752981: crypto/internal/fips140/sha256: enable zvknha for riscv64 | https://go-review.googlesource.com/c/go/+/752981 添加 sha2-256 支持【合入】
+
+本期审阅的主线CL:
+- 849005: cmd/compile: optimise bit tests with register shift values on riscv64 | https://go-review.googlesource.com/c/go/+/849005 优化寄存器位移指令
+- 732700: cmd/internal/obj/riscv: add assembly support of Zfa extension | https://go-review.googlesource.com/c/go/+/732700 添加 zfa 汇编支持
+- 806260: runtime: prefer the vDSO for riscv_hwprobe | https://go-review.googlesource.com/c/go/+/806260  优先使用 vDSO 执行 riscv_hwprobe
+
 ### QEMU
 
 RuyiSDK QEMU仓库发布了P扩展V0.6版本的实现，完成了目前P扩展所有指令的模拟支持。目前P扩展分支基于上游v11.1.0开发。
@@ -126,7 +136,11 @@ RuyiSDK QEMU仓库发布了P扩展V0.6版本的实现，完成了目前P扩展�
 欢迎试用，并提出宝贵意见。
 
 ## 社区动态
+
 **[第六届 RISC‑V 中国峰会｜RuyiSDK 持续推进 RISC‑V 软硬件生态共建](https://ruyisdk.cn/t/topic/2893)**：RuyiSDK 在第六届 RISC‑V 中国峰会分享生态共建相关成果，推动RISC‑V软硬件生态建设。
+
+- 进迭开发者大会发表演讲《AI 辅助 K1 移植 Redox OS》并参与 RISC-V 社区生态沙龙
+- RISC-V 中国峰会发表演讲 《驾驭RISC-V向量扩展：Go语言基于RVV优化实战》
 
 ---
 
