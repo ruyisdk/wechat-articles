@@ -2,10 +2,15 @@
 
 ## 卷首语
 
->
+各位 RISC-V 开发者与 RuyiSDK 社区伙伴，大家好！
+
+第六届 RISC-V 中国峰会刚刚在深圳会展中心圆满落幕。RuyiSDK 团队此次以两场分论坛技术报告、六篇技术海报和 D15 独立开源展区"三位一体"参展，从包管理器、编译器调优、芯片验证，到 AI 辅助开发与教育生态，与现场观众做了大量面对面的交流，欢迎大家移步阅读：[第六届 RISC-V 中国峰会｜RuyiSDK 持续推进 RISC-V 软硬件生态共建](https://ruyisdk.cn/t/topic/2893)。
+
+RuyiSDK 各组件的常规迭代依旧在稳步推进，具体的技术进展细节，请直接参见本期双周进展报告正文，了解更详尽的更新内容，并期待您与我们一同参与社区共建。
+
+获取更多资讯、下载最新工具或参与技术讨论，欢迎通过文章最下方的渠道找到我们。
 
 ## 基础开发环境
-
 
 ### 包管理器
 
@@ -29,10 +34,7 @@ RuyiSDK 团队仍在常态化维护 RuyiSDK 软件源。如您已有 RuyiSDK 包
 - 测试由 CI 构建的多平台 VSCodium IDE
 - 测试集成的第三方插件
 
-### 版本测试及遗留问题
-
 ## 社区与内容建设
-
 
 ### packages-index 资源更新
 
@@ -46,11 +48,7 @@ RuyiSDK 团队仍在常态化维护 RuyiSDK 软件源。如您已有 RuyiSDK 包
 
 - 补充 SpacemiT K3 CoM260 Kit 的 ROS 2 第 9、10 章课程讲义和实验手册，涵盖 Gazebo 仿真与 SLAM 基础，并限定前端课程展示范围。[课程更新](https://github.com/DuoQilai/ROS2_RISCV/commit/35a4109808b24f60b26bcd901be1c2448769814e)、[前端更新](https://github.com/DuoQilai/board-docs-frontend/compare/2d2689dddc5e2affe9c5c5c0f702a1c9fde938e1...5fd4bcb986efff805df30da8122c90f4e1cba526)
 
-### 官网&文档
-
-
 ## 基础组件
-
 
 ### 基础C库
 
@@ -60,6 +58,7 @@ RuyiSDK 团队仍在常态化维护 RuyiSDK 软件源。如您已有 RuyiSDK 包
   - 移植了 acosf, logf, asinf, asinhf, asinpif, atanf 至现有的 newlib 向量数学框架。
 
 ### GCC
+
 - Rebase了Zvdota/Zvbdota的GCC支持，修复了发现的问题
   - https://patchwork.sourceware.org/project/gcc/patch/20261014093604.829234-2-jiawei@iscas.ac.cn/
 - 添加了Ztt扩展的Md支持
@@ -108,6 +107,7 @@ RuyiSDK 团队仍在常态化维护 RuyiSDK 软件源。如您已有 RuyiSDK 包
 ### V8
 
 本期提交并合入的patch如下：
+
 1. **[riscv] Always sign-extend binary-search switch input on riscv64**
    [RISC-V] riscv64 上对二分查找 switch 输入始终做符号扩展 [CL8582687](https://chromium-review.googlesource.com/c/8582687)
 2. **[riscv][sandbox] Tag entries in the TrustedPointerTable**
@@ -116,10 +116,11 @@ RuyiSDK 团队仍在常态化维护 RuyiSDK 软件源。如您已有 RuyiSDK 包
    [RISC-V][Liftoff] 追踪 f32 和 32位 f64 常量，移植提交 8166bc39 [CL8581294](https://chromium-review.googlesource.com/c/8581294)
 4. **[riscv][interpreter] Check max_arguments in entry trampoline**
    [RISC-V][解释器] 在入口跳板中增加最大参数数校验 [CL8581295](https://chromium-review.googlesource.com/c/8581295)
-   
+
 ### OpenJDK
 
 本期审阅并合入的JDK主线PR:
+
 - https://github.com/openjdk/jdk/pull/32309 (8358959: RISC-V: Add Zalasr support for RVWMO)  -- 为RISC-V 模板解释器，C1/C2 JIT添加Zalasr扩展支持
 - https://github.com/openjdk/jdk/pull/32480 (8390826: RISC-V: Use dedicated vector mask logical instructions)  -- 为RISC-V 优化特定掩码逻辑运算
 - https://github.com/openjdk/jdk/pull/32512 (8391044: [zgc] unused parameter "node" in z_color and z_uncolor)  -- 为各CPU平台移除ZGC相关的未使用的函数参数
@@ -136,19 +137,23 @@ RuyiSDK 团队仍在常态化维护 RuyiSDK 软件源。如您已有 RuyiSDK 包
 Java重要新特性JEP 544: AOT静态编译（Ahead-of-Time Code Compilation）RISC-V移植工作进展：
 
 已初步完成JEP 544在RISC-V平台的移植，开展功能测试和性能验证：
+
 - https://github.com/DingliZhang/jdk/commit/5ee95351ad6902e02605192a610b0ad327792b34
 
 相关JEP提案：
+
 - https://openjdk.org/jeps/544 (JEP 544: Ahead-of-Time Code Compilation)
 
 ### Go
 
 本期提出的主线CL:
+
 - 849425: cmd/compile: remove MOVDnop on riscv64 | https://go-review.googlesource.com/c/go/+/849425 去除多余的 MOVDnop 空指令
 - 755840: crypto/internal/fips140/sha512: enable zvknhb for riscv64 | https://go-review.googlesource.com/c/go/+/755840 添加 sha2-512 支持【合入】
 - 752981: crypto/internal/fips140/sha256: enable zvknha for riscv64 | https://go-review.googlesource.com/c/go/+/752981 添加 sha2-256 支持【合入】
 
 本期审阅的主线CL:
+
 - 849005: cmd/compile: optimise bit tests with register shift values on riscv64 | https://go-review.googlesource.com/c/go/+/849005 优化寄存器位移指令
 - 732700: cmd/internal/obj/riscv: add assembly support of Zfa extension | https://go-review.googlesource.com/c/go/+/732700 添加 zfa 汇编支持
 - 806260: runtime: prefer the vDSO for riscv_hwprobe | https://go-review.googlesource.com/c/go/+/806260  优先使用 vDSO 执行 riscv_hwprobe
@@ -156,9 +161,11 @@ Java重要新特性JEP 544: AOT静态编译（Ahead-of-Time Code Compilation）R
 ### QEMU
 
 RuyiSDK QEMU仓库发布了P扩展V0.6版本的实现，完成了目前P扩展所有指令的模拟支持。目前P扩展分支基于上游v11.1.0开发。
+
 - https://github.com/ruyisdk/qemu/tree/p-dev
 
 同时，RuyiSDK QEMU仓库合并了来自达摩院的AME扩展V0.6版本的实现，已完成 ame-v0.6 主要功能开发、架构重构，支持 32/64 位用户模式与系统模式，覆盖矩阵计算、整数与浮点混合运算、数据搬运和类型转换，并支持多核共享后端、状态迁移及调试。目前AME扩展分支同样基于上游v11.1.0开发。
+
 - https://github.com/ruyisdk/qemu/tree/ame-0.6
 
 欢迎试用，并提出宝贵意见。
