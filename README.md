@@ -2,6 +2,10 @@
 
 Articles posted on RUYISDK WeChat Account. Mostly written in Simp. Chinese.
 
+[RuyiSDK双周进展汇报  第079期·2026年10月22日](https://github.com/ruyisdk/wechat-articles/blob/main/20261022-ruyisdk-biweekly-79.md)
+
+[RuyiSDK双周进展汇报  第078期·2026年10月13日](https://github.com/ruyisdk/wechat-articles/blob/main/20261013-ruyisdk-biweekly-78.md)
+
 [RuyiSDK双周进展汇报  第077期·2026年09月24日](https://github.com/ruyisdk/wechat-articles/blob/main/20260924-ruyisdk-biweekly-77.md)
 
 [RuyiSDK双周进展汇报  第076期·2026年09月15日](https://github.com/ruyisdk/wechat-articles/blob/main/20260915-ruyisdk-biweekly-76.md)
