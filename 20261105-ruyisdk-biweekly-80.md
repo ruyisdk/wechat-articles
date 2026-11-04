@@ -34,6 +34,12 @@
 
 ### 基础C库
 
+- GLIBC:
+  - 移植了 sinpif, sqrt, sqrtf, tanf 至现有的 glibc libmvec 框架。
+- newlib:
+  - 移植了 atanhf, atan2f, atanpif, atan2pif, exp2f, cosf, coshf, cospif, exp10f, expf, log2f, log2p1f, rsqrtf, expm1f 至现有的 newlib 向量数学框架。
+
+
 ### GCC
 
 ### LLVM
