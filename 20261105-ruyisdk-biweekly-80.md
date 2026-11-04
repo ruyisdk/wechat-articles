@@ -45,6 +45,33 @@
 ### LLVM
 
 ### V8
+本期提交并合入的patch如下：
+1. **[riscv] Fix RISC-V trusted pointer tag range check**
+   [RISC-V] 修复可信指针标签范围检查 [CL8639244](https://chromium-review.googlesource.com/c/8639244)
+2. **[riscv] Zero out-of-range trusted pointers on tag underflow**
+   [RISC-V] 标签下溢时将越界可信指针置零 [CL8620871](https://chromium-review.googlesource.com/c/8620871)
+3. **[riscv][maglev] Store zero-valued constants through the zero register**
+   [RISC-V][Maglev] 借助零寄存器保存零值常量 [CL8641030](https://chromium-review.googlesource.com/c/8641030)
+4. **[riscv] Derive CPU features from the GN build configuration**
+   [RISC-V] 从 GN 编译配置推导 CPU 特性 [CL8641350](https://chromium-review.googlesource.com/c/8641350)
+5. **[riscv][maglev] Preserve the NaN sign in Float64->Float32 conversions**
+   [RISC-V][Maglev] 在 Float64 转 Float32 时保留 NaN 的符号位 [CL8701858](https://chromium-review.googlesource.com/c/8701858)
+6. **[riscv][liftoff] Allocate sub-word atomic RMW temp outside the loop**
+   [RISC-V][Liftoff] 在循环外分配子字原子 RMW 临时寄存器 [CL8714199](https://chromium-review.googlesource.com/c/8714199)
+
+本期审阅并合入的patch如下：
+1. **[riscv] Fix emit_i32_eqz error**
+   [RISC-V] 修复 emit_i32_eqz 错误 [CL8691005](https://chromium-review.googlesource.com/c/8691005)
+2. **[riscv] Implement missing RV64 Add643 ops**
+   [RISC-V] 实现缺失的 RV64 Add643 运算 [CL8689521](https://chromium-review.googlesource.com/c/8689521)
+3. **[riscv] Fix RV64 int32mul typo**
+   [RISC-V] 修复 RV64 int32mul 拼写错误 [CL8690428](https://chromium-review.googlesource.com/c/8690428)
+4. **[riscv] Emit only ebreak for stop() on hardware**
+   [RISC-V] 在硬件上 stop() 仅生成 ebreak 指令 [CL8698658](https://chromium-review.googlesource.com/c/8698658)
+5. **[riscv] Preserve vector tails for scalar moves**
+   [RISC-V] 标量移动操作时保留向量尾部 [CL8714039](https://chromium-review.googlesource.com/c/8714039)
+6. **[riscv] Allow vlen=1024**
+   [RISC-V] 支持 VLEN=1024 [CL8585179](https://chromium-review.googlesource.com/c/8585179)
 
 ### OpenJDK
 
