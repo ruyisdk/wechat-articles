@@ -108,6 +108,20 @@ JEP 544在RISC-V平台的移植通过功能测试，对应的性能收益符合�
 
 ### Go
 
+本期提出的主线CL:
+
+- 857242: cmd/compile: intrinsify Anduintptr and Oruintptr on riscv64 | https://go-review.googlesource.com/c/go/+/857242 指令化 RISC-V And/Or 指针指令
+- 816460: internal/runtime/gc/scan: add RVV impl of filterNil | https://go-review.googlesource.com/c/go/+/816460 使用 RVV 加速 GreenGC 的 filterNil 函数 【合入】
+- 844366: runtime: crash the GC at clobberdead pointer on riscv64 | https://go-review.googlesource.com/c/go/+/844366 在 runtime 使能 clobberdead 指令
+- 844385: cmd/compile: implement clobberdead mode on riscv64 | https://go-review.googlesource.com/c/go/+/844385 在 RISC-V 平台实现 clobberdead 指令
+- 857521: cmd/compile: intrinsify Xchg8 on riscv64 | https://go-review.googlesource.com/c/go/+/857521 在 RISC-V 平台指令化 Xchg8
+
+本期审阅的主线CL:
+- 807981: cmd/compile: use OpMove instead of memmove in small-size on riscv64 | https://go-review.googlesource.com/c/go/+/807981 使用OpMove 替代 memmove 函数
+- 856701: runtime: fix register use in racecallbackthunk on riscv64 | https://go-review.googlesource.com/c/go/+/856701 修复 racecallback 错误的寄存器分配
+- 835325: cmd/compile: intrinsify Anduintptr and Oruintptr on amd64 and riscv64 | https://go-review.googlesource.com/c/go/+/835325 指令化 And/Or 指针指令
+- 801684: cmd/compile: use RVV for RISCV64 LoweredZeroLoop | https://go-review.googlesource.com/c/go/+/801684 使用 RVV 加速 LoweredZeroLoop 指令
+
 ### QEMU
 
 
