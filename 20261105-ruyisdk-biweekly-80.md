@@ -22,9 +22,16 @@
 
 ### 开发板支持矩阵
 
+- 新增 Milk-V Jupiter2 的 Bianbu 4.0.1 Desktop 中英文测试报告。[PR #411](https://github.com/ruyisdk/support-matrix/pull/411)
+- 新增 SpacemiT K3 Pico-ITX 的 Bianbu 4.0.8 LXQt 中英文测试报告。[PR #412](https://github.com/ruyisdk/support-matrix/pull/412)
+- 更新 VisionFive 2 Lite 的 Ubuntu 24.04.5 中英文测试报告。[PR #390](https://github.com/ruyisdk/support-matrix/pull/390)
 
 ### 开发板示例仓库
 
+- 新增 HiFive Premier P550 的 Dhrystone 基准测试及 SiFive Kernel Library（SKL）中文示例。[PR #51](https://github.com/ruyisdk/board-docs/pull/51)、[PR #52](https://github.com/ruyisdk/board-docs/pull/52)
+- 新增 Milk-V Jupiter2 的 llama-server 中文部署示例。[PR #55](https://github.com/ruyisdk/board-docs/pull/55)
+- 开发板文档前端开放 SpacemiT K3 CoM260 Kit 的 ROS 2 第 11 至 15 章课程入口，涵盖扫描匹配、SLAM 与定位。[PR #14](https://github.com/DuoQilai/board-docs-frontend/pull/14)、[PR #16](https://github.com/DuoQilai/board-docs-frontend/pull/16)
+- 补充 SpacemiT K3 Pico-ITX 的 ROS 2 第 2 至 4 章课程入口，并同步到开发板文档前端。[课程目录 PR #4](https://github.com/DuoQilai/ROS2_RISCV/pull/4)、[前端更新](https://github.com/DuoQilai/board-docs-frontend/commit/bfca45ef9b80fba0e9731ba51d9a6cc2f7792d9f)
 
 ### 官网&文档
 
