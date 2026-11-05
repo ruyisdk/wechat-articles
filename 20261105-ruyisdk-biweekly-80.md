@@ -82,6 +82,30 @@
 
 ### OpenJDK
 
+本期审阅并合入的JDK主线PR:
+- https://github.com/openjdk/jdk/pull/32643 (8385698: [Valhalla] C1 omits type profiling for null-free types)  -- 为各CPU平台修复值类型profiling操作
+- https://github.com/openjdk/jdk/pull/32476 (8390813: C2: Wrong entries in adlc commutative op lists)  -- 为各CPU平台修复C2矢量化操作缺陷
+- https://github.com/openjdk/jdk/pull/32693 (8391442: Test compiler/c1/CanonicalizeArrayLength.java is timing out with VerifyOops)  -- 为RISC-V和ARM64优化C1重定位操作
+- https://github.com/openjdk/jdk/pull/32592 (8391431: RISC-V: AOTCodeTest.java fails after JDK-8388288 with fastdebug)  -- 为RISC-V修复一处测试用例失败问题
+- https://github.com/openjdk/jdk/pull/32496 (8350085: RISC-V: Enable upper GPR registers in C1)  -- 为RISC-V优化C1寄存器分配
+- https://github.com/openjdk/jdk/pull/32061 (8389223: RISC-V: Implement CRC32C intrinsic using Zbc extension)  -- 利用Zbc扩展指令为RISC-V实现CRC32C instrinsic加速
+- https://github.com/openjdk/jdk/pull/32046 (8389108: RISC-V: Use shift pairs for logical right shift and mask patterns)  -- 为RISC-V优化逻辑移位和掩码组合操作
+- https://github.com/openjdk/jdk/pull/32604 (8391466: RISC-V: Remove unreachable non-acquiring CAS/GetAndSet/GetAndAdd match rules)  -- 为RISC-V清理未使用的C2 CAS匹配规则
+- https://github.com/openjdk/jdk/pull/32629 (8391597: RISC-V: Use movptr2 for C2 pointer constants)  -- 为RISC-V优化C2常量指针移动操作
+
+本期审阅并合入的JDK LTS主线PR:
+- https://github.com/openjdk/jdk25u-dev/pull/763 (8391041: RISC-V: Fix out-of-bounds read in string_indexof_char intrinsic) -- 为RISC-V修复string_indexof_char intrinsic访存越界问题
+- https://github.com/openjdk/jdk21u-dev/pull/3041 (8391041: RISC-V: Fix out-of-bounds read in string_indexof_char intrinsic)
+- https://github.com/openjdk/jdk17u-dev/pull/4644 (8391041: RISC-V: Fix out-of-bounds read in string_indexof_char intrinsic)
+
+Java重要新特性JEP 544: AOT静态编译（Ahead-of-Time Code Compilation）RISC-V移植工作进展：
+
+JEP 544在RISC-V平台的移植通过功能测试，对应的性能收益符合预期，已合入JDK主线：
+- https://github.com/openjdk/jdk/pull/32311 (8390102: RISC-V: Support AOT Code Cache)
+
+相关JEP提案：
+- https://openjdk.org/jeps/544 (JEP 544: Ahead-of-Time Code Compilation)
+
 ### Go
 
 ### QEMU
