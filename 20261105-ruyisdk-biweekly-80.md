@@ -2,10 +2,20 @@
 
 ## 卷首语
 
->
+各位 RISC-V 开发者与 RuyiSDK 社区伙伴，大家好！
+
+RuyiSDK 各条线在本周期继续稳步推进，工具软件版本虽稍有延迟，但现已发布；各组件进展丰富，具体如下：
+
+基础开发环境侧，包管理器 [0.54.0](https://github.com/ruyisdk/ruyi/releases/tag/0.54.0) 已发布，首次支持软件包与当前系统的 ABI 兼容性检测（首发覆盖 glibc/musl 的任意 Linux 发行版），并修正了非 2xx 下载响应的处理与失败排查指引；VS Code 插件打磨了错误输出展开、新闻刷新复用、错误信息本地化与术语统一等多处细节,发布了 [0.1.7](https://github.com/ruyisdk/ruyisdk-vscode-extension/releases/tag/0.1.7) 版本。此外，Ruyi Imager [1.1.0](https://github.com/ruyisdk/ruyi-imager/releases/tag/v1.1.0) 也已发布，新增 SpacemiT K3 刷写支持、独立的镜像预下载按钮，并对界面布局、本地化文本与 CLI 输出做了多处修复与优化。欢迎试用、来上游围观，或通过软件源仓库与打包脚本直接参与共建——您的需求是我们迭代开发的目标和动力。
+
+社区与内容建设方面：packages-index 为 SpacemiT K1/K3 加入了 GNU 工具链适配，开发板支持矩阵新增 Milk-V Jupiter2 与 SpacemiT K3 Pico-ITX 的 Bianbu 测试报告并更新 VisionFive 2 Lite 的 Ubuntu 报告，开发板示例仓库则补齐了 HiFive Premier P550 基准测试、Milk-V Jupiter2 的 llama-server 部署示例，以及 K3 平台 ROS 2 课程入口的扩充。
+
+基础组件方面亮点不少——GCC 三项 RISC-V 后端优化（Zba/Zbs/Zbkb）已合入上游主线并配套回归测试，RISE-CI 打通 multilib 构建检查并启动基于 SPEC CPU 2026 的真实硬件性能评测准备；LLVM 在 P 扩展乘累加、funnel shift、XTHeadBb 上持续推进，RuyiSDK LLVM 分支还初步落地了基于 v0.6 规范的 Ztt 矩阵扩展支持；OpenJDK 的 JEP 544 AOT 静态编译 RISC-V 移植通过功能测试并合入主线，CRC32C intrinsic 等多项 RISC-V 优化也已落地；V8 与 Go 团队同样围绕 Maglev、Liftoff、GC RVV 加速等方向合入了一批补丁。
+
+欢迎阅读正文，了解更详尽的更新内容，并期待您与我们一同参与社区共建。获取更多资讯、下载最新工具或参与技术讨论，欢迎通过文章最下方的渠道找到我们。
+下个版本计划于 2026 年 11 月底 发布，敬请期待！
 
 ## 基础开发环境
-
 
 ### 包管理器
 
@@ -22,17 +32,19 @@ RuyiSDK 0.54 将于 2026 年 11 月 11 日前后发布，对应的包管理器�
 
 ### RuyiSDK IDE
 
-- 包索引刷新失败时可展开查看完整错误输出。 
-- 新闻刷新复用包索引刷新流程，去除重复实现。 
-- 错误信息支持本地化。 
-- 统一 Ruyi（命令行工具）与 RuyiSDK（产品/扩展）的术语用法。 
+- 包索引刷新失败时可展开查看完整错误输出。
+- 新闻刷新复用包索引刷新流程，去除重复实现。
+- 错误信息支持本地化。
+- 统一 Ruyi（命令行工具）与 RuyiSDK（产品/扩展）的术语用法。
 - 继续测试由 CI 构建的多平台 VSCodium IDE
 - 测试集成的 ruyi 插件与第三方插件
 
 ### 版本测试及遗留问题
 
-## 社区与内容建设
+RuyiSDK 0.54.0-beta.20261102 版本 Ruyi 包管理器和 v0.1.7 版本 VSCode IDE 插件符合出口标准，准予发版。详见[测试报告](https://gitee.com/yunxiangluo/ruyisdk-test/tree/master/20261103)。
 
+
+## 社区与内容建设
 
 ### packages-index 资源更新
 
@@ -60,9 +72,9 @@ RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查�
 
 ### 官网&文档
 
+- 官网软件包页面新增了支持按照厂商、变体搜索设备的能力，欢迎[体验](https://ruyisdk.org/packages/)。
 
 ## 基础组件
-
 
 ### 基础C库
 
@@ -71,8 +83,6 @@ RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查�
 - newlib:
   - 移植了 atanhf, atan2f, atanpif, atan2pif, exp2f, cosf, coshf, cospif, exp10f, expf, log2f, log2p1f, rsqrtf, expm1f 至现有的 newlib 向量数学框架。
 
-
-### GCC
 ### GCC
 
 本期重点围绕 **RISC-V GCC 代码生成优化及真实硬件性能评测能力建设** 推进工作，在编译器上游优化和下一阶段性能分析准备方面取得进展。
@@ -95,9 +105,10 @@ RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查�
 
 **2. 完善RISE-CI工具链测试维护**
 
-打通了`Hertner`容器服务与GITHUB Actions，新增`multilib构建场景检查`，进一步完善Toolchain CI验证边界。
+打通了 `Hertner`容器服务与GITHUB Actions，新增 `multilib构建场景检查`，进一步完善Toolchain CI验证边界。
 
 目前聚焦RISC-V后端，每天会对新的RISC-V提交进行充分测试
+
 - [multilib反馈问题示例](https://github.com/riseproject-dev/gcc-postcommit-ci/issues/275)
 
 后续计划接入LLM对CI发现的错误进行评估和分析，协助开发者简化分析处理流程。
@@ -143,7 +154,9 @@ RuyiSDK LLVM 分支进展：
   为 AME 分支新增 GitHub Actions CI，自动构建 RISC-V 目标的 LLVM/Clang，并运行 RISC-V CodeGen、汇编及语义测试。已合并（补记）
 
 ### V8
+
 本期提交并合入的patch如下：
+
 1. **[riscv] Fix RISC-V trusted pointer tag range check**
    [RISC-V] 修复可信指针标签范围检查 [CL8639244](https://chromium-review.googlesource.com/c/8639244)
 2. **[riscv] Zero out-of-range trusted pointers on tag underflow**
@@ -158,6 +171,7 @@ RuyiSDK LLVM 分支进展：
    [RISC-V][Liftoff] 在循环外分配子字原子 RMW 临时寄存器 [CL8714199](https://chromium-review.googlesource.com/c/8714199)
 
 本期审阅并合入的patch如下：
+
 1. **[riscv] Fix emit_i32_eqz error**
    [RISC-V] 修复 emit_i32_eqz 错误 [CL8691005](https://chromium-review.googlesource.com/c/8691005)
 2. **[riscv] Implement missing RV64 Add643 ops**
@@ -174,6 +188,7 @@ RuyiSDK LLVM 分支进展：
 ### OpenJDK
 
 本期审阅并合入的JDK主线PR:
+
 - https://github.com/openjdk/jdk/pull/32643 (8385698: [Valhalla] C1 omits type profiling for null-free types)  -- 为各CPU平台修复值类型profiling操作
 - https://github.com/openjdk/jdk/pull/32476 (8390813: C2: Wrong entries in adlc commutative op lists)  -- 为各CPU平台修复C2矢量化操作缺陷
 - https://github.com/openjdk/jdk/pull/32693 (8391442: Test compiler/c1/CanonicalizeArrayLength.java is timing out with VerifyOops)  -- 为RISC-V和ARM64优化C1重定位操作
@@ -185,6 +200,7 @@ RuyiSDK LLVM 分支进展：
 - https://github.com/openjdk/jdk/pull/32629 (8391597: RISC-V: Use movptr2 for C2 pointer constants)  -- 为RISC-V优化C2常量指针移动操作
 
 本期审阅并合入的JDK LTS主线PR:
+
 - https://github.com/openjdk/jdk25u-dev/pull/763 (8391041: RISC-V: Fix out-of-bounds read in string_indexof_char intrinsic) -- 为RISC-V修复string_indexof_char intrinsic访存越界问题
 - https://github.com/openjdk/jdk21u-dev/pull/3041 (8391041: RISC-V: Fix out-of-bounds read in string_indexof_char intrinsic)
 - https://github.com/openjdk/jdk17u-dev/pull/4644 (8391041: RISC-V: Fix out-of-bounds read in string_indexof_char intrinsic)
@@ -192,9 +208,11 @@ RuyiSDK LLVM 分支进展：
 Java重要新特性JEP 544: AOT静态编译（Ahead-of-Time Code Compilation）RISC-V移植工作进展：
 
 JEP 544在RISC-V平台的移植通过功能测试，对应的性能收益符合预期，已合入JDK主线：
+
 - https://github.com/openjdk/jdk/pull/32311 (8390102: RISC-V: Support AOT Code Cache)
 
 相关JEP提案：
+
 - https://openjdk.org/jeps/544 (JEP 544: Ahead-of-Time Code Compilation)
 
 ### Go
@@ -208,13 +226,11 @@ JEP 544在RISC-V平台的移植通过功能测试，对应的性能收益符合�
 - 857521: cmd/compile: intrinsify Xchg8 on riscv64 | https://go-review.googlesource.com/c/go/+/857521 在 RISC-V 平台指令化 Xchg8
 
 本期审阅的主线CL:
+
 - 807981: cmd/compile: use OpMove instead of memmove in small-size on riscv64 | https://go-review.googlesource.com/c/go/+/807981 使用OpMove 替代 memmove 函数
 - 856701: runtime: fix register use in racecallbackthunk on riscv64 | https://go-review.googlesource.com/c/go/+/856701 修复 racecallback 错误的寄存器分配
 - 835325: cmd/compile: intrinsify Anduintptr and Oruintptr on amd64 and riscv64 | https://go-review.googlesource.com/c/go/+/835325 指令化 And/Or 指针指令
 - 801684: cmd/compile: use RVV for RISCV64 LoweredZeroLoop | https://go-review.googlesource.com/c/go/+/801684 使用 RVV 加速 LoweredZeroLoop 指令
-
-### QEMU
-
 
 ## 项目资源入口
 
