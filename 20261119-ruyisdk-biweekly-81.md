@@ -34,6 +34,11 @@
 
 ### 基础C库
 
+- GLIBC:
+  - 移植了 tanh, tanhf, tanpi, tanpif 至现有的 glibc libmvec 框架。
+- newlib:
+  - 移植了 hypotf, lgammaf, log10f, log1pf, powf, sincosf, sincospif, sinf, sinhf, sinpif, sqrtf, tanf, tanhf, tanpif 至现有的 newlib 向量数学框架。
+
 ### GCC
 
 ### LLVM
