@@ -109,6 +109,23 @@
 
 ### Go
 
+距离 Go 1.28特性冻结仅剩1周，因此本期变更基本聚焦于修复bug
+
+本期提出的主线CL:
+
+- 864281: math: optimize archExp/archExp2 on riscv64 | https://go-review.googlesource.com/c/go/+/864281 优化 riscv64 指数性能
+- 864283: runtime/riscv64: use ABIInternal convention in cgocallbackg | https://go-review.googlesource.com/c/go/+/864283 cgocallback 使用ABIInternal
+- 864243: test: disable fixedbugs/issue80271.go on riscv64 | https://go-review.googlesource.com/c/go/+/864243 修复blocker issue80271
+- 765200: crypto/internal/fips140/aes: blockAsm enable zvkned for riscv64 | https://go-review.googlesource.com/c/go/+/765200 AES 块加解密【合入】
+- 864662: database/sql: enable strict alloc checks for riscv64 | https://go-review.googlesource.com/c/go/+/864662 riscv64 开启 sql 分配内存的严格测试
+- 864264: runtime: enable TestUnsafePoint on riscv64 | https://go-review.googlesource.com/c/go/+/864264 riscv64 开启 unsafepointer 测试
+
+本期审阅的主线CL:
+
+- 861706: cmd/asm/internal/asm: add tests for Zfa instructions on riscv64 | https://go-review.googlesource.com/c/go/+/861706 zfa 相关测试
+- 732700: cmd/internal/obj/riscv: add assembly support of Zfa extension | https://go-review.googlesource.com/c/go/+/732700 添加zfa 扩展支持
+
+
 ### QEMU
 
 ## 社区动态
