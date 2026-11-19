@@ -71,6 +71,7 @@ RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查�
 
 ### 官网&文档
 
+- 文档：更新了 ruyi 包管理器的介绍和使用说明文档 [PR #154](https://github.com/ruyisdk/docs/pull/154)
 
 ## 基础组件
 
