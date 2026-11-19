@@ -9,6 +9,21 @@
 
 ### 包管理器
 
+由于 RuyiSDK 发版周期调整，RuyiSDK 包管理器的 0.55.0 版本预期将在 11 月底正式发布。欢迎下载 RuyiSDK 包管理器当前最新版本 0.54.0 试用。
+
+RuyiSDK 团队仍在常态化维护 RuyiSDK 软件源。如您已有 RuyiSDK 包管理器了，您可通过 `ruyi update` 获取近两周的更新：我们保证这些内容兼容 RuyiSDK 包管理器的近 3 个正式版本。
+
+目前有以下内容正在开发中：
+
+* 对格式错误的软件源（如有些插件或软件包正在调试中等情况下）更加宽容，不要崩溃。
+* 根据 XDG 基础目录规范，正确无视了使用相对路径的相应配置。
+* 在 `ruyi repo get` 中暴露 `repo.disabled` 配置项。
+* 更新了下载失败的排查指南文案，加入了服务器问题与终端网络环境等因素。
+* 工程化迭代：
+  * 更新了依赖版本。
+  * 现已官方支持 Python 3.15 运行环境。
+
+欢迎试用或来上游围观；您的需求是我们迭代开发的目标和动力。
 
 ### RuyiSDK IDE
 
@@ -22,6 +37,23 @@
 
 ### packages-index 资源更新
 
+本次 RuyiSDK 软件源的更新主要包含了以下内容：
+
+* 新增软件包：
+  * `emulator/qemu-{system,user}-riscv-ame`: 基于上游 QEMU 11.1.0，加入了 AME 扩展的最新草案版本 v0.6 的支持。此扩展支持由达摩院贡献。
+  * `emulator/qemu-{system,user}-riscv-rvp`: 基于上游 QEMU 11.1.0，加入了 RVP 扩展的最新草案版本 v0.6 的支持。
+* 更新软件包：
+  * `board-image/armbian-starfive-visionfive2-minimal`: 更新到了 26.11.0-trunk.120。
+  * `board-image/armbian-orangepi-rv2-minimal`: 更新到了 26.11.0-trunk.120。
+  * `board-image/buildroot-sdk-sipeed-licheervnano`: 更新到了 0.20261109.0。
+  * `board-image/freebsd-riscv64-mini-live`: 更新到了 14.5。
+  * `board-image/openbsd-riscv64-live`: 更新到了 8.0。
+  * `board-image/canmv-*-k230`: 修复了下载链接。
+  * `board-image/openbsd-riscv64-live`: 移除了上游不再支持或提供的版本 7.6.0。
+  * `board-images/openwrt-sifive-unmatched`: 更新到了 25.12.6。
+
+您也可以亲自参与
+RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查看、修改我们的[部分打包脚本](https://github.com/ruyisdk/ruyici)与[软件源仓库](https://github.com/ruyisdk/packages-index)。今后，按照本年度的开发计划，我们也将支持有权的第三方贡献者通过程序化的方式上传软件包、系统镜像等分发文件，以便利打包工作。
 
 ### 开发板支持矩阵
 
