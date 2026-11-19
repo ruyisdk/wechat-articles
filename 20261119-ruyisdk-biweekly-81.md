@@ -2,7 +2,20 @@
 
 ## 卷首语
 
->
+各位 RISC-V 开发者与 RuyiSDK 社区伙伴，大家好！
+
+欢迎大家阅读 RuyiSDK 第 81 期双周进展汇报，本期基础软件方面有诸多进展，主要有：
+
+- **P 扩展生态齐头并进**：GCC 交付了 3 个可在 RV32/RV64 直接运行的 P 扩展示例（图像匹配、定点点积、数字滤波），动态指令降幅最高达 80%；LLVM 本期 14 个 P 扩展 PR 提交、其中 13 个已合入上游，标量饱和移位、窄化裁剪等 intrinsics 持续补齐；软件源也新增了基于 QEMU 11.1.0、支持 AME 与 RVP 扩展 v0.6 草案的模拟器软件包（其中 AME 由达摩院贡献）。从模拟器、编译器到示例教程，P 扩展的体验链路已经打通，欢迎参照 [RVP-Example](https://github.com/pz9115/RVP-Example) 仓库中附带的预编译工具链与两份交互式 Notebook 教程上手试玩。
+
+- **V8 在 SpacemiT K3 真机实测 JetStream 3 总分 +3.5%**：本期合入的蹦床池短跳转、Zfa `fli` 浮点常量等优化带来了实测收益，gaussian-blur 单项提升 27%；内置模拟器经多项热路径优化后，richards 基准耗时最高下降 34%，开发和验证效率也明显改善。
+
+- **工具链性能与硬件适配双线推进**：GCC 13 个提交合入主线，K1 实机上标量位操作微基准节省约 27% 执行周期；OpenJDK 合入 Zicond 条件算术优化与玄铁处理器特性检测；Go 聚焦 1.28 特性冻结前的稳定性收尾。
+
+- **工具与内容更新**：软件源已上架支持 AME 与 RVP 扩展的 QEMU 软件包，已有包管理器的伙伴可通过 `ruyi update` 获取软件源更新、直接体验试用；IDE 为三个 Linux 平台打包了 ruyi 程序，开箱即用；开发板示例仓库新增 Milk-V Jupiter2 的 ONNX Runtime 部署推理示例与 SpacemiT V100-C2201 板卡文档。
+
+欢迎阅读正文，了解更详尽的更新内容，并期待您与我们一同参与社区共建。获取更多资讯、下载最新工具或参与技术讨论，欢迎通过文章最下方的渠道找到我们。
+
 
 ## 基础开发环境
 
@@ -321,12 +334,6 @@ RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查�
 
 - 861706: cmd/asm/internal/asm: add tests for Zfa instructions on riscv64 | https://go-review.googlesource.com/c/go/+/861706 zfa 相关测试
 - 732700: cmd/internal/obj/riscv: add assembly support of Zfa extension | https://go-review.googlesource.com/c/go/+/732700 添加zfa 扩展支持
-
-
-### QEMU
-
-## 社区动态
-
 
 ---
 
