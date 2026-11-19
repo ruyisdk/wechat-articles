@@ -86,6 +86,54 @@
 
 ### LLVM
 
+本期提交 PR 如下
+
+- [RISCV][P-ext] Restrict P widening shift legalization to left shifts
+  https://github.com/llvm/llvm-project/pull/242773
+  将 RV32 P 扩展中使用 `WSLL`/`WSLA` 的扩宽移位合法化限制为左移，修复右移被错误选择为左移指令的问题。已合并
+- [RISCV][P-ext] Add scalar ssh1sadd intrinsic
+  https://github.com/llvm/llvm-project/pull/239234
+  新增标量饱和移位加法 intrinsic `__riscv_ssh1sadd_i32`，支持 RV32 的 `ssh1sadd` 及 RV64 的 `pssh1sadd.w` 指令选择。已合并
+- [RISCV][P-ext] Add scalar comparison intrinsics
+  https://github.com/llvm/llvm-project/pull/239245
+  新增标量相等及有符号、无符号大小比较 intrinsics，支持 RV32 原生指令和 RV64 打包字指令，并通过交换操作数或按位取反实现其他比较形式。已合并
+- [RISCV][P-ext] Add scalar saturating and rounding shift intrinsics
+  https://github.com/llvm/llvm-project/pull/241730
+  新增标量饱和及舍入移位 intrinsics，支持有符号移位量控制左右移、RV32/RV64 指令选择及常量移位量的立即数形式。已合并
+- [RISCV][P-ext] Add scalar mhacc.h0/h1 intrinsics
+  https://github.com/llvm/llvm-project/pull/242195
+  新增选取低半字或高半字的标量乘法高位累加 intrinsics，支持有符号和混合符号形式，并实现 RV32/RV64 代码生成。已合并
+- [RISCV][P-ext] Add Scalar Zip/UnZip Intrinsics
+  https://github.com/llvm/llvm-project/pull/241430
+  新增标量交错与解交错 intrinsics，并补全 `zip*hp` 的代码生成支持。已合并
+- [RISCV][P-ext] Support Scalar Narrowing Clip
+  https://github.com/llvm/llvm-project/pull/241979
+  新增标量窄化裁剪 intrinsics，支持将 64 位值移位后饱和窄化为 32 位值，涵盖有符号、无符号及舍入变体，并补充窄化舍入算术右移支持。已合并
+- [RISCV][P-ext] Add the missing zext_invec pattern
+  https://github.com/llvm/llvm-project/pull/242288
+  补全 `zext_invec` 从 `v8i8` 到 `v2i32` 的零扩展匹配，修复已标记为合法但缺少指令选择模式的问题。已合并
+- [RISCV][P-ext] Fold packed shifts with zero
+  https://github.com/llvm/llvm-project/pull/242432
+  折叠多种移位量为零的打包移位操作，直接返回原操作数，消除冗余移位。已合并
+- [RISCV][P-ext] Use EVT in `combinePExtWidening*Acc`
+  https://github.com/llvm/llvm-project/pull/242687
+  在扩宽累加合并中使用 `EVT` 处理值类型，修复假定简单值类型导致非标准位宽整数触发错误的问题。已合并
+- [RISCV][P-ext] Replace some checks with pattern matching (NFC)
+  https://github.com/llvm/llvm-project/pull/243022
+  使用 SelectionDAG 模式匹配重写饱和运算合并及符号扩展检查，简化实现，保持功能不变。已合并
+- [RISCV][P-ext] Fix assertion when legalizing i64 shift amounts on RV32
+  https://github.com/llvm/llvm-project/pull/243366
+  放宽 RV32+P 下移位量合法化的断言，允许通用合法化展开 64 位移位量，修复处理右移时的断言失败。已合并
+- [RISCV][P-ext] Fix crash selecting WADDA[U]/WSUBA[U] with a zero accumulator
+  https://github.com/llvm/llvm-project/pull/244093
+  为扩宽加减累加指令使用 `buildGPRPair` 构造累加寄存器对，避免零累加值被选为 `X0_Pair` 后触发断言。已合并
+- [RISCV][GlobalISel] Preserve KCFI type on indirect calls
+  https://github.com/llvm/llvm-project/pull/240364
+  在 GlobalISel 间接调用指令上保留 KCFI 类型信息，使 KCFI pass 能生成间接调用检查，与 SelectionDAG 的行为保持一致。已合并
+- [RISCV][P-ext] Fold shifts with out-of-range signed shift amounts
+  https://github.com/llvm/llvm-project/pull/243813
+  根据 P 扩展有符号移位量的语义，折叠常量移位量超出元素位宽的移位操作，生成零值或等价的符号填充、最高位提取操作。正在 review
+
 ### V8
 
 ### OpenJDK
