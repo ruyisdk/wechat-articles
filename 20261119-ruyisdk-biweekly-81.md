@@ -84,6 +84,119 @@
 ### LLVM
 
 ### V8
+本期亮点：
+本期审阅并合入了来自Andrew Gaul的若干性能优化patch，这些优化与修复工作均采用"人机协作"模式完成：由 riscvlint 等工具发现优化点，AI（Claude）辅助起草补丁与基准验证，全部改动均经 ISCAS 维护者人工评审、附量化性能数据与回归测试后合入主线，性能提升项如下：
+1. 真实硬件SpaceTime K3提升说明和实测效果
+
+| CL | 改动内容 | 性能提升 |
+|---|---|---|
+| [CL8698757](https://chromium-review.googlesource.com/c/8698757) | 蹦床池之后改发 4 字节短 `jal` 替代 8~12 字节 `auipc+jr` 长跳，新增 far-jump pool 机制保证目标可达 | 获得本期最大单项收益：K3 真机 JetStream 3 总分 +3.5%（75 项中 46 项超噪声，gaussian-blur +27%、wasm 类 +17~22%）；生成代码 -1.7MB（-2.2%），其中 Maglev -2.7%、TurboFan/regexp -3.8% |
+| [CL8716968](https://chromium-review.googlesource.com/c/8716968) | TurboFan/Liftoff 构建可编码浮点常量时改用 Zfa 的 `fli` 指令 | 每个常量从 3 条指令（li+slli+fmv.d.x）变 1 条 `fli.d`，JetStream 3 生成代码消除 248 处 |
+| [CL8697059](https://chromium-review.googlesource.com/c/8697059) | 空寄存器列表的 `PushAll`/`PopAll` 提前返回，跳过 `addi sp,sp,0` 空调整 | Maglev 代码移除约 9 万条无用指令（-361KB，约 -1%） |
+| [CL8695943](https://chromium-review.googlesource.com/c/8695943) | Maglev Int32 比较直接比较寄存器，省去重复的 sext.w/zext.w 扩展复制 | Maglev 指令数 -0.47%（12 个 JetStream 3 基准、无指针压缩） |
+| [CL8780855](https://chromium-review.googlesource.com/c/8780855) | Latin-1 正则前导的 `slli t1,a1,0` 伪 move 改为直接使用源寄存器 | 消除 2,704 条单周期指令（X100 可重命名消除 mv 但不能消除 slli） |
+| [CL8701856](https://chromium-review.googlesource.com/c/8701856) | 调整溢出检查中 xor/and 的发射顺序，符合 SpaceTime X100 硬件宏融合要求 | 4,557 处依赖链从 2 cycle 降为 1 cycle（占总指令 0.01%，未单独跑分） |
+| [CL8700095](https://chromium-review.googlesource.com/c/8700095) | Smi 0 经 `zero_reg` 直接存储（x64 优化移植），参数入栈不再物化零常量 | 消除零常量物化指令（未量化） |
+| [CL8721932](https://chromium-review.googlesource.com/c/8721932) | 按 RVV v1.0 规范删除 SIMD 移位前冗余的移位量掩码计算 | 减少 SIMD 代码的指令发射（未量化） |
+
+2. V8内置模拟器上获得的提升（可提升V8的开发和验证效率）
+
+| CL | 改动内容 | 性能提升 |
+|---|---|---|
+| [CL8703878](https://chromium-review.googlesource.com/c/8703878) | `IsShortInstruction` 从 .cc 移入头文件内联（原占模拟器 23% 采样） | richards -34%（28.9s→19.0s）、ML -32%（40.2s→27.3s），本组单项最大 |
+| [CL8765048](https://chromium-review.googlesource.com/c/8765048) | 缓存"任一调试功能是否启用"，免每条指令检查 stop_at/watch/断点/trace 等 6 项 | richards -27%（17.0s→12.4s）、ML -28%（24.9s→17.9s） |
+| [CL8813064](https://chromium-review.googlesource.com/c/8813064) | 解码提速：字段读走 operand_ 快照、32 位指令类型查静态表、RVC getter 内联 | richards -20%（11.7s→9.3s）、ML -22%（17.1s→13.4s） |
+| [CL8707133](https://chromium-review.googlesource.com/c/8707133) | `UNSUPPORTED()` 报告外提为函数，避免 -fstack-protector 给每个解码函数加栈保护 | richards -3%（18.6s→18.0s） |
+| [CL8642931](https://chromium-review.googlesource.com/c/8642931) | 移除运行时改写 `v8_flags.trace_sim` | 减少热路径多余写入（未量化） |
+
+3. 本期提交并合入的 patch 如下
+
+（1）[riscv] Don't deduplicate heap number requests by their double bits
+[RISC-V] 不要依据双精度比特对堆数值请求做去重 [CL8737461](https://chromium-review.googlesource.com/c/8737461)
+
+（2）[riscv64] Fix 32-bit sign-extension for liftoff stack arguments
+[RISC-V64] 修复 Liftoff 栈参数的 32 位符号扩展 [CL8736943](https://chromium-review.googlesource.com/c/8736943)
+
+（3）[riscv][simulator] Model fence and AMO acquire/release ordering
+[RISC-V][模拟器] 建模 fence 与 AMO 获取/释放内存序 [CL8739701](https://chromium-review.googlesource.com/c/8739701)
+
+（4）[riscv] Store zero-valued constants through the zero register
+[RISC-V] 通过零寄存器存储零值常量 [CL8700095](https://chromium-review.googlesource.com/c/8700095)
+
+（5）[riscv64] Reject negative varargs length in StackOverflowCheck
+[RISC-V64] 在栈溢出检查中拒绝负的可变参数长度 [CL8701857](https://chromium-review.googlesource.com/c/8701857)
+
+（6）[riscv] Fix FP select when the zero constant is the left operand
+[RISC-V] 修复零常量为左操作数时的浮点选择指令 [CL8795387](https://chromium-review.googlesource.com/c/8795387)
+
+（7）[riscv][compiler] Check skipped write barrier for Smis
+[RISC-V][编译器] 校验 Smi 跳过的写屏障 [CL8793548](https://chromium-review.googlesource.com/c/8793548)
+
+（8）[riscv] Compute CAS address before sign-extending expected value
+[RISC-V] 在对期望值做符号扩展前先计算 CAS 地址 [CL8752939](https://chromium-review.googlesource.com/c/8752939)
+
+（9）[riscv][maglev] Fix StringCodePointAt at the end of a SlicedString
+[RISC-V][Maglev] 修复 SlicedString 末尾处的 StringCodePointAt [CL8800253](https://chromium-review.googlesource.com/c/8800253)
+
+（10）[riscv][compiler] Sign-extend switch input in AssembleArchTableSwitch
+[RISC-V][编译器] 在 AssembleArchTableSwitch 中对 switch 输入做符号扩展 [CL8793344](https://chromium-review.googlesource.com/c/8793344)
+
+（11）[riscv] Fix Mulh32 missing sign extension
+[RISC-V] 修复 Mulh32 缺失符号扩展问题 [CL8813054](https://chromium-review.googlesource.com/c/8813054)
+
+（12）[riscv][compiler] Avoid scratch register exhaustion in table switch
+[RISC-V][编译器] 避免 table switch 耗尽临时寄存器 [CL8814796](https://chromium-review.googlesource.com/c/8814796)
+
+（13）[riscv] Prevent far-jump pools from splitting RISC-V short branches
+[RISC-V] 防止远跳转池打断 RISC-V 短分支 [CL8813180](https://chromium-review.googlesource.com/c/8813180)
+
+4. 本期审阅并合入的 patch 如下
+
+（1）[riscv][maglev] Test the sign of the or for a minus-zero product
+[RISC-V][Maglev] 检测负零乘积或运算结果的符号 [CL8701837](https://chromium-review.googlesource.com/c/8701837)
+
+（2）[riscv] Inline InstructionBase::IsShortInstruction
+[RISC-V] 内联 InstructionBase::IsShortInstruction [CL8703878](https://chromium-review.googlesource.com/c/8703878)
+
+（3）[riscv] Decode constant pool marker as unsigned
+[RISC-V] 无符号解析常量池标记 [CL8493273](https://chromium-review.googlesource.com/c/8493273)
+
+（4）[maglev] Compare Int32 values on riscv without re-extending them
+[Maglev] 在 RISC-V 上比较 Int32 值，避免重复扩展 [CL8695943](https://chromium-review.googlesource.com/c/8695943)
+
+（5）[riscv] Skip the stack adjustment for empty register lists
+[RISC-V] 寄存器列表为空时跳过栈调整 [CL8697059](https://chromium-review.googlesource.com/c/8697059)
+
+（6）[riscv] Link near long calls through ra
+[RISC-V] 通过 ra 寄存器链接近长调用 [CL8680346](https://chromium-review.googlesource.com/c/8680346)
+
+（7）[riscv] Order the overflow checks' xors so the and can fuse
+[RISC-V] 调整溢出检查异或顺序，使与指令可融合 [CL8701856](https://chromium-review.googlesource.com/c/8701856)
+
+（8）[riscv] Keep forward jumps short after the trampoline pool
+[RISC-V] 跳板池之后保持向前跳转使用短跳转 [CL8698757](https://chromium-review.googlesource.com/c/8698757)
+
+（9）[riscv] Report unsupported instructions out of line in the simulator
+[RISC-V] 模拟器中离线上报不支持指令 [CL8707133](https://chromium-review.googlesource.com/c/8707133)
+
+（10）[riscv] Remove redundant SIMD shift masking
+[RISC-V] 删除冗余 SIMD 移位掩码操作 [CL8721932](https://chromium-review.googlesource.com/c/8721932)
+
+（11）[riscv] Hoist atomic exchange address calculation
+[RISC-V] 提升原子交换地址计算逻辑 [CL8724475](https://chromium-review.googlesource.com/c/8724475)
+
+（12）[riscv] Skip the shift by zero in a Latin-1 regexp's prologue
+[RISC-V] 在 Latin-1 正则序言中跳过零移位 [CL8780855](https://chromium-review.googlesource.com/c/8780855)
+
+（13）[riscv] Skip the simulator's debugging checks unless one is enabled
+[RISC-V] 未开启调试时跳过模拟器调试检查 [CL8765048](https://chromium-review.googlesource.com/c/8765048)
+
+（14）[riscv] Make the simulator's AMOs atomic read-modify-writes
+[RISC-V] 模拟器 AMO 实现为原子读改写 [CL8759153](https://chromium-review.googlesource.com/c/8759153)
+
+（15）[riscv] Speed up instruction decoding in the simulator
+[RISC-V] 优化模拟器指令解码速度 [CL8813064](https://chromium-review.googlesource.com/c/8813064)
+
 
 ### OpenJDK
 
